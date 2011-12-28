@@ -49,8 +49,8 @@ Fork away!
 + [scss-syntax](https://github.com/cakebaker/scss-syntax.vim)
 + [extradite](https://github.com/int3/vim-extradite) Extends fugitive with a very nice `git log`
 + [TailMinusF](https://github.com/matsuu/TailMinusF.git) for rails.vm `:Rlog`
-+ [HTML-AutoCloseTag](https://github.com/vim-scripts/HTML-AutoCloseTag)
 + [html5-syntax](https://github.com/developish/html5-syntax.vim.git)
++ [hammer.vim](https://github.com/robgleeson/hammer.vim) Markdown preview via :Hammer
 
 ### Removed Plugins: ###
 + [Conque](http://github.com/rson/vim-conque)

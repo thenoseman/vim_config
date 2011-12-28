@@ -136,3 +136,6 @@
 [submodule "home/.vim/bundle/vim-autoclose-townk"]
 	path = home/.vim/bundle/vim-autoclose-townk
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "home/.vim/bundle/hammer.vim"]
+	path = home/.vim/bundle/hammer.vim
+	url = https://github.com/robgleeson/hammer.vim.git
