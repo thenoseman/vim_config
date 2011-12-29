@@ -84,7 +84,7 @@
 	url = https://github.com/vim-scripts/DirDiff.vim.git
 [submodule "home/.vim/bundle/vim-markdown-syntax"]
 	path = home/.vim/bundle/vim-markdown-syntax
-	url = https://github.com/plasticboy/vim-markdown
+	url = https://github.com/tpope/vim-markdown
 [submodule "home/.vim/bundle/indexed-search"]
 	path = home/.vim/bundle/indexed-search
 	url = https://github.com/vim-scripts/IndexedSearch
