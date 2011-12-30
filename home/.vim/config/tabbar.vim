@@ -11,3 +11,5 @@ if &diff
   let Tb_loaded=1
 endif
 
+" TURNED OFF for now, lets use <leader>m more
+let Tb_loaded=1
