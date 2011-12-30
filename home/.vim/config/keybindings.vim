@@ -63,8 +63,8 @@ set listchars=tab:▸\ ,eol:¬
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
-" Define here AGAIN
-nmap <Leader>m :FufCoverageFile<CR>
+" Define here AGAIN (See fuzzyfinder.vim)
+nmap <Leader>m :NERDTreeClose<CR>:FufCoverageFile<CR> 
 
 " ,x closes buffer and jumps to previous one
 nmap <Leader>x :bd<CR>:Tbbp<CR> 
