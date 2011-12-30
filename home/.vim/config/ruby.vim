@@ -6,6 +6,7 @@ autocmd FileType ruby  call LoadRubyKeybindings()
 autocmd FileType eruby call LoadRubyKeybindings()
 autocmd FileType haml  call LoadRubyKeybindings()
 autocmd FileType yaml  call LoadRubyKeybindings()
+autocmd FileType ruby  call AddMagicEncodingComment()
 
 fun! LoadRubyKeybindings()
    " bind control-k to turn the current word into a symbol
@@ -20,36 +21,8 @@ fun! LoadRubyKeybindings()
    set nofoldenable
 endfun
 
-" :Gp changes gem 'hello' to gem 'hello', :path => '../hello'
-" Another :Gp changes it back
-fun! RubyGemfilePathLocal()
-  let line = getline(".")
-  if match(line, ":path") != -1
-    let repl = substitute(line, ', *:path.*$', "", "g")
-    call setline(".", repl)
-  else
-    normal ^^wl"ayiwA, :path => "../"apA
-  endif
-endfun
+" Bind Gemfile function
 command! Gp call RubyGemfilePathLocal()
-
-
-" Adds the ruby magic comment to file
-fun! AddMagicEncodingComment()
-  let line = getline(1)
-  let pos = getpos(".")
-  if(match(line,"encoding")) == -1
-    exec "normal ggO# -*- encoding : utf-8 -*-"
-    if pos[1] == 1
-      " new file:
-      call setpos(".", [pos[0], 2, pos[2], pos[3]])
-    else
-      " existing file
-      call setpos(".", pos)
-    endif
-  endif
-endfun
-au FileType ruby call AddMagicEncodingComment()
 
 " These files are also Ruby.
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
