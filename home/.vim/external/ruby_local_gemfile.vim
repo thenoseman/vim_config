@@ -3,9 +3,8 @@
 fun! RubyGemfilePathLocal()
   let line = getline(".")
   if match(line, ":path") != -1
-    let repl = substitute(line, ', *:path.*$', "", "g")
-    call setline(".", repl)
+    substitute /,[ ]\{-}:path.\{-}["''].\{-}["'']//g
   else
-    normal ^^wl"ayiwA, :path => "../"apA
+    substitute /gem \(["'']\)\(.\{-}\)["''].*/\0, :path => \1..\/\2\1/g
   endif
 endfun
