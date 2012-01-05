@@ -60,4 +60,4 @@ set scrolloff=5
 set sidescrolloff=5
 
 " Remove trailing whitespace
-au BufWritePre *.rb,*.haml,*.sass :%s/\s\+$//e
+au BufWritePre *.rb,*.haml,*.sass,*.js :%s/\s\+$//e
