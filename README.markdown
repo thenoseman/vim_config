@@ -13,7 +13,6 @@ This repository is meant to be used with the wonderful [Homesick-Gem](https://gi
 Fork away!
 
 ## Current Plugins: ###
-+ [FuzzyFinder](https://github.com/vim-scripts/FuzzyFinder) (,m)
 + [PHP-VIP](https://github.com/tobyS/vip)
 + [matchit](https://github.com/thenoseman/vim-matchit)
 + [xmledit](https://github.com/sukima/xmledit/)
@@ -50,6 +49,7 @@ Fork away!
 + [extradite](https://github.com/int3/vim-extradite) Extends fugitive with a very nice `git log`
 + [TailMinusF](https://github.com/matsuu/TailMinusF.git) for rails.vm `:Rlog`
 + [html5-syntax](https://github.com/developish/html5-syntax.vim.git)
++ [ctrlp](https://github.com/kien/ctrlp.vim)
 
 ### Removed Plugins: ###
 + [Conque](http://github.com/rson/vim-conque)
@@ -143,56 +143,12 @@ autoclose will automatically change it to `"|"` (where the '|' in this case
 represents your cursor location). If you don't want to use autoclose in
 a certain situation, you can use the `<Leader>a` binding to toggle it.
 
-### BufExplorer ###
-
-BufExplorer is a quick way to switch around between windows. You can run `:help
-bufexplorer` to see the full information, or just make use of the `<Leader>be`
-keybinding to bring up the BufExplorer window while you've got a few buffers
-open to see it in action.
-
-BufExplorer is configured in `vim/config/bufexplorer.vim`
-
 ### BufOnly ###
 
 BufOnly is a simple plugin that closes all buffers but the currently open one.
 Useful for when you've got a bunch of buffers open that aren't pertinent any
 more (e.g. you're switching to a different project now, etc.). I've mapped the
 BufOnly command to the `<Leader>bo` keychain.
-
-### CamelCaseMotion ###
-
-CamelCaseMotion defines keybindings for motions that work on camel-case words
-(and underscore-separated words). e.g., by default, `w` goes to the end of the
-word, even if that word is CamelCasedLikeThis. Using CamelCaseMotion, you can
-use `,w` to move to the next part of the CamelCasedWord. `:help camelcasemotion`
-for more information.
-
-### Command-T ###
-
-In the Mac OS X application TextMate, you can use Cmd-t to do a 'fuzzy' search
-for files in your current working directory. Command-T is a plugin that duplicates
-   this functionality - using `<Leader>t` by default. Just start typing and you'll see it in
-   action. The config settings I've made are in `vim\config\commandt.vim`.
-
-### Conque ###
-
-Conque is awesome. It allows you to run (and interact with) any executable
-inside vim. This means that you can run a shell, irb, script/console, or any
-similar tool inside of a vim buffer. I've got a few default bindings set up as
-follows (each of these, by default, opens the new buffer in a new
-horizontally-split window):
-
-* `<Leader>ss` - this starts your `$SHELL` in a new buffer.
-* `<Leader>sc` - this starts `./script/console` in a new buffer.
-* `<Leader>si` - this starts `irb` in a new buffer.
-* `<Leader>sx` - this starts... whatever you want :) it prompts you to enter the
-  executable you want to run, and then starts it in a new buffer.
-
-### dbext.vim ###
-
-Dbext is a very powerful plugin that provides database integration with vim. For
-the most part, this is included because Rails.vim plays very nicely with it, but
-you can also use it on its own if you prefer.
 
 ### Endwise ###
 
@@ -218,13 +174,6 @@ I also added a couple of git-svn keychains:
 
 You can also check the configuration changes I made in
 `vim/config/fugitive.vim`.
-
-### Gist.vim ###
-
-Gist.vim is a simple plugin for integrating with Github's code-sharing service,
-[Gist](http://gist.github.com). `:Gist` to post the current buffer to a new gist,
-`:Gist -p` posts a new private one, etc., etc. - check the plugin's vim.org page
-for more detailed instructions.
 
 ### NERDCommenter ###
 
@@ -289,13 +238,6 @@ SnipMate gives you snippets - pieces of often typed text you can insert into
 your document using a trigger word. Checkout the help files (`:help snipmate`)
 or view the plugin's website at vim.org for more specifics.
 
-### Space.vim ###
-
-Space.vim allows you to use the <Space> key as a repeat key for some complex
-motion commands (most notably for me, searching - I can search for something and
-then hit space to move forward and shift-space to move backwards through the
-results). Run `:help space-intro` to read up on it.
-
 ### Surround.vim ###
 
 Surround.vim allows you to do fancy things with surrounding
@@ -318,13 +260,6 @@ TailMinusF allows you to open a buffer that watches the contents of a file in
 a similar fashion to the UNIX command `tail -f` (hence the name). This is mostly
 included as a dependency to Rails.vim, but you can use it on its own via the
 `:Tail` command.
-
-### VimOutliner ###
-
-VimOutliner is a tool for creating outlines (.otl files). It's got some neat
-features, including automatically calculating the completion percentage of
-a given outline. There's a handy cheatsheet
-[here](http://sites.google.com/site/vimoutlinerinfo/vimoutliner-cheat-sheet).
 
 ### YankRing ###
 

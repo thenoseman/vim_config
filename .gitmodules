@@ -58,12 +58,6 @@
 [submodule "home/.vim/bundle/supertab"]
 	path = home/.vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "home/.vim/bundle/fuzzyfinder"]
-	path = home/.vim/bundle/fuzzyfinder
-	url = https://github.com/vim-scripts/FuzzyFinder.git
-[submodule "home/.vim/bundle/l9"]
-	path = home/.vim/bundle/l9
-	url = https://github.com/vim-scripts/L9.git
 [submodule "home/.vim/bundle/xmledit"]
 	path = home/.vim/bundle/xmledit
 	url = https://github.com/sukima/xmledit.git
@@ -136,3 +130,6 @@
 [submodule "home/.vim/bundle/vim-autoclose-townk"]
 	path = home/.vim/bundle/vim-autoclose-townk
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "home/.vim/bundle/ctrlp"]
+	path = home/.vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
