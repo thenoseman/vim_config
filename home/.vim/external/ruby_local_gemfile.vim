@@ -8,3 +8,4 @@ fun! RubyGemfilePathLocal()
     substitute /\mgem \(["'']\)\(.\{-}\)["''].*/\0, :path => \1..\/\2\1/g
   endif
 endfun
+command! Gp call RubyGemfilePathLocal()
