@@ -14,3 +14,5 @@ let g:ctrlp_custom_ignore = {
 
 " Open in current window
 let g:ctrlp_open_new_file = 0
+
+let g:ctrlp_extensions = ['tag', 'buffertag']
