@@ -16,7 +16,6 @@ Fork away!
 + [PHP-VIP](https://github.com/tobyS/vip)
 + [matchit](https://github.com/thenoseman/vim-matchit)
 + [xmledit](https://github.com/sukima/xmledit/)
-+ [tabbar](https://github.com/thenoseman/TabBar) (Modified Hotkey)
 + [greplace](https://github.com/skwp/greplace) (:Gsearch)
 + [vim-haml](https://github.com/tpope/vim-haml) HAML/SASS Plugin
 + [vim-javascript](https://github.com/pangloss/vim-javascript) for better javascript indention
