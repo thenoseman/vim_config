@@ -41,4 +41,3 @@ runtime! config/**/*
 
 " External Vim Tips scripts
 runtime! external/*.vim
-
