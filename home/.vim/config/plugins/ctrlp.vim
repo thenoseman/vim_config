@@ -16,3 +16,5 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_open_new_file = 0
 
 let g:ctrlp_extensions = ['tag', 'buffertag']
+
+nmap <leader>t :CtrlPBufTagAll<cr>
