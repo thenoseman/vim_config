@@ -30,4 +30,3 @@ function! s:CopyMatches(line1, line2, reg)
     echo 'No hits'
   endif
 endfunction
-

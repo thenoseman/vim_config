@@ -8,4 +8,6 @@ fun! RubyGemfilePathLocal()
     substitute /\mgem \(["'']\)\(.\{-}\)["''].*/\0, :path => \1..\/\2\1/g
   endif
 endfun
+
+" @command Gp: Turns a gem 'xxx' into gem 'xxx', :path => 'xxx' to include it locally
 command! Gp call RubyGemfilePathLocal()

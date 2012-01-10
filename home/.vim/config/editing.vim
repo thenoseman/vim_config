@@ -52,12 +52,9 @@ set textwidth=0
 set nolinebreak
 set wrap
 
-" Relative Numbers
-set norelativenumber
-
-" Always keep 5 lines on screen while scolling
-set scrolloff=5
-set sidescrolloff=5
+" Always keep 3 lines on screen while scolling
+set scrolloff=3
+set sidescrolloff=3
 
 " Remove trailing whitespace
 au BufWritePre *.rb,*.haml,*.sass,*.js :%s/\s\+$//e

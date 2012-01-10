@@ -7,5 +7,6 @@ fun! CallExtradite()
   exec "Extradite"
 endfun
 
+" @plugin: Extradite
+" @command Gl: Open Extradite buffer
 com! Gl call CallExtradite()
-

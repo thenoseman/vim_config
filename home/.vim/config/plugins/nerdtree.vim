@@ -7,6 +7,7 @@ let NERDTreeChDirMode=2
 
 "  NERDTree (KEY: ,d)
 let NERDTreeShowBookmarks=1
-" autocmd VimEnter * exe 'NERDTree' | wincmd l 
-map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
+" @plugin: NERDTree
+" @key <leader>d: Open or close NERDTree
+noremap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>

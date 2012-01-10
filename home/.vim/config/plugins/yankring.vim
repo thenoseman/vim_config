@@ -42,6 +42,6 @@ let g:yankring_paste_check_default_buffer = 1
 
 " Keybindings
 
-" use <Leader>y to open the YankRing window
-:nnoremap <silent> <Leader>y :YRShow<CR>
-
+" @plugin: YankRing
+" @key <leader>y: Open Yankring Window
+nnoremap <silent> <leader>y :YRShow<CR>

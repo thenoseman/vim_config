@@ -3,4 +3,6 @@
 """"""""""""""""""""""""""""""""""""""""
 
 " keybindings
-map <Leader>c ,c<space>
+" @plugin: NERDCommenter
+" @key <leader>c: Toggle comment of visual selection or current line
+noremap <leader>c ,c<space>

@@ -9,7 +9,7 @@ autocmd FileType yaml  call LoadRubyKeybindings()
 autocmd FileType ruby  call AddMagicEncodingComment()
 
 fun! LoadRubyKeybindings()
-   " bind control-k to turn the current word into a symbol
+   " @key <C-k>: Turn current word into a symbol (normal and insert mode)
    imap <buffer> <C-k> <C-o>b:<Esc>Ea
    nmap <buffer> <C-k> lbi:<Esc>E
 
@@ -20,9 +20,6 @@ fun! LoadRubyKeybindings()
    " No Folding!
    set nofoldenable
 endfun
-
-" Bind Gemfile function
-command! Gp call RubyGemfilePathLocal()
 
 " These files are also Ruby.
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
