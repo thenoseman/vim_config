@@ -64,7 +64,7 @@ highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 " ,x closes buffer and jumps to previous one
-nmap <Leader>x :bd<CR>:Tbbp<CR> 
+nmap <Leader>x :bd<CR>
 
 " ,o closes all buffers but the current one or unsaved ones
 nmap <Leader>o :BufOnly<CR> 
