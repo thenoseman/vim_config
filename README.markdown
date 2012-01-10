@@ -40,7 +40,6 @@ Fork away!
 + [YankRing](http://github.com/chrismetcalf/vim-yankring)
 + [Supertab](https://github.com/ervandew/supertab)
 + [IndexedSearch](https://github.com/vim-scripts/IndexedSearch)
-+ [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 + [vim-easymotion](https://github.com/Lokaltog/vim-easymotion)
 + [vim-ruby](https://github.com/vim-ruby/vim-ruby)
 + [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
