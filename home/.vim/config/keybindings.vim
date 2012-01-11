@@ -61,3 +61,6 @@ nnoremap Q dbxx
 " @plugin: ctrlp
 " @key <leader>t: Searches all open buffers for a tag (aka. method, class name, ...)
 nmap <leader>t :CtrlPBufTagAll<CR>
+
+" @key p: Pastes text and reindents
+nnoremap <leader>p p`[v`]=
