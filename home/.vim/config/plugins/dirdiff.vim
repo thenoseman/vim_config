@@ -45,5 +45,7 @@ function! AutoStartDirDiff()
   endif
 endfunction
 
-" Auto activate DirDiff if needed
-autocmd VimEnter * call AutoStartDirDiff()
+augroup vim_config
+  " Auto activate DirDiff if needed
+  autocmd VimEnter * call AutoStartDirDiff()
+augroup END

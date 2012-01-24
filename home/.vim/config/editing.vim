@@ -32,10 +32,12 @@ set autoread     " automatically reload a file if it's changed outside vim
 set formatoptions=crqn21
 
 " Automatically restore cursor position when possible
-autocmd BufReadPost *
-   \ if line("'\"") > 1 && line("'\"") <= line("$") |
-   \ exe "normal! g`\"" |
-   \ endif
+augroup vim_config
+  autocmd BufReadPost *
+     \ if line("'\"") > 1 && line("'\"") <= line("$") |
+     \ exe "normal! g`\"" |
+     \ endif
+augroup END
 
 "
 " Two Spaces, always

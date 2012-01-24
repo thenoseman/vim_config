@@ -7,3 +7,8 @@ let g:easytags_dynamic_files = 1
 
 " Update recursivly
 let g:easytags_autorecurse = 1
+
+" startup
+augroup vim_config
+  au VimEnter call UpdateTags()
+augroup END
