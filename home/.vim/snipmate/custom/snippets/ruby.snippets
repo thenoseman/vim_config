@@ -1,2 +1,6 @@
 snippet enc
-	# -*- encoding: utf-8 -*-	
+	# -*- encoding: utf-8 -*-
+snippet warn
+	puts "\033[33m===== #{File.basename(__FILE__)}:#{__LINE__} ====="
+	puts ${1} 
+	puts "===============================\033[0m" 
