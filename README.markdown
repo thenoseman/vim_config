@@ -33,7 +33,6 @@ Fork away!
 + [Rails.vim](http://github.com/tpope/vim-rails)
 + [Rake.vim](http://github.com/tpope/vim-rake)
 + [Repeat.vim](http://github.com/tpope/vim-repeat)
-+ [Rvm.vim](http://github.com/csexton/rvm.vim)
 + [Snipmate.vim](https://github.com/MarcWeber/snipmate.vim) original source isn't maintained anymore and this one lives
 + [Surround.vim](http://github.com/tpope/vim-surround)
 + [Syntastic](http://github.com/scrooloose/syntastic)
