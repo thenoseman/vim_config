@@ -25,7 +25,6 @@ Fork away!
 + [Markdown syntax](https://github.com/plasticboy/vim-markdown)
 + [Ack.vim](http://github.com/kronn/ack.vim)
 + [AsNeeded](http://github.com/vim-scripts/AsNeeded)
-+ [BufOnly](http://github.com/duff/vim-bufonly)
 + [Endwise](http://github.com/tpope/vim-endwise)
 + [Fugitive](http://github.com/tpope/vim-fugitive)
 + [NERDCommenter](http://github.com/scrooloose/nerdcommenter)

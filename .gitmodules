@@ -28,12 +28,6 @@
 [submodule "home/.vim/bundle/endwise"]
 	path = home/.vim/bundle/endwise
 	url = http://github.com/tpope/vim-endwise.git
-[submodule "home/.vim/bundle/bufonly"]
-	path = home/.vim/bundle/bufonly
-	url = http://github.com/duff/vim-bufonly.git
-[submodule "home/.vim/bundle/align"]
-	path = home/.vim/bundle/align
-	url = http://github.com/vim-scripts/Align.vim.git
 [submodule "home/.vim/bundle/ack"]
   path = home/.vim/bundle/ack
 	url = http://github.com/kronn/ack.vim.git
