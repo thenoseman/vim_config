@@ -100,9 +100,6 @@
 [submodule "home/.vim/bundle/vim-matchit"]
 	path = home/.vim/bundle/vim-matchit
 	url = git://github.com/thenoseman/vim-matchit.git
-[submodule "home/.vim/bundle/sweet-rspec-vim"]
-	path = home/.vim/bundle/sweet-rspec-vim
-	url = https://github.com/duskhacker/sweet-rspec-vim
 [submodule "home/.vim/bundle/greplace.vim"]
 	path = home/.vim/bundle/greplace.vim
 	url = https://github.com/skwp/greplace.vim.git
