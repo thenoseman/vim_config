@@ -20,7 +20,7 @@ Fork away!
 + [vim-haml](https://github.com/tpope/vim-haml) HAML/SASS Plugin
 + [vim-javascript](https://github.com/pangloss/vim-javascript) for better javascript indention
 + [dirdiff](https://github.com/vim-scripts/DirDiff.vim)
-+ [my own fork of autoclose](https://github.com/thenoseman/vim-autoclose), which fixes doublequote errors in 'RemoveQuotes'
++ [autoclose](https://github.com/Townk/vim-autoclose)
 + [PHP-Indention](https://github.com/2072/PHP-Indenting-for-VIm) which is going into the next VIM version anyway.
 + [Markdown syntax](https://github.com/plasticboy/vim-markdown)
 + [Ack.vim](http://github.com/kronn/ack.vim)
@@ -48,15 +48,6 @@ Fork away!
 + [html5-syntax](https://github.com/developish/html5-syntax.vim.git)
 + [ctrlp](https://github.com/kien/ctrlp.vim)
 
-### Removed Plugins: ###
-+ [Conque](http://github.com/rson/vim-conque)
-+ [Gist](https://github.com/mattn/gist-vim)
-+ [Dbext](https://github.com/zklinger/dbext)
-+ [CamelCaseMotion](https://github.com/vim-scripts/camelcasemotion)
-+ [VimOutliner](https://github.com/vimoutliner/vimoutliner)
-+ [Command-T](https://github.com/vim-scripts/Command-T)
-+ [BufExplorer](http://www.vim.org/scripts/script.php?script_id=42)
-
 ## Added non-plugin features ##
 + CopyMatches Script from [vimtips](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard) (:CopyMatches)
 + my own "mvim" script (extras/mvim) that makes all passed cmdargs available to vim ($VIM_CMDARGS)
@@ -70,9 +61,6 @@ Fork away!
 + Snippets for snipmate from:
   + [scrooloose](https://github.com/scrooloose/snipmate-snippets)
   + [honza default snippets](https://github.com/honza/snipmate-snippets)
-
-## Todos ##
-+ Try out [vim-indent-object](https://github.com/michaeljsmith/vim-indent-object)
 
 ## STRUCTURE ##
 This vim config makes use of Tim Pope's pathogen plugin, which allows all other
