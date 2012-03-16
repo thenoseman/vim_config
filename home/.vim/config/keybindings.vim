@@ -64,3 +64,9 @@ nmap <leader>t :CtrlPBufTagAll<CR>
 
 " @key p: Pastes text and reindents
 nnoremap <leader>p p`[v`]=
+
+" @key /: Always search in very magic mode
+nnoremap / /\v
+
+" @key ?: Always search in very magic mode
+nnoremap ? ?\v
