@@ -26,3 +26,6 @@ fun! LoadRubyKeybindings()
    " No Folding!
    set nofoldenable
 endfun
+
+" Unshouldify a rspec spec
+com Unshouldify :%s/\v(["'])should not/\1doesn't/g|%s/\v(["'])should have/\1has/g|%s/\vshould be/is/g|%s/\v(["'])should ([^ ]+)/\1\2s/g
