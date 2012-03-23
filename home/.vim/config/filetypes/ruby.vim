@@ -28,4 +28,10 @@ fun! LoadRubyKeybindings()
 endfun
 
 " Unshouldify a rspec spec
-com Unshouldify :%s/\v(["'])should not/\1doesn't/g|%s/\v(["'])should have/\1has/g|%s/\vshould be/is/g|%s/\v(["'])should ([^ ]+)/\1\2s/g
+fun! Unshouldify()
+  silent! s/\v(["'])should not/\1doesn't/gi
+  silent! s/\v(["'])should have/\1has/gi
+  silent! s/\vshould be/is/gi
+  silent! s/\v(["'])should ([^ ]+)/\1\2s/gi
+endfun
+com! Unshouldify call Unshouldify()
