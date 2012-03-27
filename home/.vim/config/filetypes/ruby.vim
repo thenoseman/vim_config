@@ -27,7 +27,6 @@ fun! LoadRubyKeybindings()
    set nofoldenable
 endfun
 
-" Unshouldify a rspec spec
 fun! Unshouldify()
   silent! %s/\v (["'])should not/ \1doesn't/gi
   silent! %s/\v (["'])should have/ \1has/gi
