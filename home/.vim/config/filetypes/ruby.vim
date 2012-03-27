@@ -31,7 +31,8 @@ endfun
 fun! Unshouldify()
   silent! %s/\v (["'])should not/ \1doesn't/gi
   silent! %s/\v (["'])should have/ \1has/gi
-  silent! %s/\v should be/ is/gi
+  silent! %s/\v is/ is/gi
+  silent! %s/\v (["'])should ([^ ]+y) ([^ ]+)/ \1\2 \3s/gi
   silent! %s/\v (["'])should ([^ ]+)/ \1\2s/gi
 endfun
 com! Unshouldify call Unshouldify()
