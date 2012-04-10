@@ -1,6 +1,7 @@
 "
 " Extradite Plugin
 "
+let g:extradite_showhash=1
 
 fun! CallExtradite()
   exec "NERDTreeClose"
