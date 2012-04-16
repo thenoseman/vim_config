@@ -106,9 +106,6 @@
 [submodule "home/.vim/bundle/html5-syntax"]
 	path = home/.vim/bundle/html5-syntax
 	url = https://github.com/developish/html5-syntax.vim.git
-[submodule "home/.vim/bundle/vim-autoclose-townk"]
-	path = home/.vim/bundle/vim-autoclose-townk
-	url = https://github.com/Townk/vim-autoclose.git
 [submodule "home/.vim/bundle/ctrlp"]
 	path = home/.vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
