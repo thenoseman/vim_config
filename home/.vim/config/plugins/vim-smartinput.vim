@@ -17,3 +17,9 @@ call smartinput#define_rule({
 \   'input': '<Bar><Bar><Left>',
 \   'filetype': ['ruby'],
 \ })
+
+
+" workaround for https://github.com/kana/vim-smartinput/issues/34
+" only insert doublequotes if not directly after a word character
+call smartinput#define_rule({'at': '\w\%#', 'char': '"', 'input': '"'})
+call smartinput#define_rule({'at': '\w\%#', 'char': "'", 'input': "'"})
