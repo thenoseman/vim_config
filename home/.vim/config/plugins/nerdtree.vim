@@ -13,4 +13,4 @@ let NERDTreeQuitOnOpen=1
 
 " @plugin: NERDTree
 " @key <leader>d: Open or close NERDTree
-noremap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+noremap <leader>d :NERDTreeToggle<cr>
