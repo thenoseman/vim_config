@@ -37,12 +37,15 @@ function! NERDTreeMoveAndCtrlPRefresh(node)
 endfunction
 
 fun! NERDTreeAfterInitialize()
+
+  " Remove autocmd
+  autocmd! User NERDTreePostSourceActions
+
   call NERDTreeAddKeyMap({
   \ 'key': 'c',
   \ 'scope': 'FileNode',
   \ 'callback': "NERDTreeCopyAndCtrlPRefresh",
   \ 'quickhelpText': '(c)opy file and refresh CtrlP Cache' })
-
 
   call NERDTreeAddKeyMap({
   \ 'key': 'a',
