@@ -118,3 +118,6 @@
 [submodule "home/.vim/bundle/vim-bundler"]
 	path = home/.vim/bundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
+[submodule "home/.vim/bundle/vim-easytags"]
+	path = home/.vim/bundle/vim-easytags
+	url = git://github.com/xolox/vim-easytags.git
