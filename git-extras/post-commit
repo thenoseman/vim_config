@@ -1,6 +1,0 @@
-#!/bin/sh
-#
-# Tries to update all submodules after commit
-#
-echo "Trying to update submodules"
-./update_all_submodules_to_head
