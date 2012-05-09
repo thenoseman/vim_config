@@ -2,3 +2,4 @@
 " wildcard menus, etc.
 set wildmenu                " completion with menu
 set wildmode=longest,list   " bash-like tab completion
+set completeopt=menu,preview,longest " complete options
