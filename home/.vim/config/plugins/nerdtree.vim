@@ -61,4 +61,6 @@ fun! NERDTreeAfterInitialize()
 endfun
   
 " This should work once scrooloose pulls https://github.com/scrooloose/nerdtree/pull/156
-autocmd User NERDTreePostSourceActions call NERDTreeAfterInitialize()
+augroup vim_config
+  autocmd User NERDTreePostSourceActions call NERDTreeAfterInitialize()
+augroup END
