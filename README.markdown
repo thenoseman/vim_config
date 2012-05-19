@@ -19,7 +19,7 @@ Fork away!
 + [Endwise](http://github.com/tpope/vim-endwise)
 + [Fugitive](http://github.com/tpope/vim-fugitive)
 + [greplace](http://github.com/skwp/greplace)
-+ [html5-syntax](http://github.com/developish/html5-syntax.vim.git)
++ [html5-syntax](http://github.com/developish/html5-syntax.vim)
 + [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
 + [NERDTree](http://github.com/scrooloose/nerdtree)
 + [PHP-Indention](http://github.com/2072/PHP-Indenting-for-VIm)
@@ -89,4 +89,37 @@ Auto closes ruby structures with `end` where appropriate
 A (_the_) git wrapper for vim. Use `:Gc` to commit, `:Gs` for status. When you are in a conflicted file use `:Dl`and `:Dr` 
 to copy the current hunk from left or right to the working copy.
 
+## [greplace](http://github.com/skwp/greplace)
+Ever wanted to search/replace in all/some of the files in your project?
+That's an absolute nightmare using `vimgrep`. Fret not! `:Gsearch` has you covered!
+Use `:Gsearch` to search project-wide. The results will be opened in a buffer for you to edit in place.
+After editing (don't save that buffer) use `:Greplace` to integrate your changes back into the original files.
+This thing so rocks!
+
+## [html5-syntax](http://github.com/developish/html5-syntax.vim)
+Adds syntax support for HTML5 elements like "data-*" or <section>
+
+## [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
+Filetype sensitive commenting and uncommenting of textblocks.
+Mapped to `,c ` (thats ,c[space]) to toggle commenting in visual-mode.
+
+## [NERDTree](http://github.com/scrooloose/nerdtree)
+_The_ file-explorer for vim. Closed by default. Use `,d` to open.
+After you add or delete files use `:CtrlPClearCache` to regenerate
+the ctrl-p cache.
+
+## [PHP-Indention](http://github.com/2072/PHP-Indenting-for-VIm)
+Once there was a time where I was knee-deep into PHP :)
+See [this "blog" about what it does](http://www.2072productions.com/to/phpindent.txt).
+
+## [Rails.vim](http://github.com/tpope/vim-rails)
+This does so much good for you I can't even find a feature to start with.
+If you are in a rails file (eg. controller) you can use `:Test` to open the corresponding
+test-file in a horizontal-split.
+
+# [Rake.vim](http://github.com/tpope/vim-rake)
+Adds all the rails.vim goodies to your plain old ruby files.
+
+## [Repeat.vim](http://github.com/tpope/vim-repeat)
+Allows to repeat (`.`) plugin commands like they were edit-commands.
 
