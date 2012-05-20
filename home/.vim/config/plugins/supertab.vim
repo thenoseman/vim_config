@@ -27,7 +27,6 @@ autocmd FileType *
 
 function MyTagContext()
   if filereadable(expand('%:p:h') . '/tags')
-    echo "AAAA"
     return "\<c-x>\<c-]>"
   endif
   " no return will result in the evaluation of the next
