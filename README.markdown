@@ -124,11 +124,11 @@ Allows to repeat (`.`) plugin commands like they were edit-commands.
 
 ## [Snipmate.vim](http://github.com/MarcWeber/snipmate.vim)
 Snippet expansion using the `tab` key. There are three places currently with snippets:
-- home/.vim/snipmate/honza-snippets
+- `home/.vim/snipmate/honza-snippets` 
   A collection of snippets for [a lot of filetypes](https://github.com/honza/snipmate-snippets/tree/master/snippets) including ruby
-- home/.vim/snipmate/scrooloose
+- `home/.vim/snipmate/scrooloose` 
   Html, HAML, CSS, Javacript and ruby snippets [and a few more](https://github.com/scrooloose/snipmate-snippets)
-- home/.vim/custom
+- `home/.vim/custom` 
   My personal snippets
 
 If you want to add your own directory, go to `home/.vim/config/plugins/snipmate.vim` and add your path to the `runtimepath`
