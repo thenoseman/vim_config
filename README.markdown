@@ -26,7 +26,6 @@ Fork away!
 + [Rails.vim](http://github.com/tpope/vim-rails)
 + [Rake.vim](http://github.com/tpope/vim-rake)
 + [Repeat.vim](http://github.com/tpope/vim-repeat)
-+ [scss-syntax](http://github.com/cakebaker/scss-syntax.vim)
 + [Snipmate.vim](http://github.com/MarcWeber/snipmate.vim)
   + [tlib](http://github.com/tomtom/tlib_vim)
   + [vim-addon-mw-utils](http://github.com/MarcWeber/vim-addon-mw-utils)
@@ -117,9 +116,66 @@ This does so much good for you I can't even find a feature to start with.
 If you are in a rails file (eg. controller) you can use `:Test` to open the corresponding
 test-file in a horizontal-split.
 
-# [Rake.vim](http://github.com/tpope/vim-rake)
+## [Rake.vim](http://github.com/tpope/vim-rake)
 Adds all the rails.vim goodies to your plain old ruby files.
 
 ## [Repeat.vim](http://github.com/tpope/vim-repeat)
 Allows to repeat (`.`) plugin commands like they were edit-commands.
 
+## [Snipmate.vim](http://github.com/MarcWeber/snipmate.vim)
+Snippet expansion using the `tab` key. There are three places currently with snippets:
+- home/.vim/snipmate/honza-snippets
+  A collection of snippets for [a lot of filetypes](https://github.com/honza/snipmate-snippets/tree/master/snippets) including ruby
+- home/.vim/snipmate/scrooloose
+  Html, HAML, CSS, Javacript and ruby snippets [and a few more](https://github.com/scrooloose/snipmate-snippets)
+- home/.vim/custom
+  My personal snippets
+
+If you want to add your own directory, go to `home/.vim/config/plugins/snipmate.vim` and add your path to the `runtimepath`
+
+## [Supertab](http://github.com/ervandew/supertab)
+Smart text [completion](http://vimdoc.sourceforge.net/htmldoc/insert.html#ins-completion) (eg. OmniComplete) configured to use the `ctrl-space` (<C-space>) key combo instead of `tab` which snipmate uses.
+I tried to make it as smart as possible. It first tries Omni-Completion and then falls back to local file complete.
+*Soon:* Try auto-completion based on the current `tags`. Doesn't work at the moment.
+
+## [Surround.vim](http://github.com/tpope/vim-surround)
+Easily surround text with brakets, quotes or what have you.
+Change an existing surrounding using `csOldNew` (eg. "Hello" would become 'Hello' via `cs"'`), 
+add surrounding with `ysTextobjectSurrounding` (Hello would become "Hello" with `ysiw"`) or
+delete them with `dsSurrounding`. 
+Actions are repeatable with `.` via repeat.vim.
+
+## [Syntastic](http://github.com/scrooloose/syntastic)
+On the fly (actually "on the save" :)) syntax checking for [a lot of languages](https://github.com/scrooloose/syntastic/tree/master/syntax_checkers).
+A locationlist will open if you have an error in your file.
+Deactivated filetypes (changeable `home/.vim/config/plugins/syntastic.vim`):
+- html
+- coffee
+- haml
+- sass
+
+## [vim-bundler](http://github.com/tpope/vim-bundler)
+Adds `:Bopen` (bundle open) and `:Bundle` to vim. That's nice but more importantly it adds all `tags` files of all gems in your `Gemfile` to
+vims `tags` list. 
+Generate those taks via the [gem-ctags](https://github.com/tpope/gem-ctags) gem (gem install gem-ctags && gem ctags).
+
+## [vim-coffee-script](http://github.com/kchmck/vim-coffee-script)
+Support for [CoffeeScript](http://coffeescript.org/) in VIM. Adds syntax highlighting, indention and compilation support.
+Also includes syntax support for [eco](https://github.com/sstephenson/eco) templates.
+
+## [vim-easymotion](http://github.com/Lokaltog/vim-easymotion)
+Jump to characters the easy way: `,,tCharacter` and easymotion will show letters for every Hit it got. Type those letters and easymotion jumps to that point.
+Also works with `f` or `w`. There is a [nice tutorial](http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/).
+
+## [extradite](http://github.com/int3/vim-extradite)
+Not really sure if I need his one but ...
+A `git log` viewer. Inside a git managed file do `:Dl`. Quit the plugin with `q`.
+
+## [vim-haml](http://github.com/tpope/vim-haml)
+Adds support for SASS, Scss and HAML files to VIM.
+
+## [vim-javascript](http://github.com/pangloss/vim-javascript)
+Improvements to javascript indention in VIM.
+
+## [Markdown syntax](http://github.com/plasticboy/vim-markdown)
+[Markdown](http://daringfireball.net/projects/markdown/) syntax highlighting.
