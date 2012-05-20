@@ -76,9 +76,6 @@
 [submodule "home/.vim/bundle/vim-coffee-script"]
 	path = home/.vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "home/.vim/bundle/scss-syntax"]
-	path = home/.vim/bundle/scss-syntax
-	url = git://github.com/cakebaker/scss-syntax.vim.git
 [submodule "home/.vim/snipmate/honza-snippets"]
 	path = home/.vim/snipmate/honza-snippets
 	url = git://github.com/honza/snipmate-snippets.git
