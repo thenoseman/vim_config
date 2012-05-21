@@ -179,3 +179,28 @@ Improvements to javascript indention in VIM.
 
 ## [Markdown syntax](http://github.com/plasticboy/vim-markdown)
 [Markdown](http://daringfireball.net/projects/markdown/) syntax highlighting.
+
+## [matchit](http://github.com/thenoseman/vim-matchit)
+Jump to the beginning/end of the current selected group (eg. `def ... end` or `class .. end`) with `%`.
+
+## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
+The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
+OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
+
+## [vim-smartinput](http://github.com/kana/vim-smartinput)
+Smart autocompletion of brakets, quotes and additionally highly customizable.
+There are additional mappings in `home/.vim/config/plugins/vim-smartinput.vim` to fix an issue smartinput currently has.
+
+## [vim-textobj-rubyblock](http://github.com/nelstrom/vim-textobj-rubyblock)
+Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`)
+
+## [vim-visual-star-search](http://github.com/nelstrom/vim-visual-star-search)
+Select some text in visual mode and hit `*` or `?` to search it in that file.
+
+## [xmledit](http://github.com/sukima/xmledit/)
+Edit XML and HTML files with tag-autoclosing
+
+## [YankRing](http://github.com/vim-scripts/YankRing.vim)
+Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next)
+Does much more ... see official docs.
+
