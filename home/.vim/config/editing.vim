@@ -60,3 +60,6 @@ set sidescrolloff=3
 
 " Remove trailing whitespace
 au BufWritePre *.rb,*.haml,*.sass,*.js :%s/\s\+$//e
+
+" use system clipboard
+set clipboard=unnamed
