@@ -2,12 +2,22 @@
 "" Set Ruby-specific keybindings
 """"""""""""""""""""""""""""""""
 
+" Wait xx seconds before updating tags
+let g:ctags_update_interval_sec = 120
+
 augroup vim_config
   autocmd FileType ruby  call LoadRubyKeybindings()
   autocmd FileType eruby call LoadRubyKeybindings()
   autocmd FileType haml  call LoadRubyKeybindings()
   autocmd FileType yaml  call LoadRubyKeybindings()
+
+  " Automatically add magic encoding comment
   autocmd FileType ruby  call AddMagicEncodingComment()
+
+  " On enter update/create tags
+  " On write just update tags of this file
+  autocmd VimEnter ruby call UpdateOrCreateTagsFile()
+  autocmd BufWrite ruby silent! UpdateTags
 
   " Specs can be named _scene.rb
   autocmd BufRead,BufNewFile *_scene.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subjectits shared_examples_for shared_context let | highlight def link rubyRspec Function
@@ -29,7 +39,6 @@ fun! LoadRubyKeybindings()
 endfun
 
 " remove should in rspec specs
-" examples that should (whoops) work:
 " it "should use no should"
 " it "should not use should"
 " it "shouldn't use should"
@@ -51,3 +60,12 @@ fun! Unshouldify()
   silent! %s/\v (["'])(.{-})sss/ \1\2sses/gi
 endfun
 com! Unshouldify call Unshouldify()
+
+" Create tagsfile (if it doesn't exist)
+" or update tags file if it is too old
+fun! UpdateOrCreateTagsFile()
+  let mtime = getftime("tags")
+  if mtime == -1 || localtime() - mtime > g:ctags_update_interval_sec
+    silent! UpdateTags -R
+  endif
+endfun
