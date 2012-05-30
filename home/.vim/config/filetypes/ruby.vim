@@ -16,7 +16,7 @@ augroup vim_config
 
   " On enter update/create tags
   " On write just update tags of this file
-  autocmd VimEnter ruby call UpdateOrCreateTagsFile()
+  autocmd VimEnter * call UpdateOrCreateTagsFile()
   autocmd BufWrite ruby silent! UpdateTags
 
   " Specs can be named _scene.rb
@@ -65,7 +65,7 @@ com! Unshouldify call Unshouldify()
 " or update tags file if it is too old
 fun! UpdateOrCreateTagsFile()
   let mtime = getftime("tags")
-  if mtime == -1 || localtime() - mtime > g:ctags_update_interval_sec
+  if filereadable("Gemfile") && (mtime == -1 || localtime() - mtime > g:ctags_update_interval_sec)
     silent! UpdateTags -R
   endif
 endfun
