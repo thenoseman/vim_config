@@ -1,9 +1,8 @@
-My personal VIM-config
-======================
+# My personal VIM-config
 
 This is my personal configuration for everybodies favorite editor [VIM](http://code.google.com/p/macvim/).
 I use it mainly for ruby development with a touch of PHP.
-My configuration is based on [duwanis](https://github.com/duwanis/vim_config) wonderful work.
+My configuration is based on [duwanis](https://github.com/duwanis/vim_config) work.
 
 This repository is meant to be used with the wonderful [Homesick-Gem](https://github.com/technicalpickles/homesick):
 
@@ -12,46 +11,7 @@ This repository is meant to be used with the wonderful [Homesick-Gem](https://gi
 
 Fork away!
 
-## Current Plugins: ###
-+ [Ack.vim](http://github.com/kronn/ack.vim)
-+ [ctrlp](http://github.com/kien/ctrlp.vim)
-+ [dirdiff](http://github.com/vim-scripts/DirDiff.vim)
-+ [Endwise](http://github.com/tpope/vim-endwise)
-+ [Fugitive](http://github.com/tpope/vim-fugitive)
-+ [greplace](http://github.com/skwp/greplace)
-+ [html5-syntax](http://github.com/developish/html5-syntax.vim)
-+ [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
-+ [NERDTree](http://github.com/scrooloose/nerdtree)
-+ [PHP-Indention](http://github.com/2072/PHP-Indenting-for-VIm)
-+ [Rails.vim](http://github.com/tpope/vim-rails)
-+ [Rake.vim](http://github.com/tpope/vim-rake)
-+ [Repeat.vim](http://github.com/tpope/vim-repeat)
-+ [Snipmate.vim](http://github.com/MarcWeber/snipmate.vim)
-  + [tlib](http://github.com/tomtom/tlib_vim)
-  + [vim-addon-mw-utils](http://github.com/MarcWeber/vim-addon-mw-utils)
-  + [Scrooloose snippets](http://github.com/scrooloose/snipmate-snippets)
-  + [Honza snippets](http://github.com/honza/snipmate-snippets)
-+ [Supertab](http://github.com/ervandew/supertab)
-+ [Surround.vim](http://github.com/tpope/vim-surround)
-+ [Syntastic](http://github.com/scrooloose/syntastic)
-+ [vim-bundler](http://github.com/tpope/vim-bundler)
-+ [vim-coffee-script](http://github.com/kchmck/vim-coffee-script)
-+ [vim-easymotion](http://github.com/Lokaltog/vim-easymotion)
-+ [vim-easytags](http://github.com/xolox/vim-easytags)
-+ [extradite](http://github.com/int3/vim-extradite)
-+ [vim-haml](http://github.com/tpope/vim-haml)
-+ [vim-javascript](http://github.com/pangloss/vim-javascript)
-+ [Markdown syntax](http://github.com/plasticboy/vim-markdown)
-+ [matchit](http://github.com/thenoseman/vim-matchit)
-+ [vim-ruby](http://github.com/vim-ruby/vim-ruby)
-+ [vim-smartinput](http://github.com/kana/vim-smartinput)
-+ [vim-textobj-rubyblock](http://github.com/nelstrom/vim-textobj-rubyblock)
-  + [vim-textobj-user](http://github.com/kana/vim-textobj-user)
-+ [vim-visual-star-search](http://github.com/nelstrom/vim-visual-star-search)
-+ [xmledit](http://github.com/sukima/xmledit/)
-+ [YankRing](http://github.com/vim-scripts/YankRing.vim)
-
-## Added non-plugin features ##
+# Added non-plugin features
 + CopyMatches Script from [vimtips](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard) (`:CopyMatches`)
 + my own "mvim" script (extras/mvim) that makes all passed cmdargs available to vim ($VIM_CMDARGS)
   This is used to enable you to call "mvim -d" with two directories (normally only two files).
@@ -62,6 +22,7 @@ Fork away!
 + `renew_php_functionlist` script to update the PHP-OmniComplete Function list from the PHP SVN Repository 
 + DiffOrig Function (:DiffOrig) to show the changes made to the current *unsaved* buffer
 
+# Plugins:
 ## [Ack.vim](http://github.com/kronn/ack.vim)
 [ack](http://betterthangrep.com/) is a a grep alternative written in perl. It sports context sensitive search and is generally
 blazingly fast.
@@ -130,6 +91,7 @@ Snippet expansion using the `tab` key. There are three places currently with sni
   Html, HAML, CSS, Javacript and ruby snippets [and a few more](https://github.com/scrooloose/snipmate-snippets)
 - `home/.vim/custom` 
   My personal snippets
+Depends on [tlib](http://github.com/tomtom/tlib_vim) and [vim-addon-mw-utils](http://github.com/MarcWeber/vim-addon-mw-utils)
 
 If you want to add your own directory, go to `home/.vim/config/plugins/snipmate.vim` and add your path to the `runtimepath`
 
@@ -139,10 +101,10 @@ I tried to make it as smart as possible. It first tries Omni-Completion and then
 *Soon:* Try auto-completion based on the current `tags`. Doesn't work at the moment.
 
 ## [Surround.vim](http://github.com/tpope/vim-surround)
-Easily surround text with brakets, quotes or what have you.
+Easily surround text with brackets, quotes or what have you.
 Change an existing surrounding using `csOldNew` (eg. "Hello" would become 'Hello' via `cs"'`), 
 add surrounding with `ysTextobjectSurrounding` (Hello would become "Hello" with `ysiw"`) or
-delete them with `dsSurrounding`. 
+delete them with `dsSurrounding`. With an active visual selection `SSurrounding` will also work.
 Actions are repeatable with `.` via repeat.vim.
 
 ## [Syntastic](http://github.com/scrooloose/syntastic)
@@ -169,7 +131,7 @@ Also works with `f` or `w`. There is a [nice tutorial](http://net.tutsplus.com/t
 
 ## [extradite](http://github.com/int3/vim-extradite)
 Not really sure if I need his one but ...
-A `git log` viewer. Inside a git managed file do `:Dl`. Quit the plugin with `q`.
+A `git log` viewer. Inside a git managed file do `:Gl`. Quit the plugin with `q`.
 
 ## [vim-haml](http://github.com/tpope/vim-haml)
 Adds support for SASS, Scss and HAML files to VIM.
@@ -192,7 +154,8 @@ Smart autocompletion of brakets, quotes and additionally highly customizable.
 There are additional mappings in `home/.vim/config/plugins/vim-smartinput.vim` to fix an issue smartinput currently has.
 
 ## [vim-textobj-rubyblock](http://github.com/nelstrom/vim-textobj-rubyblock)
-Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`)
+Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
+Depends on [vim-textobj-user](http://github.com/kana/vim-textobj-user)
 
 ## [vim-visual-star-search](http://github.com/nelstrom/vim-visual-star-search)
 Select some text in visual mode and hit `*` or `?` to search it in that file.
