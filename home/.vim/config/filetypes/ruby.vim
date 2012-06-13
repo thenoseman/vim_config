@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""
 
 " Wait xx seconds before updating tags
-let g:ctags_update_interval_sec = 120
+let g:ctags_update_interval_sec = 300
 
 augroup vim_config
   autocmd FileType ruby  call LoadRubyKeybindings()
