@@ -139,7 +139,7 @@ Adds support for SASS, Scss and HAML files to VIM.
 ## [vim-javascript](http://github.com/pangloss/vim-javascript)
 Improvements to javascript indention in VIM.
 
-## [Markdown syntax](http://github.com/plasticboy/vim-markdown)
+## [Markdown syntax](http://github.com/tpope/vim-markdown)
 [Markdown](http://daringfireball.net/projects/markdown/) syntax highlighting.
 
 ## [matchit](http://github.com/thenoseman/vim-matchit)
