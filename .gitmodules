@@ -55,9 +55,6 @@
 [submodule "home/.vim/bundle/dirdiff"]
 	path = home/.vim/bundle/dirdiff
 	url = git://github.com/vim-scripts/DirDiff.vim.git
-[submodule "home/.vim/bundle/vim-markdown-syntax"]
-	path = home/.vim/bundle/vim-markdown-syntax
-	url = git://github.com/tpope/vim-markdown
 [submodule "home/.vim/bundle/snipmate"]
 	path = home/.vim/bundle/snipmate
 	url = git://github.com/MarcWeber/snipmate.vim.git
