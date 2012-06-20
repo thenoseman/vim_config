@@ -3,12 +3,14 @@
 # Generate tags for all installed gems
 #
 GEM_DIR=`gem env | grep "INSTALLATION DIRECTORY" | cut -d ":" -f 2 | sed "s/ //g"`/gems
-echo "Generating tags for all gems in $GEM_DIR"
+echo "Generating missing tags for all gems in $GEM_DIR"
 cd $GEM_DIR
 
 for file in *; do
-  echo "$file"
   cd $file
-  ctags -R --languages=ruby --sort=no
+  if [ ! -f tags ]; then
+    echo "$file : generated"
+    ctags -R --languages=ruby --sort=no
+  fi
   cd ..
 done
