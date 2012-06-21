@@ -1,9 +1,6 @@
 " use homebrews ctags
 let g:easytags_cmd = '/usr/local/bin/ctags'
 
-" hardcode file to save to ... overridden by 'easytags_dynamic_files'
-let g:easytags_file = '~/.vimtags'
-
 " write/create to the first tagfile in 'set tags' list
 let g:easytags_dynamic_files = 2
 
