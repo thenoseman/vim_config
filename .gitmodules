@@ -112,3 +112,6 @@
 [submodule "home/.vim/bundle/vim-markdown"]
 	path = home/.vim/bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
+[submodule "home/.vim/bundle/delimitMate"]
+	path = home/.vim/bundle/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
