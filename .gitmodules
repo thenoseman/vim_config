@@ -76,9 +76,6 @@
 [submodule "home/.vim/snipmate/honza-snippets"]
 	path = home/.vim/snipmate/honza-snippets
 	url = git://github.com/honza/snipmate-snippets.git
-[submodule "home/.vim/external/scrooloose-snipmate-snippets"]
-	path = home/.vim/external/scrooloose-snipmate-snippets
-	url = git://github.com/scrooloose/snipmate-snippets.git
 [submodule "home/.vim/bundle/vim-extradite"]
 	path = home/.vim/bundle/vim-extradite
 	url = git://github.com/int3/vim-extradite.git
