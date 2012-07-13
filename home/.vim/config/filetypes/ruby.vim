@@ -2,9 +2,6 @@
 "" Set Ruby-specific keybindings
 """"""""""""""""""""""""""""""""
 
-" Wait xx seconds before updating tags
-let g:ctags_update_interval_sec = 300
-
 augroup vim_config
   autocmd FileType ruby  call LoadRubyKeybindings()
   autocmd FileType eruby call LoadRubyKeybindings()
@@ -66,8 +63,11 @@ com! Unshouldify call Unshouldify()
 " Create tagsfile (if it doesn't exist)
 " or update tags file if it is too old
 fun! UpdateOrCreateTagsFile()
-  let mtime = getftime("tags")
-  if filereadable("Gemfile") && (mtime == -1 || localtime() - mtime > g:ctags_update_interval_sec)
-    silent! UpdateTags -R
+  let mtime_tags = getftime(".tags")
+  let mtime_gemfile = getftime("Gemfile.lock")
+
+  if mtime_gemfile > 0 && (mtime_tags == -1 || mtime_gemfile > mtime_tags)
+    echom "Generating .tags as Gemfile.lock is newer than .tags"
+    silent execute ":!~/.vim/external/ruby-gen-tags.sh &"
   endif
 endfun
