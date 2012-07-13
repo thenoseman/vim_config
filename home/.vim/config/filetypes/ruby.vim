@@ -49,6 +49,7 @@ endfun
 " it "should silenty kill should's"
 " it "should display the shoulds"
 " it "should pass this test"
+" it 'isnt't <-- broken and fixed by 'is not'
 fun! Unshouldify()
   silent! %s/\v (["'])(should not|shouldn't)/ \1doesn't/gi
   silent! %s/\v (["'])should have/ \1has/gi
@@ -58,6 +59,7 @@ fun! Unshouldify()
   silent! %s/\v (["'])should ([^ ]+y) ([^ ]+)/ \1\2 \3s/gi
   silent! %s/\v (["'])should ([^ ]+)/ \1\2s/gi
   silent! %s/\v (["'])(.{-})sss/ \1\2sses/gi
+  silent! %s/\v 'isn't/'is not/gi
 endfun
 com! Unshouldify call Unshouldify()
 
