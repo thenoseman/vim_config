@@ -106,6 +106,3 @@
 [submodule "home/.vim/bundle/delimitMate"]
 	path = home/.vim/bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
-[submodule "home/.vim/bundle/thenoseman-vim-bundler"]
-	path = home/.vim/bundle/thenoseman-vim-bundler
-	url = git://github.com/thenoseman/vim-bundler.git
