@@ -63,11 +63,11 @@ com! Unshouldify call Unshouldify()
 " Create tagsfile (if it doesn't exist)
 " or update tags file if it is too old
 fun! UpdateOrCreateTagsFile()
-  let mtime_tags = getftime(".tags")
+  let mtime_tags = getftime("tags")
   let mtime_gemfile = getftime("Gemfile.lock")
 
   if mtime_gemfile > 0 && (mtime_tags == -1 || mtime_gemfile > mtime_tags)
-    echom "Generating .tags as Gemfile.lock is newer than .tags"
+    echom "Generating tags as Gemfile.lock is newer than tags"
     silent execute ":!~/.vim/external/ruby-gen-tags.sh &"
   endif
 endfun
