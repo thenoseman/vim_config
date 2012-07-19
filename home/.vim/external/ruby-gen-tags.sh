@@ -1,2 +1,2 @@
 #!/bin/bash
-ctags -R --languages=ruby -u -f .tags
+ctags -R --languages=ruby -u -f tags
