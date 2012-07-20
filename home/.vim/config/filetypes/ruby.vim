@@ -32,7 +32,9 @@ fun! LoadRubyKeybindings()
    set nofoldenable
 
    " No stinkin' popup
-   set noballooneval
+   if has("gui")
+     set noballooneval
+   endif
 endfun
 
 " remove should in rspec specs
