@@ -35,3 +35,5 @@ set statusline+=(%l,%c%V)\ %<%P                               " offset
 " Dont clear out the screen when vim ends
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
+
+set ttyfast
