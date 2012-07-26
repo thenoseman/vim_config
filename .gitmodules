@@ -70,9 +70,6 @@
 [submodule "home/.vim/bundle/vim-coffee-script"]
 	path = home/.vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "home/.vim/bundle/vim-extradite"]
-	path = home/.vim/bundle/vim-extradite
-	url = git://github.com/int3/vim-extradite.git
 [submodule "home/.vim/bundle/vim-matchit"]
 	path = home/.vim/bundle/vim-matchit
 	url = git://github.com/thenoseman/vim-matchit.git
