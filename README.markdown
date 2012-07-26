@@ -4,12 +4,7 @@ This is my personal configuration for everybodies favorite editor [VIM](http://c
 I use it mainly for ruby development with a touch of PHP.
 My configuration is based on [duwanis](https://github.com/duwanis/vim_config) work.
 
-This repository is meant to be used with the wonderful [Homesick-Gem](https://github.com/technicalpickles/homesick):
-
-    homesick clone thenoseman/vim_config
-    homesick symlink vim_config
-
-Fork away!
+Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home directory.
 
 # Added non-plugin features
 + CopyMatches Script from [vimtips](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard) (`:CopyMatches`)
@@ -44,10 +39,6 @@ in the [DirDiff readme](http://www.vim.org/scripts/script.php?script_id=102).
 
 ## [endwise](http://github.com/tpope/vim-endwise)
 Auto closes ruby structures with `end` where appropriate
-
-## [Fugitive](http://github.com/tpope/vim-fugitive)
-A (_the_) git wrapper for vim. Use `:Gc` to commit, `:Gs` for status. When you are in a conflicted file use `:Dl`and `:Dr` 
-to copy the current hunk from left or right to the working copy.
 
 ## [greplace](http://github.com/skwp/greplace)
 Ever wanted to search/replace in all/some of the files in your project?
@@ -126,10 +117,6 @@ Also includes syntax support for [eco](https://github.com/sstephenson/eco) templ
 ## [vim-easymotion](http://github.com/Lokaltog/vim-easymotion)
 Jump to characters the easy way: `,,tCharacter` and easymotion will show letters for every Hit it got. Type those letters and easymotion jumps to that point.
 Also works with `f` or `w`. There is a [nice tutorial](http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/).
-
-## [extradite](http://github.com/int3/vim-extradite)
-Not really sure if I need his one but ...
-A `git log` viewer. Inside a git managed file do `:Gl`. Quit the plugin with `q`.
 
 ## [vim-haml](http://github.com/tpope/vim-haml)
 Adds support for SASS, Scss and HAML files to VIM.
