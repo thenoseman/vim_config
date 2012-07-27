@@ -18,4 +18,3 @@ let g:ctrlp_open_new_file = 0
 
 " Load plugins
 let g:ctrlp_extensions = ['tag']
-

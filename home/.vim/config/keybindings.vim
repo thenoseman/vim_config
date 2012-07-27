@@ -12,15 +12,7 @@ endif
 " leader = Comma
 let mapleader = ","
 
-" navigate around in buffers...
-" @key <leader>n: Goto next buffer
-" @key <leader>p: Goto previous buffer
-noremap <leader>n :bnext<CR>
-noremap <leader>p :bprevious<CR>
-
-"
 " Keep Block visually marked when indenting
-"
 nnoremap > ><CR>gv
 nnoremap < <<CR>gv
 vnoremap > ><CR>gv
@@ -36,9 +28,7 @@ inoremap <silent> <C-Down> <C-o>:<C-u>call MoveLineDown()<CR>
 vnoremap <silent> <C-Up> :<C-u>call MoveVisualUp()<CR>
 vnoremap <silent> <C-Down> :<C-u>call MoveVisualDown()<CR>
 
-"
 " Show Invisibles (http://vimcasts.org/episodes/show-invisibles/) 
-"
 " @key <leader>l: Show EOL and Tab markers (invisible characters)
 nnoremap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
@@ -54,8 +44,8 @@ nnoremap <leader>o :BufOnly<CR>
 " @key <leader><leader>: Switch between last two buffers
 nnoremap <leader><leader> <c-^>
 
-" Remap X to delete last word in normal mode
-" @key X: delete last word in normal mode
+" Remap Q to delete last word in normal mode
+" @key Q: delete last word in normal mode
 nnoremap Q dbxx
 
 " @plugin: ctrlp
