@@ -12,9 +12,9 @@ augroup vim_config
   autocmd FileType ruby  call AddMagicEncodingComment()
 
   " On enter update/create tags
-  " On write just update tags of this file
   autocmd VimEnter * call UpdateOrCreateTagsFile()
-  autocmd BufWrite ruby silent! UpdateTags
+  " On write just update tags of this file
+  autocmd BufWrite *.rb silent! execute ":UpdateTags!"
 
   " Specs can be named _scene.rb
   autocmd BufRead,BufNewFile *_scene.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subjectits shared_examples_for shared_context let | highlight def link rubyRspec Function
