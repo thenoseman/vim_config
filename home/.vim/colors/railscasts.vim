@@ -109,3 +109,7 @@ hi PMenuSbar                 guibg=#5A647E gui=NONE
 hi PMenuThumb                guibg=#AAAAAA gui=NONE
 
 highlight rubyClass guifg=#CC7833 
+
+" Markdown by vim-markdown plugin
+highlight markdownCode ctermfg=14 guifg=#777777 guibg=#333435
+highlight markdownLineBreak ctermbg=4 guibg=#333435
