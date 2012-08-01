@@ -3,13 +3,13 @@
 """"""""""""""""""""""""""""""""
 
 augroup vim_config
-  autocmd FileType ruby  call LoadRubyKeybindings()
+  autocmd FileType ruby call LoadRubyKeybindings()
   autocmd FileType eruby call LoadRubyKeybindings()
-  autocmd FileType haml  call LoadRubyKeybindings()
-  autocmd FileType yaml  call LoadRubyKeybindings()
+  autocmd FileType haml call LoadRubyKeybindings()
+  autocmd FileType yaml call LoadRubyKeybindings()
 
   " Automatically add magic encoding comment
-  autocmd FileType ruby  call AddMagicEncodingComment()
+  autocmd FileType ruby call AddMagicEncodingComment()
 
   " On enter update/create tags
   autocmd VimEnter * call UpdateOrCreateTagsFile()
