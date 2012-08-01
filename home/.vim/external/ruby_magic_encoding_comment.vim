@@ -18,4 +18,3 @@ fun! AddMagicEncodingComment()
     endif
   endif
 endfun
-au FileType ruby call AddMagicEncodingComment()
