@@ -70,6 +70,9 @@ fun! UpdateOrCreateTagsFile()
 
   if mtime_gemfile > 0 && (mtime_tags == -1 || mtime_gemfile > mtime_tags)
     echom "Generating tags as Gemfile.lock is newer than tags"
-    silent execute ":!~/.vim/external/ruby-gen-tags.sh &"
+    let tempfile = tempname()
+    echo tempfile
+    call writefile(["#!/bin/bash","ctags -R --languages=ruby -u -f tags","rm $0"], tempfile)
+    silent! execute ":!bash " . tempfile . " &"
   endif
 endfun
