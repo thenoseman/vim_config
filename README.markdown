@@ -16,6 +16,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + `update_all_submodules_to_head` script that updates all submodules and creates a commit for those updates
 + `renew_php_functionlist` script to update the PHP-OmniComplete Function list from the PHP SVN Repository 
 + DiffOrig Function (:DiffOrig) to show the changes made to the current *unsaved* buffer
++ Use `:Unshouldify` to remove 'should' from rspec files
 
 # Plugins:
 ## [Ack.vim](http://github.com/kronn/ack.vim)
@@ -28,7 +29,7 @@ I mapped `Ack` to `Ack!` because I don't like the auto-opening.
 ## [Ctrl-P](http://github.com/kien/ctrlp.vim) ##
 The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
 Far superior to to those two in my opinion. Use `,m` to open the finder in file-mode.
-If you add files to your project run `:ClearCtrlPCache` so the plugin can find those new files.
+If you add files to your project run `:ClearCtrlPCache` (or press `<f5>` when ctrl-p is open) so the plugin can find those new files.
 
 ## [dirdiff](http://github.com/vim-scripts/DirDiff.vim)
 Enables the comparison of [directories](http://www.vim.org/scripts/script.php?script_id=102) in addition to files.

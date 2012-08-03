@@ -13,6 +13,7 @@ augroup vim_config
 
   " On enter update/create tags
   autocmd VimEnter * call UpdateOrCreateTagsFile()
+
   " On write just update tags of this file
   autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(ctags --languages=ruby -u -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
 
@@ -48,7 +49,6 @@ endfun
 " it "should silenty kill should's"
 " it "should display the shoulds"
 " it "should pass this test"
-" it 'isnt't <-- broken and fixed by 'is not'
 fun! Unshouldify()
   silent! %s/\v (["'])(should not|shouldn't)/ \1doesn't/gi
   silent! %s/\v (["'])should have/ \1has/gi
@@ -62,7 +62,7 @@ fun! Unshouldify()
 endfun
 com! Unshouldify call Unshouldify()
 
-" Create tagsfile (if it doesn't exist)
+" Create tags file (if it doesn't exist)
 " or update tags file if it is too old
 fun! UpdateOrCreateTagsFile()
   let mtime_tags = getftime("tags")
@@ -71,8 +71,7 @@ fun! UpdateOrCreateTagsFile()
   if mtime_gemfile > 0 && (mtime_tags == -1 || mtime_gemfile > mtime_tags)
     echom "Generating tags as Gemfile.lock is newer than tags"
     let tempfile = tempname()
-    echo tempfile
-    call writefile(["#!/bin/bash","ctags -R --languages=ruby -u -f tags","rm $0"], tempfile)
+    call writefile(["#!/bin/bash","ctags -R --languages=ruby -u -f tags", "rm $0"], tempfile)
     silent! execute ":!bash " . tempfile . " &"
   endif
 endfun
