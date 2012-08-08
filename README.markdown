@@ -24,7 +24,8 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 blazingly fast.
 Commands are `:Ack` which searches for a term and jumps to the first hit and `:Ack!` which searches and justs opens the hits in
 the quickfix window.
-I mapped `Ack` to `Ack!` because I don't like the auto-opening. 
+I mapped `:Ack` to `:Ack!` because I don't like the auto-opening. 
+Also included is `:Ackv` which accepts a visual selection (defaults to inner word) and searches for that (see config/plugins/ack.vim)
 
 ## [Ctrl-P](http://github.com/kien/ctrlp.vim) ##
 The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
