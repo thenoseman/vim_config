@@ -7,4 +7,4 @@ command! W w
 command! Qa qa
 
 " @command Test: Open Test and Spec in split
-command Test :sp | :A
+command! Test :sp | :A

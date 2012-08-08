@@ -25,7 +25,7 @@ autocmd FileType *
       \   call SuperTabSetDefaultCompletionType("context") |
       \ endif
 
-function MyTagContext()
+fun! MyTagContext()
   if filereadable(expand('%:p:h') . '/tags')
     return "\<c-x>\<c-]>"
   endif
