@@ -60,6 +60,8 @@ set clipboard=unnamed
 " http://ksjoberg.com/vim-esckeys.html
 set noesckeys
 
+" Wait 250 milliseconds before executing command
+set timeoutlen=250
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
