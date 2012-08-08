@@ -11,6 +11,9 @@ let NERDTreeShowBookmarks=1
 " Autoclose NERDTree on file open
 let NERDTreeQuitOnOpen=1
 
+" Don't show dotfiles
+let NERDTreeShowHidden=0
+
 " @plugin: NERDTree
 " @key <leader>d: Open NERDTree at the current buffer
 noremap <leader>d :call NERDTreeSmartToggle()<CR>
@@ -24,7 +27,14 @@ fun! NERDTreeSmartToggle()
   else
     let s:file = expand("%")
     if s:file != ""
-      execute ":NERDTreeFind"
+      if stridx(s:file, '/.') > -1 || strpart(s:file, 0,1) == "." 
+        " a .dotfile! need to reveal it and show dotfiles
+        execute ":NERDTree"
+        normal I
+        call b:NERDTreeRoot.reveal(b:NERDTreeRoot.path.New(s:file))
+      else
+        execute ":NERDTreeFind"
+      endif
     else
       execute ":NERDTree"
     endif
