@@ -31,14 +31,6 @@ set autoread     " automatically reload a file if it's changed outside vim
 "     instead (if possible).
 set formatoptions=crqn21
 
-" Automatically restore cursor position when possible
-augroup vim_config
-  autocmd BufReadPost *
-     \ if line("'\"") > 1 && line("'\"") <= line("$") |
-     \ exe "normal! g`\"" |
-     \ endif
-augroup END
-
 "
 " Two Spaces, always
 "
@@ -67,3 +59,26 @@ set clipboard=unnamed
 " Disable ESC key delay in insert mode
 " http://ksjoberg.com/vim-esckeys.html
 set noesckeys
+
+
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+" Stolen from http://stackoverflow.com/a/5403847/171364 (janus repo)
+fun! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
+
+" Automatically restore cursor position when possible
+augroup vim_config
+  autocmd BufReadPost *
+     \ if line("'\"") > 1 && line("'\"") <= line("$") |
+     \ exe "normal! g`\"" |
+     \ endif
+  autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+augroup END
