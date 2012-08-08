@@ -12,8 +12,24 @@ let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 
 " @plugin: NERDTree
-" @key <leader>d: Open or close NERDTree
-noremap <leader>d :NERDTreeToggle<cr>
+" @key <leader>d: Open NERDTree at the current buffer
+noremap <leader>d :call NERDTreeSmartToggle()<CR>
+
+" togglw NERDTree in a smart way:
+" Use NERDTree if no buffer is selected or
+" use NERDTreeFind if a buffer is active to reveal that file
+fun! NERDTreeSmartToggle()
+  if exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1
+    execute ":NERDTreeClose"
+  else
+    let s:file = expand("%")
+    if s:file != ""
+      execute ":NERDTreeFind"
+    else
+      execute ":NERDTree"
+    endif
+  endif
+endfun
 
 " remap 'c', 'm' and 'a' to first do what they do and then refresh the ctrl-p
 " cache to find those changed/added files
@@ -37,7 +53,6 @@ function! NERDTreeMoveAndCtrlPRefresh(node)
 endfunction
 
 fun! NERDTreeAfterInitialize()
-
   " Remove autocmd
   autocmd! User NERDTreePostSourceActions
 
@@ -59,7 +74,8 @@ fun! NERDTreeAfterInitialize()
   \ 'callback': "NERDTreeMoveAndCtrlPRefresh",
   \ 'quickhelpText': '(m) node and refresh CtrlP Cache' })
 endfun
-  
+ 
+
 " This should work once scrooloose pulls https://github.com/scrooloose/nerdtree/pull/156
 augroup vim_config
   autocmd User NERDTreePostSourceActions call NERDTreeAfterInitialize()
