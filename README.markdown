@@ -17,6 +17,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + `renew_php_functionlist` script to update the PHP-OmniComplete Function list from the PHP SVN Repository 
 + DiffOrig Function (:DiffOrig) to show the changes made to the current *unsaved* buffer
 + Use `:Unshouldify` to remove 'should' from rspec files
++ Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
 
 # Plugins:
 ## [Ack.vim](http://github.com/kronn/ack.vim)
