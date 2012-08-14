@@ -154,3 +154,5 @@ Edit XML and HTML files with tag-autoclosing
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next)
 Does much more ... see official docs.
 
+## [ReplaceWithRegister](https://github.com/vim-scripts/ReplaceWithRegister)
+Use `grTEXTMOTION` to replace that text by the previously 'y'anked text

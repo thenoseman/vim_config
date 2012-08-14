@@ -100,3 +100,6 @@
 [submodule "home/.vim/bundle/vim-bundler"]
 	path = home/.vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "home/.vim/bundle/ReplaceWithRegister"]
+	path = home/.vim/bundle/ReplaceWithRegister
+	url = git://github.com/vim-scripts/ReplaceWithRegister.git
