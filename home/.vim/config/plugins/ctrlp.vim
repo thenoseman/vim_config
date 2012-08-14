@@ -18,3 +18,6 @@ let g:ctrlp_open_new_file = 0
 
 " Load plugins
 let g:ctrlp_extensions = ['tag']
+
+" reuse buffer
+let g:ctrlp_switch_buffer = 2
