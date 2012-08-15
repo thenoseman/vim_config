@@ -12,7 +12,6 @@ function! AckVisualRange()
   let l:oldz = getreg("z")
   normal gv"zy
   let l:string = substitute(substitute(getreg("z"), "^[ ]*", "", ""), "[ ]*$","","")
-  execute ":echo 'test'"
   " Search motion inner word if no range given
   if l:string == ""
     normal viWgv"zy
