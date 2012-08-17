@@ -76,6 +76,14 @@ fun! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
+function! s:CloseIfOnlyQuickfixLeft()
+  if &buftype=="quickfix"
+    if winnr("$") == 1
+      q
+    endif
+  endif
+endfunction
+
 " Automatically restore cursor position when possible
 augroup vim_config
   autocmd BufReadPost *
@@ -83,4 +91,5 @@ augroup vim_config
      \ exe "normal! g`\"" |
      \ endif
   autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+  autocmd BufEnter * call s:CloseIfOnlyQuickfixLeft()
 augroup END
