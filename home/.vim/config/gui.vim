@@ -8,4 +8,7 @@ if has("gui_running")
    " 
    " more interesting, what is absent: no menu, no toolbar, no scrollbars.
    set guioptions=ac
+
+   " display full path to file in title of window
+   set titlestring=%(%{expand(\"%:~:.:h\")}%)/%t
 endif
