@@ -8,13 +8,7 @@ let g:neocomplcache_max_list = 25
 let g:neocomplcache_enable_ignore_case = 1
 let g:neocomplcache_enable_wildcard = 0
 let g:neocomplcache_enable_auto_select = 1
-
-" Must ENABLE auto opening of popup
-" else the local buffer matches are not found
-" bug in neocomplcache?
-let g:neocomplcache_disable_auto_complete = 0
-" start at an impossible length (see above)
-let g:neocomplcache_auto_completion_start_length = 999
+let g:neocomplcache_disable_auto_complete = 1
 
 " Close popup on enter
 inoremap <expr><silent> <CR> <SID>neocomplcache_cr_function()
