@@ -48,6 +48,7 @@ highlight NonText                   guifg=#777777 guibg=#2B2B2B
 highlight Normal                    guifg=#E6E1DC guibg=#111111 
 highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
 highlight CursorLine                guibg=#222222 ctermbg=233 cterm=NONE
+highlight CursorLineNr              term=underline ctermfg=14 guifg=#aaaaaa guibg=#333435
 
 highlight Directory                 guifg=#A5C261 gui=NONE
 highlight Comment                   guifg=#BC9458 ctermfg=180 gui=italic
