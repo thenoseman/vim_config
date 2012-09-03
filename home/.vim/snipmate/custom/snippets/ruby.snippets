@@ -1,5 +1,5 @@
 snippet warn
-	puts "\033[33m===== #{File.basename(__FILE__)}:#{__LINE__} -> #{caller.detect { |p| p.starts_with?(File.expand_path(".")) }.gsub(File.expand_path(".")+"/","")} ====="
+	puts "\033[33m===== #{File.basename(__FILE__)}:#{__LINE__} ====="
 	puts ${1} 
 	puts "===============================\033[0m" 
 # #!/usr/bin/env ruby
