@@ -103,3 +103,6 @@
 [submodule "home/.vim/bundle/neocomplcache"]
 	path = home/.vim/bundle/neocomplcache
 	url = git://github.com/Shougo/neocomplcache.git
+[submodule "home/.vim/bundle/vimproc"]
+	path = home/.vim/bundle/vimproc
+	url = git://github.com/Shougo/vimproc.git
