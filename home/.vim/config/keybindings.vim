@@ -61,5 +61,5 @@ nnoremap / /\v
 " @key ?: Always search in very magic mode
 nnoremap ? ?\v
 
-" @key <c-x><c-t>: Autocomplete based on tags files
-inoremap <c-x><c-t> <c-x><c-]> 
+" @key <cr>: Turn of highlighted search terms and <cr>
+nnoremap <cr> :nohlsearch<cr>
