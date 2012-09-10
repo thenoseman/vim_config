@@ -60,6 +60,3 @@ nnoremap / /\v
 
 " @key ?: Always search in very magic mode
 nnoremap ? ?\v
-
-" @key <cr>: Turn of highlighted search terms and <cr>
-nnoremap <cr> :nohlsearch<cr>
