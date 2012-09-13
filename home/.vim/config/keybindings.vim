@@ -63,3 +63,6 @@ nnoremap ? ?\v
 
 " @key <esc>: Kill searchhighlighting and esc
 nnoremap <silent> <esc> :nohl<cr><esc>
+
+" @key <c-s>: Show Highlight group under cursor
+map <c-s> :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'> trans<'.synIDattr(synID(line("."),col("."),0),"name")."> lo<".synIDattr(synIDtrans(synID(line("."),col("."),1)),"name").">"<CR>
