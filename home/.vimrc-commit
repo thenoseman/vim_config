@@ -1,0 +1,9 @@
+set nocompatible
+runtime! config/filetypes/gitrebase.vim
+
+filetype plugin on
+filetype indent on
+filetype detect
+
+syntax on 
+startinsert
