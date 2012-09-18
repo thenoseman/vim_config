@@ -33,9 +33,50 @@ snippet ife
 	} else {
 		${3}
 	}
-# tertiary conditional
-snippet t
-	${1:/* condition */} ? ${2:a} : ${3:b}
 # console.log (Firebug)
 snippet cl
 	console.log(${1});
+snippet bv
+	var ${1:MyView} = Backbone.View.extend({
+	  ${2:el: ''},
+	  ${3:tagName: ''},
+	
+	  events: {
+	    ${4:}
+	  },
+	
+	  initialize: function () {
+	    ${5:}
+	  },
+	
+	  render: function () {
+	
+	  }
+	});
+snippet br
+	var ${1:Router} = Backbone.Router.extend({
+	
+	  routes: {
+	    ${2:}
+	  },
+	
+	  initialize: function() {
+	    ${4:}
+	  },
+	
+	  ${5:method:foo}: function(${6:}) {
+	    ${7:}
+	  }
+	
+	});
+snippet bm
+	var ${1:Model} = Backbone.Model.extend({
+	  initialize: function () {
+	    
+	  }
+	});
+snippet bc
+	var ${2:$1}s = Backbone.Collection.extend({
+	  model: ${3:$1},
+	  url: "${4}"
+	});
