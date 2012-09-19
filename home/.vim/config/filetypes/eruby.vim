@@ -1,6 +1,6 @@
 augroup vim_config
   " Automatically add magic encoding comment
-  autocmd BufRead,BufNewFile *.erb echo "ERB" | call AddMagicErbEncodingComment()
+  autocmd BufRead,BufNewFile *.erb call AddMagicErbEncodingComment()
 augroup END
 
 " Adds the ruby magic comment to an erb file
