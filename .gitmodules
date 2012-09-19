@@ -106,3 +106,6 @@
 [submodule "home/.vim/bundle/vimproc"]
 	path = home/.vim/bundle/vimproc
 	url = git://github.com/Shougo/vimproc.git
+[submodule "home/.vim/bundle/vim-jade"]
+	path = home/.vim/bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
