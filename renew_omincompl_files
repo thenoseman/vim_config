@@ -12,9 +12,9 @@ cd ~/.vim
 # PHP
 #
 wget -O /tmp/php-functionlist.txt "http://svn.php.net/viewvc/phpdoc/doc-base/trunk/funclist.txt?view=co"
-diff -q /tmp/php-functionlist.txt home/.vim/external/php-functionlist.txt 2>&1 > /dev/null
+diff -q /tmp/php-functionlist.txt ~/.vim/external/php-functionlist.txt 2>&1 > /dev/null
 if [[ "$?" -eq "1" ]]; then
-  mv /tmp/php-functionlist.txt home/.vim/external/ 
+  mv /tmp/php-functionlist.txt ~/.vim/external/
   DONE_SOMETHING=1
 else
   rm /tmp/php-functionlist.txt
@@ -29,13 +29,15 @@ rm nodejs-doc-all.json
 diff -q /tmp/nodejs-doc.vim bundle/vim-nodejs-complete/after/autoload/nodejs-doc.vim 2>&1 > /dev/null
 
 if [[ "$?" -eq "1" ]]; then
-  mv bundle/vim-nodejs-complete/after/autoload/nodejs-doc.vim home/.vim/external/ 
-  git reset --hard bundle/vim-nodejs-complete
+  cd bundle/vim-nodejs-complete
+  cp after/autoload/nodejs-doc.vim ~/.vim/external/
+  git reset --hard 
   DONE_SOMETHING=1
 else
   rm /tmp/nodejs-doc.vim
 fi
 
 if [[ $DONE_SOMETHING == 1 ]]; then
-  echo "BLA"
+  git add home/.vim/external/nodejs-doc.vim home/.vim/external/php-functionlist.txt
+  git ci -m "update ominicomplete functionlists as of `date`"
 fi
