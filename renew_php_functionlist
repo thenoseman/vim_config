@@ -1,5 +1,0 @@
-#!/bin/bash
-#
-# A short script to download the current PHP functionlist for omni-complete
-#
-wget -O home/.vim/external/php-functionlist.txt "http://svn.php.net/viewvc/phpdoc/doc-base/trunk/funclist.txt?view=co"
