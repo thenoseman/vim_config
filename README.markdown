@@ -1,7 +1,7 @@
 # My personal VIM-config
 
-This is my personal configuration for everybodies favorite editor [VIM](http://code.google.com/p/macvim/).
-I use it mainly for ruby development with a touch of PHP.
+This is my personal configuration for everybodies favorite editor [VIM](http://code.google.com/p/macvim/).  
+I use it mainly for ruby development.  
 My configuration is based on [duwanis](https://github.com/duwanis/vim_config) work.
 
 Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home directory.
@@ -14,7 +14,9 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + A modified version of the [railscasts theme](https://github.com/jpo/vim-railscasts-theme) as default theme
 + My favorite font [Inconsolata-dz](http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/) in extras
 + `update_all_submodules_to_head` script that updates all submodules and creates a commit for those updates
-+ `renew_php_functionlist` script to update the PHP-OmniComplete Function list from the PHP SVN Repository 
++ `renew_omnicompl_files` script to update the PHP-OmniComplete Function list from the PHP SVN Repository and node.js
+  functionlist. Requires wget and node installed.
++ `integrate_way_cooler_icon` script downloads a better MacVim icon and integrates it into a homebrew install MacVim.
 + Use `:Unshouldify` to remove 'should' from rspec files
 + Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
 
@@ -27,7 +29,7 @@ the quickfix window.
 I mapped `:Ack` to `:Ack!` because I don't like the auto-opening. 
 Also included is `:Ackv` which accepts a visual selection (defaults to inner word) and searches for that (see config/plugins/ack.vim)
 
-## [Ctrl-P](http://github.com/kien/ctrlp.vim) ##
+## [Ctrl-P](http://github.com/kien/ctrlp.vim)
 The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
 Far superior to to those two in my opinion. Use `,m` to open the finder in file-mode.
 If you add files to your project run `:ClearCtrlPCache` (or press `<f5>` when ctrl-p is open) so the plugin can find those new files.
@@ -155,3 +157,9 @@ Does much more ... see official docs.
 
 ## [ReplaceWithRegister](https://github.com/vim-scripts/ReplaceWithRegister)
 Use `grTEXTMOTION` to replace that text by the previously 'y'anked text
+
+## [jscomplete-vim](https://github.com/teramako/jscomplete-vim)
+Better Javascript auto-complete. Includes a neocomplcache plugin.
+
+## [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete)
+Completion for node.js. Use `renew_omnicompl_files` to update the node.js function list
