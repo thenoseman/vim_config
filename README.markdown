@@ -16,7 +16,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + `update_all_submodules_to_head` script that updates all submodules and creates a commit for those updates
 + `renew_omnicompl_files` script to update the PHP-OmniComplete Function list from the PHP SVN Repository and node.js
   functionlist. Requires wget and node installed.
-+ `integrate_way_cooler_icon` script downloads a better MacVim icon and integrates it into a homebrew install MacVim.
++ `integrate_way_cooler_icon` script downloads a better MacVim icon and integrates it into a homebrew installed MacVim.
 + Use `:Unshouldify` to remove 'should' from rspec files
 + Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
 
