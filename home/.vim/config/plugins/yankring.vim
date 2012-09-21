@@ -31,7 +31,7 @@ let g:yankring_window_increment = 15
 let g:yankring_manage_numbered_reg = 1
 
 " keep the history file in the $HOME/.vim folder rather than $HOME
-let g:yankring_history_dir = '$HOME/.vim'
+let g:yankring_history_dir = '$HOME'
 
 " yankring keeps an eye on the clipboard
 let g:yankring_clipboard_monitor = 1
@@ -39,8 +39,6 @@ let g:yankring_clipboard_monitor = 1
 " if something changes the default register without going through yankring, use
 " the default register value rather than the top item in yankring's history
 let g:yankring_paste_check_default_buffer = 1
-
-" Keybindings
 
 " @plugin: YankRing
 " @key <leader>y: Open Yankring Window
