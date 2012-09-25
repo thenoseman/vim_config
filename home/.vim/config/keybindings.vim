@@ -38,9 +38,6 @@ highlight SpecialKey guifg=#4a4a59
 " @key <leader>x: closes buffer
 nnoremap <leader>x :bd<CR>
 
-" @key <leader>o: closes all buffers but the current one or unsaved ones
-nnoremap <leader>o :BufOnly<CR> 
-
 " @key <leader><leader>: Switch between last two buffers
 nnoremap <leader><leader> <c-^>
 
