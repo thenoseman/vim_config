@@ -114,10 +114,6 @@ Adds `:Bopen` (bundle open) and `:Bundle` to vim. That's nice but more important
 vims `tags` list. 
 Generate those taks via the [gem-ctags](https://github.com/tpope/gem-ctags) gem (gem install gem-ctags && gem ctags).
 
-## [vim-coffee-script](http://github.com/kchmck/vim-coffee-script)
-Support for [CoffeeScript](http://coffeescript.org/) in VIM. Adds syntax highlighting, indention and compilation support.
-Also includes syntax support for [eco](https://github.com/sstephenson/eco) templates.
-
 ## [vim-easymotion](http://github.com/Lokaltog/vim-easymotion)
 Jump to characters the easy way: `,,tCharacter` and easymotion will show letters for every Hit it got. Type those letters and easymotion jumps to that point.
 Also works with `f` or `w`. There is a [nice tutorial](http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/).
@@ -152,7 +148,8 @@ Select some text in visual mode and hit `*` or `?` to search it in that file.
 Edit XML and HTML files with tag-autoclosing
 
 ## [YankRing](http://github.com/vim-scripts/YankRing.vim)
-Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next)
+Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
+Use `,y` to open the AnykRing window and select text to paste via `enter`.
 Does much more ... see official docs.
 
 ## [ReplaceWithRegister](https://github.com/vim-scripts/ReplaceWithRegister)
