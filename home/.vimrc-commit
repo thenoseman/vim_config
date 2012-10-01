@@ -1,4 +1,5 @@
 set nocompatible
+set history=100
 runtime! config/filetypes/gitrebase.vim
 
 filetype plugin indent on
