@@ -112,3 +112,6 @@
 [submodule "home/.vim/bundle/jscomplete-vim"]
 	path = home/.vim/bundle/jscomplete-vim
 	url = git://github.com/teramako/jscomplete-vim.git
+[submodule "home/.vim/bundle/vim-fugitive"]
+	path = home/.vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git

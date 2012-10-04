@@ -41,6 +41,10 @@ automatically jump into DirDiff mode.
 Manually usage is `DirDiff SourceDir1 SourceDir2`. After the comparison window is open use the commands described
 in the [DirDiff readme](http://www.vim.org/scripts/script.php?script_id=102). 
 
+## [Fugitive](http://github.com/tpope/vim-fugitive)
+A (_the_) git wrapper for vim. Use `:Gc` to commit, `:Gs` for status. When you are in a conflicted file use `:Dl` and `:Dr` 
+to copy the current hunk from left or right to the working copy.
+
 ## [endwise](http://github.com/tpope/vim-endwise)
 Auto closes ruby structures with `end` where appropriate
 
