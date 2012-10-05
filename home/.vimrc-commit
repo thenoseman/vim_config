@@ -1,6 +1,10 @@
 set nocompatible
-set history=100
+
 runtime! config/filetypes/gitrebase.vim
+
+" Load YankRing to restore old commit messages
+runtime! config/plugins/yankring.vim
+runtime! bundle/yankring.vim/plugin/yankring.vim
 
 filetype plugin indent on
 filetype detect
