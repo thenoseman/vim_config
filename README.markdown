@@ -17,8 +17,9 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + `renew_omnicompl_files` script to update the PHP-OmniComplete Function list from the PHP SVN Repository and node.js
   functionlist. Requires wget and node installed.
 + `integrate_way_cooler_icon` script downloads a better MacVim icon and integrates it into a homebrew installed MacVim.
-+ Use `:Unshouldify` to remove 'should' from rspec files
-+ Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
++ Use `:Unshouldify` to remove 'should' from a open rspec files
++ Rails Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
++ Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
 
 # Plugins:
 ## [Ack.vim](http://github.com/kronn/ack.vim)
