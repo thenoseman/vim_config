@@ -56,10 +56,6 @@ au BufWritePre *.rb,*.haml,*.sass,*.js :%s/\s\+$//e
 " use system clipboard
 set clipboard=unnamed
 
-" Disable ESC key delay in insert mode
-" http://ksjoberg.com/vim-esckeys.html
-set noesckeys
-
 " Wait less milliseconds before executing command
 set timeoutlen=500
 
