@@ -36,5 +36,8 @@ fun! RefreshCtrlPCache(post)
     endif
   endif
 endfun
-autocmd! BufWritePre * call RefreshCtrlPCache(0)
-autocmd! BufWritePost * call RefreshCtrlPCache(1)
+
+augroup vim_config
+  autocmd! BufWritePre * call RefreshCtrlPCache(0)
+  autocmd! BufWritePost * call RefreshCtrlPCache(1)
+augroup END
