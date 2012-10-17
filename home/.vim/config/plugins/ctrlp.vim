@@ -21,3 +21,20 @@ let g:ctrlp_extensions = ['tag']
 
 " reuse buffer
 let g:ctrlp_switch_buffer = 2
+
+" Auto-refresh ctrl-p cache on
+" newly created files
+fun! RefreshCtrlPCache(post)
+  if a:post == 0
+    let g:CurrentFileIsNewlyCreated = 0
+    if !filereadable(expand("%"))
+      let g:CurrentFileIsNewlyCreated = 1
+    endif
+  else
+    if g:CurrentFileIsNewlyCreated == 1
+      CtrlPClearCache
+    endif
+  endif
+endfun
+autocmd! BufWritePre * call RefreshCtrlPCache(0)
+autocmd! BufWritePost * call RefreshCtrlPCache(1)
