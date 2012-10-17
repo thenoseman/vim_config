@@ -9,7 +9,7 @@ augroup vim_config
   autocmd FileType yaml call LoadRubyKeybindings()
 
   " Automatically add magic encoding comment
-  autocmd FileType ruby call AddTextToTopIfMissing("# -*- encoding : utf-8 -*-")
+  autocmd FileType ruby call AddTextToTopIfMissing("# -*- encoding : utf-8 -*-","#.\{-}encoding[ ]\+:[ ]\+utf-8")
 
   " On enter update/create tags
   autocmd VimEnter * call UpdateOrCreateTagsFile()
