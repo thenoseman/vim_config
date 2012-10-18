@@ -10,7 +10,6 @@ fun! AddTextToTopIfMissing(text, ...)
   let line = getline(1)
   let pos = getpos(".")
   let escaped = substitute(matchRegex,"\\([*/^$+=]\\)","\\\\\\1","g")
-  echo escaped
   if(match(line,escaped)) == -1
     call append(0, a:text)
     call setpos(".", pos)
