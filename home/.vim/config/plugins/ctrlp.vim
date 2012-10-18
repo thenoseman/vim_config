@@ -14,13 +14,19 @@ let g:ctrlp_custom_ignore = {
 set wildignore+=*tmp*,*.git,.sass_cache,.DS_Store,*.jpg,*.png,*.svn,tags,*.log,node_modules
 
 " Open in current window
-let g:ctrlp_open_new_file = 0
+let g:ctrlp_open_new_file = 'r'
 
 " Load plugins
 let g:ctrlp_extensions = ['tag']
 
 " reuse buffer
-let g:ctrlp_switch_buffer = 2
+let g:ctrlp_switch_buffer = 'Et'
+
+" follow symlinks
+let g:ctrlp_follow_symlinks = 1
+
+" dotfiles are ok
+let g:ctrlp_show_hidden = 1
 
 " Auto-refresh ctrl-p cache on
 " newly created files
