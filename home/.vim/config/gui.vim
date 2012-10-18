@@ -10,7 +10,7 @@ if has("gui_running")
   set guioptions=ac
 
   " display full path to file in title of window
-  set titlestring=%(%{expand(\"%:~:.:h\")}%)/%t
+  autocmd! BufEnter * let &titlestring="[" . split(getcwd(),"/")[-1] . "]" . expand("%")
 
   " Disable ESC key delay in insert mode
   " http://ksjoberg.com/vim-esckeys.html
