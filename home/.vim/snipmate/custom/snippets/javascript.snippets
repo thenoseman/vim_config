@@ -19,10 +19,10 @@ snippet domr
 # Function
 snippet fun
 	function ${1:function_name}(${2:argument}) {
-		${3:// body...}
+		${3}
 	}
 snippet afun
-	function(${1}) { ${2} }
+	function (${1}) { ${2} }
 # if
 snippet if
 	if (${1:true}) {
@@ -35,9 +35,10 @@ snippet ife
 	} else {
 		${3}
 	}
-# console.log (Firebug)
+# console.log
 snippet cl
 	console.log(${1});
+# Backbone
 snippet bv
 	var ${1:MyView} = Backbone.View.extend({
 	  ${2:el: ''},
