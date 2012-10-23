@@ -47,3 +47,7 @@ augroup vim_config
   autocmd! BufWritePre * call RefreshCtrlPCache(0)
   autocmd! BufWritePost * call RefreshCtrlPCache(1)
 augroup END
+
+" @plugin: ctrlp
+" @key <leader>t: Searches all open buffers for a tag (aka. method, class name, ...)
+nmap <leader>t :CtrlPTag<CR>

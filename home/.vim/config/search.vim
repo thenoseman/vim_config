@@ -1,10 +1,9 @@
-""""""""""""""""""""""""""""""""""""""""
-"" This file deals with all settings
-"" related to searching.
-""""""""""""""""""""""""""""""""""""""""
+" This file deals with all settings related to searching
 
-set hlsearch    " highlight search terms
-set incsearch   " search incrementally
+" highlight search terms and search incrementally
+set hlsearch    
+set incsearch
 
-set ignorecase  " ignore case in searches...
-set smartcase   " ...but not really. Case sensitive if capitals are included.
+" ignore case only if no capitals are included
+set ignorecase
+set smartcase

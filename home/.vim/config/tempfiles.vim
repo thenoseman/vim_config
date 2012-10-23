@@ -1,15 +1,12 @@
-"
 " settings controlling temporary/backup files
-"
-
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Configure undo files (if we're in vim 7.3 and +persistent_undo has been
 " compiled)
 if has("persistent_undo")
-   set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-   set undofile
+  set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+  set undofile
 endif
 
 ""
@@ -18,7 +15,6 @@ endif
 " 'q' - quit.
 " 'o' - open the file in read-only mode.
 " 'r' - recover the changes.
-augroup SimultaneousEdits
-   autocmd!
-   autocmd  SwapExists  *  :let v:swapchoice = 'e'
+augroup vim_config
+  autocmd SwapExists * :let v:swapchoice = 'e'
 augroup END

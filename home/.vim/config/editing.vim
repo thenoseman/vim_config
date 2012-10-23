@@ -10,9 +10,11 @@ set smartindent
 " backspace behaves 'normally'
 set backspace=indent,eol,start
 
-set whichwrap+=<,>,h,l   " cursor keys also wrap
+" cursor keys also wrap
+set whichwrap+=<,>,h,l
 
-set autoread     " automatically reload a file if it's changed outside vim
+" automatically reload a file if it's changed outside vim
+set autoread
 
 " format settings
 " t - Auto-wrap text using textwidth
@@ -31,17 +33,13 @@ set autoread     " automatically reload a file if it's changed outside vim
 "     instead (if possible).
 set formatoptions=crqn21
 
-"
 " Two Spaces, always
-"
 set expandtab
 set softtabstop=2
 set tabstop=2
 set shiftwidth=2
 
-"
 " Dont break lines
-"
 set textwidth=0
 set nolinebreak
 set wrap
@@ -51,7 +49,7 @@ set scrolloff=3
 set sidescrolloff=3
 
 " Remove trailing whitespace
-au BufWritePre *.rb,*.haml,*.sass,*.js :%s/\s\+$//e
+au BufWritePre *.rb,*.haml,*.sass,*.js,*.scss,*.css :%s/\s\+$//e
 
 " use system clipboard
 set clipboard=unnamed
@@ -89,3 +87,6 @@ augroup vim_config
   autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
   autocmd BufEnter * call s:CloseIfOnlyQuickfixLeft()
 augroup END
+
+" don't care for octal or hex values when using VIMs arithmetic function
+set nrformats=

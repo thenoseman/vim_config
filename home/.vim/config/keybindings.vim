@@ -3,7 +3,7 @@
 "
 
 " fix arrow keys in console mode
-if has('gui_running')
+if has('gui_running') && has("unix")
   set nomacmeta
 else
   set term=ansi
@@ -44,13 +44,6 @@ nnoremap <leader><leader> <c-^>
 " Remap Q to delete last word in normal mode
 " @key Q: delete last word in normal mode
 nnoremap Q dbxx
-
-" @plugin: ctrlp
-" @key <leader>t: Searches all open buffers for a tag (aka. method, class name, ...)
-nmap <leader>t :CtrlPTag<CR>
-
-" @key p: Pastes text and reindents
-nnoremap <leader>p p`[v`]=
 
 " @key /: Always search in very magic mode
 nnoremap / /\v

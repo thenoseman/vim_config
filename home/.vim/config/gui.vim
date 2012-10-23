@@ -9,7 +9,7 @@ if has("gui_running")
   " more interesting, what is absent: no menu, no toolbar, no scrollbars.
   set guioptions=ac
 
-  " display full path to file in title of window
+  " display base project name and full path to file in title of window
   autocmd! BufEnter * let &titlestring="[" . split(getcwd(),"/")[-1] . "]" . expand("%")
 
   " Disable ESC key delay in insert mode

@@ -1,7 +1,7 @@
 "
 " Setting for VIM in diff-mode (mvim -d)
 "
-" Keys:
+" keys:
 "
 " do - diff obtain
 " dp - diff put
@@ -12,7 +12,6 @@
 " zc - close folded text
 
 if &diff
-  " Turning off TabBar is done in tabbar.vim	
   " Turning of syntastic is done in syntastic.vim
   
   " Always make the window equal in size

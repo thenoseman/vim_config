@@ -35,4 +35,5 @@ set statusline+=(%l,%c%V)\ %<%P                               " offset
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 
+" faster keystroke sending
 set ttyfast
