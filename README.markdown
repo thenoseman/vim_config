@@ -147,9 +147,6 @@ Alternative to [DelimitMate](https://github.com/Raimondi/delimitMate)
 Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
 Depends on [vim-textobj-user](http://github.com/kana/vim-textobj-user)
 
-## [vim-visual-star-search](http://github.com/nelstrom/vim-visual-star-search)
-Select some text in visual mode and hit `*` or `?` to search it in that file.
-
 ## [xmledit](http://github.com/sukima/xmledit/)
 Edit XML and HTML files with tag-autoclosing
 
