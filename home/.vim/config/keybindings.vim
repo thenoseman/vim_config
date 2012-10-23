@@ -31,7 +31,11 @@ vnoremap <silent> <C-Down> :<C-u>call MoveVisualDown()<CR>
 " Show Invisibles (http://vimcasts.org/episodes/show-invisibles/) 
 " @key <leader>l: Show EOL and Tab markers (invisible characters)
 nnoremap <leader>l :set list!<CR>
-set listchars=tab:▸\ ,eol:¬
+if has("unix")
+  set listchars=tab:▸\ ,eol:¬
+else
+  set listchars=tab:>-,eol:¬
+endif
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 

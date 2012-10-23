@@ -13,7 +13,16 @@ set cul
 "
 " New Font
 "
-set guifont=Inconsolata-dz:h12.00
+if has('gui') && has('unix')
+  set guifont=Inconsolata-dz:h12.00
+else
+  set guifont=Inconsolata-dz:h8.00
+endif
+
+" Bigger for Windows
+if !has("unix")
+  set columns=999 lines=999
+endif
 
 set laststatus=2   " always display a status line
 set number         " show line numbers
