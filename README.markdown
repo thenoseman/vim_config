@@ -139,8 +139,9 @@ Jump to the beginning/end of the current selected group (eg. `def ... end` or `c
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
 OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
 
-## [delimMate](https://github.com/Raimondi/delimitMate)
-Autoclose brackets and quotes
+## [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+Autoclose brackets and quotes.  
+Alternative to [DelimitMate](https://github.com/Raimondi/delimitMate)
 
 ## [vim-textobj-rubyblock](http://github.com/nelstrom/vim-textobj-rubyblock)
 Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).

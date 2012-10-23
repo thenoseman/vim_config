@@ -88,9 +88,6 @@
 [submodule "home/.vim/bundle/vim-markdown"]
 	path = home/.vim/bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "home/.vim/bundle/delimitMate"]
-	path = home/.vim/bundle/delimitMate
-	url = git://github.com/Raimondi/delimitMate.git
 [submodule "home/.vim/bundle/vim-bundler"]
 	path = home/.vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
@@ -115,3 +112,6 @@
 [submodule "home/.vim/bundle/vim-fugitive"]
 	path = home/.vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "home/.vim/bundle/auto-pairs"]
+	path = home/.vim/bundle/auto-pairs
+	url = git://github.com/jiangmiao/auto-pairs.git
