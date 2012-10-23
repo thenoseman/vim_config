@@ -1,7 +1,9 @@
 "
 " ack.vim
 "
-let g:ackprg="ack -H --nocolor --nogroup --column"
+
+" auto quote all meta characters (literal search mode)
+let g:ackprg="ack -H --nocolor --nogroup --column -Q"
 
 " Dont auto-open first match
 cabbrev Ack Ack!
@@ -23,7 +25,7 @@ function! AckVisualRange()
 endfunction
 
 " Use the :Ackv command or 'Ack' (in normal or visual mode)
-" to search for the current word under the cursot (text-object iW) in normal
+" to search for the current word under the cursor (text-object iW) in normal
 " mode or for the seection in visual mode.
 command! -range Ackv call AckVisualRange()
 nmap Ack :call AckVisualRange()<cr>
