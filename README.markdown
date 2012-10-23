@@ -1,7 +1,12 @@
 # My personal VIM-config
 
 This is my personal configuration for everybodies favorite editor [VIM](http://code.google.com/p/macvim/).  
-I use it mainly for ruby development.  
+I use it mainly for ruby development.
+
+This config should be gVIM (Windows) compatible.  
+Place all files in your user-directory and rename `.vimrc` to `_vimrc` and `.vim` to `vimfiles`.
+Copy `vimfiles/external/vim-pathogen/autoload/pathogen.vim` to `autoload/pathogen.vim`
+
 My configuration is based on [duwanis](https://github.com/duwanis/vim_config) work.
 
 Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home directory.
