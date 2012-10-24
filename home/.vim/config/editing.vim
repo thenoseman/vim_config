@@ -10,9 +10,6 @@ set smartindent
 " backspace behaves 'normally'
 set backspace=indent,eol,start
 
-" cursor keys also wrap
-set whichwrap+=<,>,h,l
-
 " automatically reload a file if it's changed outside vim
 set autoread
 
