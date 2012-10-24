@@ -133,9 +133,6 @@ Adds support for SASS, Scss and HAML files to VIM.
 ## [vim-javascript](http://github.com/pangloss/vim-javascript)
 Improvements to javascript indention in VIM.
 
-## [matchit](http://github.com/thenoseman/vim-matchit)
-Jump to the beginning/end of the current selected group (eg. `def ... end` or `class .. end`) with `%`.
-
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
 OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
@@ -153,7 +150,7 @@ Edit XML and HTML files with tag-autoclosing
 
 ## [YankRing](http://github.com/vim-scripts/YankRing.vim)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
-Use `,y` to open the AnykRing window and select text to paste via `enter`.
+Use `,y` to open the YankRing window and select text to paste via `<cr>`.
 Does much more ... see official docs.
 
 ## [ReplaceWithRegister](https://github.com/vim-scripts/ReplaceWithRegister)

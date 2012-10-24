@@ -29,6 +29,9 @@ set shortmess=filmnrxtTI
 " turn filetype settings off so that stuff gets loaded from pathogen
 filetype off
 
+" initialize matchit.vim
+runtime macros/matchit.vim
+
 " use pathogen to load plugins/etc.
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
