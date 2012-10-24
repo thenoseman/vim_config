@@ -79,9 +79,6 @@
 [submodule "home/.vim/bundle/yankring.vim"]
 	path = home/.vim/bundle/yankring.vim
 	url = git://github.com/vim-scripts/YankRing.vim.git
-[submodule "home/.vim/bundle/vim-markdown"]
-	path = home/.vim/bundle/vim-markdown
-	url = git://github.com/tpope/vim-markdown.git
 [submodule "home/.vim/bundle/vim-bundler"]
 	path = home/.vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
