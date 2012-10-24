@@ -30,7 +30,8 @@ set shortmess=filmnrxtTI
 filetype off
 
 " use pathogen to load plugins/etc.
-call pathogen#runtime_append_all_bundles()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 " turn on all filetype settings, syntax, etc.
 filetype plugin indent on
