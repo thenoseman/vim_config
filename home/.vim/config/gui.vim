@@ -16,6 +16,6 @@ if has("gui_running")
 
   " Disable ESC key delay in insert mode
   " http://ksjoberg.com/vim-esckeys.html
-  " Breaks cursor keys in trerminal vim
+  " Breaks cursor keys in terminal vim
   set noesckeys
 endif
