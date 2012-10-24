@@ -61,9 +61,6 @@
 [submodule "home/.vim/bundle/vim-ruby"]
 	path = home/.vim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
-[submodule "home/.vim/bundle/vim-matchit"]
-	path = home/.vim/bundle/vim-matchit
-	url = git://github.com/thenoseman/vim-matchit.git
 [submodule "home/.vim/bundle/greplace.vim"]
 	path = home/.vim/bundle/greplace.vim
 	url = git://github.com/skwp/greplace.vim.git
