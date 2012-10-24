@@ -5,7 +5,6 @@ I use it mainly for ruby development.
 
 This config should be gVIM (Windows) compatible.  
 Place all files in your user-directory and rename `.vimrc` to `_vimrc` and `.vim` to `vimfiles`.
-Copy `vimfiles/external/vim-pathogen/autoload/pathogen.vim` to `autoload/pathogen.vim`
 
 My configuration is based on [duwanis](https://github.com/duwanis/vim_config) work.
 
