@@ -13,7 +13,7 @@ set cul
 "
 " New Font
 "
-if has('gui') && has('unix')
+if has('gui_running') && has('unix')
   set guifont=Inconsolata-dz:h12.00
 else
   set guifont=Inconsolata-dz:h8.00

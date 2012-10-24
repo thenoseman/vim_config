@@ -33,7 +33,7 @@ fun! LoadRubyKeybindings()
    set nofoldenable
 
    " No stinkin' popup
-   if has("gui")
+   if has("gui_running")
      set noballooneval
    endif
 endfun
