@@ -133,9 +133,6 @@ Adds support for SASS, Scss and HAML files to VIM.
 ## [vim-javascript](http://github.com/pangloss/vim-javascript)
 Improvements to javascript indention in VIM.
 
-## [Markdown syntax](http://github.com/tpope/vim-markdown)
-[Markdown](http://daringfireball.net/projects/markdown/) syntax highlighting.
-
 ## [matchit](http://github.com/thenoseman/vim-matchit)
 Jump to the beginning/end of the current selected group (eg. `def ... end` or `class .. end`) with `%`.
 
@@ -161,6 +158,7 @@ Does much more ... see official docs.
 
 ## [ReplaceWithRegister](https://github.com/vim-scripts/ReplaceWithRegister)
 Use `grTEXTMOTION` to replace that text by the previously 'y'anked text
+Currently works only in terminal VIM.
 
 ## [jscomplete-vim](https://github.com/teramako/jscomplete-vim)
 Better Javascript auto-complete. Includes a neocomplcache plugin.
