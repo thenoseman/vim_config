@@ -29,26 +29,6 @@ let g:ctrlp_follow_symlinks = 1
 " dotfiles are ok
 let g:ctrlp_show_hidden = 1
 
-" Auto-refresh ctrl-p cache on
-" newly created files
-fun! RefreshCtrlPCache(post)
-  if a:post == 0
-    let g:CurrentFileIsNewlyCreated = 0
-    if !filereadable(expand("%"))
-      let g:CurrentFileIsNewlyCreated = 1
-    endif
-  else
-    if g:CurrentFileIsNewlyCreated == 1
-      CtrlPClearCache
-    endif
-  endif
-endfun
-
-augroup vim_config
-  autocmd! BufWritePre * call RefreshCtrlPCache(0)
-  autocmd! BufWritePost * call RefreshCtrlPCache(1)
-augroup END
-
 " @plugin: ctrlp
 " @key <leader>t: Searches all open buffers for a tag (aka. method, class name, ...)
 nmap <leader>t :CtrlPTag<CR>
