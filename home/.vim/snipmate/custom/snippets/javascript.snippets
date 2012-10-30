@@ -23,6 +23,12 @@ snippet fun
 	}
 snippet afun
 	function (${1}) { ${2} }
+# Self executing closure (use in blank .js file)
+snippet c
+	(function `substitute(Filename(), '\(_\([a-z]\)\)', "\\U\\2", "g")`Closure() {
+		'use strict';
+		${1}
+	})();
 # if
 snippet if
 	if (${1:true}) {
