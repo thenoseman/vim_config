@@ -31,9 +31,6 @@
 [submodule "home/.vim/bundle/vim-textobj-rubyblock"]
 	path = home/.vim/bundle/vim-textobj-rubyblock
   url = git://github.com/nelstrom/vim-textobj-rubyblock.git
-[submodule "home/.vim/bundle/xmledit"]
-	path = home/.vim/bundle/xmledit
-	url = git://github.com/sukima/xmledit.git
 [submodule "home/.vim/bundle/vim-haml"]
 	path = home/.vim/bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
