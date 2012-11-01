@@ -40,8 +40,15 @@ call pathogen#infect()
 filetype plugin indent on
 syntax on
 
-" load everything else in its own config file
-runtime! config/**/*
+if has('unix')
+  set runtimepath+=~/.vim/config
+else
+  set runtimepath+=~/vimfiles/config
+endif
 
-" External Vim Tips scripts
-runtime! external/*.vim
+" load everything else in its own config file
+runtime! config/*.vim
+runtime! config/plugins/*.vim
+runtime! config/filetypes/*.vim
+runtime! assorted_scripts/*.vim
+
