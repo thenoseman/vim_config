@@ -88,7 +88,7 @@ Adds all the rails.vim goodies to your plain old ruby files.
 Allows to repeat (`.`) plugin commands like they were edit-commands.
 
 ## [Snipmate.vim](http://github.com/MarcWeber/snipmate.vim)
-Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/custom`.  
+Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
 I don't use external snippets anymore but good ones are:  
 - Honza's snippets for [a lot of filetypes](https://github.com/honza/snipmate-snippets/tree/master/snippets) including ruby  
 - Scrooloose's HTML, HAML, CSS, Javacript and ruby snippets [and a few more](https://github.com/scrooloose/snipmate-snippets)  
