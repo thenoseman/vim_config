@@ -145,9 +145,6 @@ Alternative to [DelimitMate](https://github.com/Raimondi/delimitMate)
 Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
 Depends on [vim-textobj-user](http://github.com/kana/vim-textobj-user)
 
-## [xmledit](http://github.com/sukima/xmledit/)
-Edit XML and HTML files with tag-autoclosing
-
 ## [YankRing](http://github.com/vim-scripts/YankRing.vim)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
 Use `,y` to open the YankRing window and select text to paste via `<cr>`.
