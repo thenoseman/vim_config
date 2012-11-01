@@ -2,13 +2,14 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_camel_case_completion = 0
 let g:neocomplcache_enable_smart_case = 0
 let g:neocomplcache_enable_underbar_completion = 0
-let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_min_syntax_length = 2
 let g:neocomplcache_enable_auto_delimiter = 0
-let g:neocomplcache_max_list = 25
+let g:neocomplcache_max_list = 10
 let g:neocomplcache_enable_ignore_case = 1
 let g:neocomplcache_enable_wildcard = 0
-let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_enable_auto_select = 0
 let g:neocomplcache_disable_auto_complete = 1
+let g:neocomplcache_use_vimproc = 1
 
 " Close popup on enter
 inoremap <expr><silent> <CR> <SID>neocomplcache_cr_function()
