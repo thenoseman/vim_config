@@ -8,6 +8,7 @@ Place all files in your user-directory and rename `.vimrc` to `_vimrc` and `.vim
 
 My configuration is based on [duwanis](https://github.com/duwanis/vim_config) work.
 
+Clone this repository to your HD and don't forget to `git submodule init && git submodule update` to make it work.  
 Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home directory.
 
 # Added non-plugin features
