@@ -79,9 +79,6 @@
 [submodule "home/.vim/bundle/ReplaceWithRegister"]
 	path = home/.vim/bundle/ReplaceWithRegister
 	url = git://github.com/vim-scripts/ReplaceWithRegister.git
-[submodule "home/.vim/bundle/neocomplcache"]
-	path = home/.vim/bundle/neocomplcache
-	url = git://github.com/Shougo/neocomplcache.git
 [submodule "home/.vim/bundle/vimproc"]
 	path = home/.vim/bundle/vimproc
 	url = git://github.com/Shougo/vimproc.git
@@ -103,3 +100,6 @@
 [submodule "home/.vim/bundle/vim-pathogen"]
 	path = home/.vim/bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule "home/.vim/bundle/supertab"]
+	path = home/.vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
