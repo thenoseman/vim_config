@@ -101,7 +101,6 @@ If you want to add your own directory, go to `home/.vim/config/plugins/snipmate.
 ## [Supertab](http://github.com/ervandew/supertab)
 Smart text [completion](http://vimdoc.sourceforge.net/htmldoc/insert.html#ins-completion) (eg. OmniComplete) configured to use the `ctrl-space` (<C-space>) key combo instead of `tab` which snipmate uses.
 I tried to make it as smart as possible. It first tries Omni-Completion and then falls back to local file complete.
-*Soon:* Try auto-completion based on the current `tags`. Doesn't work at the moment.
 
 ## [Surround.vim](http://github.com/tpope/vim-surround)
 Easily surround text with brackets, quotes or what have you.
@@ -156,7 +155,7 @@ Use `grTEXTMOTION` to replace that text by the previously 'y'anked text
 Currently works only in terminal VIM.
 
 ## [jscomplete-vim](https://github.com/teramako/jscomplete-vim)
-Better Javascript auto-complete. Includes a neocomplcache plugin.
+Better Javascript auto-complete.
 
 ## [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete)
 Completion for node.js. Use `renew_omnicompl_files` to update the node.js function list
