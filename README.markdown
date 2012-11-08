@@ -64,6 +64,9 @@ This thing so rocks!
 ## [html5-syntax](http://github.com/developish/html5-syntax.vim)
 Adds syntax support for HTML5 elements like "data-*" or <section>
 
+## [jscomplete-vim](https://github.com/teramako/jscomplete-vim)
+Better Javascript auto-complete.
+
 ## [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
 Filetype sensitive commenting and uncommenting of textblocks.
 Mapped to `,c ` (thats ,c[space]) to toggle commenting in visual-mode.
@@ -87,6 +90,10 @@ Adds all the rails.vim goodies to your plain old ruby files.
 
 ## [Repeat.vim](http://github.com/tpope/vim-repeat)
 Allows to repeat (`.`) plugin commands like they were edit-commands.
+
+## [ReplaceWithRegister](https://github.com/vim-scripts/ReplaceWithRegister)
+Use `grTEXTMOTION` to replace that text by the previously 'y'anked text
+Currently works only in terminal VIM.
 
 ## [Snipmate.vim](http://github.com/MarcWeber/snipmate.vim)
 Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
@@ -112,7 +119,7 @@ Actions are repeatable with `.` via repeat.vim.
 ## [Syntastic](http://github.com/scrooloose/syntastic)
 On the fly (actually "on the save" :)) syntax checking for [a lot of languages](https://github.com/scrooloose/syntastic/tree/master/syntax_checkers).
 A locationlist will open if you have an error in your file.
-Deactivated filetypes (changeable `home/.vim/config/plugins/syntastic.vim`):
+Deactivated filetypes (changeable in `home/.vim/config/plugins/syntastic.vim`):
 - html
 - coffee
 - haml
@@ -133,6 +140,9 @@ Adds support for SASS, Scss and HAML files to VIM.
 ## [vim-javascript](http://github.com/pangloss/vim-javascript)
 Improvements to javascript indention in VIM.
 
+## [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete)
+Completion for node.js. Use `renew_omnicompl_files` to update the node.js function list
+
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
 OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
@@ -149,13 +159,3 @@ Depends on [vim-textobj-user](http://github.com/kana/vim-textobj-user)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
 Use `,y` to open the YankRing window and select text to paste via `<cr>`.
 Does much more ... see official docs.
-
-## [ReplaceWithRegister](https://github.com/vim-scripts/ReplaceWithRegister)
-Use `grTEXTMOTION` to replace that text by the previously 'y'anked text
-Currently works only in terminal VIM.
-
-## [jscomplete-vim](https://github.com/teramako/jscomplete-vim)
-Better Javascript auto-complete.
-
-## [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete)
-Completion for node.js. Use `renew_omnicompl_files` to update the node.js function list
