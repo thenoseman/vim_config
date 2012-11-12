@@ -18,11 +18,14 @@ snippet domr
 	});
 # Function
 snippet fun
-	function ${1:function_name}(${2:argument}) {
+	function ${1:functionName}(${2:argument}) {
 		${3}
 	}
 snippet afun
 	function (${1}) { ${2} }
+# Node require (must insert empty line?! WTF! Snipmate!)
+snippet r
+	var ${1:} = require('$1');
 # Self executing closure (use in blank .js file)
 snippet c
 	(function `substitute(Filename(), '\(_\([a-z]\)\)', "\\U\\2", "g")`Closure() {
