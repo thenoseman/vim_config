@@ -4,7 +4,7 @@ augroup END
 
 " inserts the 'c' snipmate template in new .js files
 fun! s:jsNewFileTemplate()
-  if getline("$")[1] == 0
+  if len(getline(1, "$")) == 1 && len(getline(1)) == 0
     execute "normal ic\<Tab> \<Esc>"
   endif
 endfun
