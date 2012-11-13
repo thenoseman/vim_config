@@ -97,3 +97,6 @@
 [submodule "home/.vim/bundle/supertab"]
 	path = home/.vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "home/.vim/bundle/auto-pairs"]
+	path = home/.vim/bundle/auto-pairs
+	url = git://github.com/thenoseman/auto-pairs.git
