@@ -35,6 +35,10 @@ the quickfix window.
 I mapped `:Ack` to `:Ack!` because I don't like the auto-opening. 
 Also included is `:Ackv` which accepts a visual selection (defaults to inner word) and searches for that (see config/plugins/ack.vim)
 
+## [auto-pairs](https://github.com/thenoseman/auto-pairs)
+Autoclose brackets and quotes.  
+Alternative to [DelimitMate](https://github.com/Raimondi/delimitMate)
+
 ## [Ctrl-P](http://github.com/kien/ctrlp.vim)
 The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
 Far superior to to those two in my opinion. Use `,m` to open the finder in file-mode.
@@ -146,10 +150,6 @@ Completion for node.js. Use `renew_omnicompl_files` to update the node.js functi
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
 OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
-
-## [auto-pairs](https://github.com/jiangmiao/auto-pairs)
-Autoclose brackets and quotes.  
-Alternative to [DelimitMate](https://github.com/Raimondi/delimitMate)
 
 ## [vim-textobj-rubyblock](http://github.com/nelstrom/vim-textobj-rubyblock)
 Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
