@@ -13,12 +13,4 @@ git submodule foreach git pull origin master
 
 # Commit
 git add home/.vim/bundle/* home/.vim/external/* home/.vim/snipmate/*
-git commit -m "Updated submodules to the newest version as of `date`" 
-
-# recompile vimproc?
-vimproc_so=`stat -f "%m" home/.vim/bundle/vimproc/autoload/vimproc_mac.so`
-vimproc_dir=`stat -f "%m" home/.vim/bundle/vimproc/autoload`
-if [[ $vimproc_dir -gt $vimproc_so ]]; then
-  rm home/.vim/bundle/vimproc/autoload/vimproc_mac.so
-  echo "Will recompile vimproc on next vim start"
-fi
+git commit -am "Updated submodules to the newest version as of `date`" 
