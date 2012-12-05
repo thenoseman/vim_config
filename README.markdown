@@ -35,10 +35,6 @@ the quickfix window.
 I mapped `:Ack` to `:Ack!` because I don't like the auto-opening. 
 Also included is `:Ackv` which accepts a visual selection (defaults to inner word) and searches for that (see config/plugins/ack.vim)
 
-## [auto-pairs](https://github.com/thenoseman/auto-pairs)
-Autoclose brackets and quotes.  
-Alternative to [DelimitMate](https://github.com/Raimondi/delimitMate)
-
 ## [Ctrl-P](http://github.com/kien/ctrlp.vim)
 The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
 Far superior to to those two in my opinion. Use `,m` to open the finder in file-mode.
@@ -155,7 +151,5 @@ OmniComplete support _without_ booting rails inside vim (see [the official docs]
 Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
 Depends on [vim-textobj-user](http://github.com/kana/vim-textobj-user)
 
-## [YankRing](http://github.com/vim-scripts/YankRing.vim)
+## [YankStack](https://github.com/maxbrunsfeld/vim-yankstack)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
-Use `,y` to open the YankRing window and select text to paste via `<cr>`.
-Does much more ... see official docs.
