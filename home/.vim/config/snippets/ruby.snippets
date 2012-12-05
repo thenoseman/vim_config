@@ -75,7 +75,9 @@ snippet dov
 	end
 snippet pry
 	require 'pry'; binding.pry
-
+# debugger
+snippet deb
+	puts "\033[33m= DEBUGGER (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "debugger"; debugger
 #############################################
 # Rails snippets - for pure Ruby, see above #
 #############################################
