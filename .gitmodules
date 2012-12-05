@@ -70,9 +70,6 @@
 [submodule "home/.vim/bundle/vim-smartinput"]
 	path = home/.vim/bundle/vim-smartinput
 	url = git://github.com/kana/vim-smartinput.git
-[submodule "home/.vim/bundle/yankring.vim"]
-	path = home/.vim/bundle/yankring.vim
-	url = git://github.com/vim-scripts/YankRing.vim.git
 [submodule "home/.vim/bundle/vim-bundler"]
 	path = home/.vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
