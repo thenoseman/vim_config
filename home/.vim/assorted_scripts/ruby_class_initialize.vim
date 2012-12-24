@@ -5,8 +5,11 @@ fun! RubyClassByPath(currfile)
 endfun
 
 fun! RubyClassInitialize()
+
+  let currpos = getpos(".")
+
   " current filename -> class
-  let code = ["class ".RubyClassByPath(expand("#:t:r"))]
+  let code = []
 
   " known path
   let curr_path = expand("%:h")
@@ -17,30 +20,30 @@ fun! RubyClassInitialize()
 
   " add a module per level of directory
   for path in split(curr_path, "/")
-   let code = insert(code, "module ".RubyClassByPath(path))
+    let code = add(code, "module ".RubyClassByPath(path))
   endfor
+  let code = add(code, "class ".RubyClassByPath(expand("#:t:r")))
 
   " indent the 'module' and 'class' lines
   let final = []
   let indent = 0
   for line in code
-    let final = add(final, repeat(" ", indent*2).line) 
-    let indent += 1
+    let final = add(final, repeat(" ", indent).line) 
+    let indent += 2
   endfor
-  let final = add(final, repeat(" ", indent*2)) 
 
-  " this is where the cursor is going to be placed
-  let target_pos = indent+2
+  " middle line
+  let final = add(final, repeat(" ", indent))
 
   " work back with 'end'
-  let indent -= 1
+  let indent -= 2
   while indent >= 0
-    let final = add(final, repeat(" ", indent*2)."end")
-    let indent -= 1
+    let final = add(final, repeat(" ", indent)."end")
+    let indent -= 2
   endwhile
 
-  let finished = append(1, final)
-  call setpos(".", [0, target_pos, 0, 0])
+  let finished = append(currpos[1], final)
+  call setpos(".", [0, (currpos[1]+(len(final)/2)+1), 0, 0])
   normal! A
 endfun
 com! Rcls call RubyClassInitialize()
