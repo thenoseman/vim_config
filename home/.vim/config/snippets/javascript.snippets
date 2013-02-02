@@ -26,9 +26,9 @@ snippet afun
 # Node require (must insert empty line?! WTF! Snipmate!)
 snippet r
 	var ${1:} = require('$1');
-# Self executing closure (use in blank .js file)
+# Immediatlely Invoked Functional Expression IIFE (use in blank .js file)
 snippet c
-	(function `substitute(Filename(), '\(_\([a-z]\)\)', "\\U\\2", "g")`Closure() {
+	(function `substitute(Filename(), '\(_\([a-z]\)\)', "\\U\\2", "g")`Scope() {
 		'use strict';
 		${1}
 	})();
