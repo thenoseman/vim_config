@@ -19,16 +19,16 @@ snippet domr
 # Function
 snippet fun
 	function ${1:functionName}(${2:argument}) {
-		${3}
+	  ${3}
 	}
 snippet afun
 	function (${1}) { ${2} }
-# Node require (must insert empty line?! WTF! Snipmate!)
+# Node require
 snippet r
 	var ${1:} = require('$1');
 # Immediatlely Invoked Functional Expression IIFE (use in blank .js file)
 snippet c
-	(function `substitute(Filename(), '\(_\([a-z]\)\)', "\\U\\2", "g")`Scope() {
+	(function `substitute(Filename(), '\([_-]\([a-z]\)\)', "\\U\\2", "g")`Scope() {
 		'use strict';
 		${1}
 	})();
