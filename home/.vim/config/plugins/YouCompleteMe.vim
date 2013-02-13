@@ -9,7 +9,7 @@ let g:ycm_filetypes_to_completely_ignore = get(g:, 'ycm_filetypes_to_completely_
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_select_completion = ['<Down>', '<Enter>']
 
 let g:ycm_key_list_previous_completion = ['<Up>']
 

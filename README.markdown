@@ -108,6 +108,11 @@ If you want to add your own directory, go to `home/.vim/config/plugins/snipmate.
 ## [Supertab](http://github.com/ervandew/supertab)
 Smart text [completion](http://vimdoc.sourceforge.net/htmldoc/insert.html#ins-completion) (eg. OmniComplete) configured to use the `ctrl-space` (<C-space>) key combo instead of `tab` which snipmate uses.
 I tried to make it as smart as possible. It first tries Omni-Completion and then falls back to local file complete.
+*This is only active for Windows*
+
+## [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+Auto Completion Plugin, *active on Mac*  
+This has a compiled (cmake) component which needs to be compiled before starting vim. See [the github page](https://github.com/Valloric/YouCompleteMe#mac-os-x-super-quick-installation) for detailed instructions.  
 
 ## [Surround.vim](http://github.com/tpope/vim-surround)
 Easily surround text with brackets, quotes or what have you.
