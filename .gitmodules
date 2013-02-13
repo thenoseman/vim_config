@@ -97,3 +97,6 @@
 [submodule "home/.vim/bundle/vim-yankstack"]
 	path = home/.vim/bundle/vim-yankstack
 	url = git://github.com/maxbrunsfeld/vim-yankstack.git
+[submodule "home/.vim/bundle/YouCompleteMe"]
+	path = home/.vim/bundle/YouCompleteMe
+	url = git://github.com/Valloric/YouCompleteMe.git

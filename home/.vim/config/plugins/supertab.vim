@@ -1,4 +1,7 @@
-" Supertab config
+" Only load if supertab plugin is activated
+if index(g:pathogen_disabled, "supertab") == 0
+  finish
+endif
 
 " First try context sensitive completion then
 " fal back to  keyword local completion if nothing found
