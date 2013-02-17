@@ -25,6 +25,10 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + Use `:Unshouldify` to remove 'should' from a open rspec files
 + Rails Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
 + Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
++ `re[MOTION]`: Replaces the MOTION text with the last yanked test (assorted_scripts/replace_with_register.vim)
++ `ec[MOTION]`: In a ruby file echoes the variable defined by MOTION (assorted_scripts/echo_ruby_variable_command.vim)
++ `:Rcls` initializes the module/class structure of a previously saved file (assorted_scripts/ruby_class_initialize.vim)
++ `:Gp` in a Gemfile line ("gem 'somegem'") adds a local path (:path => "../somegem") to the Gemfile
 
 # Plugins:
 ## [Ack.vim](http://github.com/kronn/ack.vim)
@@ -90,10 +94,6 @@ Adds all the rails.vim goodies to your plain old ruby files.
 
 ## [Repeat.vim](http://github.com/tpope/vim-repeat)
 Allows to repeat (`.`) plugin commands like they were edit-commands.
-
-## [ReplaceWithRegister](https://github.com/vim-scripts/ReplaceWithRegister)
-Use `grTEXTMOTION` to replace that text by the previously 'y'anked text
-Currently works only in terminal VIM.
 
 ## [ultisnips](https://github.com/SirVer/ultisnips)
 Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
