@@ -95,11 +95,9 @@ Allows to repeat (`.`) plugin commands like they were edit-commands.
 Use `grTEXTMOTION` to replace that text by the previously 'y'anked text
 Currently works only in terminal VIM.
 
-## [Snipmate.vim](http://github.com/MarcWeber/snipmate.vim)
+## [ultisnips](https://github.com/SirVer/ultisnips)
 Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
-I don't use external snippets anymore but good ones are:  
-- Honza's snippets for [a lot of filetypes](https://github.com/honza/snipmate-snippets/tree/master/snippets) including ruby  
-- Scrooloose's HTML, HAML, CSS, Javacript and ruby snippets [and a few more](https://github.com/scrooloose/snipmate-snippets)  
+Replacement for [Snipmate.vim](http://github.com/garbas/snipmate.vim) which seems dead.
 
 Depends on [tlib](http://github.com/tomtom/tlib_vim) and [vim-addon-mw-utils](http://github.com/MarcWeber/vim-addon-mw-utils)
 

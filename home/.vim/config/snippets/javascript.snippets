@@ -1,97 +1,127 @@
 # jasmine
-snippet it
-	it("${1}", sinon.test(function() {
-	  ${2}
-	}));
-snippet desc
-	describe("${1}", function() {
-	  ${2}
-	});
-snippet bef
-	beforeEach(function() {
-	  ${1}
-	});
+snippet it "it"
+it("${1}", sinon.test(function() {
+  ${2}
+}));
+endsnippet
+
+snippet desc "desc"
+describe("${1}", function() {
+  ${2}
+});
+endsnippet
+
+snippet bef "bef"
+beforeEach(function() {
+  ${1}
+});
+endsnippet
+
 # jQuery
-snippet domr
-	$(function() {
-	  ${1}
-	});
+snippet domr "domr"
+$(function() {
+  ${1}
+});
+endsnippet
+
 # Function
-snippet fun
-	function ${1:functionName}(${2:argument}) {
-	  ${3}
-	}
-snippet afun
-	function (${1}) { ${2} }
+snippet fun "fun"
+function ${1:functionName}(${2:argument}) {
+  ${3}
+}
+endsnippet
+
+snippet afun "afun"
+function (${1}) { ${2} }
+endsnippet
+
 # Node require
-snippet r
-	var ${1:} = require('$1');
+snippet r "r"
+var ${1:} = require('$1');
+endsnippet
+
 # Immediatlely Invoked Functional Expression IIFE (use in blank .js file)
-snippet c
-	(function `substitute(Filename(), '\([_-]\([a-z]\)\)', "\\U\\2", "g")`Scope() {
-		'use strict';
-		${1}
-	})();
+snippet c "c"
+(function `!v substitute(Filename(), '\([_-]\([a-z]\)\)', "\\U\\2", "g")`Scope() {
+	'use strict';
+	${1}
+})();
+endsnippet
+
 # if
-snippet if
-	if (${1:true}) {
-		${2}
-	}
+snippet if "if"
+if (${1:true}) {
+	${2}
+}
+endsnippet
+
 # if ... else
-snippet ife
-	if (${1:true}) {
-		${2}
-	} else {
-		${3}
-	}
+snippet ife "ife"
+if (${1:true}) {
+	${2}
+} else {
+	${3}
+}
+endsnippet
+
 # console.log
-snippet cl
-	console.log(${1});
+snippet cl "cl"
+console.log(${1});
+endsnippet
+
 #
 # Backbone
 # 
-snippet bv
-	var ${1:MyView} = Backbone.View.extend({
-	  ${2:el: ''},
-	  ${3:tagName: ''},
-	  ${4:className: ''},
-	  template: $("${5: '#'}").html(),
-	  initialize: function () {
-	    ${6:}
-	  },
-	  events: {
-	    ${7:}
-	  },
-	  render: function () {
-		var tmpl = _.template(this.template);
-		${8}
+snippet bv "bv"
+var ${1:MyView} = Backbone.View.extend({
+  ${2:el: ''},
+  ${3:tagName: ''},
+  ${4:className: ''},
+  template: $("${5: '#'}").html(),
+  initialize: function () {
+    ${6:}
+  },
+  events: {
+    ${7:}
+  },
+  render: function () {
+	var tmpl = _.template(this.template);
+	${8}
+	this.$el.html(tmpl(this.model.toJSON()));
+	return this;
+  }
+});
+endsnippet
 
-		this.$el.html(tmpl(this.model.toJSON()));
-		return this;
-	  }
-	});
-snippet br
-	var ${1:Router} = Backbone.Router.extend({
-	  routes: {
-	    ${2:}
-	  },
-	  initialize: function() {
-	    ${4:}
-	  },
-	  ${5:method:foo}: function(${6:}) {
-	    ${7:}
-	  }
-	});
-snippet bm
-	var ${1:Model} = Backbone.Model.extend({
-	  defaults: {
-	  },
-	  initialize: function () {
-	    ${2}
-	  }
-	});
-snippet bc
-	var ${2:$1}s = Backbone.Collection.extend({
-	  model: ${3:$1},
-	  url: "${4}"
-	});
+snippet br "br"
+var ${1:Router} = Backbone.Router.extend({
+  routes: {
+    ${2:}
+  },
+  initialize: function() {
+    ${4:}
+  },
+  ${5:method:foo}: function(${6:}) {
+    ${7:}
+  }
+});
+endsnippet
+
+snippet bm "bm"
+var ${1:Model} = Backbone.Model.extend({
+  defaults: {
+  },
+  initialize: function () {
+    ${2}
+  }
+});
+endsnippet
+
+snippet bc "bc"
+var ${2:$1}s = Backbone.Collection.extend({
+  model: ${3:$1},
+  url: "${4}"
+});
+endsnippet
+
+

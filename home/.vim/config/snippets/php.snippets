@@ -1,0 +1,7 @@
+snippet edie "echo and die"
+echo "<pre>"; var_dump(${1}); echo "\nStopped intentionally in ".substr(__FILE__,-30)." (line #".__LINE__.")</pre>"; die(); //DEBUG
+endsnippet
+
+snippet stop "stop here"
+die("Stopped intentionally in file ".__FILE__." (line #".__LINE__.")");
+endsnippet

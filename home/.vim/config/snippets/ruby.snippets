@@ -1,115 +1,184 @@
-snippet warn
-	puts "\033[33m===== #{File.basename(__FILE__)}:#{__LINE__} ====="
-	puts ${1} 
-	puts "===============================\033[0m" 
+snippet warn "warn"
+puts "\033[33m===== #{File.basename(__FILE__)}:#{__LINE__} ====="
+puts ${1} 
+puts "===============================\033[0m" 
+endsnippet
+
 # #!/usr/bin/env ruby
-snippet #!
-	#!/usr/bin/env ruby
-	# encoding: utf-8
-snippet beg
-	begin
+snippet #! "#!"
+#!/usr/bin/env ruby
+# encoding: utf-8
+endsnippet
+
+snippet beg "beg"
+begin
+	${3}
+rescue ${1:Exception} => ${2:e}
+end
+endsnippet
+
+snippet def "def"
+def ${1:method_name}
+	${2}
+end
+endsnippet
+
+snippet if "if"
+if ${1:condition}
+	${2}
+end
+endsnippet
+
+snippet ife "ife"
+if ${1:condition}
+	${2}
+else
+	${3}
+end
+endsnippet
+
+snippet cla "class .. end"
+class ${1:`!v substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+	${2}
+end
+endsnippet
+
+snippet cla "class .. initialize .. end"
+class ${1:`!v substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+	def initialize(${2:args})
 		${3}
-	rescue ${1:Exception} => ${2:e}
 	end
-snippet def
-	def ${1:method_name}
-		${2}
-	end
-snippet if
-	if ${1:condition}
-		${2}
-	end
-snippet ife
-	if ${1:condition}
-		${2}
-	else
-		${3}
-	end
-snippet cla class .. end
-	class ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
-		${2}
-	end
-snippet cla class .. initialize .. end
-	class ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
-		def initialize(${2:args})
-			${3}
-		end
-	end
-snippet mod module .. end
-	module ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
-		${2}
-	end
+end
+endsnippet
+
+snippet mod "module .. end"
+module ${1:`!v substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+	${2}
+end
+endsnippet
+
 # attr_reader
-snippet r
-	attr_reader :${1:attr_names}
+snippet r "r"
+attr_reader :${1:attr_names}
+endsnippet
+
 # attr_writer
-snippet w
-	attr_writer :${1:attr_names}
+snippet w "w"
+attr_writer :${1:attr_names}
+endsnippet
+
 # attr_accessor
-snippet rw
-	attr_accessor :${1:attr_names}
+snippet rw "rw"
+attr_accessor :${1:attr_names}
+endsnippet
+
 # def self
-snippet defs
-	def self.${1:class_method_name}
-		${2}
-	end
-snippet sorb
-	sort_by { |${1:e}| ${2} }
-snippet lam
-	lambda { |${1:args}| ${2} }
-snippet dov
-	do |${1:variable}|
-		${2}
-	end
-snippet pry
-	require 'pry'; binding.pry
+snippet defs "defs"
+def self.${1:class_method_name}
+	${2}
+end
+endsnippet
+
+snippet sorb "sorb"
+sort_by { |${1:e}| ${2} }
+endsnippet
+
+snippet lam "lam"
+lambda { |${1:args}| ${2} }
+endsnippet
+
+snippet dov "dov"
+do |${1:variable}|
+	${2}
+end
+endsnippet
+
+snippet pry "pry"
+require 'pry'; binding.pry
+endsnippet
+
 # debugger
-snippet deb
-	puts "\033[33m= DEBUGGER (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "debugger"; debugger
+snippet deb "deb"
+puts "\033[33m= DEBUGGER (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "debugger"; debugger
+endsnippet
+
 #############################################
 # Rails snippets - for pure Ruby, see above #
 #############################################
-snippet flash
-	flash[:${1:notice}] = "${2}"
-snippet habtm
-	has_and_belongs_to_many :${1:object}, :join_table => "${2:table_name}", :foreign_key => "${3}_id"${4}
-snippet hm
-	has_many :${1:object}
-snippet hmd
-	has_many :${1:other}s, :class_name => "${2:$1}", :foreign_key => "${3:$1}_id", :dependent => :destroy${4}
-snippet hmt
-	has_many :${1:object}, :through => :${2:object}
-snippet ho
-	has_one :${1:object}
-snippet i18
-	I18n.t('${1:type.key}')${2}
-snippet ist
-	<%= image_submit_tag("${1:agree.png}", :id => "${2:id}"${3} %>
-snippet log
-	Rails.logger.${1:debug} ${2}
-snippet logd
-	logger.debug { "${1:message}" }${2}
+snippet flash "flash"
+flash[:${1:notice}] = "${2}"
+endsnippet
+
+snippet habtm "habtm"
+has_and_belongs_to_many :${1:object}, :join_table => "${2:table_name}", :foreign_key => "${3}_id"${4}
+endsnippet
+
+snippet hm "hm"
+has_many :${1:object}
+endsnippet
+
+snippet hmd "hmd"
+has_many :${1:other}s, :class_name => "${2:$1}", :foreign_key => "${3:$1}_id", :dependent => :destroy${4}
+endsnippet
+
+snippet hmt "hmt"
+has_many :${1:object}, :through => :${2:object}
+endsnippet
+
+snippet ho "ho"
+has_one :${1:object}
+endsnippet
+
+snippet i18 "i18"
+I18n.t('${1:type.key}')${2}
+endsnippet
+
+snippet ist "ist"
+<%= image_submit_tag("${1:agree.png}", :id => "${2:id}"${3} %>
+endsnippet
+
+snippet log "log"
+Rails.logger.${1:debug} ${2}
+endsnippet
+
+snippet logd "logd"
+logger.debug { "${1:message}" }${2}
+endsnippet
+
 #rspec
-snippet it
-	it "${1:spec_name}" do
-		${2}
-	end
-snippet itp
-	it "${1:spec_name}"
+snippet it "it"
+it "${1:spec_name}" do
 	${2}
-snippet desc
-	describe ${1:class_name} do
-		${2}
-	end
-snippet cont
-	context "${1:message}" do
-		${2}
-	end
-snippet bef
-	before :${1:each} do
-		${2}
-	end
-snippet aft
-	after :${1:each} do
-		${2}
-	end
+end
+endsnippet
+
+snippet itp "itp"
+it "${1:spec_name}"
+${2}
+endsnippet
+
+snippet desc "desc"
+describe ${1:class_name} do
+	${2}
+end
+endsnippet
+
+snippet cont "cont"
+context "${1:message}" do
+	${2}
+end
+endsnippet
+
+snippet bef "bef"
+before :${1:each} do
+	${2}
+end
+endsnippet
+
+snippet aft "aft"
+after :${1:each} do
+	${2}
+end
+endsnippet
+
+

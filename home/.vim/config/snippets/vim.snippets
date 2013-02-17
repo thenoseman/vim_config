@@ -1,5 +1,8 @@
-snippet guard
-	if exists("g:loaded_`Filename($1)`")
-	  finish
-	endif
-	let g:loaded_`Filename($1)`= 1
+snippet guard "guard"
+if exists("g:loaded_`!v Filename($1)`")
+  finish
+endif
+let g:loaded_`!v Filename($1)`= 1
+endsnippet
+
+
