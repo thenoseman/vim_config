@@ -1,5 +1,5 @@
 " Only load if supertab plugin is activated
-if index(g:pathogen_disabled, "supertab") == 0
+if index(g:pathogen_disabled, "supertab") > -1
   finish
 endif
 

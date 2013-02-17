@@ -1,5 +1,5 @@
 " Only load if YouCompleteMe plugin is activated (Mac)
-if index(g:pathogen_disabled, "YouCompleteMe") == 0
+if index(g:pathogen_disabled, "YouCompleteMe") > -1
   finish
 endif
 
