@@ -9,7 +9,7 @@ function! RSpecCurrent()
     echom "mkfifo tmp/rspec-test-pipe && while true; do sh -c '$(cat tmp/rspec-test-pipe)'; done"
     finish
   else
-    execute "silent !echo \"bundle exec rspec --color " . expand("%p") . ":" . line(".") . "\" > tmp/rspec-test-pipe"
+    execute "silent !echo echo \"STARTING RSPEC...\" && echo \"bundle exec rspec --color " . expand("%p") . ":" . line(".") . "\" > tmp/rspec-test-pipe"
   endif
 endfunction
 
