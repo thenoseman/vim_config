@@ -17,9 +17,13 @@ git commit -am "Updated submodules to the newest version as of `date`"
 
 # Compile YouCompleteMe if neccessary
 if [[ home/.vim/bundle/YouCompleteMe/cpp/ycm/ycm_core.cpp -nt home/.vim/bundle/YouCompleteMe/python/ycm_core.so ]]; then 
+  echo
+  echo
   echo "***********************************************"
   echo "* Compiling YouCompleteMe ... please wait ... *"
   echo "***********************************************"
+  echo
+  echo
 
   cd home/.vim/bundle/YouCompleteMe
   ./install.sh
