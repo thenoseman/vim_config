@@ -12,7 +12,7 @@
 git submodule foreach git pull origin master
 
 # Commit
-git add home/.vim/bundle/* home/.vim/external/* home/.vim/snipmate/*
+git add home/.vim/bundle/*
 git commit -am "Updated submodules to the newest version as of `date`" 
 
 # Compile YouCompleteMe if neccessary
