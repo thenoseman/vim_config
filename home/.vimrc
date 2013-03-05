@@ -37,7 +37,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " disable plugins on Mac/Windows
 if has('unix')
-  let g:pathogen_disabled = ["supertab"]
+  let g:pathogen_disabled = ["supertab","YouCompleteMe"]
 else
   let g:pathogen_disabled = ["YouCompleteMe"]
 endif
