@@ -30,6 +30,8 @@ if [[ home/.vim/bundle/YouCompleteMe/cpp/ycm/ycm_core.cpp -nt home/.vim/bundle/Y
   cd ../../../../
 fi
 
+echo
 echo "Changes in Submodules ..."
 echo "-------------------------"
+echo
 git log -1 -p --oneline | grep "+++" | sed "s/^.*bundle\///"
