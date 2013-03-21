@@ -31,6 +31,7 @@
 "     end
 "   end
 " end 
+
 nmap <silent> rr :set opfunc=<SID>RenameSymbolInFile<CR>g@
 
 fun! s:RenameSymbolInFile(type,...)
@@ -58,9 +59,12 @@ fun! s:RenameSymbolInFile(type,...)
   let sel_save = &selection
   let &selection = "inclusive"
   let reg_save = @@
+  let ignorecase_save = &ignorecase
   let currentPos = getpos(".")
   let matchingConfig = {}
   let minimalDistance = 9999
+
+  set noignorecase
 
   " only works with character motion
   if a:type == 'char'
@@ -72,7 +76,12 @@ fun! s:RenameSymbolInFile(type,...)
   let currentIndention = len(get(matchlist(getline("."), '\(\s*\)\S'),1,0))
 
   " go to next 'end' and detect indention
-  let targetIndention = len(matchlist(getline(search('^'.repeat('\s', currentIndention-&shiftwidth)."end", "cnW")), '\(\s*\)\S')[1])
+  let blockindention = matchlist(getline(search('^'.repeat('\s', currentIndention-&shiftwidth)."end", "cnW")), '\(\s*\)\S')
+  if len(blockindention) < 2
+    echo "Could not detect start and/or end of current scope"
+    return ""
+  endif
+  let targetIndention = len(blockindention[1])
 
   " detect matching config
   for detectConfig in get(config, &filetype, [])
@@ -114,13 +123,18 @@ fun! s:RenameSymbolInFile(type,...)
     " var=
     " |var|
     " var:
-    let content = map(getline(matchingConfig["upperLine"], matchingConfig["lowerLine"]), 'substitute(v:val, '''.getreg("@@").'\([ ]*\)\(\[\|(\|$\|\.\|)\|=\||\|:\)[$]*'', "'.renameTo.'\\1\\2", "g")')
+    " var+
+    " var-
+    " var%
+    let content = map(getline(matchingConfig["upperLine"], matchingConfig["lowerLine"]), 'substitute(v:val, ''\([^.]\)'.getreg("@@").'\([ ]*\)\(\[\|(\|$\|\.\|)\|=\||\|:\|+\|-\|%\)[$]*'', "\\1'.renameTo.'\\2\\3", "g")')
     call setline(matchingConfig["upperLine"], content) 
 
     " restore
     let &selection = sel_save
     let @@ = reg_save
   endif
+
+  let &ignorecase = ignorecase_save
 
   " restore cursor position
   call setpos(".", currentPos)
