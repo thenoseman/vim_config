@@ -3,7 +3,7 @@ if index(g:pathogen_disabled, "YouCompleteMe") > -1
   finish
 endif
 
-let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_of_chars_for_completion = 3
 
 let g:ycm_filetypes_to_completely_ignore = { 'notes' : 1, 'markdown' : 1, 'text' : 1, 'yaml' : 1, 'sass' : 1, 'html' : 1 }
 
