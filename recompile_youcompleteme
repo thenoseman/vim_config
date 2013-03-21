@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "***********************************************"
+echo "* Compiling YouCompleteMe ... please wait ... *"
+echo "***********************************************"
+echo
+echo
+
+cd home/.vim/bundle/YouCompleteMe
+./install.sh
+cd ../../../../
