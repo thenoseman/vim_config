@@ -22,7 +22,9 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + `renew_omnicompl_files` script to update the PHP-OmniComplete Function list from the PHP SVN Repository and node.js
   functionlist. Requires wget and node installed.
 + `integrate_way_cooler_icon` script downloads a better MacVim icon and integrates it into a homebrew installed MacVim.
-+ Use `:Unshouldify` to remove 'should' from a open rspec files
+
+# Assorted scripts:
++ Use `:Unshouldify` to remove 'should' from an open rspec files
 + Rails Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
 + Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
 + `re[MOTION]`: Replaces the MOTION text with the last yanked test (assorted_scripts/replace_with_register.vim)
@@ -50,13 +52,6 @@ If you use my `mvim` shell script instead of the MacVim supplied one you can use
 automatically jump into DirDiff mode.
 Manually usage is `DirDiff SourceDir1 SourceDir2`. After the comparison window is open use the commands described
 in the [DirDiff readme](http://www.vim.org/scripts/script.php?script_id=102). 
-
-## [Fugitive](http://github.com/tpope/vim-fugitive)
-A (_the_) git wrapper for vim. Use `:Gc` to commit, `:Gs` for status. When you are in a conflicted file use `:Dl` and `:Dr` 
-to copy the current hunk from left or right to the working copy.
-
-## [endwise](http://github.com/tpope/vim-endwise)
-Auto closes ruby structures with `end` where appropriate
 
 ## [greplace](http://github.com/skwp/greplace)
 Ever wanted to search/replace in all/some of the files in your project?
@@ -95,18 +90,14 @@ Adds all the rails.vim goodies to your plain old ruby files.
 ## [Repeat.vim](http://github.com/tpope/vim-repeat)
 Allows to repeat (`.`) plugin commands like they were edit-commands.
 
-## [ultisnips](https://github.com/SirVer/ultisnips)
-Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
-Replacement for [Snipmate.vim](http://github.com/garbas/snipmate.vim) which seems dead.
-
-Depends on [tlib](http://github.com/tomtom/tlib_vim) and [vim-addon-mw-utils](http://github.com/MarcWeber/vim-addon-mw-utils)
-
-If you want to add your own directory, go to `home/.vim/config/plugins/snipmate.vim` and add your path to the `runtimepath`
-
 ## [Supertab](http://github.com/ervandew/supertab)
 Smart text [completion](http://vimdoc.sourceforge.net/htmldoc/insert.html#ins-completion) (eg. OmniComplete) configured to use the `ctrl-space` (<C-space>) key combo instead of `tab` which snipmate uses.
 I tried to make it as smart as possible. It first tries Omni-Completion and then falls back to local file complete.
 *This is only active for Windows*
+
+## [ultisnips](https://github.com/SirVer/ultisnips)
+Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
+Replacement for [Snipmate.vim](http://github.com/garbas/snipmate.vim) which seems to be unmaintained.
 
 ## [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 Auto Completion Plugin, *active on Mac*  
@@ -137,8 +128,18 @@ Generate those taks via the [gem-ctags](https://github.com/tpope/gem-ctags) gem 
 Jump to characters the easy way: `,,tCharacter` and easymotion will show letters for every Hit it got. Type those letters and easymotion jumps to that point.
 Also works with `f` or `w`. There is a [nice tutorial](http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/).
 
+## [vim-endwise](http://github.com/tpope/vim-endwise)
+Auto closes ruby structures with `end` where appropriate
+
+## [vim-fugitive](http://github.com/tpope/vim-fugitive)
+A (_the_) git wrapper for vim. Use `:Gc` to commit, `:Gs` for status. When you are in a conflicted file use `:Dl` and `:Dr` 
+to copy the current hunk from left or right to the working copy.
+
 ## [vim-haml](http://github.com/tpope/vim-haml)
 Adds support for SASS, Scss and HAML files to VIM.
+
+## [vim-jade](http://github.com/digitaltoad/vim-jade)
+Support for Jade Templates in Javascript
 
 ## [vim-javascript](http://github.com/pangloss/vim-javascript)
 Improvements to javascript indention in VIM.
