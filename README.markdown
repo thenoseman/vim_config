@@ -12,7 +12,6 @@ Clone this repository to your HD and don't forget to `git submodule init && git 
 Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home directory.
 
 # Added non-plugin features
-+ CopyMatches Script from [vimtips](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard) (`:CopyMatches`)
 + my own "mvim" script (extras/mvim) that makes all passed cmdargs available to vim ($VIM_CMDARGS)
   This is used to enable you to call "mvim -d" with two directories (normally only two files).
   If you call "mvim -d" with two directories, the DirDiff Plugin will automatically be called to diff the directories.
@@ -22,15 +21,33 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + `renew_omnicompl_files` script to update the PHP-OmniComplete Function list from the PHP SVN Repository and node.js
   functionlist. Requires wget and node installed.
 + `integrate_way_cooler_icon` script downloads a better MacVim icon and integrates it into a homebrew installed MacVim.
-
-# Assorted scripts:
 + Use `:Unshouldify` to remove 'should' from an open rspec files
 + Rails Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
 + Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
-+ `re[MOTION]`: Replaces the MOTION text with the last yanked test (assorted_scripts/replace_with_register.vim)
-+ `ec[MOTION]`: In a ruby file echoes the variable defined by MOTION (assorted_scripts/echo_ruby_variable_command.vim)
-+ `:Rcls` initializes the module/class structure of a previously saved file (assorted_scripts/ruby_class_initialize.vim)
-+ `:Gp` in a Gemfile line ("gem 'somegem'") adds a local path (:path => "../somegem") to the Gemfile
+
+# Assorted scripts:
+- `add_text_if_missing.vim`:  
+  Adds a function to add a line (eg. UTF-8 encoding for ruby < 2.0) to the top of a file
+- `copy_matches.vim`:  
+  Copy the search matches to the clipboard ([source](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard)) with `:CopyMatches`
+- `echo_ruby_variable_command.vim`:  
+  `ec[MOTION]`: In a ruby file echoes the variable defined by MOTION 
+- `move-lines.vim`:  
+  Moves visually selected lines up/down 
+- `nodejs-doc.vim`:  
+  Data file for node.js autocompletion
+- `refactor_rename.vim`:  
+  `rr[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
+- `replace_with_register.vim`:  
+  `re[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
+- `ruby_class_initialize.vim`:  
+  `:Rcls` initializes the module/class structure of a *previously saved* file
+- `ruby_local_gemfile.vim`:  
+  `:Gp` in a Gemfile line ("gem 'somegem'") adds a local path (:path => "../somegem") to the Gemfile
+- `run_current_rspec_test_via_pipe.vim`:  
+  Press `<Leader>r` on a rspec describe/context/it and it will be executed in "to" a named pipe (tmp/rspec-test-pipe).  
+  Create pipe like this:
+ `mkdir -p tmp && if [ ! -p tmp/rspec-test-pipe ]; then mkfifo tmp/rspec-test-pipe; fi && echo "Now listening to tmp/rspec-test-pipe" && while true; do sh -c "$(cat tmp/rspec-test-pipe)"; done'`
 
 # Plugins:
 ## [Ack.vim](http://github.com/kronn/ack.vim)
