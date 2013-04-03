@@ -1,10 +1,13 @@
+snippet . "inspect" w
+.inspect
+endsnippet
+
 snippet warn "warn"
 puts "\033[33m===== #{File.basename(__FILE__)}:#{__LINE__} ====="
 puts ${1} 
 puts "===============================\033[0m" 
 endsnippet
 
-# #!/usr/bin/env ruby
 snippet #! "#!"
 #!/usr/bin/env ruby
 # encoding: utf-8
