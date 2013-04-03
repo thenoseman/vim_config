@@ -46,6 +46,8 @@ To install a better integrated version of MacVim please see [this gist](https://
   `:Rcls` initializes the module/class structure of a *previously saved* file
 - `ruby_local_gemfile.vim`:  
   `:Gp` in a Gemfile line ("gem 'somegem'") adds a local path (:path => "../somegem") to the Gemfile
+- `ruby_method_visibility.vim`:  
+  Enter `:Vis` and this script shows you the method visibilities (private/public/protected) in the gutter
 - `run_current_rspec_test_via_pipe.vim`:  
   Press `<Leader>r` on a rspec describe/context/it and it will be executed in "to" a named pipe (tmp/rspec-test-pipe).  
   Create pipe like this:
