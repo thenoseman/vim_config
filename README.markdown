@@ -11,8 +11,6 @@ My configuration is based on [duwanis](https://github.com/duwanis/vim_config) wo
 Clone this repository to your HD and don't forget to `git submodule init && git submodule update` to make it work.  
 Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home directory.
 
-To install a better integrated version of MacVim please see [this gist](https://gist.github.com/thenoseman/5094256) that integrates your active python/ruby instead of the system ones.
-
 # Added non-plugin features
 + my own "mvim" script (extras/mvim) that makes all passed cmdargs available to vim ($VIM_CMDARGS)
   This is used to enable you to call "mvim -d" with two directories (normally only two files).
