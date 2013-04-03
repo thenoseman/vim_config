@@ -23,31 +23,49 @@ To install a better integrated version of MacVim please see [this gist](https://
 + `renew_omnicompl_files` script to update the PHP-OmniComplete Function list from the PHP SVN Repository and node.js
   functionlist. Requires wget and node installed.
 + `integrate_way_cooler_icon` script downloads a better MacVim icon and integrates it into a homebrew installed MacVim.
-+ Use `:Unshouldify` to remove 'should' from an open rspec files
-+ Rails Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
-+ Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
++ `home/extras/macvim_with_current_ruby.patch` patches the homebrew formula for macvim to integrate the active ruby and python in MacVIM.  
+  Apply via `patch -p0 /usr/local/Library/Formula/macvim.rb home/extras/macvim_with_current_ruby.patch` then reinstall macvim with homebrew
 
 # Assorted scripts:
 - `add_text_if_missing.vim`:  
   Adds a function to add a line (eg. UTF-8 encoding for ruby < 2.0) to the top of a file
+
 - `copy_matches.vim`:  
   Copy the search matches to the clipboard ([source](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard)) with `:CopyMatches`
+
 - `echo_ruby_variable_command.vim`:  
   `ec[MOTION]`: In a ruby file echoes the variable defined by MOTION 
+
 - `move-lines.vim`:  
   Moves visually selected lines up/down 
+
 - `nodejs-doc.vim`:  
   Data file for node.js autocompletion
+
+- `presentationmode.vim`:  
+  Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
+
 - `refactor_rename.vim`:  
   `rr[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
+
 - `replace_with_register.vim`:  
   `re[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
+
 - `ruby_class_initialize.vim`:  
   `:Rcls` initializes the module/class structure of a *previously saved* file
+
 - `ruby_local_gemfile.vim`:  
   `:Gp` in a Gemfile line ("gem 'somegem'") adds a local path (:path => "../somegem") to the Gemfile
+
 - `ruby_method_visibility.vim`:  
   Enter `:Vis` and this script shows you the method visibilities (private/public/protected) in the gutter
+
+- `ruby_rails_locale_lookup.vim`:  
+  Rails Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
+
+- `ruby_unshouldify_rspec.vim`:  
+  Use `:Unshouldify` to remove 'should' from an open rspec files
+
 - `run_current_rspec_test_via_pipe.vim`:  
   Press `<Leader>r` on a rspec describe/context/it and it will be executed in "to" a named pipe (tmp/rspec-test-pipe).  
   Create pipe like this:

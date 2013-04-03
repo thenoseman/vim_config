@@ -1,0 +1,59 @@
+*** old_macvim.rb  2013-03-05 21:02:41.000000000 +0100
+--- new_macvim.rb  2013-03-05 21:50:51.000000000 +0100
+*************** class Macvim < Formula
+*** 31,36 ****
+--- 31,47 ----
+      # Reference: https://github.com/b4winckler/macvim/wiki/building
+      ENV['CC'] = "clang" if MacOS.version >= :mountain_lion
+  
++     # python version active
++     python_version=`python -c "import sys; print sys.version"`.match(/^(.*?) /)[1]
++     python_version_minor = python_version.match(/([2-3]\.[0-9]+)/)[1]
++     python_path="/usr/local/Cellar/python/#{python_version}/Frameworks/Python.framework/Versions/Current/lib/python#{python_version_minor}/config"
++     if !File.exists?("/usr/local/lib/python#{python_version_minor}/config") && File.exists?(python_path)
++       ln_s(python_path, "/usr/local/lib/python#{python_version_minor}/config")
++     end
++ 
++     # ruby version active
++     ruby_path = `gem env | grep "RUBY EXECUTABLE"`.match(/: (.*)/)[1]
++ 
+      args = %W[
+        --with-features=huge
+        --with-tlib=ncurses
+*************** class Macvim < Formula
+*** 38,46 ****
+        --with-macarchs=#{arch}
+        --enable-perlinterp
+        --enable-pythoninterp
+        --enable-rubyinterp
+!       --enable-tclinterp
+!       --with-ruby-command=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+      ]
+  
+      args << "--enable-cscope" if build.include? "with-cscope"
+--- 49,57 ----
+        --with-macarchs=#{arch}
+        --enable-perlinterp
+        --enable-pythoninterp
++       --with-python-config-dir=/usr/local/lib/python#{python_version_minor}/config
+        --enable-rubyinterp
+!       --with-ruby-command=#{ruby_path}
+      ]
+  
+      args << "--enable-cscope" if build.include? "with-cscope"
+*************** class Macvim < Formula
+*** 50,56 ****
+        args << "--with-lua-prefix=#{HOMEBREW_PREFIX}"
+      end
+  
+!    args << "--enable-python3interp" if build.include? "with-python3"
+  
+      system "./configure", *args
+  
+--- 61,67 ----
+        args << "--with-lua-prefix=#{HOMEBREW_PREFIX}"
+      end
+  
+!     args << "--enable-python3interp" if build.include? "with-python3"
+  
+      system "./configure", *args

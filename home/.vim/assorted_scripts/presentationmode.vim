@@ -1,3 +1,8 @@
+if exists("g:loaded_presentationmode")
+  finish
+endif
+let g:loaded_presentationmode= 1
+
 fun! s:PresentationModeEnter()
   " Taken from http://vim.wikia.com/wiki/Change_font_size_quickly
   " Scale font with ctrl+shift+Up or Down Keys
