@@ -136,10 +136,6 @@ I tried to make it as smart as possible. It first tries Omni-Completion and then
 Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
 Replacement for [Snipmate.vim](http://github.com/garbas/snipmate.vim) which seems to be unmaintained.
 
-## [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-Auto Completion Plugin, *active on Mac*  
-This has a compiled (cmake) component which needs to be compiled before starting vim. See [the github page](https://github.com/Valloric/YouCompleteMe#mac-os-x-super-quick-installation) for detailed instructions.  
-
 ## [Surround.vim](http://github.com/tpope/vim-surround)
 Easily surround text with brackets, quotes or what have you.
 Change an existing surrounding using `csOldNew` (eg. "Hello" would become 'Hello' via `cs"'`), 
