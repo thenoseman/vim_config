@@ -15,13 +15,6 @@ git submodule foreach git pull origin master
 git add home/.vim/bundle/*
 git commit -am "Updated submodules to the newest version as of `date`" 
 
-# Compile YouCompleteMe if neccessary
-if [[ $((`find home/.vim/bundle/YouCompleteMe/cpp -newer home/.vim/bundle/YouCompleteMe/python/ycm_core.so | wc -l`+0)) > 0 ]]; then
-  echo
-  echo
-  ./recompile_youcompleteme
-fi
-
 echo
 echo "Changes in Submodules ..."
 echo "-------------------------"

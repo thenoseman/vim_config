@@ -39,7 +39,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 if has('unix')
   let g:pathogen_disabled = ["supertab"]
 else
-  let g:pathogen_disabled = ["YouCompleteMe"]
+  let g:pathogen_disabled = []
 endif
 
 call pathogen#infect()
