@@ -5,17 +5,21 @@ let g:loaded_run_current_rspec = 1
 
 " uses spring gem
 function! RSpecCurrent()
-  echom "Starting rspec on named pipe tmp/rspec-test-pipe"
   if(!filereadable("bin/rspec"))
-    echom "please 'gem install spring && spring binstubs rspec'"
-    finish
+    echom "please 'gem install spring && spring binstub rspec'"
+    return
   endif
+
   if(!filereadable("tmp/rspec-test-pipe"))
-    execute "!mkfifo tmp/rspec-test-pipe && while true; do sh -c '$(cat tmp/rspec-test-pipe)'; done"
+    echom "IN SHELL DO: mkfifo tmp/rspec-test-pipe && while true; do sh -c '$(cat tmp/rspec-test-pipe)'; done"
+    return
   endif
+
   if(stridx(expand("%p"), "_spec") > -1)
     let g:rspec_current_rspec_test = expand("%p").":".line(".")
   endif
+
+  echom "running " . g:rspec_current_rspec_test . " via tmp/rspec-test-pipe"
   execute "silent !echo \"bin/rspec --color " . g:rspec_current_rspec_test . "\" > tmp/rspec-test-pipe"
 endfunction
 
