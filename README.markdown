@@ -44,7 +44,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
   Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
 
 - `refactor_rename.vim`:  
-  `rr[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
+  `er[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
 
 - `replace_with_register.vim`:  
   `re[MOTION]`: Replaces the MOTION text with the last yanked/deleted text

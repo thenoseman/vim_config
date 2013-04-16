@@ -6,7 +6,7 @@
 " The scope is defined by the config-dictionary, the innermost scope wins.
 " 
 " usage:
-" rr{motion}: rename the text/variable in {motion} 
+" er{motion}: rename the text/variable in {motion} 
 "
 " example:
 " 
@@ -30,9 +30,9 @@
 "       hello #<-- 'rriw' here renames inside the do...end block
 "     end
 "   end
-" end 
+" end
 
-nmap <silent> rr :set opfunc=<SID>RenameSymbolInFile<CR>g@
+nmap <silent> er :set opfunc=<SID>RenameSymbolInFile<CR>g@
 
 fun! s:RenameSymbolInFile(type,...)
 
