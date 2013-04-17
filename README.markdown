@@ -40,6 +40,9 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 - `nodejs-doc.vim`:  
   Data file for node.js autocompletion
 
+- `pretty_print_xml.vim`:  
+  Pretty print (format) an XML file with `:Pretty`
+
 - `presentationmode.vim`:  
   Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
 
@@ -47,7 +50,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
   `er[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
 
 - `replace_with_register.vim`:  
-  `re[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
+  `ep[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
 
 - `ruby_class_initialize.vim`:  
   `:Rcls` initializes the module/class structure of a *previously saved* file
@@ -65,8 +68,9 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
   Use `:Unshouldify` to remove 'should' from an open rspec files
 
 - `run_current_rspec_test_via_pipe.vim`:  
-  Press `<Leader>r` on a rspec describe/context/it and it will be executed in "to" a named pipe (tmp/rspec-test-pipe).  
-  Create pipe like this:
+  Press `<Leader>r` on a rspec describe/context/it and it will be executed in a named pipe (tmp/rspec-test-pipe).  
+  Press `<Leader>r` outside of an rspec file and the last run spec will be re-executed  
+  Create pipe like this:  
  `mkdir -p tmp && if [ ! -p tmp/rspec-test-pipe ]; then mkfifo tmp/rspec-test-pipe; fi && echo "Now listening to tmp/rspec-test-pipe" && while true; do sh -c "$(cat tmp/rspec-test-pipe)"; done'`
 
 # Plugins:
