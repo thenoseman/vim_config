@@ -79,9 +79,6 @@
 [submodule "home/.vim/bundle/vim-pathogen"]
 	path = home/.vim/bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "home/.vim/bundle/supertab"]
-	path = home/.vim/bundle/supertab
-	url = git://github.com/ervandew/supertab.git
 [submodule "home/.vim/bundle/vim-yankstack"]
 	path = home/.vim/bundle/vim-yankstack
 	url = git://github.com/maxbrunsfeld/vim-yankstack.git
