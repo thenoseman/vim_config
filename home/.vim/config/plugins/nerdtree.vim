@@ -18,7 +18,7 @@ let NERDTreeShowHidden=0
 " @key <leader>d: Open NERDTree at the current buffer
 noremap <leader>d :call NERDTreeSmartToggle()<CR>
 
-" togglw NERDTree in a smart way:
+" toggle NERDTree in a smart way:
 " Use NERDTree if no buffer is selected or
 " use NERDTreeFind if a buffer is active to reveal that file
 fun! NERDTreeSmartToggle()

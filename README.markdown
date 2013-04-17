@@ -108,9 +108,9 @@ Filetype sensitive commenting and uncommenting of textblocks.
 Mapped to `,c ` (thats ,c[space]) to toggle commenting in visual-mode.
 
 ## [NERDTree](http://github.com/scrooloose/nerdtree)
-_The_ file-explorer for vim. Closed by default. Use `,d` to open.
-After you add or delete files use `:CtrlPClearCache` to regenerate
-the ctrl-p cache.
+_The_ file-explorer for vim. Closed by default. Use `,d` to open.  
+Auto-opens the directory of the current file (See `config/plugins/nerdtree.vim`).  
+After you add or delete files use `:CtrlPClearCache` (or press `F5` inside ctrl-p) to regenerate the ctrl-p cache.
 
 ## [PHP-Indention](http://github.com/2072/PHP-Indenting-for-VIm)
 Once there was a time where I was knee-deep into PHP :)
@@ -126,11 +126,6 @@ Adds all the rails.vim goodies to your plain old ruby files.
 
 ## [Repeat.vim](http://github.com/tpope/vim-repeat)
 Allows to repeat (`.`) plugin commands like they were edit-commands.
-
-## [Supertab](http://github.com/ervandew/supertab)
-Smart text [completion](http://vimdoc.sourceforge.net/htmldoc/insert.html#ins-completion) (eg. OmniComplete) configured to use the `ctrl-space` (<C-space>) key combo instead of `tab` which snipmate uses.
-I tried to make it as smart as possible. It first tries Omni-Completion and then falls back to local file complete.
-*This is only active for Windows*
 
 ## [ultisnips](https://github.com/SirVer/ultisnips)
 Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
@@ -155,7 +150,6 @@ Deactivated filetypes (changeable in `home/.vim/config/plugins/syntastic.vim`):
 ## [vim-bundler](http://github.com/tpope/vim-bundler)
 Adds `:Bopen` (bundle open) and `:Bundle` to vim. That's nice but more importantly it adds all `tags` files of all gems in your `Gemfile` to
 vims `tags` list. 
-Generate those taks via the [gem-ctags](https://github.com/tpope/gem-ctags) gem (gem install gem-ctags && gem ctags).
 
 ## [vim-easymotion](http://github.com/Lokaltog/vim-easymotion)
 Jump to characters the easy way: `,,tCharacter` and easymotion will show letters for every Hit it got. Type those letters and easymotion jumps to that point.
@@ -169,7 +163,7 @@ A (_the_) git wrapper for vim. Use `:Gc` to commit, `:Gs` for status. When you a
 to copy the current hunk from left or right to the working copy.
 
 ## [vim-haml](http://github.com/tpope/vim-haml)
-Adds support for SASS, Scss and HAML files to VIM.
+Adds support for SASS, SCSS and HAML files to VIM.
 
 ## [vim-jade](http://github.com/digitaltoad/vim-jade)
 Support for Jade Templates in Javascript
