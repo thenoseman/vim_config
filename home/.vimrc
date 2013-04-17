@@ -34,14 +34,7 @@ runtime macros/matchit.vim
 
 " use pathogen to load plugins/etc.
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-" disable plugins on Mac/Windows
-if has('unix')
-  let g:pathogen_disabled = ["supertab"]
-else
-  let g:pathogen_disabled = []
-endif
-
+let g:pathogen_disabled = []
 call pathogen#infect()
 
 " turn on all filetype settings, syntax, etc.
