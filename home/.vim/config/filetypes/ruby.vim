@@ -1,12 +1,10 @@
-""""""""""""""""""""""""""""""""
-"" Set Ruby-specific keybindings
-""""""""""""""""""""""""""""""""
+" Set Ruby-specific keybindings
 
 augroup vim_config
-  autocmd FileType ruby call LoadRubyKeybindings()
+  autocmd FileType ruby  call LoadRubyKeybindings()
   autocmd FileType eruby call LoadRubyKeybindings()
-  autocmd FileType haml call LoadRubyKeybindings()
-  autocmd FileType yaml call LoadRubyKeybindings()
+  autocmd FileType haml  call LoadRubyKeybindings()
+  autocmd FileType yaml  call LoadRubyKeybindings()
 
   " Automatically add magic encoding comment
   autocmd BufRead,BufNewFile *.rb call AddTextToTopIfMissing("# -*- encoding : utf-8 -*-","encoding[ ]\+:[ ]\+utf-8")
@@ -51,4 +49,3 @@ fun! UpdateOrCreateTagsFile()
     silent! execute ":!bash " . tempfile . " &"
   endif
 endfun
-

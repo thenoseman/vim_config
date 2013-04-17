@@ -3,6 +3,6 @@ augroup vim_config
 augroup END
 
 fun! LoadMarkdownBindings()
-  " Shift Enter inserts sof markdown brake (two spaces)
+  " Shift Enter inserts soft markdown brake (two spaces)
   inoremap <buffer> <silent> <s-enter> <space><space><CR>
 endfun
