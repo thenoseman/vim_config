@@ -87,3 +87,7 @@ augroup END
 
 " don't care for octal or hex values when using VIMs arithmetic function
 set nrformats=
+
+" More natural split direction
+set splitbelow
+set splitright
