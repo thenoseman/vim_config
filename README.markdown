@@ -169,9 +169,6 @@ to copy the current hunk from left or right to the working copy.
 ## [vim-haml](http://github.com/tpope/vim-haml)
 Adds support for SASS, SCSS and HAML files to VIM.
 
-## [vim-jade](http://github.com/digitaltoad/vim-jade)
-Support for Jade Templates in Javascript
-
 ## [vim-javascript](http://github.com/pangloss/vim-javascript)
 Improvements to javascript indention in VIM.
 
