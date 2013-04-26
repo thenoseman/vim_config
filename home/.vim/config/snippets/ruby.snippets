@@ -119,8 +119,8 @@ require 'pry'; binding.pry
 endsnippet
 
 # debugger
-snippet deb "deb"
-puts "\033[33m= DEBUGGER (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "debugger"; debugger
+snippet deb "debub with pry"
+puts "\033[33m= DEBUGGER (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "pry"; binding.pry
 endsnippet
 
 #############################################
