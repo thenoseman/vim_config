@@ -114,13 +114,14 @@ do |${1:variable}|
 end
 endsnippet
 
-snippet pry "pry"
-require 'pry'; binding.pry
+# debugger
+snippet deb "debugger"
+puts "\033[33m= DEBUGGER (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "debugger"; debugger
 endsnippet
 
-# debugger
-snippet deb "debub with pry"
-puts "\033[33m= DEBUGGER (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "pry"; binding.pry
+# pry
+snippet pry "debug with pry"
+puts "\033[33m= PRY (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "pry"; binding.pry
 endsnippet
 
 #############################################
