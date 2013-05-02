@@ -172,9 +172,6 @@ Adds support for SASS, SCSS and HAML files to VIM.
 ## [vim-javascript](http://github.com/pangloss/vim-javascript)
 Improvements to javascript indention in VIM.
 
-## [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete)
-Completion for node.js. Use `renew_omnicompl_files` to update the node.js function list
-
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
 OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
