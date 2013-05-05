@@ -15,7 +15,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=0
 
 " No Check for
-let g:syntastic_mode_map = {'active_filetypes': [], 'mode': 'active', 'passive_filetypes': ['html','coffee','haml','sass','scss']}  
+let g:syntastic_mode_map = {'active_filetypes': [], 'mode': 'active', 'passive_filetypes': ['html','coffee','haml','sass','scss','xml']}  
 
 " In vimdiff Mode do not auto-show the errors
 if &diff
