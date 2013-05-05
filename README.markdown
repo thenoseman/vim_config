@@ -94,6 +94,9 @@ automatically jump into DirDiff mode.
 Manually usage is `DirDiff SourceDir1 SourceDir2`. After the comparison window is open use the commands described
 in the [DirDiff readme](http://www.vim.org/scripts/script.php?script_id=102). 
 
+## [vim-extradite](https://github.com/int3/vim-extradite)
+Adds `Glog` to scroll through the current files history
+
 ## [greplace](http://github.com/skwp/greplace.vim)
 Ever wanted to search/replace in all/some of the files in your project?
 That's an absolute nightmare using `vimgrep`. Fret not! `:Gsearch` has you covered!

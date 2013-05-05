@@ -79,3 +79,6 @@
 [submodule "home/.vim/bundle/ultisnips"]
 	path = home/.vim/bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
+[submodule "home/.vim/bundle/vim-extradite"]
+	path = home/.vim/bundle/vim-extradite
+	url = git://github.com/int3/vim-extradite.git
