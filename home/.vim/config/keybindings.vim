@@ -12,6 +12,12 @@ endif
 " leader = Comma
 let mapleader = ","
 
+" Keep Block visually marked when indenting
+nnoremap > ><CR>gv
+nnoremap < <<CR>gv
+vnoremap > ><CR>gv
+vnoremap < <<CR>gv
+
 " Move lines up/down even in visual mode
 " @key <C-Up>: Move in visual mode marked lines up (in all modes)
 " @key <C-Down>: Move in visual mode marked lines down (in all modes)
