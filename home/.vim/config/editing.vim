@@ -54,9 +54,6 @@ set clipboard=unnamed
 " Wait less milliseconds before executing command
 set timeoutlen=500
 
-" Display unicode double width characters
-set ambiwidth=double
-
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
 " Stolen from http://stackoverflow.com/a/5403847/171364 (janus repo)
