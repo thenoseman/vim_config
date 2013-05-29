@@ -7,7 +7,7 @@ let g:UltiSnipsUsePythonVersion = 2
 " Split vertically on snippet edit
 let g:UltiSnipsEditSplit = "vertical"
 
-" Proivate and public snippet dirs
+" Private and public snippet dirs
 let g:UltiSnipsSnippetsDir = "~/.vim/config/snippets"
 let g:UltiSnipsSnippetDirectories = ["snippets"]
 
@@ -18,6 +18,6 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Dont auto-rehash on snippet changes
-" restart VIm for that
+" restart VIM for that
 let g:UltiSnipsDoHash=0
 
