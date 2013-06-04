@@ -5,9 +5,9 @@ let g:loaded_run_current_rspec = 1
 
 " uses spring gem
 function! RSpecCurrent()
-  if(!filereadable("bin/rspec"))
-    echom "please 'gem install spring && spring binstub rspec'"
-    return
+  let s:bin = "rspec"
+  if(filereadable("bin/rspec"))
+    let s:bin = "bin/rspec"
   endif
 
   if(!filereadable("tmp/rspec-test-pipe"))
@@ -20,7 +20,7 @@ function! RSpecCurrent()
   endif
 
   echom "running " . g:rspec_current_rspec_test . " via tmp/rspec-test-pipe"
-  execute "silent !echo \"bin/rspec --color " . g:rspec_current_rspec_test . "\" > tmp/rspec-test-pipe"
+  execute "silent !echo \"" . s:bin . " --color " . g:rspec_current_rspec_test . "\" > tmp/rspec-test-pipe"
 endfunction
 
 map <leader>r :call RSpecCurrent() <CR>
