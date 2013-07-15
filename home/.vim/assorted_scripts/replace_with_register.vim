@@ -2,14 +2,14 @@
 " with the previous yanked/deleted text
 "
 " yank/delete some text and then
-" use er[MOTION] to replace the motion target with the yanked text
+" use re[MOTION] to replace the motion target with the yanked text
 
 if exists("g:loaded_replace_with_register") || &cp || v:version < 700
   finish
 endif
 let g:loaded_replace_with_register = 1
 
-nmap <silent> er :set opfunc=<SID>ReplaceWithRegister<CR>g@
+nmap <silent> re :set opfunc=<SID>ReplaceWithRegister<CR>g@
 
 function! <SID>ReplaceWithRegister(type, ...)
   let sel_save = &selection
