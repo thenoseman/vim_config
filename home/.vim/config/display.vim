@@ -5,7 +5,11 @@
 " Set iTerm Profiles -> your Profile -> Terminal -> Report Terminal Type to xterm-256colors
 au VimEnter * set t_Co=256
 
-colorscheme railscasts
+if has('gui_running')
+  colorscheme railscasts
+else
+  colorscheme railscasts-console
+endif
 
 " Show cursor line
 set cul
