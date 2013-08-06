@@ -32,7 +32,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
   Copy the search matches to the clipboard ([source](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard)) with `:CopyMatches`
 
 - `echo_ruby_variable_command.vim`:  
-  `ec[MOTION]`: In a ruby file echoes the variable defined by MOTION 
+  `ec[MOTION]`: In a ruby file 'puts' the variable defined by MOTION one line after the text
 
 - `move-lines.vim`:  
   Moves visually selected lines up/down 
@@ -47,10 +47,10 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
   Enter `:Presentationmode` with larger font, "fullscreen" and `<ctrl-shift-up>` and `<ctrl-shift-down>` to scale the fontsize manually
 
 - `refactor_rename.vim`:  
-  `er[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
+  `rr[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
 
 - `replace_with_register.vim`:  
-  `ep[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
+  `re[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
 
 - `ruby_class_initialize.vim`:  
   `:Rcls` initializes the module/class structure of a *previously saved* file
