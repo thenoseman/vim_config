@@ -29,6 +29,12 @@ let g:ctrlp_follow_symlinks = 1
 " dotfiles are ok
 let g:ctrlp_show_hidden = 1
 
+" cache file list
+let g:ctrlp_use_caching = 1
+
+" Clear the file-cache on exit
+let g:ctrlp_clear_cache_on_exit = 1
+
 " @plugin: ctrlp
 " @key <leader>t: Searches all open buffers for a tag (aka. method, class name, ...)
 nmap <leader>t :CtrlPTag<CR>
