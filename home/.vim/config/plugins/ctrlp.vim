@@ -10,7 +10,7 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.sass-cache$|tmp$|node_modules$|^spec\/reports',
   \ 'file': '\.exe$\|\.so$\|\.dll$|\.jpg$|\.png$|\.DS_Store|tags|\.log$',
-  \ 'link': 'public/cms'
+  \ 'link': 'public/cms|gems'
   \ }
 set wildignore+=*tmp*,*.git,.sass_cache,.DS_Store,*.jpg,*.png,*.svn,tags,*.log,node_modules,*SPEC-*
 
@@ -24,7 +24,7 @@ let g:ctrlp_extensions = ['tag']
 let g:ctrlp_switch_buffer = 'Et'
 
 " follow symlinks
-let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_follow_symlinks = 0
 
 " dotfiles are ok
 let g:ctrlp_show_hidden = 1
