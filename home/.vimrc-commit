@@ -9,7 +9,3 @@ runtime! bundle/yankring.vim/plugin/yankring.vim
 filetype plugin indent on
 filetype detect
 syntax on 
-
-if &ft != "gitrebase"
-  startinsert
-endif
