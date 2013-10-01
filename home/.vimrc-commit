@@ -1,3 +1,5 @@
+" this config is read via the .gotconfig setting
+" vim -u NONE -N -u ~/.vimrc-commit -c 'normal A' -c 'startinsert'
 set nocompatible
 
 runtime! config/filetypes/gitrebase.vim
