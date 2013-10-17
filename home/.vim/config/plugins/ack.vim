@@ -3,7 +3,8 @@
 "
 
 " auto quote all meta characters (literal search mode)
-let g:ackprg="ack -H --nocolor --nogroup --column -Q"
+"let g:ackprg="ack -H --nocolor --nogroup --column -Q"
+let g:ackprg='ag --nogroup --nocolor --column'
 
 " Dont auto-open first match
 cabbrev Ack Ack!
