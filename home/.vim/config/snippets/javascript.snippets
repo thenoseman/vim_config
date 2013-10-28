@@ -31,10 +31,20 @@ function ${1:functionName}(${2:argument}) {
 }
 endsnippet
 
-snippet f "function() {}" w
+snippet fu "function() {}" w
 function (${1}) { 
   ${2} 
 }
+endsnippet
+
+snippet f "function() {}" w
+function () { 
+  ${2} 
+}
+endsnippet
+
+snippet d "debugger;" w
+debugger;
 endsnippet
 
 # Node require
