@@ -1,4 +1,4 @@
 TODOS
 =====
 
-- [] Deactivate cursor keys
+- [ ] Deactivate cursor keys
