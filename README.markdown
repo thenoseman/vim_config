@@ -104,9 +104,6 @@ This thing so rocks!
 ## [html5-syntax](http://github.com/developish/html5-syntax.vim)
 Adds syntax support for HTML5 elements like "data-*" or <section>
 
-## [jscomplete-vim](https://github.com/teramako/jscomplete-vim)
-Better Javascript auto-complete.
-
 ## [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
 Filetype sensitive commenting and uncommenting of textblocks.
 Mapped to `,c ` (thats ,c[space]) to toggle commenting in visual-mode.
