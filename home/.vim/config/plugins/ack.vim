@@ -29,5 +29,3 @@ endfunction
 " to search for the current word under the cursor (text-object iW) in normal
 " mode or for the seection in visual mode.
 command! -range Ackv call AckVisualRange()
-nmap Ack :call AckVisualRange()<cr>
-vmap Ack :call AckVisualRange()<cr>
