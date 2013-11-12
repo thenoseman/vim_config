@@ -5,6 +5,8 @@
 target=$(find /usr/local/Cellar -name MacVim.app 2> /dev/null | sort | tail -n 1)
 path="$target/Contents/Resources/"
 
+echo "Found Icon in ${path}"
+
 wget -O /tmp/MacVim-generic.icns http://dribbble.com/shots/337065-MacVim-Icon-Updated/attachments/15582
 
 cp /tmp/MacVim-generic.icns $path
