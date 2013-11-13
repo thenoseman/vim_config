@@ -63,6 +63,3 @@ map <c-s> :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'> trans<'.s
 
 " ctrl-space: autocomplete lokal 
 imap <c-space> <c-x><c-n>
-
-" quickly switch between two open files
-nmap <c-b> :b#<cr> 
