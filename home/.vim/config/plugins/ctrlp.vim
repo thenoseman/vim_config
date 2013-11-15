@@ -38,3 +38,7 @@ let g:ctrlp_clear_cache_on_exit = 1
 " @plugin: ctrlp
 " @key <leader>t: Searches all open buffers for a tag (aka. method, class name, ...)
 nmap <leader>t :CtrlPTag<CR>
+
+" @plugin: ctrlp
+" @key <leader>u: Searches the recently open files list
+nmap <leader>u :CtrlPMRUFiles<CR>
