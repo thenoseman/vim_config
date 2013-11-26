@@ -7,3 +7,7 @@ set incsearch
 " ignore case only if no capitals are included
 set ignorecase
 set smartcase
+
+" http://vim.wikia.com/wiki/VimTip159
+" auto search visually selected text when using '/'
+vmap / y:execute "/".escape(@",'[]/\.*')<CR>
