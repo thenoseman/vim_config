@@ -6,6 +6,10 @@
 "let g:ackprg="ack -H --nocolor --nogroup --column -Q"
 let g:ackprg='ag --nogroup --nocolor --column'
 
+" use ag for grep (also in Gsearch)
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
+
 " Dont auto-open first match
 cabbrev Ack Ack!
 
