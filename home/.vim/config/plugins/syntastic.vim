@@ -12,7 +12,7 @@ endif
 let g:syntastic_auto_loc_list=1
 
 " always show warnings
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 " No Check for
 let g:syntastic_mode_map = {'active_filetypes': [], 'mode': 'active', 'passive_filetypes': ['html','coffee','haml','sass','scss','xml']}  
