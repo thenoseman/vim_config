@@ -28,14 +28,8 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 - `copy_matches.vim`:  
   Copy the search matches to the clipboard ([source](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard)) with `:CopyMatches`
 
-- `echo_ruby_variable_command.vim`:  
-  `ec[MOTION]`: In a ruby file 'puts' the variable defined by MOTION one line after the text
-
 - `move-lines.vim`:  
   Moves visually selected lines up/down 
-
-- `nodejs-doc.vim`:  
-  Data file for node.js autocompletion
 
 - `pretty_print_xml.vim`:  
   Pretty print (format) an XML file with `:Pretty`
@@ -47,7 +41,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
   `rr[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
 
 - `replace_with_register.vim`:  
-  `re[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
+  `<Leader>e[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
 
 - `ruby_class_initialize.vim`:  
   `:Rcls` initializes the module/class structure of a *previously saved* file
@@ -72,8 +66,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 
 # Plugins:
 ## [Ack.vim](http://github.com/kronn/ack.vim)
-[ack](http://betterthangrep.com/) is a a grep alternative written in perl. It sports context sensitive search and is generally
-blazingly fast.
+Configured to be used with [ag](https://github.com/ggreer/the_silver_searcher) which is a grep alternative. It sports context sensitive search and is generally blazingly fast.
 Commands are `:Ack` which searches for a term and jumps to the first hit and `:Ack!` which searches and justs opens the hits in
 the quickfix window.
 I mapped `:Ack` to `:Ack!` because I don't like the auto-opening. 
