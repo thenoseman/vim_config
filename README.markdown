@@ -184,3 +184,5 @@ Depends on [vim-textobj-user](http://github.com/kana/vim-textobj-user)
 
 ## [YankStack](https://github.com/maxbrunsfeld/vim-yankstack)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/thenoseman/vim_config/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
