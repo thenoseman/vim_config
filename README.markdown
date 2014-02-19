@@ -18,8 +18,6 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 + A modified version of the [railscasts theme](https://github.com/jpo/vim-railscasts-theme) as default theme
 + My favorite font [Inconsolata-dz](http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/) in extras
 + `update_all_submodules_to_head` script that updates all submodules and creates a commit for those updates
-+ `renew_omnicompl_files` script to update the PHP-OmniComplete Function list from the PHP SVN Repository and node.js
-  functionlist. Requires wget and node installed.
 + `home/extras/macvim_with_current_ruby.patch` patches the homebrew formula for macvim to integrate the active ruby and python in MacVIM.  
   Apply via `patch -p0 /usr/local/Library/Formula/macvim.rb home/extras/macvim_with_current_ruby.patch` then reinstall macvim with homebrew
 
@@ -83,7 +81,7 @@ Also included is `:Ackv` which accepts a visual selection (defaults to inner wor
 
 ## [Ctrl-P](http://github.com/kien/ctrlp.vim)
 The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
-Far superior to to those two in my opinion. Use `,m` to open the finder in file-mode.
+Far superior to those two in my opinion. Use `,m` to open the finder in file-mode.
 If you add files to your project run `:ClearCtrlPCache` (or press `<f5>` when ctrl-p is open) so the plugin can find those new files.
 
 ## [dirdiff](http://github.com/vim-scripts/DirDiff.vim)
@@ -111,10 +109,6 @@ Mapped to `,c ` (thats ,c[space]) to toggle commenting in visual-mode.
 _The_ file-explorer for vim. Closed by default. Use `,d` to open.  
 Auto-opens the directory of the current file (See `config/plugins/nerdtree.vim`).  
 After you add or delete files use `:CtrlPClearCache` (or press `F5` inside ctrl-p) to regenerate the ctrl-p cache.
-
-## [PHP-Indention](http://github.com/2072/PHP-Indenting-for-VIm)
-Once there was a time where I was knee-deep into PHP :)
-See [this "blog" about what it does](http://www.2072productions.com/to/phpindent.txt).
 
 ## [Rails.vim](http://github.com/tpope/vim-rails)
 This does so much good for you I can't even find a feature to start with.
