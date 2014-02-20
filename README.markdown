@@ -43,6 +43,9 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 - `replace_with_register.vim`:  
   `<Leader>e[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
 
+- `ruby_19hash_syntax.vim`:  
+  `:Rkey` converts old 1.8 hash syntax to new 1.9 syntax
+
 - `ruby_class_initialize.vim`:  
   `:Rcls` initializes the module/class structure of a *previously saved* file
 
