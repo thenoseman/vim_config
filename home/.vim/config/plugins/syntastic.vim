@@ -1,21 +1,24 @@
 """"""""""""""""""""""""""""""""""""""""
 "" Syntastic-specific config settings
 """"""""""""""""""""""""""""""""""""""""
-
 " use signs to indicate lines with errors
 " only if signs are available
-if has('signs')
-   let g:syntastic_enable_signs = 1
-endif
+let g:syntastic_enable_signs = 1
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_error_symbol='✗'
+
+let g:syntastic_check_on_open = 0
+
+let g:syntastic_echo_current_error = 1
+
+let g:syntastic_id_checkers = 1
+
+let g:syntastic_enable_balloons = 0
+
+let g:syntastic_always_populate_loc_list = 1
 
 " automatically open the location list when a buffer has errors
 let g:syntastic_auto_loc_list=1
-
-" always show warnings
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-
-" No Check for
-let g:syntastic_mode_map = {'active_filetypes': [], 'mode': 'active', 'passive_filetypes': ['html','coffee','haml','sass','scss','xml']}  
 
 " In vimdiff Mode do not auto-show the errors
 if &diff
@@ -23,13 +26,11 @@ if &diff
 endif
 let g:syntastic_loc_list_height=5
 
-" Use 'dem fancy symbols
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_error_symbol='✗'
-
-" no balloneval please
-let g:syntastic_enable_balloons = 0
+" No Check for
+let g:syntastic_mode_map = {'active_filetypes': [], 'mode': 'active', 'passive_filetypes': ['html','coffee','haml','sass','scss','xml']}  
 
 " Don't jump to first error on save
 let g:syntastic_auto_jump=0
 
+" Run all checkers and aggregate errors
+let g:syntastic_aggregate_errors=1
