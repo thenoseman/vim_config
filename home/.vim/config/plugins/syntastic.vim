@@ -34,3 +34,6 @@ let g:syntastic_auto_jump=0
 
 " Run all checkers and aggregate errors
 let g:syntastic_aggregate_errors=1
+
+" Force eslint for javascript
+let g:syntastic_javascript_checkers=['eslint', 'jshint']   
