@@ -4,7 +4,7 @@
 
 " auto quote all meta characters (literal search mode)
 "let g:ackprg="ack -H --nocolor --nogroup --column -Q"
-let g:ackprg='ag --nogroup --nocolor --column'
+let g:ackprg='ag --nogroup --nocolor --column -Q'
 
 " use ag for grep (also in Gsearch)
 set grepprg=ag
