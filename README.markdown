@@ -117,6 +117,9 @@ Adds all the rails.vim goodies to your plain old ruby files.
 ## [Repeat.vim](http://github.com/tpope/vim-repeat)
 Allows to repeat (`.`) plugin commands like they were edit-commands.
 
+## [rspec.vim](https://github.com/Keithbsmiley/rspec.vim)
+Better syntax highlighting for rspec files
+
 ## [ultisnips](https://github.com/SirVer/ultisnips)
 Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
 Replacement for [Snipmate.vim](http://github.com/garbas/snipmate.vim) which seems to be unmaintained.

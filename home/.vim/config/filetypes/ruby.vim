@@ -16,7 +16,7 @@ augroup vim_config
   autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(ctags --languages=ruby -u -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
 
   " Specs can be named _scene.rb
-  autocmd BufRead,BufNewFile *_scene.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let | highlight def link rubyRspec Function
+  autocmd BufReadPost,BufNewFile *_scene.rb set syntax=rspec
 
   " These files are also Ruby.
   autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
