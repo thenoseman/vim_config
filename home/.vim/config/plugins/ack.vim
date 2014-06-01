@@ -1,6 +1,8 @@
 "
 " ack.vim
-"
+" modified to work with 'ag'
+" 
+" brew install the_silver_searcher
 
 " auto quote all meta characters (literal search mode)
 "let g:ackprg="ack -H --nocolor --nogroup --column -Q"
@@ -14,6 +16,9 @@ let g:ackhighlight=1
 
 " Dont auto-open first match
 cabbrev Ack Ack!
+
+" Ag is the new Ack
+cnoreabbrev Ag Ack!
 
 " :Ack for a visual selection (see below)
 " Adapted from https://github.com/jordansissel/vim-ackmore
