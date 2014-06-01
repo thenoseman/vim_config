@@ -8,7 +8,9 @@ let g:ackprg='ag --nogroup --nocolor --column -Q'
 
 " use ag for grep (also in Gsearch)
 set grepprg=ag
-let g:grep_cmd_opts = '--line-numbers --noheading'
+let g:grep_cmd_opts='--line-numbers --noheading'
+let g:ackhighlight=1
+
 
 " Dont auto-open first match
 cabbrev Ack Ack!
