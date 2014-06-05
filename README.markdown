@@ -59,7 +59,7 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
   Rails Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
 
 - `ruby_spec_textobject.vim`:  
-  A modified version of [this ruby textobject plugin](https://github.com/nelstrom/vim-textobj-rubyblock) which detects rspec syntax as block delimiters
+  A modified version of [this ruby textobject plugin](https://github.com/nelstrom/vim-textobj-rubyblock) which detects rspec syntax as block delimiters.  
   Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
 
 - `ruby_unshouldify_rspec.vim`:  
