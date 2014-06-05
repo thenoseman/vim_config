@@ -169,7 +169,7 @@ Adds support for SASS, SCSS and HAML files to VIM.
 Improvements to javascript indention in VIM.
 
 ## [vim-puppet](http://github.com/rodjek/vim-puppet)
-Syntax Highlihting and formattin for puppet projects
+Syntax Highlighting and formatting for puppet projects
 
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
