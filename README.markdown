@@ -58,6 +58,10 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 - `ruby_rails_locale_lookup.vim`:  
   Rails Locale lookup via `:Loc` (try inside t("content.of.some.yaml.file"))
 
+- `ruby_spec_textobject.vim`:  
+  A modified version of (this ruby textobject plugin)[https://github.com/nelstrom/vim-textobj-rubyblock] which detects rspec syntax as block delimiters
+  Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
+
 - `ruby_unshouldify_rspec.vim`:  
   Use `:Unshouldify` to remove 'should' from an open rspec files
 
@@ -171,11 +175,5 @@ Syntax Highlihting and formattin for puppet projects
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
 OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
 
-## [vim-textobj-rubyblock](http://github.com/nelstrom/vim-textobj-rubyblock)
-Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
-Depends on [vim-textobj-user](http://github.com/kana/vim-textobj-user)
-
 ## [YankStack](https://github.com/maxbrunsfeld/vim-yankstack)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/thenoseman/vim_config/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
