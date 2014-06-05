@@ -87,13 +87,19 @@ snippet pry "debug with pry"
 puts "\033[33m= PRY (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "pry"; binding.pry
 endsnippet
 
-#initilaize
+#initialize
 snippet init "def initialize ... end"
 def initialize(${1:opts})
 	${2}
 end
 endsnippet
 
+# HEREDOC
+snippet doc "heredoc block"
+<<-HEREDOC
+${1}
+HEREDOC
+endsnippet
 
 # ---------------------------
 # SPEC
