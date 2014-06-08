@@ -46,9 +46,6 @@
 [submodule "home/.vim/bundle/greplace.vim"]
 	path = home/.vim/bundle/greplace.vim
 	url = git://github.com/skwp/greplace.vim.git
-[submodule "home/.vim/bundle/html5-syntax"]
-	path = home/.vim/bundle/html5-syntax
-	url = git://github.com/developish/html5-syntax.vim.git
 [submodule "home/.vim/bundle/ctrlp"]
 	path = home/.vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
