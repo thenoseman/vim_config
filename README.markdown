@@ -98,7 +98,7 @@ Use `:Gsearch` to search project-wide. The results will be opened in a buffer fo
 After editing (don't save that buffer) use `:Greplace` to integrate your changes back into the original files.
 This thing so rocks!
 
-## [html5-syntax](http://github.com/developish/html5-syntax.vim)
+## [html5.vim](https://github.com/othree/html5.vim)
 Adds syntax support for HTML5 elements like "data-*" or <section>
 
 ## [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
