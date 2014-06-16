@@ -168,6 +168,9 @@ Adds support for SASS, SCSS and HAML files to VIM.
 ## [vim-javascript](http://github.com/pangloss/vim-javascript)
 Improvements to javascript indention in VIM.
 
+## [vi-json](https://github.com/elzr/vim-json)
+Improved highlighting and special JSON related functionality
+
 ## [vim-puppet](http://github.com/rodjek/vim-puppet)
 Syntax Highlighting and formatting for puppet projects
 
