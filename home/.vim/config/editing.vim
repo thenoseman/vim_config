@@ -91,3 +91,8 @@ set nrformats=
 " More natural split direction
 set splitbelow
 set splitright
+
+" add minus / dash to motion word separator
+" usefull for motiond like inner-word that then
+" also use - as a delimeter
+set iskeyword+=-
