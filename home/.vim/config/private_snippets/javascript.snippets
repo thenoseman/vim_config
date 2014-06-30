@@ -25,7 +25,7 @@ $(function() {
 endsnippet
 
 # Function
-snippet fun "fun"
+snippet fun "function $($) {$} "
 function ${1:functionName}(${2:argument}) {
   ${3}
 }
@@ -41,6 +41,12 @@ snippet f "function() {}" w
 function () { 
   ${2} 
 }
+endsnippet
+
+snippet npromise "new Promise"
+	return new Promise(function (resolve) {
+		${1}
+	});
 endsnippet
 
 snippet d "debugger;" w
