@@ -91,6 +91,12 @@ snippet cl "cl"
 console.log(${1});
 endsnippet
 
+snippet undef "if(undef) {}"
+if(typeof ${1} === "undefined") {
+	${2}
+}
+endsnippet
+
 #
 # Backbone
 # 
