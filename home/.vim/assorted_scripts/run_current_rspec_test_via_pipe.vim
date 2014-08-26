@@ -20,7 +20,7 @@ function! RSpecCurrent()
   endif
 
   echom "running " . g:rspec_current_rspec_test . " via tmp/rspec-test-pipe"
-  execute "silent !echo \"" . s:bin . " --color " . g:rspec_current_rspec_test . "\" -f n > tmp/rspec-test-pipe"
+  execute "silent !echo \"" . s:bin . " --color " . g:rspec_current_rspec_test . "\" -f documentation > tmp/rspec-test-pipe"
 endfunction
 
 map <leader>r :call RSpecCurrent() <CR>
