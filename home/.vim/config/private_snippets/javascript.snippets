@@ -1,30 +1,31 @@
-# jasmine
-snippet it "it"
-it("${1}", sinon.test(function() {
-  ${2}
-}));
+#
+# Mocha + Chai
+#
+snippet it "it() {}"
+it("${1}", function(){
+	${2}
+});
 endsnippet
 
-snippet desc "desc"
+snippet desc "describe() {}"
 describe("${1}", function() {
   ${2}
 });
 endsnippet
 
-snippet bef "bef"
+snippet bef "beforeEach"
 beforeEach(function() {
   ${1}
 });
 endsnippet
 
-# jQuery
-snippet domr "domr"
-$(function() {
-  ${1}
-});
+snippet exp "expect"
+expect(${1}).to.${2}
 endsnippet
 
+#
 # Function
+# 
 snippet fun "function $($) {$} "
 function ${1:functionName}(${2:argument}) {
   ${3}
@@ -70,22 +71,6 @@ snippet c "c"
 })();
 endsnippet
 
-# if
-snippet if "if"
-if (${1:true}) {
-	${2}
-}
-endsnippet
-
-# if ... else
-snippet ife "ife"
-if (${1:true}) {
-	${2}
-} else {
-	${3}
-}
-endsnippet
-
 # console.log
 snippet cl "cl"
 console.log(${1});
@@ -95,6 +80,16 @@ snippet undef "if(undef) {}"
 if(typeof ${1} === "undefined") {
 	${2}
 }
+endsnippet
+
+# Used in formofill to export a clas for testing 
+# purposes and require()ing it
+snippet export "export class"
+// REMOVE START
+if(typeof exports === "object") {
+	exports.clazz = ${1};
+}
+// REMOVE END
 endsnippet
 
 #
