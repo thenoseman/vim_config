@@ -58,6 +58,20 @@ snippet us "use strict"
 'use strict';
 endsnippet
 
+snippet esl0 "eslint OFF"
+/*eslint-disable ${1}*/
+endsnippet
+
+snippet esl1 "eslint ON"
+/*eslint-enable ${1}*/
+endsnippet
+
+snippet esl "eslint OFF-ON"
+/*eslint-enable $1*/
+$0
+/*eslint-disable $1*/
+endsnippet
+
 # Node require
 snippet r "r"
 var ${1:} = require('$1');
