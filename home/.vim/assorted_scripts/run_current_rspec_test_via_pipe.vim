@@ -5,7 +5,7 @@ let g:loaded_run_current_rspec = 1
 
 " uses spring gem
 function! RSpecCurrent()
-  let s:bin = "rspec"
+  let s:bin = "bundle exec rspec"
   if(filereadable("bin/rspec"))
     let s:bin = "bin/rspec"
   endif
