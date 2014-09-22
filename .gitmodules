@@ -10,9 +10,6 @@
 [submodule "home/.vim/bundle/repeat"]
 	path = home/.vim/bundle/repeat
 	url = git://github.com/tpope/vim-repeat.git
-[submodule "home/.vim/bundle/rails"]
-	path = home/.vim/bundle/rails
-	url = git://github.com/tpope/vim-rails.git
 [submodule "home/.vim/bundle/rake"]
 	path = home/.vim/bundle/rake
 	url = git://github.com/tpope/vim-rake.git
