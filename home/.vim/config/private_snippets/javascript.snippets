@@ -1,10 +1,10 @@
 #
-# Mocha + Chai
+# Mocha + Chai + Sinon
 #
 snippet it "it() {}"
-it("${1}", function(){
+it("${1}", sinon.test(function(){
 	${2}
-});
+}));
 endsnippet
 
 snippet desc "describe() {}"
@@ -67,9 +67,9 @@ snippet esl1 "eslint ON"
 endsnippet
 
 snippet esl "eslint OFF-ON"
-/*eslint-enable $1*/
-$0
 /*eslint-disable $1*/
+$0
+/*eslint-enable $1*/
 endsnippet
 
 # Node require
