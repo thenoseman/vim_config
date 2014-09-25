@@ -35,7 +35,7 @@ set showcmd        " display unfinished commands
 set showmatch      " show matching bracket (briefly jump)
 set showmode       " display the current mode in the status bar
 set title          " show file in titlebar
-
+set noerrorbells visualbell t_vb= " no bells or flashes or whatever
 " status bar
 set statusline+=%f\                                           " filename
 set statusline+=[%{strlen(&ft)?&ft:'none'}]                   " filetype
