@@ -50,6 +50,12 @@ snippet nprom "new Promise"
 	});
 endsnippet
 
+snippet .then "then(function(){})" w
+.then(function(${1:resolved}) {
+  ${2}
+});
+endsnippet
+
 snippet d "debugger;" w
 debugger;
 endsnippet
