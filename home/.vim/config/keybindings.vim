@@ -49,12 +49,6 @@ nnoremap <leader><leader> <c-^>
 " @key Q: delete last word in normal mode
 nnoremap Q dbxx
 
-" @key /: Always search in very magic mode
-nnoremap / /\v
-
-" @key ?: Always search in very magic mode
-nnoremap ? ?\v
-
 " @key <esc>: Kill searchhighlighting and esc
 nnoremap <silent> <esc> :nohl<cr><esc>
 
