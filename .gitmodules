@@ -82,3 +82,6 @@
 [submodule "home/.vim/bundle/incsearch.vim"]
 	path = home/.vim/bundle/incsearch.vim
 	url = https://github.com/haya14busa/incsearch.vim
+[submodule "home/.vim/bundle/lexima.vim"]
+	path = home/.vim/bundle/lexima.vim
+	url = git@github.com:cohama/lexima.vim.git
