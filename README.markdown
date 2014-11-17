@@ -104,9 +104,6 @@ This thing so rocks!
 ## [html5.vim](https://github.com/othree/html5.vim)
 Adds syntax support for HTML5 elements like "data-*" or <section>
 
-## [lexima.vim](https://github.com/cohama/lexima.vim)
-Another bracket autoclosing plugin.
-
 ## [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
 Filetype sensitive commenting and uncommenting of textblocks.
 Mapped to `,c ` (thats ,c[space]) to toggle commenting in visual-mode.
