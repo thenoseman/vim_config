@@ -13,7 +13,7 @@ augroup vim_config
   autocmd VimEnter * call UpdateOrCreateTagsFile()
 
   " On write just update tags of this file
-  autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(ctags --languages=ruby -u -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
+  autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(/usr/local/bin/ctags --languages=ruby -u -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
 
   " Specs can be named _scene.rb
   autocmd BufReadPost,BufNewFile *_scene.rb set syntax=rspec
@@ -44,6 +44,6 @@ fun! UpdateOrCreateTagsFile()
 
   if mtime_gemfile > 0 && (mtime_tags == -1 || mtime_gemfile > mtime_tags)
     echom "Generating tags as Gemfile.lock is newer than tags"
-    silent! execute ":!(ctags -R --languages=ruby -u -f tags) &"
+    silent! execute ":!(/usr/local/bin/ctags -R --languages=ruby -u -f tags) &"
   endif
 endfun
