@@ -11,7 +11,7 @@ let g:ctrlp_max_depth = 8
 
 " Add some ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.sass-cache$|tmp$|node_modules$|^spec\/reports',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.sass-cache$|tmp$|node_modules$|^spec\/reports|^build',
   \ 'file': '\.exe$\|\.so$\|\.dll$|\.jpg$|\.png$|\.DS_Store|tags|\.log$',
   \ 'link': 'public/cms|gems'
   \ }
