@@ -1,4 +1,5 @@
 augroup vim_config
+  autocmd BufNewFile,BufRead *.md set ft=markdown
   autocmd FileType markdown call LoadMarkdownBindings()
 augroup END
 
