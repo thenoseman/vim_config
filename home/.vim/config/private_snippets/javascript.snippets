@@ -120,7 +120,7 @@ if(typeof ${1} === "undefined") {
 }
 endsnippet
 
-# Used in formofill to export a clas for testing 
+# Used in formofill to export a class for testing 
 # purposes and require()ing it
 snippet export "export class"
 // REMOVE START
@@ -128,6 +128,14 @@ if(typeof exports === "object") {
 	exports.clazz = ${1};
 }
 // REMOVE END
+endsnippet
+
+snippet $ "document.querySelector" i
+document.querySelector("${1}")
+endsnippet
+
+snippet $$ "document.querySelectorAll" i
+document.querySelectorAll("${1}")
 endsnippet
 
 #
