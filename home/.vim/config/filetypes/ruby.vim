@@ -2,6 +2,11 @@
 
 augroup vim_config
   autocmd FileType ruby  call LoadRubyKeybindings()
+
+  " see https://code.google.com/p/vim/issues/detail?id=282
+  autocmd FileType ruby  set regexpengine=1
+  autocmd FileType ruby  set lazyredraw
+
   autocmd FileType eruby call LoadRubyKeybindings()
   autocmd FileType haml  call LoadRubyKeybindings()
   autocmd FileType yaml  call LoadRubyKeybindings()
@@ -20,6 +25,8 @@ augroup vim_config
 
   " These files are also Ruby.
   autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
+
+
 augroup END
 
 fun! LoadRubyKeybindings()
