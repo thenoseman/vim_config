@@ -79,9 +79,6 @@
 [submodule "home/.vim/bundle/vim-rails"]
 	path = home/.vim/bundle/vim-rails
 	url = git@github.com:tpope/vim-rails.git
-[submodule "home/.vim/bundle/incsearch.vim"]
-	path = home/.vim/bundle/incsearch.vim
-	url = https://github.com/haya14busa/incsearch.vim
 [submodule "home/.vim/bundle/vim-go"]
 	path = home/.vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
