@@ -8,3 +8,6 @@ command! Qa qa
 
 " @command Test: Open Test and Spec in split
 command! Test :sp | :A
+
+" @command unindent ruby hashes coded with rubymine/intellij
+command! -range Unindent :'<,'>s/:\s\+/: /g
