@@ -145,3 +145,7 @@ endsnippet
 snippet todo "# TODO"
 #TODO: ${1} (FS, `!v strftime("%Y-%m-%d")`)
 endsnippet
+
+snippet save "save_and_open page + screenshot"
+save_and_open_page; page.save_screenshot("tmp/capybara-screenshot-`!v strftime("%Y-%m-%d")`.png")
+endsnippet
