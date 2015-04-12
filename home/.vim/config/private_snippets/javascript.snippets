@@ -130,69 +130,6 @@ if(typeof exports === "object") {
 // REMOVE END
 endsnippet
 
-snippet $ "document.querySelector" i
-document.querySelector("${1}")
-endsnippet
-
-snippet $$ "document.querySelectorAll" i
-document.querySelectorAll("${1}")
-endsnippet
-
-#
-# Backbone
-# 
-snippet bv "bv"
-var ${1:MyView} = Backbone.View.extend({
-  ${2:el: ''},
-  ${3:tagName: ''},
-  ${4:className: ''},
-  template: $("${5: '#'}").html(),
-  initialize: function () {
-    ${6:}
-  },
-  events: {
-    ${7:}
-  },
-  render: function () {
-	var tmpl = _.template(this.template);
-	${8}
-	this.$el.html(tmpl(this.model.toJSON()));
-	return this;
-  }
-});
-endsnippet
-
-snippet br "br"
-var ${1:Router} = Backbone.Router.extend({
-  routes: {
-    ${2:}
-  },
-  initialize: function() {
-    ${4:}
-  },
-  ${5:method:foo}: function(${6:}) {
-    ${7:}
-  }
-});
-endsnippet
-
-snippet bm "bm"
-var ${1:Model} = Backbone.Model.extend({
-  defaults: {
-  },
-  initialize: function () {
-    ${2}
-  }
-});
-endsnippet
-
-snippet bc "bc"
-var ${2:$1}s = Backbone.Collection.extend({
-  model: ${3:$1},
-  url: "${4}"
-});
-endsnippet
-
 snippet \$ "document.querySelector"
 document.querySelector("${1}")\;
 endsnippet
