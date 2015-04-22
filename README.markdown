@@ -162,6 +162,11 @@ Adds `Glog` to scroll through the current files history
 A (_the_) git wrapper for vim. Use `:Gc` to commit, `:Gs` for status. When you are in a conflicted file use `:Dl` and `:Dr` 
 to copy the current hunk from left or right to the working copy.
 
+## [vim-go](https://github.com/fatih/vim-go)
+The universal and best go support for vim. Supports UltiSnips.
+Go development is best when used with [direnv](http://direnv.net/) to setup the GOPATH like this:
+``echo "export GOPATH=`pwd`" > .envrc`` and then starting vim and doing a `:GoInstallBinaries`
+
 ## [vim-haml](http://github.com/tpope/vim-haml)
 Adds support for SASS, SCSS and HAML files to VIM.
 
