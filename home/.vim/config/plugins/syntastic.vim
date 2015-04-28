@@ -26,8 +26,11 @@ if &diff
 endif
 let g:syntastic_loc_list_height=5
 
-" No Check for
-let g:syntastic_mode_map = {'active_filetypes': [], 'mode': 'active', 'passive_filetypes': ['html','coffee','haml','sass','scss','xml']}  
+" No Check for ...
+let g:syntastic_mode_map = {
+      \ 'active_filetypes': [], 
+      \ 'mode': 'active', 
+      \ 'passive_filetypes': ["html","coffee","haml","sass","scss","xml"] }  
 
 " Don't jump to first error on save
 let g:syntastic_auto_jump=0
@@ -37,3 +40,7 @@ let g:syntastic_aggregate_errors=1
 
 " Force eslint for javascript
 let g:syntastic_javascript_checkers=['eslint', 'jshint']   
+
+" Don't build for go programs, just use goimports (via gofmt)
+let g:syntastic_go_checkers = ['gofmt']
+let g:syntastic_go_gofmt_exec = './bin/goimports'
