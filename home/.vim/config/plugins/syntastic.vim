@@ -46,3 +46,8 @@ let g:syntastic_go_checkers = ['gofmt', 'golint']
 let g:syntastic_go_gofmt_exec = './bin/goimports'
 let g:syntastic_go_golint_exec = './bin/golint'
 let g:syntastic_go_gofmt_args = '-w'
+
+augroup vim_config
+  " reload the file after save since goimports modified it (potentially)
+  autocmd BufWritePost *.go silent! :e! | syntax on
+augroup END
