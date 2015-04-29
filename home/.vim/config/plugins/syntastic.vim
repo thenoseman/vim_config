@@ -42,5 +42,7 @@ let g:syntastic_aggregate_errors=1
 let g:syntastic_javascript_checkers=['eslint', 'jshint']   
 
 " Don't build for go programs, just use goimports (via gofmt)
-let g:syntastic_go_checkers = ['gofmt']
+let g:syntastic_go_checkers = ['gofmt', 'golint']
 let g:syntastic_go_gofmt_exec = './bin/goimports'
+let g:syntastic_go_golint_exec = './bin/golint'
+let g:syntastic_go_gofmt_args = '-w'
