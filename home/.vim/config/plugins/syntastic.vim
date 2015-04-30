@@ -41,13 +41,8 @@ let g:syntastic_aggregate_errors=1
 " Force eslint for javascript
 let g:syntastic_javascript_checkers=['eslint', 'jshint']   
 
-" Don't build for go programs, just use goimports (via gofmt)
+" Don't build for go programs, just use gofmt
 let g:syntastic_go_checkers = ['gofmt', 'golint']
-let g:syntastic_go_gofmt_exec = './bin/goimports'
+"let g:syntastic_go_gofmt_exec = './bin/goimports'
 let g:syntastic_go_golint_exec = './bin/golint'
-let g:syntastic_go_gofmt_args = '-w'
-
-augroup vim_config
-  " reload the file after save since goimports modified it (potentially)
-  autocmd BufWritePost *.go silent! :e! | syntax on
-augroup END
+"let g:syntastic_go_gofmt_args = '-w'
