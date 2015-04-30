@@ -8,17 +8,3 @@ let g:go_highlight_trailing_whitespace_error = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_methods = 1
-
-augroup vim_config<CR>
-  " Auto install binaries if missing
-  autocmd BufWritePre *.go call GoCheckBinaries()
-
-  autocmd FileType go nmap <leader>r <Plug>(go-run)
-  autocmd FileType go nmap <leader>D <Plug>(go-doc-browser)
-augroup END
-
-fun! GoCheckBinaries()
-  if !filereadable("./bin/goimports")
-    execute ":GoInstallBinaries"
-  endif
-endfunction
