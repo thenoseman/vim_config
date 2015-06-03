@@ -32,8 +32,15 @@ let g:ctrlp_follow_symlinks = 0
 " dotfiles are ok
 let g:ctrlp_show_hidden = 1
 
-" cache file list
-let g:ctrlp_use_caching = 1
+" dont cache cache file list
+" use ag or git ls
+let g:ctrlp_use_caching = 0
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+else
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+endif
 
 " Clear the file-cache on exit
 let g:ctrlp_clear_cache_on_exit = 1
