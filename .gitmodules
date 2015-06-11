@@ -28,9 +28,6 @@
 [submodule "home/.vim/bundle/vim-haml"]
 	path = home/.vim/bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
-[submodule "home/.vim/bundle/vim-javascript"]
-	path = home/.vim/bundle/vim-javascript
-	url = git://github.com/pangloss/vim-javascript.git
 [submodule "home/.vim/bundle/dirdiff"]
 	path = home/.vim/bundle/dirdiff
 	url = git://github.com/vim-scripts/DirDiff.vim.git
