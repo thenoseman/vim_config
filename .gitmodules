@@ -85,3 +85,6 @@
 [submodule "home/.vim/bundle/gitignore"]
 	path = home/.vim/bundle/gitignore
 	url = git@github.com:vim-scripts/gitignore.git
+[submodule "home/.vim/bundle/yajs.vim"]
+	path = home/.vim/bundle/yajs.vim
+	url = git@github.com:othree/yajs.vim.git
