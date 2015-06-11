@@ -173,8 +173,8 @@ Go development is best when used with [direnv](http://direnv.net/) to setup the 
 ## [vim-haml](http://github.com/tpope/vim-haml)
 Adds support for SASS, SCSS and HAML files to VIM.
 
-## [vim-javascript](http://github.com/pangloss/vim-javascript)
-Improvements to javascript indention in VIM.
+## [yajs.vim](https://github.com/othree/yajs.vim)
+Improvements to javascript indention and syntax highlighting in VIM.
 
 ## [vi-json](https://github.com/elzr/vim-json)
 Improved highlighting and special JSON related functionality
