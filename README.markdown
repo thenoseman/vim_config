@@ -151,6 +151,9 @@ Deactivated filetypes (changeable in `home/.vim/config/plugins/syntastic.vim`):
 Adds `:Bopen` (bundle open) and `:Bundle` to vim. That's nice but more importantly it adds all `tags` files of all gems in your `Gemfile` to
 vims `tags` list. 
 
+## [vim-closetag]( https://github.com/alvan/vim-closetag)
+Auto closes tags in HTML/XML files.
+
 ## [vim-easymotion](http://github.com/Lokaltog/vim-easymotion)
 Jump to characters the easy way: `,,tCharacter` and easymotion will show letters for every hit it got. Type those letters and easymotion jumps to that point.
 Also works with `f` or `w`. There is a [nice tutorial](http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/).
