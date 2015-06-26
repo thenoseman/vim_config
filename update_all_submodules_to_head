@@ -8,6 +8,13 @@
 # Unlike svn:externals "git submodule" adds a submodule AT A SPECIFIC commit. There's no auto-update!
 #
 
+build_tern() {
+  echo "Building TERN via npm install"
+  cd home/.vim/bundle/tern_for_vim/
+  npm install
+  cd ../../../..
+}
+
 # First update all submodules to HEAD
 git submodule foreach git pull origin master
 
@@ -19,4 +26,9 @@ echo
 echo "Changes in Submodules ..."
 echo "-------------------------"
 echo
-git log -1 -p --oneline | grep "+++" | sed "s/^.*bundle\///"
+CHANGES=$(git log -1 -p --oneline | grep "+++" | sed "s/^.*bundle\///")
+echo $CHANGES
+
+TERN_CHANGED=$(echo $CHANGES | grep tern | wc -l | tr -d " ")
+[[ ! "${TERN_CHANGED}" == "0"  ]] && build_tern
+[ ! -f "home/.vim/bundle/tern_for_vim/node_modules/tern/bin/tern" ] && build_tern

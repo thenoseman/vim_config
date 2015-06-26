@@ -88,3 +88,6 @@
 [submodule "home/.vim/bundle/vim-closetag"]
 	path = home/.vim/bundle/vim-closetag
 	url = git@github.com:alvan/vim-closetag.git
+[submodule "home/.vim/bundle/tern_for_vim"]
+	path = home/.vim/bundle/tern_for_vim
+	url = git@github.com:marijnh/tern_for_vim.git
