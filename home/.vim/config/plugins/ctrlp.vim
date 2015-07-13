@@ -45,6 +45,14 @@ endif
 " Clear the file-cache on exit
 let g:ctrlp_clear_cache_on_exit = 1
 
+" ctags binary
+let g:ctrlp_buftag_ctags_bin = '/usr/local/bin/ctags'
+
+if !executable(g:ctrlp_buftag_ctags_bin)
+  echoe "Please install ctags via homebrew! (brew install ctags)"
+  system('brew install ctags && brew link ctags')
+endif
+
 " @plugin: ctrlp
 " @key <leader>t: Searches all open buffers for a tag (aka. method, class name, ...)
 nmap <leader>t :CtrlPTag<CR>
