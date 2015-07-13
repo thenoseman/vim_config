@@ -103,7 +103,7 @@ endsnippet
 
 # Immediatlely Invoked Functional Expression IIFE (use in blank .js file)
 snippet c "c"
-(function `!v substitute(Filename(), '\([_-]\([a-z]\)\)', "\\U\\2", "g")`Scope() {
+(function `!v substitute(expand('%:t:r'), '\([_-]\([a-z]\)\)', "\\U\\2", "g")`Scope() {
 	'use strict';
 	${1}
 })();
@@ -130,16 +130,15 @@ if(typeof exports === "object") {
 // REMOVE END
 endsnippet
 
-snippet \$ "document.querySelector"
-document.querySelector("${1}")\;
+snippet qs "document.querySelector"
+document.querySelector("${1}");
 endsnippet
 
-snippet \$\$ "document.querySelectorAll"
+snippet qsa "document.querySelectorAll"
 document.querySelectorAll("${1}");
 endsnippet
 
 snippet toa "Nodelist to array"
 var l = nl.length, ${1:arr} = new Array(l);
 while (l--) { $1[l] = nl[l] };
-
 endsnippet
