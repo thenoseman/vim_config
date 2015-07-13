@@ -11,6 +11,7 @@
 build_tern() {
   echo "Building TERN via npm install"
   cd home/.vim/bundle/tern_for_vim/
+  rm -rf node_modules
   npm install
   cd ../../../..
 }
