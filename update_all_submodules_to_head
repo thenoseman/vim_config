@@ -18,10 +18,12 @@ build_tern() {
 
 # First update all submodules to HEAD
 git submodule foreach git pull origin master
+build_tern
 
 # Commit
 git add home/.vim/bundle/*
 git commit -am "Updated submodules to the newest version as of `date`" 
+
 
 echo
 echo "Changes in Submodules ..."
@@ -29,5 +31,5 @@ echo "-------------------------"
 echo
 CHANGES=$(git log -1 -p --oneline | grep "+++" | sed "s/^.*bundle\///")
 echo $CHANGES
+echo
 
-build_tern
