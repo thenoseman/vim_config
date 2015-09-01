@@ -11,8 +11,8 @@
 build_tern() {
   echo "Building TERN via npm install"
   cd home/.vim/bundle/tern_for_vim/
-  rm -rf node_modules
-  npm install
+  npm update
+  npm install --force
   cd ../../../..
 }
 
@@ -30,6 +30,4 @@ echo
 CHANGES=$(git log -1 -p --oneline | grep "+++" | sed "s/^.*bundle\///")
 echo $CHANGES
 
-TERN_CHANGED=$(echo $CHANGES | grep tern | wc -l | tr -d " ")
-[[ ! "${TERN_CHANGED}" == "0"  ]] && build_tern
-[ ! -f "home/.vim/bundle/tern_for_vim/node_modules/tern/bin/tern" ] && build_tern
+build_tern
