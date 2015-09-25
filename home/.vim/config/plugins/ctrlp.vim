@@ -6,7 +6,6 @@ let g:ctrlp_map = '<leader>m'
 " Don't manage working directory
 let g:ctrlp_working_path_mode = 0
 
-let g:ctrlp_max_files = 1000
 let g:ctrlp_max_depth = 10
 
 " Add some ignores
@@ -47,6 +46,15 @@ let g:ctrlp_clear_cache_on_exit = 1
 
 " ctags binary
 let g:ctrlp_buftag_ctags_bin = '/usr/local/bin/ctags'
+
+" Matching functions supplied by plugin (https://github.com/FelikZ/ctrlp-py-matcher)
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+" update after 250ms
+let g:ctrlp_lazy_update = 1
+
+" No upper limit
+let g:ctrlp_max_files = 0
 
 if !executable(g:ctrlp_buftag_ctags_bin)
   echoe "Please install ctags via homebrew! (brew install ctags)"
