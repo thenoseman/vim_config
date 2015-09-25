@@ -50,8 +50,8 @@ let g:ctrlp_buftag_ctags_bin = '/usr/local/bin/ctags'
 " Matching functions supplied by plugin (https://github.com/FelikZ/ctrlp-py-matcher)
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
-" update after 250ms
-let g:ctrlp_lazy_update = 1
+" instant update
+let g:ctrlp_lazy_update = 0
 
 " No upper limit
 let g:ctrlp_max_files = 0
