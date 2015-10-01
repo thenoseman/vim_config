@@ -18,7 +18,11 @@ set cul
 " New Font
 "
 if has('gui_running') && has('unix')
-  set guifont=Inconsolata-dz:h12.00
+  if hostname() == 'Franks-MacBook-Pro.local'
+    set guifont=Inconsolata-dz:h11.00
+  else
+    set guifont=Inconsolata-dz:h12.00
+  endif
 else
   set guifont=Inconsolata-dz:h8.00
 endif
