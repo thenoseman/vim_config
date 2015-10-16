@@ -47,6 +47,7 @@ endsnippet
 snippet done "call(done)"
 call(done);
 endsnippet
+
 #
 # Function
 # 
@@ -82,6 +83,9 @@ snippet us "use strict"
 'use strict';
 endsnippet
 
+#
+# ESLINT
+#
 snippet esl0 "eslint OFF"
 /*eslint-disable ${1}*/
 endsnippet
@@ -96,12 +100,12 @@ ${0:${VISUAL}}
 /*eslint-enable $1*/
 endsnippet
 
-# Node require
+# Require
 snippet r "r"
 var ${1:} = require('$1');
 endsnippet
 
-# Immediatlely Invoked Functional Expression IIFE (use in blank .js file)
+# Immediately Invoked Functional Expression IIFE (use in blank .js file)
 snippet c "c"
 (function `!v substitute(expand('%:t:r'), '\([_-]\([a-z]\)\)', "\\U\\2", "g")`Scope() {
 	'use strict';
@@ -145,4 +149,10 @@ endsnippet
 
 snippet todo "// TODO"
 //TODO: ${1} (FS, `!v strftime("%Y-%m-%d")`)
+endsnippet
+
+snippet add ".addEventListener" w
+addEventListener("${1:click}", function(evt) {
+  ${2}
+});
 endsnippet
