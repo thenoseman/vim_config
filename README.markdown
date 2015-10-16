@@ -128,7 +128,7 @@ Allows to repeat (`.`) plugin commands like they were edit-commands.
 Better syntax highlighting for rspec files
 
 ## [ultisnips](https://github.com/SirVer/ultisnips)
-Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/snippets`.  
+Snippet expansion using the `tab` key. Snippets are placed in `home/.vim/config/private_snippets`.  
 Replacement for [Snipmate.vim](http://github.com/garbas/snipmate.vim) which seems to be unmaintained.
 
 ## [Surround.vim](http://github.com/tpope/vim-surround)
