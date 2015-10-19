@@ -1,5 +1,5 @@
 augroup vim_config
-  autocmd BufRead,BufNewFile *.js call s:jsNewFileTemplate()
+  "autocmd BufRead,BufNewFile *.js call s:jsNewFileTemplate()
   autocmd FileType javascript call s:configureTern()
 augroup END
 
