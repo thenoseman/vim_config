@@ -91,3 +91,12 @@
 [submodule "home/.vim/bundle/ctrlp-py-matcher"]
 	path = home/.vim/bundle/ctrlp-py-matcher
 	url = https://github.com/FelikZ/ctrlp-py-matcher
+[submodule "home/.vim/bundle/tsuquyomi"]
+	path = home/.vim/bundle/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
+[submodule "home/.vim/bundle/vimproc"]
+	path = home/.vim/bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim
+[submodule "home/.vim/bundle/typescript-vim"]
+	path = home/.vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git

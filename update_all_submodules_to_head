@@ -18,7 +18,14 @@ build_tern() {
 
 # First update all submodules to HEAD
 git submodule foreach git pull origin master
+
+# Build tern
 build_tern
+
+# build vimproc
+cd home/.vim/bundle/vimproc
+make
+cd ../../../
 
 # Commit
 git add home/.vim/bundle/*
