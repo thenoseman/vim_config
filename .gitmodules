@@ -61,9 +61,6 @@
 [submodule "home/.vim/bundle/vim-extradite"]
 	path = home/.vim/bundle/vim-extradite
 	url = git://github.com/int3/vim-extradite.git
-[submodule "home/.vim/bundle/vim-puppet"]
-	path = home/.vim/bundle/vim-puppet
-	url = git://github.com/rodjek/vim-puppet.git
 [submodule "home/.vim/bundle/rspec.vim"]
 	path = home/.vim/bundle/rspec.vim
 	url = git@github.com:Keithbsmiley/rspec.vim.git

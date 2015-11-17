@@ -182,9 +182,6 @@ Improvements to javascript indention and syntax highlighting in VIM.
 ## [vi-json](https://github.com/elzr/vim-json)
 Improved highlighting and special JSON related functionality
 
-## [vim-puppet](http://github.com/rodjek/vim-puppet)
-Syntax Highlighting and formatting for puppet projects
-
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
 OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
