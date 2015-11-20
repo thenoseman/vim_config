@@ -147,6 +147,12 @@ Deactivated filetypes (changeable in `home/.vim/config/plugins/syntastic.vim`):
 - haml
 - sass
 
+## [tsuquyami](https://github.com/Quramy/tsuquyomi)
+TypeScript support using tsserver
+
+## [typescript-vim](https://github.com/leafgarland/typescript-vim)
+Syntax highlighting support for typescript
+
 ## [vim-bundler](http://github.com/tpope/vim-bundler)
 Adds `:Bopen` (bundle open) and `:Bundle` to vim. That's nice but more importantly it adds all `tags` files of all gems in your `Gemfile` to
 vims `tags` list. 
@@ -181,12 +187,6 @@ Improvements to javascript indention and syntax highlighting in VIM.
 
 ## [vi-json](https://github.com/elzr/vim-json)
 Improved highlighting and special JSON related functionality
-
-## [tsuquyami](https://github.com/Quramy/tsuquyomi)
-TypeScript support using tsserver
-
-## [typescript-vim](https://github.com/leafgarland/typescript-vim)
-Syntax highlighting support for typescript
 
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
