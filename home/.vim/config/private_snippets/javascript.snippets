@@ -158,5 +158,5 @@ addEventListener("${1:click}", function(evt) {
 endsnippet
 
 snippet imp "import ..."
-import * as ${1/\w+\s*/\u$0/g} from "${1}";
+import * as ${1/.*\/(.*)$/\u$1/g} from "${1}";
 endsnippet
