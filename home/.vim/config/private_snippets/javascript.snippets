@@ -158,7 +158,7 @@ addEventListener("${1:click}", function(evt) {
 endsnippet
 
 snippet imp "import ..."
-import * as ${1/.*\/(.*)$/\u$1/g} from "${1}";
+import ${1/.*\/(.*)$/\u$1/g} from "${1}";
 endsnippet
 
 snippet i18n "chrome.i18n.getMessage()" i
