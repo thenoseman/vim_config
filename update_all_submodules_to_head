@@ -12,6 +12,8 @@ ccgreen=$(echo -e "\033[0;32m")
 ccyellow=$(echo -e "\033[0;33m")
 ccend=$(echo -e "\033[0m")
 
+HERE=$(pwd)
+
 out() {
   echo "${ccgreen}${1}${ccend}"
 }
@@ -20,7 +22,7 @@ build_tern() {
   cd home/.vim/bundle/tern_for_vim/
   npm update
   npm install --force
-  cd ../../../..
+  cd ${HERE}
 }
 
 # First update all submodules to HEAD
@@ -35,7 +37,7 @@ build_tern
 out "Building vimproc"
 cd home/.vim/bundle/vimproc
 make
-cd ../../../
+cd ${HERE}
 
 # Commit
 out "Committing changes"
