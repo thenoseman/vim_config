@@ -46,3 +46,6 @@ let g:syntastic_go_checkers = ['gofmt', 'golint']
 "let g:syntastic_go_gofmt_exec = './bin/goimports'
 let g:syntastic_go_golint_exec = './bin/golint'
 "let g:syntastic_go_gofmt_args = '-w'
+
+" Use correct ruby version
+let g:syntastic_ruby_mri_exec = expand("~/.rbenv/versions/2.3.0/bin/ruby")
