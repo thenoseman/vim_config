@@ -84,12 +84,18 @@ The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http:
 Far superior to those two in my opinion. Use `,m` to open the finder in file-mode.
 If you add files to your project run `:ClearCtrlPCache` (or press `<f5>` when ctrl-p is open) so the plugin can find those new files.
 
+## [ctrlp-py-matcher](https://github.com/FelikZ/ctrlp-py-matcher)
+Adds faster python based matcher s to ctrl-p
+
 ## [dirdiff](http://github.com/vim-scripts/DirDiff.vim)
 Enables the comparison of [directories](http://www.vim.org/scripts/script.php?script_id=102) in addition to files.
 If you use my `mvim` shell script instead of the MacVim supplied one you can use `mvim -d dir1 dir2` and vim will
 automatically jump into DirDiff mode.
 Manually usage is `DirDiff SourceDir1 SourceDir2`. After the comparison window is open use the commands described
 in the [DirDiff readme](http://www.vim.org/scripts/script.php?script_id=102). 
+
+## [Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim)
+Syntax highlighting for Dockerfiles
 
 ## [gitignore](https://github.com/vim-scripts/gitignore)
 Adds all the files from `.gitgnore` to `wildignore`
@@ -147,6 +153,9 @@ Deactivated filetypes (changeable in `home/.vim/config/plugins/syntastic.vim`):
 - haml
 - sass
 
+## [tern_for_vim](https://github.com/marijnh/tern_for_vim)
+Adds tern support inside vim (eg. `:TernDef, :TernDoc`)
+
 ## [tsuquyami](https://github.com/Quramy/tsuquyomi)
 TypeScript support using tsserver
 
@@ -181,12 +190,15 @@ Adds support for SASS, SCSS and HAML files to VIM.
 ## [yajs.vim](https://github.com/othree/yajs.vim)
 Improvements to javascript indention and syntax highlighting in VIM.
 
-## [vi-json](https://github.com/elzr/vim-json)
+## [vim-json](https://github.com/elzr/vim-json)
 Improved highlighting and special JSON related functionality
 
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
 OmniComplete support _without_ booting rails inside vim (see [the official docs](https://github.com/vim-ruby/vim-ruby/blob/master/doc/ft-ruby-omni.txt) on how this works)
+
+## [vim-proc](https://github.com/Shougo/vimproc.vim)
+Adds "jobs" or parallel execution to vim. Used as a 3rd party lib by some plugins.
 
 ## [YankStack](https://github.com/maxbrunsfeld/vim-yankstack)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
