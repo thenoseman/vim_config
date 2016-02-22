@@ -43,9 +43,6 @@
 [submodule "home/.vim/bundle/ctrlp"]
 	path = home/.vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "home/.vim/bundle/vim-bundler"]
-	path = home/.vim/bundle/vim-bundler
-	url = git://github.com/tpope/vim-bundler.git
 [submodule "home/.vim/bundle/vim-fugitive"]
 	path = home/.vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
@@ -100,3 +97,6 @@
 [submodule "home/.vim/bundle/typescript-vim"]
 	path = home/.vim/bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "home/.vim/bundle/Dockerfile.vim"]
+	path = home/.vim/bundle/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git

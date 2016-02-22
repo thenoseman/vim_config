@@ -153,10 +153,6 @@ TypeScript support using tsserver
 ## [typescript-vim](https://github.com/leafgarland/typescript-vim)
 Syntax highlighting support for typescript
 
-## [vim-bundler](http://github.com/tpope/vim-bundler)
-Adds `:Bopen` (bundle open) and `:Bundle` to vim. That's nice but more importantly it adds all `tags` files of all gems in your `Gemfile` to
-vims `tags` list. 
-
 ## [vim-closetag]( https://github.com/alvan/vim-closetag)
 Auto closes tags in HTML/XML files.
 
