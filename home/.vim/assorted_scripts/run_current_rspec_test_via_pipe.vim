@@ -19,7 +19,7 @@ function! RSpecCurrent()
     let g:rspec_current_rspec_test = expand("%p").":".line(".")
   endif
 
-  echom "running " . g:rspec_current_rspec_test . " via tmp/rspec-test-pipe"
+  echom "running " . g:rspec_current_rspec_test . " via tmp/rspec-test-pipe (" . s:bin . ")"
   execute "silent !echo \"" . s:bin . " --color " . g:rspec_current_rspec_test . "\" -f documentation > tmp/rspec-test-pipe"
 endfunction
 
