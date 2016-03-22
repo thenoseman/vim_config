@@ -36,6 +36,7 @@ build_tern
 # build vimproc
 out "Building vimproc"
 cd home/.vim/bundle/vimproc
+make clean
 make
 cd ${HERE}
 
