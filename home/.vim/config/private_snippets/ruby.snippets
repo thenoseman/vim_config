@@ -147,5 +147,5 @@ snippet todo "# TODO"
 endsnippet
 
 snippet save "save_and_open page + screenshot"
-save_and_open_page; page.save_screenshot("tmp/capybara-screenshot-`!v strftime("%Y-%m-%d")`.png"); Launchy.open("tmp/capybara-screenshot-`!v strftime("%Y-%m-%d")`.png")
+save_and_open_page; save_and_open_screenshot
 endsnippet
