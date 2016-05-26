@@ -6,11 +6,6 @@ augroup vim_config
   autocmd FileType haml  call ConfigureRubyFileType()
   autocmd FileType yaml  call ConfigureRubyFileType()
 
-  " Automatically add magic encoding comment
-  if system("/usr/bin/env ruby --version") !~ "2\.3\."
-    autocmd BufRead,BufNewFile *.rb call AddTextToTopIfMissing("# -*- encoding : utf-8 -*-","encoding[ ]\+:[ ]\+utf-8")
-  endif
-
   " On enter update/create tags
   autocmd VimEnter * call UpdateOrCreateTagsFile()
 
