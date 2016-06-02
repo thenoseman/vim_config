@@ -79,7 +79,7 @@ the quickfix window.
 I mapped `:Ack` to `:Ack!` because I don't like the auto-opening. 
 Also included is `:Ackv` which accepts a visual selection (defaults to inner word) and searches for that (see config/plugins/ack.vim)
 
-## [Ctrl-P](http://github.com/kien/ctrlp.vim)
+## [Ctrl-P](http://github.com/ctrlpvim/ctrlp.vim)
 The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
 Far superior to those two in my opinion. Use `,m` to open the finder in file-mode.
 If you add files to your project run `:ClearCtrlPCache` (or press `<f5>` when ctrl-p is open) so the plugin can find those new files.
