@@ -30,7 +30,7 @@ let g:syntastic_loc_list_height=5
 let g:syntastic_mode_map = {
       \ 'active_filetypes': [], 
       \ 'mode': 'active', 
-      \ 'passive_filetypes': ["html","coffee","haml","sass","scss","xml","typescript"] }  
+      \ 'passive_filetypes': ["html","coffee","haml","sass","scss","xml"] }  
 
 " Don't jump to first error on save
 let g:syntastic_auto_jump=0
