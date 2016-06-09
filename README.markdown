@@ -150,7 +150,7 @@ Deactivated filetypes (changeable in `home/.vim/config/plugins/syntastic.vim`):
 - haml
 - sass
 
-## [tern_for_vim](https://github.com/marijnh/tern_for_vim)
+## [tern_for_vim](https://github.com/ternjs/tern_for_vim)
 Adds tern support inside vim (eg. `:TernDef, :TernDoc`)
 
 ## [tsuquyami](https://github.com/Quramy/tsuquyomi)
