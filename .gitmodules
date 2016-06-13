@@ -94,3 +94,6 @@
 [submodule "home/.vim/bundle/vim-closetag"]
 	path = home/.vim/bundle/vim-closetag
 	url = https://github.com/alvan/vim-closetag.git
+[submodule "home/.vim/bundle/vim-grepper"]
+	path = home/.vim/bundle/vim-grepper
+	url = https://github.com/mhinz/vim-grepper.git
