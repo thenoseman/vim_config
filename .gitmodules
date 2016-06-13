@@ -19,9 +19,6 @@
 [submodule "home/.vim/bundle/endwise"]
 	path = home/.vim/bundle/endwise
 	url = git://github.com/tpope/vim-endwise.git
-[submodule "home/.vim/bundle/ack"]
-  path = home/.vim/bundle/ack
-	url = git://github.com/mileszs/ack.vim.git
 [submodule "home/.vim/bundle/vim-textobj-user"]
 	path = home/.vim/bundle/vim-textobj-user
 	url = git://github.com/kana/vim-textobj-user.git

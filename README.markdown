@@ -72,12 +72,6 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
  `mkdir -p tmp && if [ ! -p tmp/rspec-test-pipe ]; then mkfifo tmp/rspec-test-pipe; fi && echo "Now listening to tmp/rspec-test-pipe" && while true; do sh -c "$(cat tmp/rspec-test-pipe)"; done'`
 
 # Plugins:
-## [Ack.vim](http://github.com/kronn/ack.vim)
-Configured to be used with [ag](https://github.com/ggreer/the_silver_searcher) which is a grep alternative. It sports context sensitive search and is generally blazingly fast.
-Commands are `:Ack` which searches for a term and jumps to the first hit and `:Ack!` which searches and justs opens the hits in
-the quickfix window.
-I mapped `:Ack` to `:Ack!` because I don't like the auto-opening. 
-Also included is `:Ackv` which accepts a visual selection (defaults to inner word) and searches for that (see config/plugins/ack.vim)
 
 ## [Ctrl-P](http://github.com/ctrlpvim/ctrlp.vim)
 The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
