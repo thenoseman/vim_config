@@ -38,14 +38,28 @@ let g:syntastic_auto_jump=0
 " Run all checkers and aggregate errors
 let g:syntastic_aggregate_errors=1
 
+"
+" JAVASCRIPT
+"
 " Force eslint for javascript
 let g:syntastic_javascript_checkers=['eslint', 'jshint']   
 
+"
+" GO
+"
 " Don't build for go programs, just use gofmt
 let g:syntastic_go_checkers = ['gofmt', 'golint']
 "let g:syntastic_go_gofmt_exec = './bin/goimports'
 let g:syntastic_go_golint_exec = './bin/golint'
 "let g:syntastic_go_gofmt_args = '-w'
 
+"
+" RUBY
+"
 " Use correct ruby version
 let g:syntastic_ruby_mri_exec = expand("~/.rbenv/versions/2.3.0/bin/ruby")
+
+"
+" TYPESCRIPT
+" 
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
