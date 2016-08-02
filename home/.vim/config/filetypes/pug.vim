@@ -1,8 +1,9 @@
 augroup vim_config
-  autocmd FileType pug call s:configurePug()
+  autocmd BufRead,BufNewFile *.pug call s:configurePug()
 augroup END
 
 fun! s:configurePug()
-  " Angular parens
-  syn region pugInterpolation matchgroup=pugInterpolationDelimiter start="{{" end="}}"
+  " Angular parens interpolation
+  syn region ngTplInterpolation start="{{" end="}}" containedin=pugTagInlineText
+  hi def link ngTplInterpolation Constant
 endfun
