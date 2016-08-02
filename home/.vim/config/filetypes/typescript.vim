@@ -7,11 +7,9 @@ augroup vim_config
 augroup END
 
 fun! s:configureTypescript()
-  set ballooneval
   set updatetime=2000
 
   nmap <buffer> gd :TsuDefinition<cr>
 
-  autocmd BufNewFile,BufRead *.ts setlocal ballonexpr=tsuquyomi#balloonexpr()
   autocmd CursorHold,CursorHoldI *.ts echo tsuquyomi#hint()
 endfun
