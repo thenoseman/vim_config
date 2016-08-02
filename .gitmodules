@@ -97,3 +97,6 @@
 [submodule "home/.vim/bundle/vim-grepper"]
 	path = home/.vim/bundle/vim-grepper
 	url = https://github.com/mhinz/vim-grepper.git
+[submodule "home/.vim/bundle/vim-pug"]
+	path = home/.vim/bundle/vim-pug
+	url = https://github.com/digitaltoad/vim-pug.git

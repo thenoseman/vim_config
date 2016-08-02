@@ -182,11 +182,11 @@ Interface to a lot of grep tools like eg. the-silver-searcher. Use `:Ag` to sear
 ## [vim-haml](http://github.com/tpope/vim-haml)
 Adds support for SASS, SCSS and HAML files to VIM.
 
-## [yajs.vim](https://github.com/othree/yajs.vim)
-Improvements to javascript indention and syntax highlighting in VIM.
-
 ## [vim-json](https://github.com/elzr/vim-json)
 Improved highlighting and special JSON related functionality
+
+## [vim-pug]( https://github.com/digitaltoad/vim-pug)
+Pug syntax support files
 
 ## [vim-ruby](http://github.com/vim-ruby/vim-ruby)
 The Standard ruby support plugin. Configured in `home/.vim/config/plugins/vim-ruby.vim` to highlight trailing whitespace and for best
@@ -197,3 +197,7 @@ Adds "jobs" or parallel execution to vim. Used as a 3rd party lib by some plugin
 
 ## [YankStack](https://github.com/maxbrunsfeld/vim-yankstack)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
+
+## [yajs.vim](https://github.com/othree/yajs.vim)
+Improvements to javascript indention and syntax highlighting in VIM.
+
