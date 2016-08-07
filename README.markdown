@@ -91,6 +91,10 @@ in the [DirDiff readme](http://www.vim.org/scripts/script.php?script_id=102).
 ## [Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim)
 Syntax highlighting for Dockerfiles
 
+## [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
+Support for [EditorConfig](http://editorconfig.org/).  
+Also do a `brew install editorconfig`.
+
 ## [greplace](http://github.com/skwp/greplace.vim)
 Ever wanted to search/replace in all/some of the files in your project?
 That's an absolute nightmare using `vimgrep`. Fret not! `:Gsearch` has you covered!
