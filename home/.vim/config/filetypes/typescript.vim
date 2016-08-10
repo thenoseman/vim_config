@@ -7,9 +7,5 @@ augroup vim_config
 augroup END
 
 fun! s:configureTypescript()
-  set updatetime=2000
-
   nmap <buffer> gd :TsuDefinition<cr>
-
-  autocmd CursorHold,CursorHoldI *.ts echo tsuquyomi#hint()
 endfun

@@ -1,4 +1,6 @@
+" 
 " TypeScript support
+"
 
 " Only load plugin on vim 7.04+
 if v:version < 704
