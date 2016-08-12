@@ -1,5 +1,5 @@
 snippet concern "ActiveSupport::Concern class" b
-module ${1:`!v substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+module ${1:`!v substitute(expand("%:t:r"), '\(_\|^\)\(.\)', '\u\2', 'g')`}
   extend ActiveSupport::Concern
 
   included do
@@ -30,13 +30,13 @@ snippet #! "#!"
 endsnippet
 
 snippet cla "class .. end"
-class ${1:`!v substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+class ${1:`!v substitute(expand("%:t:r"), '\(_\|^\)\(.\)', '\u\2', 'g')`}
   ${2}
 end
 endsnippet
 
 snippet cla "class .. initialize .. end"
-class ${1:`!v substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+class ${1:`!v substitute(expand("%:t:r"), '\(_\|^\)\(.\)', '\u\2', 'g')`}
   def initialize(${2:args})
     ${3}
   end
@@ -44,7 +44,7 @@ end
 endsnippet
 
 snippet mod "module .. end"
-module ${1:`!v substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+module ${1:`!v substitute(expand("%:t:r"), '\(_\|^\)\(.\)', '\u\2', 'g')`}
   ${2}
 end
 endsnippet
@@ -75,11 +75,6 @@ snippet defs "defs"
 def self.${1:class_method_name}
   ${2}
 end
-endsnippet
-
-# debugger
-snippet deb "debugger"
-puts "\033[33m= DEBUGGER (#{File.basename(__FILE__)}:#{__LINE__}) =\033[0m"; require "debugger"; debugger
 endsnippet
 
 # pry

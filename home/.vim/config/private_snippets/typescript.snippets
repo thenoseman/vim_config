@@ -1,1 +1,18 @@
-extends javascript
+#
+# Angular2
+#
+snippet @c "@Component({ ... })" b
+@Component({
+  selector: "$1",
+  directives: [ $2 ],
+  template: require("./$3.component.pug"),
+  styles: [ require("./$3.component.scss") ],
+})
+$0
+endsnippet
+
+snippet ecc "export class ...Component { ... }"
+export class ${1:`!v substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u\2', 'g')`}Component {
+	$0
+}
+endsnippet
