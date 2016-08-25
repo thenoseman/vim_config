@@ -19,6 +19,6 @@ export class ${1:`!v substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u\2', 'g')`}
 endsnippet
 
 snippet imp "Imports for PUG/SCSS" b
-import { tpl } from "./${1:`!v expand("%:t:r")`}.pug";
-import { css } from "./${1:`!v expand("%:t:r")`}.scss";
+import tpl from "./${1:`!v expand("%:t:r")`}.pug";
+import css from "./${1:`!v expand("%:t:r")`}.scss";
 endsnippet
