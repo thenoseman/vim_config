@@ -5,8 +5,8 @@ snippet @c "@Component({ ... })" b
 @Component({
   selector: "$1",
   directives: [ $2 ],
-  template: require("./$3.component.pug"),
-  styles: [ require("./$3.component.scss") ],
+  template: tpl,
+  styles: [ css ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 $0
@@ -16,4 +16,9 @@ snippet ecc "export class ...Component { ... }"
 export class ${1:`!v substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u\2', 'g')`}Component {
 	$0
 }
+endsnippet
+
+snippet imp "Imports for PUG/SCSS" b
+import { tpl } from "./${1:`!v expand("%:t:r")`}.pug";
+import { css } from "./${1:`!v expand("%:t:r")`}.scss";
 endsnippet
