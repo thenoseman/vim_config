@@ -1,6 +1,9 @@
 #
 # Angular2
 #
+
+extends javascript
+
 snippet @c "@Component({ ... })" b
 @Component({
   selector: "$1",
@@ -9,10 +12,6 @@ snippet @c "@Component({ ... })" b
   styles: [ css ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-$0
-endsnippet
-
-snippet ecc "export class ...Component { ... }"
 export class ${1:`!v substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u\2', 'g')`}Component {
 	$0
 }
