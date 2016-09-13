@@ -2,19 +2,19 @@
 # Mocha + Chai + Sinon
 #
 snippet it "it() {}"
-it("${1}", sinon.test(function (){
+it("${1}", () => {
 	${2}
-}));
+});
 endsnippet
 
 snippet desc "describe() {}"
-describe("${1}", function () {
+describe("${1}", () => {
   ${2}
 });
 endsnippet
 
 snippet bef "beforeEach"
-beforeEach(function () {
+beforeEach(() => {
   ${1}
 });
 endsnippet
