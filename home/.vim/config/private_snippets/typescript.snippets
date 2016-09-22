@@ -2,17 +2,26 @@
 # Angular2
 #
 
-extends javascript
+# console.log
+snippet cl "cl"
+console.log(${1});
+endsnippet
 
-snippet @c "@Component({ ... })" b
+snippet todo "// TODO"
+// TODO: ${1} (FS, `!v strftime("%Y-%m-%d")`)
+endsnippet
+
+snippet @comp "@Component({ ... })" b
+import { Component, ChangeDetectionStrategy } from "@angular/core";
+
 @Component({
-  selector: "$1",
+  selector: "${1:`!p snip.rv = re.sub('(?!^)([A-Z]+)', r'-\1',t[1]).lower()`}",
   directives: [ $2 ],
   template: tpl,
   styles: [ css ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ${1:`!v substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u\2', 'g')`}Component {
+export class ${1:`!v substitute(substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u\2', 'g'),'\.\(component\|service\)','','g')`}Component {
 	$0
 }
 endsnippet
@@ -20,4 +29,16 @@ endsnippet
 snippet imp "Imports for PUG/SCSS" b
 import tpl from "./${1:`!v expand("%:t:r")`}.pug";
 import "./${1:`!v expand("%:t:r")`}.scss";
+endsnippet
+
+snippet @serv "@Service({...})"
+import { Injectable } from "@angular/core";
+import { Http, Response } from "@angular/http";
+
+@Injectable()
+export class ${1:`!v substitute(substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u\2', 'g'),'\.\(component\|service\)','','g')`}Service {
+
+  constructor(private http: Http) {
+  }
+}
 endsnippet
