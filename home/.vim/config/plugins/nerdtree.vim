@@ -14,6 +14,13 @@ let NERDTreeQuitOnOpen=1
 " Don't show dotfiles
 let NERDTreeShowHidden=0
 
+let NERDTreeMinimalUI=1
+
+let NERDTreeAutoDeleteBuffer=1
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
 " @plugin: NERDTree
 " @key <leader>d: Open NERDTree at the current buffer
 noremap <leader>d :call NERDTreeSmartToggle()<CR>
