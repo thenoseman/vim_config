@@ -26,7 +26,7 @@ export class ${1:`!v substitute(substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u
 }
 endsnippet
 
-snippet imp "Imports for PUG/SCSS" b
+snippet tpl "Imports for PUG/SCSS" b
 import tpl from "./${1:`!v expand("%:t:r")`}.pug";
 import "./${1:`!v expand("%:t:r")`}.scss";
 endsnippet
@@ -41,4 +41,30 @@ export class ${1:`!v substitute(substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u
   constructor(private http: Http) {
   }
 }
+endsnippet
+
+snippet desc "describe() {}"
+describe("${1}", () => {
+  $0
+});
+endsnippet
+
+snippet it "it() {}"
+it("${1}", () => {
+  $0
+});
+endsnippet
+
+snippet imp "import ..."
+import ${1/.*\/(.*)$/\u$1/g} from "${1}";
+endsnippet
+
+snippet bef "beforeEach"
+beforeEach(() => {
+  ${1}
+});
+endsnippet
+
+snippet exp "expect"
+expect(${1}).to${2}
 endsnippet
