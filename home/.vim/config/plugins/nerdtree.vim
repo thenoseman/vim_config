@@ -12,7 +12,7 @@ let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 
 " Don't show dotfiles
-let NERDTreeShowHidden=0
+let NERDTreeShowHidden=1
 
 let NERDTreeMinimalUI=1
 
