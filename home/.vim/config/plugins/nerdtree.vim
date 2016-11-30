@@ -15,6 +15,7 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 
 let NERDTreeMinimalUI=1
+let NERDTreeWinSize=35
 
 let NERDTreeAutoDeleteBuffer=1
 
