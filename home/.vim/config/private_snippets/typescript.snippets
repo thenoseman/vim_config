@@ -3,8 +3,18 @@
 #
 
 # console.log
-snippet cl "cl"
+snippet cl "console.log"
 console.log(${1});
+endsnippet
+
+# console.warn
+snippet cl "console.warn"
+console.warn(${1});
+endsnippet
+
+# console.error
+snippet ce "console.error"
+console.error(${1});
 endsnippet
 
 snippet todo "// TODO"
@@ -12,22 +22,23 @@ snippet todo "// TODO"
 endsnippet
 
 snippet @comp "@Component({ ... })" b
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from "@angular/core";
 
 @Component({
   selector: "${1:`!p snip.rv = re.sub('(?!^)([A-Z]+)', r'-\1',t[1]).lower()`}",
   directives: [ $2 ],
   template: tpl,
   styles: [ css ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
 export class ${1:`!v substitute(substitute(expand("%:t:r"), '\(-\|^\)\(.\)', '\u\2', 'g'),'\.\(component\|service\)','','g')`}Component {
 	$0
 }
 endsnippet
 
-snippet tpl "Imports for PUG/SCSS" b
-import tpl from "./${1:`!v expand("%:t:r")`}.pug";
+snippet tpl "Imports for HTML/SCSS" b
+import tpl from "./${1:`!v expand("%:t:r")`}.html";
 import "./${1:`!v expand("%:t:r")`}.scss";
 endsnippet
 
@@ -55,10 +66,6 @@ it("${1}", () => {
 });
 endsnippet
 
-snippet imp "import ..."
-import ${1/.*\/(.*)$/\u$1/g} from "${1}";
-endsnippet
-
 snippet bef "beforeEach"
 beforeEach(() => {
   ${1}
@@ -76,3 +83,8 @@ endsnippet
 snippet tsl1 "turn tslint on"
 /* tslint:enable */
 endsnippet
+
+snippet imp "import ..."
+import ${1/.*\/(.*)$/\u$1/g} from "${1}";
+endsnippet
+
