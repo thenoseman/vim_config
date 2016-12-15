@@ -10,4 +10,6 @@ fun! s:configureTypescript()
   setlocal completeopt+=preview
   set ballooneval
   setlocal balloonexpr=tsuquyomi#balloonexpr()
+  set suffixesadd+=.html
+  set suffixesadd+=.scss
 endfun
