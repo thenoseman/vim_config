@@ -17,3 +17,6 @@ let g:tsuquyomi_ignore_missing_modules = 1
 
 " use syntastic
 let g:tsuquyomi_disable_quickfix = 1
+
+" Use shortest path import
+let g:tsuquyomi_shortest_import_path = 1
