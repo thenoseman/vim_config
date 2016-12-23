@@ -57,7 +57,7 @@ let g:syntastic_go_golint_exec = './bin/golint'
 " RUBY
 "
 " Use correct ruby version
-let g:syntastic_ruby_mri_exec = expand("~/.rbenv/versions/2.3.0/bin/ruby")
+let g:syntastic_ruby_mri_exec = expand("~/.rbenv/versions/2.3.1/bin/ruby")
 
 "
 " TYPESCRIPT
