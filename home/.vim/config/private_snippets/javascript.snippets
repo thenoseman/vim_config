@@ -20,7 +20,7 @@ beforeEach(() => {
 endsnippet
 
 snippet exp "expect"
-expect(${1}).to.${2}
+expect(${1}).to${2}
 endsnippet
 
 #
@@ -150,11 +150,6 @@ endsnippet
 
 snippet qsa "document.querySelectorAll"
 document.querySelectorAll("${1}");
-endsnippet
-
-snippet toa "Nodelist to array"
-var l = nl.length, ${1:arr} = new Array(l);
-while (l--) { $1[l] = nl[l] };
 endsnippet
 
 snippet todo "// TODO"
