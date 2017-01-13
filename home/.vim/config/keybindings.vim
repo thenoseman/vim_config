@@ -49,7 +49,7 @@ nnoremap <leader><leader> <c-^>
 " @key Q: delete last word in normal mode
 nnoremap Q dbxx
 
-" @key <esc>: Kill searchhighlighting and esc
+" @key <esc>: Kill search highlighting on esc
 nnoremap <silent> <esc> :nohl<cr><esc>
 
 " @key <c-s>: Show Highlight group under cursor
@@ -57,3 +57,7 @@ map <c-s> :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'> trans<'.s
 
 " ctrl-space: autocomplete via crtl-n
 imap <c-space> <c-n>
+
+" Map 'g=' to indent whole buffer 
+nmap g= :call PreservePosition("normal gg=G")<CR>
+
