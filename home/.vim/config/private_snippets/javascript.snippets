@@ -105,14 +105,6 @@ snippet r "r"
 var ${1:} = require('$1');
 endsnippet
 
-# Immediately Invoked Functional Expression IIFE (use in blank .js file)
-snippet c "c"
-(function `!v substitute(expand('%:t:r'), '\([_-]\([a-z]\)\)', "\\U\\2", "g")`Scope() {
-	'use strict';
-	${1}
-})();
-endsnippet
-
 # console.log
 snippet cl "console.log"
 console.log(${1});

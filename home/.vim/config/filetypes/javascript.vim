@@ -3,13 +3,6 @@ augroup vim_config
   autocmd FileType javascript call s:configureTern()
 augroup END
 
-" inserts the 'c' snipmate template in new .js files
-fun! s:jsNewFileTemplate()
-  if len(getline(1, "$")) == 1 && len(getline(1)) == 0
-    execute "normal ic\<Tab> \<Esc>"
-  endif
-endfun
-
 fun! s:configureTern()
   set ballooneval
   nmap <buffer> gd :TernDef<cr>
