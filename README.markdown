@@ -25,6 +25,9 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 - `add_text_if_missing.vim`:  
   Adds a function to add a line (eg. UTF-8 encoding for ruby < 2.0) to the top of a file
 
+- `bracket-textobject.vim`:  
+  Adds `id` and `af` textobjects that match surrounding brackets.
+
 - `copy_matches.vim`:  
   Copy the search matches to the clipboard ([source](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard)) with `:CopyMatches`
 
