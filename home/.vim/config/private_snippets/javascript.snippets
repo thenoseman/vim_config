@@ -40,7 +40,7 @@ endsnippet
 
 snippet getv "getValue()"
 getValue("${1}", function (err, value) { 
-	expect(value).to.eq("${2}");  
+	expect(value).to.eq("${2}");
 })
 endsnippet
 
@@ -51,15 +51,9 @@ endsnippet
 #
 # Function
 # 
-snippet fun "function $($) {$} "
-function ${1:functionName}(${2:argument}) {
-  ${3}
-}
-endsnippet
-
-snippet f "function() {}" w
-function ${1}(${2}) { 
-  ${3} 
+snippet f "() => {};"
+(${1:params}) => {
+  ${2}
 }
 endsnippet
 
