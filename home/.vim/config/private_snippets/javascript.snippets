@@ -57,20 +57,10 @@ snippet f "() => {};"
 }
 endsnippet
 
-snippet nprom "new Promise"
-return new Promise(function (resolve) {
-	${1}
-});
-endsnippet
-
-snippet .then "then(function(){})" w
-.then(function(${1:resolved}) {
-  ${2}
-});
-endsnippet
-
-snippet d "debugger;" w
-debugger;
+snippet const "constructor() {}"
+constructor(${1}) {
+	${2}
+}
 endsnippet
 
 snippet us "use strict"
@@ -96,7 +86,7 @@ endsnippet
 
 # Require
 snippet r "r"
-var ${1:} = require('$1');
+const ${1:} = require("$1");
 endsnippet
 
 # console.log
