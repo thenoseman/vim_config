@@ -56,6 +56,8 @@ let g:ctrlp_lazy_update = 0
 " No upper limit
 let g:ctrlp_max_files = 0
 
+let g:user_command_async = 1
+
 if !executable(g:ctrlp_buftag_ctags_bin)
   echoe "Please install ctags via homebrew! (brew install ctags)"
   system('brew install ctags && brew link ctags')
