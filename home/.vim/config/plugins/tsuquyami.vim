@@ -20,3 +20,6 @@ let g:tsuquyomi_disable_quickfix = 1
 
 " Use shortest path import
 let g:tsuquyomi_shortest_import_path = 1
+
+" use vimproc because its faster
+let g:tsuquyomi_use_vimproc = 1
