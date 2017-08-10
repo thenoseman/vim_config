@@ -9,5 +9,3 @@ fun! s:configureTern()
   nmap <buffer> <c-]> :TernDef<cr>
   set updatetime=2000
 endfun
-
-au BufNewFile,BufRead *.es6 set filetype=javascript
