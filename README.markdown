@@ -163,10 +163,6 @@ Syntax highlighting support for typescript
 ## [vim-closetag]( https://github.com/alvan/vim-closetag)
 Auto closes tags in HTML/XML files.
 
-## [vim-easymotion](http://github.com/Lokaltog/vim-easymotion)
-Jump to characters the easy way: `,,tCharacter` and easymotion will show letters for every hit it got. Type those letters and easymotion jumps to that point.
-Also works with `f` or `w`. There is a [nice tutorial](http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/).
-
 ## [vim-endwise](http://github.com/tpope/vim-endwise)
 Auto closes ruby structures with `end` where appropriate
 

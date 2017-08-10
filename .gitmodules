@@ -28,9 +28,6 @@
 [submodule "home/.vim/bundle/dirdiff"]
 	path = home/.vim/bundle/dirdiff
 	url = git://github.com/vim-scripts/DirDiff.vim.git
-[submodule "home/.vim/bundle/vim-easymotion"]
-	path = home/.vim/bundle/vim-easymotion
-	url = git://github.com/Lokaltog/vim-easymotion.git
 [submodule "home/.vim/bundle/vim-ruby"]
 	path = home/.vim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
