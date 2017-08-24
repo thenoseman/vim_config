@@ -6,7 +6,7 @@ let g:grepper = {
     \ }
 
 " Create :Ag command
-command! -nargs=* Ag Grepper -noprompt -tool ag -grepprg ag --vimgrep <args>
+command! -nargs=* Rg Grepper -noprompt -tool rg -grepprg rg --vimgrep <args>
 
 " gs<motion> prepupulates search
 nmap gs <plug>(GrepperOperator)

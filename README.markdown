@@ -179,7 +179,7 @@ Go development is best when used with [direnv](http://direnv.net/) to setup the 
 ``echo "export GOPATH=`pwd`" > .envrc`` and then starting vim and doing a `:GoInstallBinaries`
 
 ## [vim-grepper](https://github.com/mhinz/vim-grepper)
-Interface to a lot of grep tools like eg. the-silver-searcher. Use `:Ag` to search for a term or
+Interface to a lot of grep tools like eg. ripgrep. Use `:Rg` to search for a term or
 `gs<motion>` to search for any motion.
 
 ## [vim-haml](http://github.com/tpope/vim-haml)
