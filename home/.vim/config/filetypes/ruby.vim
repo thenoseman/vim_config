@@ -19,7 +19,7 @@ augroup vim_config
   autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
 
   " Add frozen string literal to each file
-  autocmd BufRead,BufNewFile *.rb call AddTextToTopIfMissing("# frozen_string_literal: true","frozen_string_literal")
+  "autocmd BufRead,BufNewFile *.rb call AddTextToTopIfMissing("# frozen_string_literal: true","frozen_string_literal")
 augroup END
 
 fun! ConfigureRubyFileType()
