@@ -5,6 +5,9 @@ let g:grepper = {
     \ 'highlight': 1
     \ }
 
+set grepprg=rg
+let g:grep_cmd_opts = '-n --no-heading'
+
 " Create :Ag command
 command! -nargs=* Rg Grepper -noprompt -tool rg -grepprg rg --vimgrep <args>
 
