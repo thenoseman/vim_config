@@ -67,4 +67,5 @@ let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
 "
 " SHELL
 "
-let g:syntastic_sh_checkers = ['shellcheck_x']
+let g:syntastic_sh_shellcheck_args = ['-fgcc', '-x']
+let g:syntastic_sh_checkers = ['shellcheck']
