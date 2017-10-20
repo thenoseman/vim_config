@@ -76,10 +76,8 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
 
 # Plugins:
 
-## [Ctrl-P](http://github.com/ctrlpvim/ctrlp.vim)
-The revelation when it comes to file-finding. Alternative to [fuzzyfinder](http://github.com/vim-scripts/FuzzyFinder) and [Command-T](http://www.vim.org/scripts/script.php?script_id=3025).
-Far superior to those two in my opinion. Use `,m` to open the finder in file-mode.
-If you add files to your project run `:ClearCtrlPCache` (or press `<f5>` when ctrl-p is open) so the plugin can find those new files.
+## [ALE](http://github.com/w0rp/ale)
+Asynchronous Syntax checking for VIM 8
 
 ## [ctrlp-py-matcher](https://github.com/FelikZ/ctrlp-py-matcher)
 Adds faster python based matcher s to ctrl-p
@@ -141,15 +139,6 @@ Change an existing surrounding using `csOldNew` (eg. "Hello" would become 'Hello
 add surrounding with `ysTextobjectSurrounding` (Hello would become "Hello" with `ysiw"`) or
 delete them with `dsSurrounding`. With an active visual selection `SSurrounding` will also work.
 Actions are repeatable with `.` via repeat.vim.
-
-## [Syntastic](http://github.com/scrooloose/syntastic)
-On the fly (actually "on the save" :)) syntax checking for [a lot of languages](https://github.com/scrooloose/syntastic/tree/master/syntax_checkers).
-A locationlist will open if you have an error in your file.
-Deactivated filetypes (changeable in `home/.vim/config/plugins/syntastic.vim`):
-- html
-- coffee
-- haml
-- sass
 
 ## [tern_for_vim](https://github.com/ternjs/tern_for_vim)
 Adds tern support inside vim (eg. `:TernDef, :TernDoc`)

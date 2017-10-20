@@ -1,0 +1,27 @@
+Before:
+  Save &l:statusline
+
+  let b:funky_command_created = 0
+
+  " We will test for the existence of this command, so create one if needed.
+  if !exists(':CtrlPFunky')
+    command CtrlPFunky echo
+    let b:funky_command_created = 1
+  endif
+
+After:
+  if b:funky_command_created
+    delcommand CtrlPFunky
+    let b:funky_command_created = 0
+  endif
+
+  unlet! b:funky_command_created
+
+  Restore
+
+Execute(ALE shouldn't do much of anything for ctrlp-funky buffers):
+  Assert !ale#ShouldDoNothing(bufnr('')), 'The preliminary check failed'
+
+  let &l:statusline = '%#CtrlPMode2# prt %*%#CtrlPMode1# line %* <mru>={%#CtrlPMode1# funky %*}=<fil> <-> %=%<%#CtrlPMode2# %{getcwd()} %*'
+
+  Assert ale#ShouldDoNothing(bufnr(''))
