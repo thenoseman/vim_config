@@ -1,9 +1,6 @@
 [submodule "home/.vim/bundle/nerdtree"]
 	path = home/.vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "home/.vim/bundle/syntastic"]
-	path = home/.vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
 [submodule "home/.vim/bundle/surround"]
 	path = home/.vim/bundle/surround
 	url = git://github.com/tpope/vim-surround.git
