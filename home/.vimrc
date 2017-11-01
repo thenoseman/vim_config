@@ -26,16 +26,8 @@ set history=100
 " I - don't give the intro message when starting Vim.
 set shortmess=filmnrxtTI
 
-" turn filetype settings off so that stuff gets loaded from pathogen
-filetype off
-
 " initialize matchit.vim
 runtime macros/matchit.vim
-
-" use pathogen to load plugins/etc.
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-let g:pathogen_disabled = []
-call pathogen#infect()
 
 " turn on all filetype settings, syntax, etc.
 filetype plugin indent on
@@ -46,6 +38,8 @@ if has('unix')
 else
   set runtimepath+=~/vimfiles/config
 endif
+
+packloadall
 
 " load everything else in its own config file
 runtime! config/*.vim
