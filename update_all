@@ -1,0 +1,31 @@
+#!/bin/bash
+ccred=$(echo -e "\033[0;31m")
+ccgreen=$(echo -e "\033[0;32m")
+ccyellow=$(echo -e "\033[0;33m")
+ccend=$(echo -e "\033[0m")
+
+HERE=$(pwd)
+
+out() {
+  echo "${ccgreen}${1}${ccend}"
+}
+
+for dir in $(ls -1 home/.vim/pack/plugins/start); do
+  cd "home/.vim/pack/plugins/start/${dir}"
+  git pull origin master
+  cd ${HERE}
+done
+
+# Build tern
+out "Building TERN via npm install"
+cd home/.vim/pack/plugins/start/tern_for_vim
+npm update
+npm install --force
+cd ${HERE}
+
+# build vimproc
+out "Building vimproc"
+cd home/.vim/pack/plugins/start/vimproc.vim
+make clean
+make
+cd ${HERE}
