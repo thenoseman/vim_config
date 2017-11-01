@@ -27,7 +27,7 @@ build_tern() {
 
 # First update all submodules to HEAD
 out "Updating submodules"
-git submodule foreach git pull origin master
+git submodule update --recursive --remote
 
 # Build tern
 out "Building TERN via npm install"
