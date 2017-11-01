@@ -1,10 +1,2 @@
-""""""""""""""""""""""""""""""""""""""""
-"" NERDCommenter-specific settings
-""""""""""""""""""""""""""""""""""""""""
-
-" keybindings
-" @plugin: NERDCommenter
-" @key <leader>c: Toggle comment of visual selection or current line
-noremap <leader>c ,c<space>
-
+map ,c <plug>NERDCommenterToggle
 let g:NERDCustomDelimiters = { 'typescript': { 'left': '// ' } }
