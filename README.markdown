@@ -184,6 +184,9 @@ OmniComplete support _without_ booting rails inside vim (see [the official docs]
 ## [vim-proc](https://github.com/Shougo/vimproc.vim)
 Adds "jobs" or parallel execution to vim. Used as a 3rd party lib by some plugins.
 
+## [vim-terraform](https://github.com//hashivim/vim-terraform)
+terraform integration
+
 ## [YankStack](https://github.com/maxbrunsfeld/vim-yankstack)
 Manages the copy and paste registers for you. Restore a yanked text with `ctrl-p` or `ctrl-n` (previous and next).  
 
