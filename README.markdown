@@ -8,7 +8,7 @@ Place all files in your user-directory and rename `.vimrc` to `_vimrc` and `.vim
 
 My configuration is based on [duwanis](https://github.com/duwanis/vim_config) work.
 
-Clone this repository to your HD and don't forget to `git submodule init && git submodule update` to make it work.  
+Clone this repository to your HD once inside vim execute `:PlugUpdate` once.
 Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home directory.
 
 # Added non-plugin features
@@ -17,7 +17,6 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
   If you call "mvim -d" with two directories, the DirDiff Plugin will automatically be called to diff the directories.
 + A modified version of the [railscasts theme](https://github.com/jpo/vim-railscasts-theme) as default theme
 + My favorite font [Inconsolata-dz](http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/) in extras
-+ `update_all_submodules_to_head` script that updates all submodules and creates a commit for those updates
 + `home/extras/macvim_with_current_ruby.patch` patches the homebrew formula for macvim to integrate the active ruby and python in MacVIM.  
   Apply via `patch -p0 /usr/local/Library/Formula/macvim.rb home/extras/macvim_with_current_ruby.patch` then reinstall macvim with homebrew
 
@@ -75,6 +74,8 @@ Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home director
  `mkdir -p tmp && if [ ! -p tmp/rspec-test-pipe ]; then mkfifo tmp/rspec-test-pipe; fi && echo "Now listening to tmp/rspec-test-pipe" && while true; do sh -c "$(cat tmp/rspec-test-pipe)"; done'`
 
 # Plugins:
+
+See `home/.vim/config/vimplug.vim` :
 
 ## [ALE](http://github.com/w0rp/ale)
 Asynchronous Syntax checking for VIM 8
