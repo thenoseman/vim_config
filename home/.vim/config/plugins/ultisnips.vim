@@ -1,7 +1,3 @@
-if index(g:pathogen_disabled, "ultisnips") > -1
-  finish
-endif
-
 let g:UltiSnipsUsePythonVersion = 2
 
 " Split vertically on snippet edit

@@ -32,11 +32,6 @@ filetype off
 " initialize matchit.vim
 runtime macros/matchit.vim
 
-" use pathogen to load plugins/etc.
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-let g:pathogen_disabled = []
-call pathogen#infect()
-
 " turn on all filetype settings, syntax, etc.
 filetype plugin indent on
 syntax on
