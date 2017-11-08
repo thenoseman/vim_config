@@ -19,23 +19,6 @@ fun! FixTagsPath()
   let &tags = join(new_tags,",")
 endfun
 
-"
-" The following will activate vim-rails
-" for directories that have a .gemspec file
-"
-fun! ActivateRailsVimForGems()
-  if exists('b:rails_root')
-    return
-  endif
-
-  let s:f = findfile(glob('*.gemspec'), ';.')
-  if !empty(s:f)
-    let b:rails_root=fnamemodify(s:f, ':p:h')    
-    call rails#buffer_setup()
-  endif
-endfun
-autocmd FileType ruby call ActivateRailsVimForGems()
-
 " Projections for vim-rails
 " See https://gist.github.com/jsteiner/5555868
 " or  https://gist.github.com/jsteiner/5556217
