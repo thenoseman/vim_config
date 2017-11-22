@@ -4,7 +4,6 @@ augroup vim_config
 augroup END
 
 fun! s:configureTern()
-  set ballooneval
   nmap <buffer> gd :TernDef<cr>
   nmap <buffer> <c-]> :TernDef<cr>
   set updatetime=2000
