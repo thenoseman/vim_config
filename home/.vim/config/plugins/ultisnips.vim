@@ -1,4 +1,9 @@
-let g:UltiSnipsUsePythonVersion = 2
+if has("gui_macvim")
+  let g:UltiSnipsUsePythonVersion = 2
+else
+  " On linux
+  let g:UltiSnipsUsePythonVersion = 3
+end
 
 " Split vertically on snippet edit
 let g:UltiSnipsEditSplit = "vertical"
