@@ -43,7 +43,7 @@ endif
 let g:ctrlp_clear_cache_on_exit = 1
 
 " ctags binary
-let g:ctrlp_buftag_ctags_bin = '/usr/local/bin/ctags'
+let g:ctrlp_buftag_ctags_bin = g:ctags_bin
 
 " Matching functions supplied by plugin (https://github.com/FelikZ/ctrlp-py-matcher)
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
@@ -55,11 +55,6 @@ let g:ctrlp_lazy_update = 0
 let g:ctrlp_max_files = 0
 
 let g:user_command_async = 1
-
-if !executable(g:ctrlp_buftag_ctags_bin)
-  echoe "Please install ctags via homebrew! (brew install ctags)"
-  system('brew install ctags && brew link ctags')
-endif
 
 " @plugin: ctrlp
 " @key <leader>t: Searches all open buffers for a tag (aka. method, class name, ...)

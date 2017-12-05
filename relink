@@ -2,7 +2,7 @@
 #
 # relinks all dotfiles in home to the homedir
 #
-FILES=`find home -name ".*" -d 1`
+FILES=`find home -maxdepth 1 -name ".*"`
 for f in $FILES 
 do
   linkme=${f/home\//}
