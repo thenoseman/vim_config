@@ -49,9 +49,6 @@ nnoremap <leader><leader> <c-^>
 " @key Q: delete last word in normal mode
 nnoremap Q dbxx
 
-" @key <esc>: Kill search highlighting on esc
-nnoremap <silent> <Leader><Leader> :nohl<cr><esc>
-
 " @key <c-s>: Show Highlight group under cursor
 map <c-s> :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'> trans<'.synIDattr(synID(line("."),col("."),0),"name")."> lo<".synIDattr(synIDtrans(synID(line("."),col("."),1)),"name").">"<CR>
 
