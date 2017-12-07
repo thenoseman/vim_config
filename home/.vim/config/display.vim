@@ -28,7 +28,7 @@ if has('mac')
     set guifont=Inconsolata-dz:h8.00
   endif
 else
-  set guifont=Inconsolata-g
+  set guifont=Inconsolata-g\ 11
 endif
 
 " Bigger for Windows
