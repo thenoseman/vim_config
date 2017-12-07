@@ -1,8 +1,5 @@
 " only execute the contents of this file if the GUI is in use.
 if has("gui_running")
-  if has("unix")
-    set transp=0
-  endif
 
   "" gui options
   " a - Autoselect

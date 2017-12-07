@@ -17,14 +17,18 @@ set cul
 "
 " New Font
 "
-if has('gui_running') && has('unix')
-  if tolower(hostname()) =~ 'franks-mbp'
-    set guifont=Inconsolata-dz:h11.00
+if has('mac')
+  if has('gui_running')
+    if tolower(hostname()) =~ 'franks-mbp'
+      set guifont=Inconsolata-dz:h11.00
+    else
+      set guifont=Inconsolata-dz:h12.00
+    endif
   else
-    set guifont=Inconsolata-dz:h12.00
+    set guifont=Inconsolata-dz:h8.00
   endif
 else
-  set guifont=Inconsolata-dz:h8.00
+  set guifont=Inconsolata-g
 endif
 
 " Bigger for Windows
@@ -40,6 +44,7 @@ set showmatch      " show matching bracket (briefly jump)
 set showmode       " display the current mode in the status bar
 set title          " show file in titlebar
 set noerrorbells visualbell t_vb= " no bells or flashes or whatever
+
 " status bar
 set statusline+=%f\                                           " filename
 set statusline+=[%{strlen(&ft)?&ft:'none'}]                   " filetype

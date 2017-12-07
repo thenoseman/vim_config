@@ -3,10 +3,8 @@
 "
 
 " fix arrow keys in console mode
-if has('gui_running') && has("unix")
+if has('gui_running') && has("mac")
   set nomacmeta
-else
-  set term=ansi
 endif
 
 " leader = Comma
