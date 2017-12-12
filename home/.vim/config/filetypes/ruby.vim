@@ -14,6 +14,7 @@ augroup vim_config
 
   " Specs can be named _scene.rb (integration tests)
   autocmd BufReadPost,BufNewFile *_scene.rb set syntax=rspec | call ConfigureRubyFileType()
+  autocmd BufReadPost,BufNewFile *_spec.rb set ft=rspec
 
   " These files are also Ruby.
   autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
