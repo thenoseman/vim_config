@@ -1,11 +1,6 @@
 #!/bin/bash
-#
-# relinks all dotfiles in home to the homedir
-#
-FILES=`find home -maxdepth 1 -name ".*"`
-for f in $FILES 
-do
-  linkme=${f/home\//}
-  rm ~/$linkme
-  ln -s `pwd`/home/$linkme ~/$linkme
-done
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+rm "${HOME}/.vimrc" && ln -s "${DIR}/home/.vimrc" "${HOME}/.vimrc"
+rm "${HOME}/.vimrc-commit" && ln -s "${DIR}/home/.vimrc-commit" "${HOME}/.vimrc-commit"
+rm "${HOME}/.vim" && ln -s "${DIR}/home/.vim" "${HOME}/.vim"
