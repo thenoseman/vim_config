@@ -1,6 +1,6 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-rm "${HOME}/.vimrc" && ln -s "${DIR}/home/.vimrc" "${HOME}/.vimrc"
-rm "${HOME}/.vimrc-commit" && ln -s "${DIR}/home/.vimrc-commit" "${HOME}/.vimrc-commit"
-rm "${HOME}/.vim" && ln -s "${DIR}/home/.vim" "${HOME}/.vim"
+rm -rf "${HOME}/.vimrc" && ln -s "${DIR}/home/.vimrc" "${HOME}/.vimrc"
+rm -rf "${HOME}/.vimrc-commit" && ln -s "${DIR}/home/.vimrc-commit" "${HOME}/.vimrc-commit"
+rm -rf "${HOME}/.vim" && ln -s "${DIR}/home/.vim" "${HOME}/.vim"
