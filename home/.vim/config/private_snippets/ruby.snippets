@@ -96,47 +96,6 @@ snippet doc "heredoc block"
 HEREDOC
 endsnippet
 
-# ---------------------------
-# SPEC
-# ---------------------------
-snippet it "it"
-it "${1:spec_name}" do
-  ${2}
-end
-endsnippet
-
-snippet desc "desc"
-describe "${1:class_name}" do
-  ${2}
-end
-endsnippet
-
-snippet cont "cont"
-context "${1:message}" do
-  ${2}
-end
-endsnippet
-
-snippet bef "bef"
-before do
-  ${2}
-end
-endsnippet
-
-snippet aft "aft"
-after :${1:each} do
-  ${2}
-end
-endsnippet
-
-snippet exp "expect().to "
-expect(${1}).to ${2}
-endsnippet
-
-snippet all "allow().to "
-allow(${1}).to receive(${2}).${3}
-endsnippet
-
 snippet todo "# TODO"
 #TODO: ${1} (FS, `!v strftime("%Y-%m-%d")`)
 endsnippet
