@@ -13,8 +13,8 @@ augroup vim_config
   autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(/usr/local/bin/ctags --languages=ruby -u -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
 
   " Specs can be named _scene.rb (integration tests)
-  autocmd BufReadPost,BufNewFile *_scene.rb set syntax=rspec | call ConfigureRubyFileType()
-  autocmd BufReadPost,BufNewFile *_spec.rb set ft=rspec
+  autocmd BufReadPost,BufNewFile *_scene.rb set ft=rspec | call ConfigureRubyFileType()
+  autocmd BufReadPost,BufNewFile *_spec.rb set ft=rspec | call ConfigureRubyFileType()
 
   " These files are also Ruby.
   autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
