@@ -10,7 +10,7 @@ augroup vim_config
   autocmd VimEnter * call UpdateOrCreateTagsFile()
 
   " On write just update tags of this file
-  autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(ripper-tags --exclude=vendor -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
+  autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(ripper-tags --exclude=vendor --exclude=log --exclude=tmp --exclude=testapp -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
 
   " Specs can be named _scene.rb (integration tests)
   autocmd BufReadPost,BufNewFile *_scene.rb set ft=rspec | call ConfigureRubyFileType()
@@ -38,7 +38,7 @@ fun! ConfigureRubyFileType()
   set lazyredraw
 
   " gd => jump to definition (ctags based)
-  nmap <buffer> gd <c-]>
+  nmap <buffer> gd <c-]><cr> 
 endfun
 
 " Create tags file (if it doesn't exist)
