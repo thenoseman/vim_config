@@ -18,9 +18,6 @@ augroup vim_config
 
   " These files are also Ruby.
   autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
-
-  " Add frozen string literal to each file
-  "autocmd BufRead,BufNewFile *.rb call AddTextToTopIfMissing("# frozen_string_literal: true","frozen_string_literal")
 augroup END
 
 fun! ConfigureRubyFileType()
@@ -41,7 +38,7 @@ fun! ConfigureRubyFileType()
   set lazyredraw
 
   " gd => jump to definition (ctags based)
-  nmap <buffer> gd <c-]><cr> 
+  nmap <buffer> gd <c-]>
 endfun
 
 " Create tags file (if it doesn't exist)
