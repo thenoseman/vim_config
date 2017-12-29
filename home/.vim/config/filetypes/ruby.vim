@@ -49,6 +49,6 @@ fun! UpdateOrCreateTagsFile()
 
   if mtime_gemfile > 0 && (mtime_tags == -1 || mtime_gemfile > mtime_tags)
     echom "Generating tags as Gemfile.lock is newer than tags"
-    silent! execute ":!(ripper-tags -R --exclude=vendor --exclude=log --exclude=tmp --exclude=testapp) &"
+    job_start("ripper-tags -R --exclude=vendor --exclude=log --exclude=tmp --exclude=testapp")
   endif
 endfun
