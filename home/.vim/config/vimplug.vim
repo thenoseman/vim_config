@@ -20,6 +20,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/DirDiff.vim'
 Plug 'w0rp/ale'
+Plug 'ruby-formatter/rufo-vim'
 
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
