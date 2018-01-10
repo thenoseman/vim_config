@@ -30,7 +30,7 @@ set shortmess=filmnrxtTI
 filetype off
 
 " initialize matchit.vim
-runtime macros/matchit.vim
+packadd! matchit
 
 " turn on all filetype settings, syntax, etc.
 filetype plugin indent on

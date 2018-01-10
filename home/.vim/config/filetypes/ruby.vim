@@ -39,6 +39,15 @@ fun! ConfigureRubyFileType()
 
   " gd => jump to definition (ctags based)
   nmap <buffer> gd <c-]><cr> 
+
+  " Extend the default ruby matchit to include the rspec verbs
+  let b:match_words =
+	\ '\<\%(if\|unless\|case\|while\|until\|for\|do\|class\|module\|def\|begin\|describe\|context\|it\|before\|after\)\>=\@!' .
+	\ ':' .
+	\ '\<\%(else\|elsif\|ensure\|when\|rescue\|break\|redo\|next\|retry\)\>' .
+	\ ':' .
+        \ '\%(^\|[^.\:@$]\)\@<=\<end\:\@!\>' .
+	\ ',{:},\[:\],(:)'
 endfun
 
 " Create tags file (if it doesn't exist)
