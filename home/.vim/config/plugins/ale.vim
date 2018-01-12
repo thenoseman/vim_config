@@ -15,12 +15,10 @@ let g:ale_linter_aliases = { 'arduino': 'cpp' }
 
 let g:ale_linters = {
   \   'ruby': ['ruby'],
-  \   'html': [ '' ]
+  \   'html': [ '' ],
+  \   'arduino' : [ 'g++' ]
 \}
 
 let g:ale_fixers = {
   \   'javascript': [ 'eslint' ]
 \}
-
-" For arduino
-let g:ale_cpp_gcc_options = '-std=c++14 -Wall -isystem ' . expand($HOME) . '/.platformio/packages/framework-arduinoavr/cores/arduino -isystem ' . expand($HOME) . '/.platformio/packages/toolchain-atmelavr/avr/include -isystem ' . expand($HOME) . '/.platformio/packages/framework-arduinoavr/variants/atmega328pb'
