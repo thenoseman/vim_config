@@ -1,0 +1,23 @@
+extends cpp
+
+#  ------------------------------------------------------------------------------
+# Setup and loop
+#  ------------------------------------------------------------------------------
+snippet setup "setup()"
+void setup()
+{
+	Serial.begin(115200);
+	${1}
+}
+endsnippet
+
+snippet loop "loop()"
+void loop()
+{
+	${1}
+}
+endsnippet
+
+snippet spl "serial println"
+Serial.println((${1:"hello"});
+endsnippet
