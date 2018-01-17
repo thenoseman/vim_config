@@ -42,7 +42,7 @@ fun! ConfigureRubyFileType()
 
   " Extend the default ruby matchit to include the rspec verbs
   let b:match_words =
-	\ '\<\%(if\|unless\|case\|while\|until\|for\|do\|class\|module\|def\|begin\|describe\|context\|it\|before\|after\)\>=\@!' .
+	\ '\<\%(if\|unless\|case\|while\|until\|for\|do\|class\|module\|def\|begin\)\>=\@!' .
 	\ ':' .
 	\ '\<\%(else\|elsif\|ensure\|when\|rescue\|break\|redo\|next\|retry\)\>' .
 	\ ':' .
