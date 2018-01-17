@@ -29,7 +29,7 @@ fun! ConfigureRubyFileType()
    set nofoldenable
 
    " No stinkin' popup
-   if has("gui_running")
+   if has('gui_running')
      set noballooneval
    endif
 
@@ -53,11 +53,11 @@ endfun
 " Create tags file (if it doesn't exist)
 " or update tags file if it is too old
 fun! UpdateOrCreateTagsFile()
-  let mtime_tags = getftime("tags")
-  let mtime_gemfile = getftime("Gemfile.lock")
+  let l:mtime_tags = getftime('tags')
+  let l:mtime_gemfile = getftime('Gemfile.lock')
 
-  if mtime_gemfile > 0 && (mtime_tags == -1 || mtime_gemfile > mtime_tags)
-    echom "Generating tags as Gemfile.lock is newer than tags"
-    job_start("ripper-tags -R --exclude=vendor --exclude=log --exclude=tmp --exclude=testapp")
+  if l:mtime_gemfile > 0 && (l:mtime_tags == -1 || l:mtime_gemfile > l:mtime_tags)
+    echom 'Generating tags as Gemfile.lock is newer than tags'
+    call job_start('ripper-tags -R --exclude=vendor --exclude=log --exclude=tmp --exclude=testapp')
   endif
 endfun
