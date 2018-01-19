@@ -43,7 +43,13 @@ fun! ArduinoFilterErrors()
     let l:list = ArduinoFilterList(l:list, removeFilter)
   endfor
 
-  call setloclist(0, l:list)
+  " Close if no error found
+  if len(l:list) == 0
+    lclose
+  else
+    call setloclist(0, l:list)
+  endif
+
 endfun
 
 augroup ALEProgress
