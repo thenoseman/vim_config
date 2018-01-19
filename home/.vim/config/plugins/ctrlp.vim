@@ -45,8 +45,8 @@ let g:ctrlp_clear_cache_on_exit = 1
 " ctags binary
 let g:ctrlp_buftag_ctags_bin = g:ctags_bin
 
-" Matching functions supplied by plugin (https://github.com/FelikZ/ctrlp-py-matcher)
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" Matching functions supplied by plugin
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " instant update
 let g:ctrlp_lazy_update = 0

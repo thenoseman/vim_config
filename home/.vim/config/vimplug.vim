@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/bundles')
 
-Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'SirVer/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -22,6 +21,7 @@ Plug 'vim-scripts/DirDiff.vim'
 Plug 'w0rp/ale'
 Plug 'ruby-formatter/rufo-vim'
 
+Plug 'JazzCore/ctrlp-cmatcher', { 'dir': '~/.vim/bundles/ctrlp-cmatcher', 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
