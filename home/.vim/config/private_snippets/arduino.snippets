@@ -25,3 +25,19 @@ endsnippet
 snippet #d "#define"
 #define ${1:DIGITAL_PIN_CLK} = ${2}
 endsnippet
+
+snippet ini "platformio.ini"
+; PlatformIO Project Configuration File
+; To build use :ArdUpload or "PLATFORMIO_SRC_DIR=src/path pio run --target=upload"
+[platformio]
+src_dir = src
+
+[env:nanoatmega328]
+platform = atmelavr
+board = nanoatmega328
+framework = arduino
+targets = upload
+lib_deps =
+  FastLED
+lib_ignore = LibNameSeeLibrary.json
+endsnippet
