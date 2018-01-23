@@ -18,7 +18,7 @@ fun! UpdateOrCreateArduinoTagsFile()
   let l:piolibs = split(globpath(getcwd() . '/.piolibdeps', '*'), '\n')
 
   for relpath in l:piolibs
-    call add(l:includes, relpath)
+    call add(l:includes, shellescape(relpath))
   endfor
 
   " ARDUINO includes for platformio
