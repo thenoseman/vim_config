@@ -11,6 +11,10 @@ void setup()
 }
 endsnippet
 
+snippet #inc "#include"
+#include <${1}>
+endsnippet
+
 snippet loop "loop()"
 void loop()
 {
@@ -19,11 +23,15 @@ void loop()
 endsnippet
 
 snippet spl "serial println"
-Serial.println((${1:"hello"});
+Serial.println("${1:hello}");
 endsnippet
 
 snippet #d "#define"
 #define ${1:DIGITAL_PIN_CLK} = ${2}
+endsnippet
+
+snippet pin "pinMode"
+pinMode(${1:1}, ${2:INPUT})
 endsnippet
 
 snippet ini "platformio.ini"
