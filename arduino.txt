@@ -1,0 +1,3 @@
+./packages/toolchain-atmelavr/bin/avr-g++
+
+~/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pioenvs/nanoatmega328/src/main.ino.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -g -Os -Wall -ffunction-sections -fdata-sections -flto -mmcu=atmega328p -DF_CPU=16000000L -DPLATFORMIO=30501 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -DARDUINO=10620 -I/Users/frank/.platformio/packages/framework-arduinoavr/cores/arduino -I/Users/frank/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs -Isrc src/main.ino.cpp
