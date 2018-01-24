@@ -2,6 +2,7 @@
 " Config for ALE plugin
 "
 
+scriptencoding utf-8
 let g:ale_sign_error = '💀'
 let g:ale_sign_warning = '🤔'
 let g:ale_lint_on_text_changed = 'never'
@@ -37,10 +38,10 @@ fun! ArduinoFilterErrors()
   let l:list = copy(getloclist(0))
 
   " Remove errors when path of file contains ...
-  let l:removeWhenPathContains = [ '.piolibdeps' , '.platformio' ]
+  let l:removeWhenPathContains = [ '\.piolibdeps' , '\.platformio' ]
 
-  for removeFilter in l:removeWhenPathContains
-    let l:list = ArduinoFilterList(l:list, removeFilter)
+  for l:removeFilter in l:removeWhenPathContains
+    let l:list = ArduinoFilterList(l:list, l:removeFilter)
   endfor
 
   " Close if no error found
