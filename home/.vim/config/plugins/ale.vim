@@ -14,6 +14,7 @@ let g:ale_sh_shellcheck_executable = 'shellcheck -x'
 
 let g:ale_linters = {
       \   'ruby': ['ruby'],
+      \   'rspec': ['ruby'],
       \   'html': [ '' ],
       \   'cpp' : [ 'g++' ]
       \}
