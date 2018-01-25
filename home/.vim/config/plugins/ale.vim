@@ -12,12 +12,10 @@ let g:ale_open_list = 1
 " SHELLCHECK use extended mode 
 let g:ale_sh_shellcheck_executable = 'shellcheck -x'
 
-let g:ale_linter_aliases = { 'arduino': 'cpp' }
-
 let g:ale_linters = {
       \   'ruby': ['ruby'],
       \   'html': [ '' ],
-      \   'arduino' : [ 'g++' ]
+      \   'cpp' : [ 'g++' ]
       \}
 
 let g:ale_fixers = {

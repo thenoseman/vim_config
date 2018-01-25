@@ -1,5 +1,7 @@
+" Mainly arduino stuff:
+
 augroup vim_config
-  autocmd FileType arduino call UpdateOrCreateArduinoTagsFile()
+  autocmd FileType arduino,cpp call UpdateOrCreateArduinoTagsFile()
 augroup END
 
 fun! UpdateOrCreateArduinoTagsFile()
