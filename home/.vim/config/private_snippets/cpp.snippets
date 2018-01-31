@@ -34,18 +34,12 @@ snippet pin "pinMode"
 pinMode(${1:1}, ${2:INPUT})
 endsnippet
 
-snippet ini "platformio.ini"
-; PlatformIO Project Configuration File
-; To build use :ArdUpload or "PLATFORMIO_SRC_DIR=src/path pio run --target=upload"
-[platformio]
-src_dir = src
+snippet tpl "Arduino sketch template"
 
-[env:nanoatmega328]
-platform = atmelavr
-board = nanoatmega328
-framework = arduino
-targets = upload
-lib_deps =
-  FastLED
-lib_ignore = LibNameSeeLibrary.json
+endsnippet
+
+snippet spf "Serial.printf"
+#ifdef DEBUG
+	serialOut.printf("${1:%s}"${2:, "something"});
+#endif
 endsnippet
