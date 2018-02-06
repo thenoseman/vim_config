@@ -28,5 +28,5 @@ fun! UpdateOrCreateArduinoTagsFile()
   call add(l:includes, expand($HOME) . '/.platformio/packages/toolchain-atmelavr/avr/include')
   call add(l:includes, expand($HOME) . '/.platformio/packages/framework-arduinoavr/variants/atmega328pb')
 
-  let b:ale_cpp_gcc_options = '-DDEBUG -std=c++14 -Wall -ferror-limit=999 -Wno-#warnings -isystem ' . join(l:includes, ' -isystem ')
+  let b:ale_cpp_gcc_options = '-std=c++14 -Wall -ferror-limit=999 -Wno-#warnings -isystem ' . join(l:includes, ' -isystem ')
 endfun

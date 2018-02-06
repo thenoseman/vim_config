@@ -22,7 +22,7 @@ void loop()
 }
 endsnippet
 
-snippet spl "serial println"
+snippet sp "serial println"
 Serial.println("${1:hello}");
 endsnippet
 
@@ -35,11 +35,23 @@ pinMode(${1:1}, ${2:INPUT})
 endsnippet
 
 snippet tpl "Arduino sketch template"
+#include <Arduino.h>
+#include <HardwareSerial.h>
 
+extern HardwareSerial Serial;
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+}
 endsnippet
 
-snippet spf "Serial.printf"
+snippet #i "#ifdef"
 #ifdef DEBUG
-	serialOut.printf("${1:%s}"${2:, "something"});
+  ${1}
 #endif
 endsnippet
