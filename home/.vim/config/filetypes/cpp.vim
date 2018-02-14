@@ -2,14 +2,17 @@
 
 augroup vim_config
   autocmd FileType arduino,cpp call UpdateOrCreateArduinoTagsFile()
+  autocmd FileType arduino,cpp set foldmethod=marker
+  autocmd BufWinLeave cpp mkview
+  autocmd BufWinEnter cpp silent loadview
 augroup END
 
 fun! UpdateOrCreateArduinoTagsFile()
-  let mtime_tags = getftime("tags")
-  let mtime_file = getftime("platformio.ini")
+  let l:mtime_tags = getftime('tags')
+  let l:mtime_file = getftime('platformio.ini')
 
-  if mtime_file > 0 && (mtime_tags == -1 || mtime_file > mtime_tags)
-    silent! execute ":!" .g:ctags_bin . " -R ."
+  if l:mtime_file > 0 && (l:mtime_tags == -1 || l:mtime_file > l:mtime_tags)
+    silent! execute ':!' .g:ctags_bin . ' -R .'
   endif
 
   " ALE config
@@ -19,8 +22,8 @@ fun! UpdateOrCreateArduinoTagsFile()
   
   let l:piolibs = split(globpath(getcwd() . '/.piolibdeps', '*'), '\n')
 
-  for relpath in l:piolibs
-    call add(l:includes, shellescape(relpath))
+  for l:relpath in l:piolibs
+    call add(l:includes, shellescape(l:relpath))
   endfor
 
   " ARDUINO includes for platformio

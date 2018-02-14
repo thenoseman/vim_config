@@ -10,3 +10,4 @@ home/.vim/config/private/*
 home/.vim/.netrwhist
 .envrc
 home/.vim/bundles/
+home/.vim/view/
