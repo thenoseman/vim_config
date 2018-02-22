@@ -28,26 +28,43 @@ let g:ale_fixers = {
 "
 
 " remove entries from List which match filter
-fun! ArduinoFilterList(loclist, filter)
+fun! ArduinoFilterPathList(loclist, filter)
   return filter(a:loclist, 'expand("#" . v:val.bufnr . ":p") !~ "' . a:filter . '"')
+endfun
+
+fun! ArduinoFilterErrorList(loclist, filter)
+  return filter(a:loclist, 'v:val.text !~ "' . a:filter . '"')
 endfun
 
 " Filter arduino gcc error messages and remove library error messages
 fun! ArduinoFilterErrors()
-  let l:list = copy(getloclist(0))
+ 
+  if fnamemodify(bufname("%"), ":e") ==? "cpp"
+    let l:list = copy(getloclist(0))
 
-  " Remove errors when path of file contains ...
-  let l:removeWhenPathContains = [ '\.piolibdeps' , '\.platformio' ]
+    " Remove errors when path of file contains ...
+    let l:removeWhenPathContains = [ '\.piolibdeps' , '\.platformio' ]
 
-  for l:removeFilter in l:removeWhenPathContains
-    let l:list = ArduinoFilterList(l:list, l:removeFilter)
-  endfor
+    " Remove errors when text contains ...
+    let l:removeWhenErrorContains = [ 'mach-o section specifier requires a segment' ]
 
-  " Close if no error found
-  if len(l:list) == 0
-    lclose
-  else
-    call setloclist(0, l:list)
+    " Filter by path
+    for l:removeFilter in l:removeWhenPathContains
+      let l:list = ArduinoFilterPathList(l:list, l:removeFilter)
+    endfor
+
+    " Filter by error string
+    for l:removeFilter in l:removeWhenErrorContains
+      let l:list = ArduinoFilterErrorList(l:list, l:removeFilter)
+    endfor
+
+    " Close if no error found
+    if len(l:list) == 0
+      sign unplace *
+      lclose
+    else
+      call setloclist(0, l:list)
+    endif
   endif
 
 endfun
