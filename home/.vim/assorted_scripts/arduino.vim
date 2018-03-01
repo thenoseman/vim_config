@@ -1,6 +1,7 @@
 fun! s:ArduinoUpload()
   let l:path_to_src = expand('%:p:h')
-  let l:cmd = 'PLATFORMIO_BUILD_FLAGS=-DDEBUG PLATFORMIO_SRC_DIR=' . l:path_to_src . ' pio run --target=upload'
+  let l:env = substitute(filter(readfile('platformio.ini'), 'v:val =~ "env:"')[0], '\(env:\|\[\|\]\)', '', 'g') 
+  let l:cmd = 'PLATFORMIO_BUILD_FLAGS=-DDEBUG PLATFORMIO_SRC_DIR=' . l:path_to_src . ' pio run --target=upload --environment=' . l:env
   silent !clear
   execute '!' . l:cmd
 endfun
