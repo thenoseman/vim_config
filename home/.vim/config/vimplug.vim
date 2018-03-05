@@ -21,7 +21,7 @@ Plug 'vim-scripts/DirDiff.vim'
 Plug 'w0rp/ale'
 Plug 'ruby-formatter/rufo-vim'
 
-Plug 'JazzCore/ctrlp-cmatcher', { 'dir': '~/.vim/bundles/ctrlp-cmatcher', 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
+Plug 'nixprime/cpsm', { 'dir': '~/.vim/bundles/cpsm', 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments PY3=ON ./install.sh'}
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
