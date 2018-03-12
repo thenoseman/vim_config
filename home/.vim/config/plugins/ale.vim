@@ -13,16 +13,19 @@ let g:ale_open_list = 1
 let g:ale_sh_shellcheck_executable = 'shellcheck -x'
 
 let g:ale_linters = {
-      \   'ruby': ['ruby'],
-      \   'rspec': ['ruby'],
-      \   'html': [ '' ],
-      \   'cpp' : [ 'g++' ]
-      \}
+\   'ruby': ['ruby'],
+\   'rspec': ['ruby'],
+\   'html': [ '' ],
+\   'cpp' : [ 'g++' ]
+\}
 
 let g:ale_fixers = {
-      \   'javascript': [ 'eslint' ]
-      \}
+\   'javascript': [ 'eslint' ]
+\}
 
+let g:ale_linter_aliases = {
+\   'rspec': 'ruby'
+\}
 "
 " ARDUINO development
 "
