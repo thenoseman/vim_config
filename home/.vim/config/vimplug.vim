@@ -19,7 +19,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/DirDiff.vim'
 Plug 'w0rp/ale'
-Plug 'ruby-formatter/rufo-vim'
+Plug 'thenoseman/rufo-vim'
 
 Plug 'nixprime/cpsm', { 'dir': '~/.vim/bundles/cpsm', 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments PY3=ON ./install.sh'}
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
