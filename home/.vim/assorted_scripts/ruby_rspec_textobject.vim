@@ -1,5 +1,5 @@
 " Stolen from https://github.com/nelstrom/vim-textobj-rubyblock
-" and modified to detect rspec locks as block limits
+" and modified to detect rspec blocks as block limits
 "
 if exists('g:loaded_textobj_rubyrspecblock')  "{{{1
   finish
