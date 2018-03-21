@@ -7,7 +7,6 @@ Plug 'int3/vim-extradite'
 Plug 'kana/vim-textobj-user'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-grepper'
-Plug 'othree/yajs.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'skwp/greplace.vim'
@@ -21,8 +20,9 @@ Plug 'vim-scripts/DirDiff.vim'
 Plug 'w0rp/ale'
 Plug 'ruby-formatter/rufo-vim'
 
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'nixprime/cpsm', { 'dir': '~/.vim/bundles/cpsm', 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments PY3=ON ./install.sh'}
-Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
+Plug 'Keithbsmiley/rspec.vim', { 'for': 'rspec' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
 Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
