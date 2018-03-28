@@ -4,7 +4,6 @@ fun! s:ArduinoUpload()
 
   let l:has_build_flags = len(filter(readfile('platformio.ini'), 'v:val =~# "build_flags = "'))
   let l:build_flags = "-DDEBUG"
-  echoerr l:has_build_flags
   if l:has_build_flags > 0
     let l:build_flags = substitute(filter(readfile('platformio.ini'), 'v:val =~# "build_flags = "')[0], 'build_flags = ', '', 'g') 
   endif
