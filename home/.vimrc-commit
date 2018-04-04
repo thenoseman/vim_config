@@ -11,3 +11,6 @@ runtime! bundle/yankring.vim/plugin/yankring.vim
 filetype plugin indent on
 filetype detect
 syntax on 
+
+" Length of commit line max 120
+au FileType gitcommit setlocal tw=120
