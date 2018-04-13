@@ -20,12 +20,19 @@ let g:ale_linters = {
 \}
 
 let g:ale_fixers = {
-\   'javascript': [ 'eslint' ]
+\   'javascript': [ 'prettier' ]
 \}
+let g:ale_fix_on_save = 1
+
+" Prettier
+" https://github.com/prettier/prettier/blob/master/docs/options.md
+let g:ale_javascript_prettier_options = '--print-width 100 --trailing-comma es5'
+let g:ale_javascript_prettier_use_local_config = 1
 
 let g:ale_linter_aliases = {
 \   'rspec': 'ruby'
 \}
+
 "
 " ARDUINO development
 "
