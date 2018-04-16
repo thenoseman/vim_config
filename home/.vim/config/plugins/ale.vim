@@ -34,6 +34,12 @@ let g:ale_linter_aliases = {
 \}
 
 "
+" GO
+"
+let g:ale_linters = {'go': ['gometalinter' ,'gofmt']}
+let g:ale_go_gometalinter_options = "--fast --config .gometalinter.json"
+
+"
 " ARDUINO development
 "
 
