@@ -14,9 +14,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/DirDiff.vim'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tyru/caw.vim'
 Plug 'w0rp/ale'
 "Plug 'tweekmonster/startuptime.vim'
+Plug 'Shougo/context_filetype.vim'
 
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 Plug 'nixprime/cpsm', { 'dir': '~/.vim/bundles/cpsm', 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments PY3=ON ./install.sh'}
