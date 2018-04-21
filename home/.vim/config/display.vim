@@ -5,11 +5,12 @@
 " Set iTerm Profiles -> your Profile -> Terminal -> Report Terminal Type to xterm-256colors
 au VimEnter * set t_Co=256
 
-if has('gui_running')
-  colorscheme railscasts
-else
-  colorscheme railscasts-console
-endif
+colorscheme railscasts
+" if has('gui_running')
+"   colorscheme railscasts
+" else
+"   colorscheme railscasts-console
+" endif
 
 " Show cursor line
 set cul
@@ -19,7 +20,7 @@ set cul
 "
 if has('mac')
   if has('gui_running')
-    if tolower(hostname()) =~ 'franks-mbp'
+    if tolower(hostname()) =~ 'Franks-MacBook'
       set guifont=Inconsolata-dz:h11.00
     else
       set guifont=Inconsolata-dz:h12.00
