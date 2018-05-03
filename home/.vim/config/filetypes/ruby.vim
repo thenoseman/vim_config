@@ -6,9 +6,6 @@ augroup vim_config
   autocmd FileType haml  call ConfigureRubyFileType()
   autocmd FileType yaml  call ConfigureRubyFileType()
 
-  " On enter update/create tags
-  autocmd VimEnter * call UpdateOrCreateTagsFile()
-
   " On write just update tags of this file
   autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(ripper-tags --exclude=vendor --exclude=log --exclude=tmp --exclude=testapp -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
 
@@ -48,16 +45,4 @@ fun! ConfigureRubyFileType()
 	\ ':' .
         \ '\%(^\|[^.\:@$]\)\@<=\<end\:\@!\>' .
 	\ ',{:},\[:\],(:)'
-endfun
-
-" Create tags file (if it doesn't exist)
-" or update tags file if it is too old
-fun! UpdateOrCreateTagsFile()
-  let l:mtime_tags = getftime('tags')
-  let l:mtime_gemfile = getftime('Gemfile.lock')
-
-  if l:mtime_gemfile > 0 && (l:mtime_tags == -1 || l:mtime_gemfile > l:mtime_tags)
-    echom 'Generating tags as Gemfile.lock is newer than tags'
-    call job_start('ripper-tags -R --exclude=vendor --exclude=log --exclude=tmp --exclude=testapp')
-  endif
 endfun
