@@ -30,6 +30,7 @@ fun! UpdateOrCreateArduinoTagsFile()
   call add(l:includes, expand($HOME) . '/.platformio/packages/framework-arduinoavr/cores/arduino')
   call add(l:includes, expand($HOME) . '/.platformio/packages/toolchain-atmelavr/avr/include')
   call add(l:includes, expand($HOME) . '/.platformio/packages/framework-arduinoavr/variants/atmega328pb')
+  call add(l:includes, expand($HOME) . '/.platformio/packages/framework-arduinoavr/variants/digispark')
 
   let b:ale_cpp_gcc_options = '-std=c++14 -Wall -ferror-limit=999 -Wno-#warnings -isystem ' . join(l:includes, ' -isystem ')
 endfun
