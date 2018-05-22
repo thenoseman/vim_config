@@ -16,7 +16,8 @@ let g:ale_linters = {
 \   'ruby': ['ruby'],
 \   'rspec': ['ruby'],
 \   'html': [ '' ],
-\   'cpp' : [ 'g++' ]
+\   'cpp' : [ 'g++' ],
+\   'go' : ['gometalinter' ,'gofmt'],
 \}
 
 let g:ale_fixers = {
@@ -34,11 +35,6 @@ let g:ale_linter_aliases = {
 \}
 
 "
-" GO
-"
-let g:ale_linters = {'go': ['gometalinter' ,'gofmt']}
-
-"
 " ARDUINO development
 "
 
@@ -54,7 +50,7 @@ endfun
 " Filter arduino gcc error messages and remove library error messages
 fun! ArduinoFilterErrors()
  
-  if fnamemodify(bufname("%"), ":e") ==? "cpp"
+  if fnamemodify(bufname('%'), ':e') ==? 'cpp'
     let l:list = copy(getloclist(0))
 
     " Remove errors when path of file contains ...
