@@ -17,7 +17,6 @@ let g:ale_linters = {
 \   'rspec': ['ruby'],
 \   'html': [ '' ],
 \   'cpp' : [ 'g++' ],
-\   'go' : ['gometalinter' ,'gofmt'],
 \}
 
 let g:ale_fixers = {
