@@ -8,6 +8,8 @@ let g:grepper = {
 set grepprg=rg
 let g:grep_cmd_opts = '-n --no-heading --hidden'
 
+let g:grepper.tools = ['rg']
+
 " Create :Rg command
 command! -nargs=* Rg Grepper -noprompt -tool rg -grepprg rg --hidden --vimgrep <args>
 
