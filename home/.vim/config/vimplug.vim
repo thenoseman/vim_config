@@ -20,7 +20,7 @@ Plug 'w0rp/ale'
 "Plug 'tweekmonster/startuptime.vim'
 
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
-Plug 'nixprime/cpsm', { 'dir': '~/.vim/bundles/cpsm', 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments PY3=ON ./install.sh'}
+Plug 'nixprime/cpsm', { 'dir': '~/.vim/bundles/cpsm', 'do': 'VIM=/usr/local/opt/macvim/MacVim.app/Contents/MacOS/Vim CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments PY3=ON ./install.sh'}
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'rspec' }
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
 Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
