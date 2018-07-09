@@ -42,6 +42,11 @@ else
   set runtimepath+=~/vimfiles/config
 endif
 
+" Python 3.7 ("DeprecationWarning: The imp module is deprecated in favour of importlib;")
+if has('python3')
+  silent! python3 1
+endif
+
 " load everything else in its own config file
 runtime! config/*.vim
 runtime! config/plugins/*.vim
