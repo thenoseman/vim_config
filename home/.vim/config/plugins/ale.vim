@@ -20,6 +20,7 @@ let g:ale_linters = {
 \   'html': [ '' ],
 \   'cpp' : [ 'g++' ],
 \   'sh' : [ 'shellcheck' ],
+\   'javascript' : [ 'eslint' ], 
 \}
 
 let g:ale_fixers = {
