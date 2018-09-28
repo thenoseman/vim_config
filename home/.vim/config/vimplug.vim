@@ -38,7 +38,6 @@ Plug 'tpope/vim-haml', { 'for': 'haml' }
 Plug 'tpope/vim-rake', { 'for': ['ruby', 'rspec'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'rspec'] }
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rspec'] }
-Plug 'ruby-formatter/rufo-vim', { 'for': ['ruby', 'rspec'] }
 Plug 'tpope/vim-projectionist', { 'for': ['ruby', 'rspec'] }
 
 call plug#end()
