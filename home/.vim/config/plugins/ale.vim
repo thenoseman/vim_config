@@ -25,7 +25,8 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   'javascript': [ 'prettier' ],
-\   'ruby': [ 'rufo' ]
+\   'ruby': [ 'rufo' ],
+\   'rspec': [ 'rufo' ]
 \}
 let g:ale_fix_on_save = 1
 
