@@ -4,7 +4,7 @@ augroup vim_config
 augroup END
 
 fun! LoadGitrebaseBindings()
-  nnoremap <buffer> <silent> P :Pick<CR>
-  nnoremap <buffer> <silent> S :Squash<CR>
-  nnoremap <buffer> <silent> C :Cycle<CR>
+  nnoremap <buffer> <silent> <C-P> :Pick<CR>
+  nnoremap <buffer> <silent> <C-S> :Squash<CR>
+  nnoremap <buffer> <silent> <C-C> :Cycle<CR>
 endfun
