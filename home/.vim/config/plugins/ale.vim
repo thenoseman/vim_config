@@ -4,6 +4,8 @@
 
 scriptencoding utf-8
 
+command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
+
 let g:ale_sign_error = '💀'
 let g:ale_sign_warning = '🤔'
 let g:ale_lint_on_text_changed = 'never'
