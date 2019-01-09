@@ -7,6 +7,9 @@ set nocompatible
 " allow buffers to be hidden when they're not saved
 set hidden
 
+" No swapfile
+set noswapfile
+
 " save the last 100 commands/search terms
 set history=100
 
