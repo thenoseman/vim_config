@@ -29,7 +29,8 @@ let g:ale_fixers = {
 \   'javascript': [ 'prettier' ],
 \   'json': [ 'prettier' ],
 \   'ruby': [ 'rufo' ],
-\   'rspec': [ 'rufo' ]
+\   'rspec': [ 'rufo' ],
+\   'terraform': [ 'terraform' ],
 \}
 let g:ale_fix_on_save = 1
 
