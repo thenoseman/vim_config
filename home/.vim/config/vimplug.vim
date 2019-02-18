@@ -27,7 +27,7 @@ Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform'}
-Plug 'thenoseman/vim-terraform-completion', { 'for': 'terraform'}
+Plug 'juliosueiras/vim-terraform-completion', { 'for': 'terraform'}
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'kristijanhusak/vim-js-file-import', { 'for': 'javascript'}
