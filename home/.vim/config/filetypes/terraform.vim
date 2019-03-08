@@ -4,24 +4,25 @@ fun! TerraformGetProvider()
     execute '?^\s*\(resource\|data\)\s*"'
   endif
 
-  let a:provider = split(split(substitute(getline("."),'"', '', ''))[1], "_")[0]
+  let s:provider = split(split(substitute(getline("."),'"', '', 'g'))[1], "_")[0]
 
   call setpos(".", s:curr_pos)
   unlet s:curr_pos
-  return a:provider
+  return s:provider
 endfun
 
 fun! TerraformGetResource()
+
   let s:curr_pos = getpos('.')
   if getline(".") !~# '^\s*\(resource\|data\)\s*"'
     execute '?^\s*\(resource\|data\)\s*"'
   endif
-  let a:provider = split(split(substitute(getline("."),'"', '', ''))[1], "_")[0]
 
-  let a:resource = substitute(split(split(getline("."))[1], a:provider . "_")[1], '"','','')
+  let s:resource = split(substitute(getline("."),'"', '', 'g'), ' ')[1]
+
   call setpos('.', s:curr_pos)
   unlet s:curr_pos
-  return a:resource
+  return s:resource
 endfun
 
 fun! TerraformGetType()
@@ -30,44 +31,41 @@ fun! TerraformGetType()
         execute '?\s*\(resource\|data\)\s*"'
     endif
 
+
     if getline(".") =~? "resource"
-        let a:res = "resource"
+        let s:res = "resource"
     else
-        let a:res = "data"
+        let s:res = "data"
     endif
 
     call setpos(".", s:curr_pos)
     unlet s:curr_pos
-	return a:res
+	return s:res
 endfun
 
 function! TerraformOpenDoc()
   try
-    let a:provider = TerraformGetProvider()
-    let a:resource = TerraformGetResource()
-    let a:arg = matchlist(getline("."), '\s*\([^ ]*\)\s*=\?', '')
-    if len(a:arg) >= 2
-      let a:arg = a:arg[1]
-    else
-      let a:arg = ''
-    endif
+    let s:provider = TerraformGetProvider()
+    let s:resource = TerraformGetResource()
 
-    let a:link = 'https://www.terraform.io/docs/providers/' . a:provider
+    let s:link = 'https://www.terraform.io/docs/providers/' . s:provider
 
     if TerraformGetType() ==? 'resource'
-      let a:link .= '/r'
+      let s:link .= '/r'
     else
-      let a:link .= '/d'
+      let s:link .= '/d'
     endif
 
-    let a:link .= '/' . a:resource . '.html\#' . a:arg
+    let s:short_resource = substitute(s:resource, '.*_', '', '')
+
+    let s:link .= '/' . s:short_resource . '.html'
 
     "(Windows) cmd /c start filename_or_URL
     if has('mac')
-      silent! execute ':!open ' . a:link
+      silent! execute ':!open ' . s:link
       silent! execute ':redraw!'
     else
-      silent! execute ':!xdg-open ' . a:link
+      silent! execute ':!xdg-open ' . s:link
       silent! execute ':redraw!'
     endif
   catch
