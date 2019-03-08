@@ -56,7 +56,7 @@ function! TerraformOpenDoc()
       let s:link .= '/d'
     endif
 
-    let s:short_resource = substitute(s:resource, '.*_', '', '')
+    let s:short_resource = substitute(s:resource, 'aws_', '', '')
 
     let s:link .= '/' . s:short_resource . '.html'
 
