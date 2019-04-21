@@ -96,3 +96,9 @@ set splitright
 " usefull for motiond like inner-word that then
 " also use - as a delimeter
 set iskeyword+=-
+
+" Provides tab-completion for all file-related tasks
+set path=.,**
+
+" Display all matching files when we tab complete
+set wildmenu
