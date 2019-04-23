@@ -31,8 +31,12 @@ let g:ale_fixers = {
 \   'ruby': [ 'rufo' ],
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
+\   'html': [ 'tidy' ],
 \}
 let g:ale_fix_on_save = 1
+
+" TIDY
+let g:ale_html_tidy_executable= '/usr/local/bin/tidy'
 
 " Prettier
 " https://github.com/prettier/prettier/blob/master/docs/options.md
