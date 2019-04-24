@@ -31,7 +31,7 @@ let g:ale_fixers = {
 \   'ruby': [ 'rufo' ],
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
-\   'html': [ 'tidy' ],
+\   'html': [ 'prettier' ],
 \}
 let g:ale_fix_on_save = 1
 
