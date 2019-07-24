@@ -103,6 +103,9 @@ Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 " A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly.
 Plug 'elzr/vim-json', { 'for': 'json' }
 
+" Svelte JavaScript syntax highlighting for vim
+Plug 'evanleck/vim-svelte', { 'for': 'svelte' }
+
 " YAJS.vim: Yet Another JavaScript Syntax for Vim
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 

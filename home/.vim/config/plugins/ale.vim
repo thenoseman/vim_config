@@ -22,7 +22,8 @@ let g:ale_linters = {
 \   'html': [ '' ],
 \   'cpp' : [ 'g++' ],
 \   'sh' : [ 'shellcheck' ],
-\   'javascript' : [ 'eslint' ], 
+\   'javascript' : [ 'eslint' ],
+\   'svelte': [ 'eslint' ],
 \}
 
 let g:ale_fixers = {
@@ -32,6 +33,7 @@ let g:ale_fixers = {
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
 \   'html': [ 'prettier' ],
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_fix_on_save = 1
 
@@ -44,7 +46,8 @@ let g:ale_javascript_prettier_options = '--print-width 100 --trailing-comma es5'
 let g:ale_javascript_prettier_use_local_config = 1
 
 let g:ale_linter_aliases = {
-\   'rspec': 'ruby'
+\   'rspec': 'ruby',
+\   'svelte': ['css', 'javascript'],
 \}
 
 "
