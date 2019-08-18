@@ -21,16 +21,16 @@ Plug 'ludovicchabant/vim-gutentags'
 " A lightweight implementation of emacs's kill-ring for vim
 Plug 'maxbrunsfeld/vim-yankstack'
 
-" space_invader: Helps you win at grep
+" Helps you win at grep
 Plug 'mhinz/vim-grepper'
 
 " Global search and replace for VI
 Plug 'skwp/greplace.vim'
 
-" endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+" eisely add 'end' in ruby, endfunction/endif/more in vim script, etc
 Plug 'tpope/vim-endwise'
 
-" fugitive.vim: A Git wrapper so awesome, it should be illegal
+" A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
 " A git commit browser for vim. Extends fugitive.vim.
@@ -110,7 +110,7 @@ Plug 'evanleck/vim-svelte', { 'for': 'svelte' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 
 " Import/require files in javascript with single button!
-Plug 'kristijanhusak/vim-js-file-import', { 'for': 'javascript'}
+" Plug 'kristijanhusak/vim-js-file-import', { 'for': 'javascript'}
 
 " A Vim plugin for TypeScript
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
