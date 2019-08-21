@@ -71,7 +71,7 @@ Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean 
 "
 
 " Auto close (X)HTML tags
-Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
+Plug 'alvan/vim-closetag', { 'for': ['html', 'xml', 'svelte'] }
 
 " HTML5 omnicomplete and syntax
 Plug 'othree/html5.vim', { 'for': 'html' }
