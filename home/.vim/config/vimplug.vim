@@ -107,10 +107,10 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'evanleck/vim-svelte', { 'for': 'svelte' }
 
 " YAJS.vim: Yet Another JavaScript Syntax for Vim
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
+"Plug 'othree/yajs.vim', { 'for': 'javascript' }
 
-" Import/require files in javascript with single button!
-" Plug 'kristijanhusak/vim-js-file-import', { 'for': 'javascript'}
+" bundle provides syntax highlighting and improved indentation
+Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'svelte' ]}
 
 " A Vim plugin for TypeScript
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
