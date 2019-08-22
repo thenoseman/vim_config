@@ -12,7 +12,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_open_list = 1
 
-" SHELLCHECK use extended mode 
+" SHELLCHECK use extended mode
 let g:ale_sh_shellcheck_executable = 'shellcheck'
 let g:ale_sh_shellcheck_options = '-x'
 
@@ -33,6 +33,7 @@ let g:ale_fixers = {
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
 \   'html': [ 'prettier' ],
+\   'svelte': [ 'eslint', 'prettier' ],
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_fix_on_save = 1
@@ -65,7 +66,7 @@ endfun
 
 " Filter arduino gcc error messages and remove library error messages
 fun! ArduinoFilterErrors()
- 
+
   if fnamemodify(bufname('%'), ':e') ==? 'cpp'
     let l:list = copy(getloclist(0))
 
