@@ -27,19 +27,19 @@ endsnippet
 # webdriver.io
 #
 snippet isv ".isVisible()"
-.isVisible("${1}", function (err, isVisible) { 
-	expect(isVisible).to.eq(${2:true});  
+.isVisible("${1}", function (err, isVisible) {
+	expect(isVisible).to.eq(${2:true});
 })
 endsnippet
 
 snippet gett "getText()"
-getText("${1}", function (err, text) { 
-	expect(text).to.eq("${2}");  
+getText("${1}", function (err, text) {
+	expect(text).to.eq("${2}");
 })
 endsnippet
 
 snippet getv "getValue()"
-getValue("${1}", function (err, value) { 
+getValue("${1}", function (err, value) {
 	expect(value).to.eq("${2}");
 })
 endsnippet
@@ -50,7 +50,7 @@ endsnippet
 
 #
 # Function
-# 
+#
 snippet f "() => {};"
 (${1:params}) => {
   ${2}
@@ -114,7 +114,7 @@ if(typeof ${1} === "undefined") {
 }
 endsnippet
 
-# Used in formofill to export a class for testing 
+# Used in formofill to export a class for testing
 # purposes and require()ing it
 snippet export "export class"
 // REMOVE START
@@ -142,8 +142,12 @@ addEventListener("${1:click}", function(evt) {
 });
 endsnippet
 
+snippet im "import { } ..."
+import { ${1} } from "${2}";
+endsnippet
+
 snippet imp "import ..."
-import ${1/.*\/(.*)$/\u$1/g} from "${1}";
+import ${1} from "${2}";
 endsnippet
 
 snippet i18n "chrome.i18n.getMessage()" i
