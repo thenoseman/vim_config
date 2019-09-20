@@ -137,4 +137,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rspec'] }
 " projectionist.vim: Granular project configuration
 Plug 'tpope/vim-projectionist', { 'for': ['ruby', 'rspec'] }
 
+" Ruby textobjects
+Plug 'tek/vim-textobj-ruby', { 'for': ['ruby', 'rspec'] }
+
 call plug#end()
