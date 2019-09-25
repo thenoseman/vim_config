@@ -15,7 +15,7 @@ function! RSpecCurrent()
     return
   endif
 
-  if(stridx(expand("%p"), "_spec") > -1)
+  if(stridx(expand("%p"), "_spec") > -1 || stridx(expand("%p"), "_scene") > -1)
     let g:rspec_current_rspec_test = expand("%p").":".line(".")
   endif
 
