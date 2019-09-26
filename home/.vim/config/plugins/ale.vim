@@ -20,10 +20,12 @@ let g:ale_linters = {
 \   'ruby': ['ruby'],
 \   'rspec': ['ruby'],
 \   'html': [ '' ],
+\   'haml': [ 'htmllint' ],
 \   'cpp' : [ 'g++' ],
 \   'sh' : [ 'shellcheck' ],
 \   'javascript' : [ 'eslint' ],
 \   'svelte': [ 'eslint' ],
+\   'terraform': [ ],
 \}
 
 let g:ale_fixers = {
@@ -33,8 +35,7 @@ let g:ale_fixers = {
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
 \   'html': [ 'prettier' ],
-\   'svelte': [ 'eslint', 'prettier' ],
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'svelte': [ 'eslint', 'prettier' ]
 \}
 let g:ale_fix_on_save = 1
 
