@@ -11,3 +11,4 @@ home/.vim/.netrwhist
 .envrc
 home/.vim/bundles/
 home/.vim/view/
+home/.vim/autoload/plug.vim.old
