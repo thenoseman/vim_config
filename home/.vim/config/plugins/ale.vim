@@ -25,7 +25,7 @@ let g:ale_linters = {
 \   'sh' : [ 'shellcheck' ],
 \   'javascript' : [ 'eslint' ],
 \   'svelte': [ 'eslint' ],
-\   'terraform': [ ],
+\   'terraform': [ 'tflint' ],
 \}
 
 let g:ale_fixers = {
