@@ -78,7 +78,7 @@ endfunction
 " Automatically restore cursor position when possible
 augroup vim_config
   autocmd BufReadPost *
-     \ if line("'\"") > 1 && line("'\"") <= line("$") && !exist("g:vim_commandline") |
+     \ if line("'\"") > 1 && line("'\"") <= line("$") && !exists("g:vim_commandline") |
      \ exe "normal! g`\"" |
      \ endif
   autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
