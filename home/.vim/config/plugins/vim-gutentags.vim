@@ -5,7 +5,7 @@ call add(g:gutentags_project_info, {'type': 'ruby', 'file': 'Gemfile'})
 call add(g:gutentags_project_info, {'type': 'javascript', 'file': 'package.json'})
 
 " These directories will be ignored when running ctags:
-let g:gutentags_ctags_exclude = [ 'node_modules', 'build', 'dist', 'log' ]
+let g:gutentags_ctags_exclude = [ 'node_modules', 'build', 'dist', 'log', 'tmp' ]
 
 " Ignore everything in wildignore
 let g:gutentags_ctags_exclude_wildignore = 1
