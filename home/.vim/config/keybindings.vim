@@ -50,8 +50,8 @@ nnoremap Q dbxx
 " @key <c-s>: Show Highlight group under cursor
 map <c-s> :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'> trans<'.synIDattr(synID(line("."),col("."),0),"name")."> lo<".synIDattr(synIDtrans(synID(line("."),col("."),1)),"name").">"<CR>
 
-" ctrl-space: autocomplete via crtl-n
-imap <c-space> <c-n>
+" ctrl-space: autocomplete via Omnicomplete
+imap <c-space> <c-x><c-o>
 
 " Map 'g=' to indent whole buffer 
 nmap g= :call PreservePosition("normal gg=G")<CR>

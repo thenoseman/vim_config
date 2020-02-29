@@ -15,9 +15,6 @@ Plug 'editorconfig/editorconfig-vim'
 " Vim plugin: Create your own text objects
 Plug 'kana/vim-textobj-user'
 
-" A Vim plugin that manages your tag files
-Plug 'ludovicchabant/vim-gutentags'
-
 " A lightweight implementation of emacs's kill-ring for vim
 Plug 'maxbrunsfeld/vim-yankstack'
 
@@ -51,6 +48,10 @@ Plug 'vim-scripts/DirDiff.vim'
 " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 Plug 'w0rp/ale'
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 "Plug 'tweekmonster/startuptime.vim'
 
 "

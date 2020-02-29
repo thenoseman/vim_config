@@ -25,17 +25,9 @@ fun! ConfigureRubyFileType()
    " No Folding!
    set nofoldenable
 
-   " No stinkin' popup
-   if has('gui_running')
-     set noballooneval
-   endif
-
   " see https://code.google.com/p/vim/issues/detail?id=282
   set regexpengine=1
   set lazyredraw
-
-  " gd => jump to definition (ctags based)
-  nmap <buffer> gd <c-]><cr> 
 
   " Extend the default ruby matchit to include the rspec verbs
   let b:match_words =

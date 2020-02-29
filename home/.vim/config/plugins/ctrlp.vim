@@ -42,9 +42,6 @@ endif
 " Clear the file-cache on exit
 let g:ctrlp_clear_cache_on_exit = 1
 
-" ctags binary
-let g:ctrlp_buftag_ctags_bin = g:ctags_bin
-
 " Matching functions supplied by plugin
 let g:ctrlp_match_func = {'match' : 'cpsm#CtrlPMatch' }
 
