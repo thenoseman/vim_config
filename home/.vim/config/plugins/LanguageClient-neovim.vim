@@ -4,10 +4,12 @@ endif
 
 let g:LanguageClient_serverCommands = {
   \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+  \ 'rspec': ['~/.rbenv/shims/solargraph', 'stdio'],
 \ }
 
 let g:LanguageClient_rootMarkers = {
   \ 'ruby': ['Gemfile'],
+  \ 'rspec': ['Gemfile'],
 \ }
 
 let g:LanguageClient_hasSnippetSupport = 1
