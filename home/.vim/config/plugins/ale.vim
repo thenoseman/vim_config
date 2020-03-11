@@ -40,6 +40,11 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 
+let g:ale_linter_aliases = {
+\   'rspec': 'ruby',
+\   'svelte': ['css', 'javascript'],
+\}
+
 " TIDY
 let g:ale_html_tidy_executable= '/usr/local/bin/tidy'
 
@@ -47,11 +52,6 @@ let g:ale_html_tidy_executable= '/usr/local/bin/tidy'
 " https://github.com/prettier/prettier/blob/master/docs/options.md
 let g:ale_javascript_prettier_options = '--print-width 100 --trailing-comma es5'
 let g:ale_javascript_prettier_use_local_config = 1
-
-let g:ale_linter_aliases = {
-\   'rspec': 'ruby',
-\   'svelte': ['css', 'javascript'],
-\}
 
 "
 " ARDUINO development
