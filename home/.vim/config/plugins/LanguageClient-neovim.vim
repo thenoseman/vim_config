@@ -5,11 +5,14 @@ endif
 let g:LanguageClient_serverCommands = {
   \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
   \ 'rspec': ['~/.rbenv/shims/solargraph', 'stdio'],
+  \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+  \ 'svelte': ['/usr/local/bin/javascript-typescript-stdio'],
 \ }
 
 let g:LanguageClient_rootMarkers = {
   \ 'ruby': ['Gemfile'],
   \ 'rspec': ['Gemfile'],
+  \ 'javascript': ['package.json'],
 \ }
 
 let g:LanguageClient_hasSnippetSupport = 1
