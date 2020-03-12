@@ -7,12 +7,15 @@ let g:LanguageClient_serverCommands = {
   \ 'rspec': ['~/.rbenv/shims/solargraph', 'stdio'],
   \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
   \ 'svelte': ['/usr/local/bin/javascript-typescript-stdio'],
+  \ 'vue': ['vls'],
 \ }
 
 let g:LanguageClient_rootMarkers = {
   \ 'ruby': ['Gemfile'],
   \ 'rspec': ['Gemfile'],
   \ 'javascript': ['package.json'],
+  \ 'vue': ['package.json'],
+  \ 'svelte': ['package.json'],
 \ }
 
 let g:LanguageClient_hasSnippetSupport = 1

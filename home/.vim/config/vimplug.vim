@@ -120,6 +120,11 @@ Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 "
+" vue
+"
+Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
+
+"
 " Ruby
 "
 

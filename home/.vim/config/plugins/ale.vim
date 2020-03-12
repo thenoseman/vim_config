@@ -27,6 +27,7 @@ let g:ale_linters = {
 \   'javascript' : [ 'eslint' ],
 \   'svelte': [ 'eslint' ],
 \   'terraform': [ 'tflint' ],
+\   'vue': [ 'eslint' ],
 \}
 
 let g:ale_fixers = {
@@ -36,13 +37,16 @@ let g:ale_fixers = {
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
 \   'html': [ 'prettier' ],
-\   'svelte': [ 'eslint', 'prettier' ]
+\   'svelte': [ 'prettier', 'eslint' ],
+\   'vue': [ 'prettier', 'eslint' ],
 \}
 let g:ale_fix_on_save = 1
+let g:ale_linters_explicit = 1
 
 let g:ale_linter_aliases = {
 \   'rspec': 'ruby',
 \   'svelte': ['css', 'javascript'],
+\   'vue': ['css', 'javascript'],
 \}
 
 " TIDY
