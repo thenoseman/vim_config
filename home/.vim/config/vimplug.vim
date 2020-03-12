@@ -111,7 +111,7 @@ Plug 'evanleck/vim-svelte', { 'for': 'svelte' }
 "Plug 'othree/yajs.vim', { 'for': 'javascript' }
 
 " bundle provides syntax highlighting and improved indentation
-Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'svelte' ]}
+Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'vue', 'svelte' ]}
 
 " A Vim plugin for TypeScript
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
@@ -119,9 +119,10 @@ Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 " Typescript syntax files for Vim
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
-"
-" vue
-"
+" Automatic JS module import
+Plug 'galooshi/vim-import-js', { 'for': [ 'javascript', 'vue', 'svelte' ]}
+
+" Vue
 Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
 
 "
