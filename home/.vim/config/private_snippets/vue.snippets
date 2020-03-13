@@ -1,0 +1,26 @@
+extends html, javascript, css
+
+snippet template "new component template"
+<template>
+  ${1:<div></div>}
+</template>
+
+<script>
+import { ref, reactive } from "@vue/composition-api";
+
+export default {
+  setup() {
+    const count = ref(0)
+    const object = reactive({ foo: 'bar' })
+
+    return {
+      count,
+      object
+    }
+  },
+	components: {
+		AddionalComponentsUsedHere
+	}
+}
+</script>
+endsnippet
