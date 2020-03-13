@@ -105,3 +105,8 @@ set wildmenu
 
 " overwrite ftplugin/gitcommit.vim
 au FileType gitcommit setlocal tw=120
+
+" Taken from http://vim.wikia.com/wiki/Change_font_size_quickly
+" Scale font with ctrl+shift+Up or Down Keys
+nnoremap <c-s-Up> :silent! let &guifont = substitute(&guifont,':h\zs\d\+','\=eval(submatch(0)+2)','')<CR>
+nnoremap <c-s-Down> :silent! let &guifont = substitute(&guifont,':h\zs\d\+','\=eval(submatch(0)-2)','')<CR>
