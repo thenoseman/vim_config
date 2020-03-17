@@ -72,13 +72,16 @@ Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean 
 "
 
 " Auto close (X)HTML tags
-Plug 'alvan/vim-closetag', { 'for': ['html', 'xml', 'svelte'] }
+Plug 'alvan/vim-closetag', { 'for': ['html', 'xml', 'svelte', 'vue'] }
 
 " HTML5 omnicomplete and syntax
 Plug 'othree/html5.vim', { 'for': 'html' }
 
 " Vim runtime files for Haml, Sass, and SCSS
 Plug 'tpope/vim-haml', { 'for': 'haml' }
+
+" Emmet
+Plug 'mattn/emmet-vim'
 
 "
 " Infrastructure
