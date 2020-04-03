@@ -1,5 +1,5 @@
-if !executable(expand("$HOME/.rbenv/shims/solargraph"))
-  echom "Please install solargraph to ~/.rbenv/shims/solargraph (gem install solargraph) and then execute 'solargraph download-core'"
+if !executable("solargraph")
+  echom "Please install solargraph (gem install solargraph) and then execute 'solargraph download-core'"
 endif
 
 let g:LanguageClient_serverCommands = {
