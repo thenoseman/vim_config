@@ -55,7 +55,8 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-"Plug 'tweekmonster/startuptime.vim'
+
+" Plug 'tweekmonster/startuptime.vim'
 
 "
 " Common tools
@@ -84,7 +85,7 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'tpope/vim-haml', { 'for': 'haml' }
 
 " Emmet
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': ['html', 'xml', 'svelte', 'vue'] }
 
 "
 " Infrastructure
@@ -121,6 +122,9 @@ Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'vue', 'svelte' ]}
 
 " Automatic JS module import
 Plug 'galooshi/vim-import-js', { 'for': [ 'javascript', 'vue', 'svelte' ]}
+
+" Textobjects if/af for matching brackets
+Plug 'thenoseman/vim-textobj-braces', { 'for': [ 'javascript', 'vue', 'svelte' ]}
 
 " Vue
 Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
