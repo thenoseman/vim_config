@@ -18,6 +18,9 @@ Plug 'kana/vim-textobj-user'
 " A lightweight implementation of emacs's kill-ring for vim
 Plug 'maxbrunsfeld/vim-yankstack'
 
+" Replace text with the contents of a register (https://github.com/vim-scripts/ReplaceWithRegister)
+Plug 'vim-scripts/ReplaceWithRegister'
+
 " Helps you win at grep
 Plug 'mhinz/vim-grepper'
 

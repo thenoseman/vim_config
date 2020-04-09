@@ -37,7 +37,7 @@ Install with `brew install --HEAD macvim`.
   Adds a function to add a line (eg. UTF-8 encoding for ruby < 2.0) to the top of a file
 
 - `bracket-textobject.vim`:  
-  Adds `id` and `af` textobjects that match surrounding brackets.
+  Adds `if` and `af` textobjects that match surrounding brackets.
 
 - `copy_matches.vim`:  
   Copy the search matches to the clipboard ([source](http://vim.wikia.com/wiki/Copy_the_search_results_into_clipboard)) with `:CopyMatches`
@@ -53,9 +53,6 @@ Install with `brew install --HEAD macvim`.
 
 - `refactor_rename.vim`:  
   `rr[MOTION]`: Rename the text defined by MOTION in current scope. Currently knows the ruby filetype (see script file to define others).
-
-- `replace_with_register.vim`:  
-  `<Leader>e[MOTION]`: Replaces the MOTION text with the last yanked/deleted text
 
 - `ruby_19hash_syntax.vim`:  
   `:Rkey` converts old 1.8 hash syntax to new 1.9 syntax
@@ -75,9 +72,6 @@ Install with `brew install --HEAD macvim`.
 - `ruby_spec_textobject.vim`:  
   A modified version of [this ruby textobject plugin](https://github.com/nelstrom/vim-textobj-rubyblock) which detects rspec syntax as block delimiters.  
   Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
-
-- `ruby_unshouldify_rspec.vim`:  
-  Use `:Unshouldify` to remove 'should' from an open rspec files
 
 - `run_current_rspec_test_via_pipe.vim`:  
   Press `<Leader>r` on a rspec describe/context/it and it will be executed in a named pipe (tmp/rspec-test-pipe).  

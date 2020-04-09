@@ -5,7 +5,6 @@ fun! RubyClassByPath(currfile)
 endfun
 
 fun! RubyClassInitialize()
-
   let currpos = getpos(".")
 
   " current filename -> class
