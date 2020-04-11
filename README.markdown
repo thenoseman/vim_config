@@ -1,36 +1,23 @@
 # My personal VIM-config
 
 This is my personal configuration for everybodies favorite editor [VIM](http://code.google.com/p/macvim/).  
-I use it mainly for ruby development.
+I use it mainly for ruby and javascript development.
 
-This config should be gVIM (Windows) compatible.  
+This config might be gVIM (Windows) compatible.  
 Place all files in your user-directory and rename `.vimrc` to `_vimrc` and `.vim` to `vimfiles`.
 
 My configuration is based on [duwanis](https://github.com/duwanis/vim_config) work.
 
-Clone this repository to your HD once inside vim execute `:PlugUpdate` once.
-Call `relink_dotfiles_to_home` to link `.vim` and `.vimrc` to your home directory.
+Clone this repository then call `./relink` to link `.vim` and `.vimrc` to your home directory. Once you are inside vim run `:PlugInstall`.
 
 # Added non-plugin features
-+ my own "mvim" script (extras/mvim) that makes all passed cmdargs available to vim ($VIM_CMDARGS)
++ my own "mvim" script (home/extras/mvim) that makes all passed cmdargs available to vim ($VIM_CMDARGS)
   This is used to enable you to call "mvim -d" with two directories (normally only two files).
   If you call "mvim -d" with two directories, the DirDiff Plugin will automatically be called to diff the directories.
 + A modified version of the [railscasts theme](https://github.com/jpo/vim-railscasts-theme) as default theme
 + My favorite font [Inconsolata-dz](http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/) in extras
 
-# Installing a custom ruby for macvim
-Macvim always compiles with the system ruby (2.0.0 ATM).  
-To use a more current version `brew edit macvim` and insert the following:
 
-```
-def install
-    # Change this to the absolute path of the ruby you want:
-    ENV.prepend_path "PATH", "/Users/frank/.rbenv/versions/2.4.2/bin/"
-    
-    ENV.prepend_path "PATH", Formula["python"].opt_libexec / "bin"
-    ...
-```
-Install with `brew install --HEAD macvim`.
 
 # Assorted scripts:
 - `add_text_if_missing.vim`:  
@@ -81,4 +68,4 @@ Install with `brew install --HEAD macvim`.
 
 # Plugins:
 
-See `home/.vim/config/vimplug.vim` :
+See `home/.vim/config/vimplug.vim` 
