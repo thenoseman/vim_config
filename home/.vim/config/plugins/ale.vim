@@ -37,73 +37,25 @@ let g:ale_fixers = {
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
 \   'html': [ 'prettier' ],
-\   'svelte': [ 'prettier', 'eslint' ],
-\   'vue': [ 'prettier', 'eslint' ],
+\   'svelte': [ 'prettier', 'eslint', 'importjs' ],
+\   'vue': [ 'prettier', 'eslint', 'importjs' ],
 \}
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
 
 let g:ale_linter_aliases = {
 \   'rspec': 'ruby',
-\   'svelte': ['css', 'javascript'],
-\   'vue': ['css', 'javascript'],
+\   'svelte': ['css', 'javascript', 'html'],
+\   'vue': ['css', 'javascript', 'html'],
 \}
 
 " TIDY
 let g:ale_html_tidy_executable= '/usr/local/bin/tidy'
 
-" Prettier
-" https://github.com/prettier/prettier/blob/master/docs/options.md
-let g:ale_javascript_prettier_options = '--print-width 100 --trailing-comma es5'
+" Prettier (https://github.com/prettier/prettier/blob/master/docs/options.md)
+let g:ale_javascript_prettier_options = '--print-width 120 --trailing-comma es5'
 let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_javascript_prettier_use_global = 1
 
-"
-" ARDUINO development
-"
-
-" remove entries from List which match filter
-fun! ArduinoFilterPathList(loclist, filter)
-  return filter(a:loclist, 'expand("#" . v:val.bufnr . ":p") !~ "' . a:filter . '"')
-endfun
-
-fun! ArduinoFilterErrorList(loclist, filter)
-  return filter(a:loclist, 'v:val.text !~ "' . a:filter . '"')
-endfun
-
-" Filter arduino gcc error messages and remove library error messages
-fun! ArduinoFilterErrors()
-
-  if fnamemodify(bufname('%'), ':e') ==? 'cpp'
-    let l:list = copy(getloclist(0))
-
-    " Remove errors when path of file contains ...
-    let l:removeWhenPathContains = [ '\.piolibdeps' , '\.platformio' ]
-
-    " Remove errors when text contains ...
-    let l:removeWhenErrorContains = [ 'mach-o section specifier requires a segment' ]
-
-    " Filter by path
-    for l:removeFilter in l:removeWhenPathContains
-      let l:list = ArduinoFilterPathList(l:list, l:removeFilter)
-    endfor
-
-    " Filter by error string
-    for l:removeFilter in l:removeWhenErrorContains
-      let l:list = ArduinoFilterErrorList(l:list, l:removeFilter)
-    endfor
-
-    " Close if no error found
-    if len(l:list) == 0
-      sign unplace *
-      lclose
-    else
-      call setloclist(0, l:list)
-    endif
-  endif
-
-endfun
-
-augroup ALEProgress
-  autocmd!
-  autocmd User ALELintPost call ArduinoFilterErrors()
-augroup end
+" VUE
+let g:ale_vue_vls_use_global = 1
