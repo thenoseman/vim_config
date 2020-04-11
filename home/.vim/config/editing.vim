@@ -45,9 +45,6 @@ set wrap
 set scrolloff=3
 set sidescrolloff=3
 
-" Remove trailing whitespace
-au BufWritePre *.rb,*.haml,*.sass,*.js,*.scss,*.css :%s/\s\+$//e
-
 " use system clipboard
 set clipboard=unnamed
 
