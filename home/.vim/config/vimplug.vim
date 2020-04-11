@@ -12,7 +12,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
 
-" Vim plugin: Create your own text objects
+" Create your own text objects
 Plug 'kana/vim-textobj-user'
 
 " A lightweight implementation of emacs's kill-ring for vim
@@ -55,6 +55,9 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
+
+" Automatic :nohlsearch
+Plug 'romainl/vim-cool'
 
 " Plug 'tweekmonster/startuptime.vim'
 
