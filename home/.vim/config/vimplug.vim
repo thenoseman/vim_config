@@ -90,6 +90,9 @@ Plug 'tpope/vim-haml', { 'for': 'haml' }
 " Emmet
 Plug 'mattn/emmet-vim', { 'for': ['html', 'xml', 'svelte', 'vue'] }
 
+" SCSS Syntax highlighting
+Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue', 'svelte'] }
+
 "
 " Infrastructure
 "
