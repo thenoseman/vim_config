@@ -1,26 +1,25 @@
 extends html, javascript, css
 
-snippet template "new component template"
+snippet t "New component template"
 <template>
-  ${1:<div></div>}
+  ${1:<div>$0</div>}
 </template>
 
 <script>
-import { ref, reactive } from "@vue/composition-api";
+import { } from "@vue/composition-api";
 
 export default {
   setup() {
-    const count = ref(0)
-    const object = reactive({ foo: 'bar' })
-
     return {
-      count,
-      object
     }
   },
 	components: {
-		AddionalComponentsUsedHere
+		AdditionalComponentsUsedAsChild
 	}
 }
 </script>
+
+<style lang="scss">
+  
+</style>
 endsnippet
