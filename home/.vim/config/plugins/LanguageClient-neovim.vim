@@ -13,9 +13,9 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_rootMarkers = {
   \ 'ruby': ['Gemfile'],
   \ 'rspec': ['Gemfile'],
-  \ 'javascript': ['package.json'],
-  \ 'vue': ['package.json'],
-  \ 'svelte': ['package.json'],
+  \ 'javascript': ['package.json', 'jsconfig.js'],
+  \ 'vue': ['package.json', 'jsconfig.js'],
+  \ 'svelte': ['package.json', 'jsconfig.js'],
 \ }
 
 let g:LanguageClient_hasSnippetSupport = 1
