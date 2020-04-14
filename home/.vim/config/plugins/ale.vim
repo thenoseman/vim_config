@@ -25,6 +25,7 @@ let g:ale_linters = {
 \   'cpp' : [ 'g++' ],
 \   'sh' : [ 'shellcheck' ],
 \   'javascript' : [ 'eslint' ],
+\   'json' : [ 'jsonlint' ],
 \   'svelte': [ 'eslint' ],
 \   'terraform': [ 'tflint' ],
 \   'vue': [ 'eslint' ],
