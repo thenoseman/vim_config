@@ -2,13 +2,14 @@
 " vim-grepper
 "
 let g:grepper = {
-    \ 'highlight': 1
-    \ }
+\ 'highlight': 1,
+\ 'tools': [ 'rg' ],
+\ 'rg': { 'grepprg':    '/usr/local/bin/rg -H --no-heading --vimgrep -n --hidden -F',
+\         'grepformat': '%f:%l:%c:%m,%f',
+\         'escape':     '\^$.*+?()[]{}|' },
+\ }
 
 set grepprg=rg
-let g:grep_cmd_opts = '-n --no-heading --hidden -F'
-
-let g:grepper.tools = ['rg']
 
 " Create :Rg command
 command! -nargs=* Rg Grepper -noprompt -tool rg -grepprg rg --hidden --vimgrep <args>
