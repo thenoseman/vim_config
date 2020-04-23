@@ -51,11 +51,6 @@ Plug 'vim-scripts/DirDiff.vim'
 " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 Plug 'w0rp/ale'
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-
 " Automatic :nohlsearch
 Plug 'romainl/vim-cool'
 
