@@ -23,29 +23,8 @@ snippet exp "expect"
 expect(${1}).to${2}
 endsnippet
 
-#
-# webdriver.io
-#
-snippet isv ".isVisible()"
-.isVisible("${1}", function (err, isVisible) {
-	expect(isVisible).to.eq(${2:true});
-})
-endsnippet
-
-snippet gett "getText()"
-getText("${1}", function (err, text) {
-	expect(text).to.eq("${2}");
-})
-endsnippet
-
-snippet getv "getValue()"
-getValue("${1}", function (err, value) {
-	expect(value).to.eq("${2}");
-})
-endsnippet
-
-snippet done "call(done)"
-call(done);
+snippet d "debugger"
+debugger;
 endsnippet
 
 #
