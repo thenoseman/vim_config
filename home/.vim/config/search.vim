@@ -13,5 +13,5 @@ set smartcase
 vmap / y:execute "/".escape(@",'[]/\.*')<CR>
 
 " For GSearch
-let g:grep_cmd_opts = '--fixed-strings --ignore-case'
+let g:grep_cmd_opts = '--fixed-strings --ignore-case --line-number'
 
