@@ -20,7 +20,7 @@ set cul
 "
 if has('mac')
   if has('gui_running')
-    if tolower(hostname()) =~ 'Franks-MacBook'
+    if tolower(hostname()) =~ 'franks-macbook'
       set guifont=Inconsolata-dz:h11.00
     else
       set guifont=Inconsolata-dz:h12.00
