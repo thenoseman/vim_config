@@ -33,21 +33,33 @@ console.log(wrapper.html());
 endsnippet
 
 snippet store "store tpl"
-const state = () => ({});
+export const state = () => ({
+  payload: null,
+});
 
 // getters
-const getters = {};
+export const getters = {};
 
 // actions
-const actions = {};
+export const actions = {
+  actionName({ commit }, payload) {
+    commit("ACTION_NAME", payload);
+  },
+};
 
 // mutations
-const mutations = {};
+export const mutations = {
+  ACTION_NAME(state, payload) {
+    state.payload = payload;
+  },
+};
 
 export default {
+  namespaced: true,
   state,
   getters,
   actions,
   mutations,
 };
 endsnippet
+
