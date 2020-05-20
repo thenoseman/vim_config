@@ -64,7 +64,7 @@ Plug 'romainl/vim-cool'
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 
 " A fast CtrlP matcher
-Plug 'raghur/fruzzy', {'dir': '~/.vim/bundles/fruzzy/python3', 'do': 'python -c \"import fruzzy_installer; fruzzy_installer.install();\"' }
+Plug 'raghur/fruzzy', {'do': ':call fruzzy#install()' }
 
 " Interactive command execution in Vim.
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
