@@ -63,8 +63,8 @@ Plug 'romainl/vim-cool'
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 
-" A CtrlP matcher, specialized for paths.
-Plug 'nixprime/cpsm', { 'dir': '~/.vim/bundles/cpsm', 'do': 'VIM=/usr/local/opt/macvim/MacVim.app/Contents/MacOS/Vim CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments PY3=ON ./install.sh'}
+" A fast CtrlP matcher
+Plug 'raghur/fruzzy', {'dir': '~/.vim/bundles/fruzzy/python3', 'do': 'python -c \"import fruzzy_installer; fruzzy_installer.install();\"' }
 
 " Interactive command execution in Vim.
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
