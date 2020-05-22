@@ -44,7 +44,7 @@ let g:ctrlp_clear_cache_on_exit = 1
 
 " Matching functions supplied by plugin
 let g:fruzzy#usenative = 1
-let g:fruzzy#sortonempty = 0
+let g:fruzzy#sortonempty = 1
 let g:ctrlp_match_func = {'match' : 'fruzzy#ctrlp#matcher' }
 
 " instant update
