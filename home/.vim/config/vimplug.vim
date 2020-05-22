@@ -45,9 +45,6 @@ Plug 'tpope/vim-surround'
 " Vim comment plugin: supported operator/non-operator mappings, repeatable by dot-command, 300+ filetypes
 Plug 'tyru/caw.vim'
 
-" A plugin to diff and merge two directories recursively
-Plug 'vim-scripts/DirDiff.vim'
-
 " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 Plug 'w0rp/ale'
 

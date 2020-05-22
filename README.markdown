@@ -11,9 +11,6 @@ My configuration is based on [duwanis](https://github.com/duwanis/vim_config) wo
 Clone this repository then call `./relink` to link `.vim` and `.vimrc` to your home directory. Once you are inside vim run `:PlugInstall`.
 
 # Added non-plugin features
-+ my own "mvim" script (home/extras/mvim) that makes all passed cmdargs available to vim ($VIM_CMDARGS)
-  This is used to enable you to call "mvim -d" with two directories (normally only two files).
-  If you call "mvim -d" with two directories, the DirDiff Plugin will automatically be called to diff the directories.
 + A modified version of the [railscasts theme](https://github.com/jpo/vim-railscasts-theme) as default theme
 + My favorite font [Inconsolata-dz](http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/) in extras
 
