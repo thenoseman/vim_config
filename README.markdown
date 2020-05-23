@@ -57,11 +57,11 @@ Clone this repository then call `./relink` to link `.vim` and `.vimrc` to your h
   A modified version of [this ruby textobject plugin](https://github.com/nelstrom/vim-textobj-rubyblock) which detects rspec syntax as block delimiters.  
   Adds the `ar` and `ir` text-objects to VIM so you can for example delete a complete method (with the cursor somewhere in it) via `dir` (deletes _without_ `def .. .end`) or `dar` (deletes incl. `def .. .end`).
 
-- `run_current_rspec_test_via_pipe.vim`:  
-  Press `<Leader>r` on a rspec describe/context/it and it will be executed in a named pipe (tmp/rspec-test-pipe).  
+- `run_current_test_via_pipe.vim`:  
+  Press `<Leader>r` on a rspec describe/context/it and it will be executed in a named pipe (tmp/test-pipe).  
   Press `<Leader>r` outside of an rspec file and the last run spec will be re-executed  
   Create pipe like this:  
- `mkdir -p tmp && if [ ! -p tmp/rspec-test-pipe ]; then mkfifo tmp/rspec-test-pipe; fi && echo "Now listening to tmp/rspec-test-pipe" && while true; do sh -c "$(cat tmp/rspec-test-pipe)"; done'`
+ `mkdir -p tmp && if [ ! -p tmp/test-pipe ]; then mkfifo tmp/test-pipe; fi && echo "Now listening to tmp/test-pipe" && while true; do sh -c "$(cat tmp/test-pipe)"; done'`
 
 # Plugins:
 
