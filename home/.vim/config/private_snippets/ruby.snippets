@@ -14,10 +14,6 @@ module ${1:`!v substitute(expand("%:t:r"), '\(_\|^\)\(.\)', '\u\2', 'g')`}
 end
 endsnippet
 
-snippet . "inspect" w
-.inspect
-endsnippet
-
 snippet warn "warn"
 puts "\033[33m===== #{File.basename(__FILE__)}:#{__LINE__} ====="
 puts ${1} 
@@ -35,44 +31,14 @@ class ${1:`!v substitute(expand("%:t:r"), '\(_\|^\)\(.\)', '\u\2', 'g')`}
 end
 endsnippet
 
-snippet cla "class .. initialize .. end"
-class ${1:`!v substitute(expand("%:t:r"), '\(_\|^\)\(.\)', '\u\2', 'g')`}
-  def initialize(${2:args})
-    ${3}
-  end
-end
-endsnippet
-
 snippet mod "module .. end"
 module ${1:`!v substitute(expand("%:t:r"), '\(_\|^\)\(.\)', '\u\2', 'g')`}
   ${2}
 end
 endsnippet
 
-# attr_reader
-snippet r "r"
-attr_reader :${1:attr_names}
-endsnippet
-
-# attr_writer
-snippet w "w"
-attr_writer :${1:attr_names}
-endsnippet
-
-# attr_accessor
-snippet rw "rw"
-attr_accessor :${1:attr_names}
-endsnippet
-
 snippet def "def"
 def ${1:method_name}
-  ${2}
-end
-endsnippet
-
-# def self
-snippet defs "defs"
-def self.${1:class_method_name}
   ${2}
 end
 endsnippet
@@ -98,4 +64,8 @@ endsnippet
 
 snippet save "save_and_open_screenshot"
 save_and_open_screenshot
+endsnippet
+
+snippet todo "# TODO"
+#TODO: ${1} (FS, `!v strftime("%Y-%m-%d")`)
 endsnippet
