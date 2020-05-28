@@ -7,9 +7,7 @@ scriptencoding utf-8
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
 
 let g:ale_completion_tsserver_autoimport = 1
-let g:ale_echo_msg_error_str = '💀'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_echo_msg_warning_str = '🤔'
+let g:ale_echo_msg_format = '[%linter%] %code%: %s'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_text_changed = 'never'
