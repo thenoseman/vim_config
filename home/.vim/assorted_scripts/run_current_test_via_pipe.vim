@@ -31,7 +31,7 @@ fun! JestExecuteCurrent()
   let s:itpos = search('it(', 'bcnWz', line("w0"))
   let s:line = getline(s:itpos)
   let s:ittxt = matchstr(getline(s:itpos), "\".*\"")    
-  echom 'Running test: ' . s:ittxt . ' in ' . expand("%p")
+  echom 'Running test: ' . s:ittxt[0:10] . ' in ' . expand("%:t")
   execute "silent !echo NODE_ICU_DATA=node_modules/full-icu node node_modules/.bin/vue-cli-service test:unit --runInBand -t " . shellescape(s:ittxt) . " " . expand("%p") . " > tmp/test-pipe"
 endfun
 
