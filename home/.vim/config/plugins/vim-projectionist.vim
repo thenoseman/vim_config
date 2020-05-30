@@ -9,5 +9,15 @@ let g:projectionist_heuristics = {
   \     "spec/controllers/*_spec.rb": { "alternate": "app/controllers/{}.rb" },
   \     "app/helpers/*.rb": { "alternate": "spec/helpers/{}_spec.rb" },
   \     "spec/helpers/*_spec.rb": { "alternate": "app/helpers/{}.rb" }
+  \   },
+  \   "package.json": {
+  \     "src/*.js": {
+  \       "alternate": "tests/unit/{}.spec.js",
+  \       "type": "source"
+  \     },
+  \     "tests/unit/*.js": {
+  \       "alternate": "src/{}.js",
+  \       "type": "test"
+  \     }
   \   }
   \ }
