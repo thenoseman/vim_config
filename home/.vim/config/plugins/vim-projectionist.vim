@@ -15,8 +15,12 @@ let g:projectionist_heuristics = {
   \       "alternate": "tests/unit/{}.spec.js",
   \       "type": "source"
   \     },
-  \     "tests/unit/*.js": {
-  \       "alternate": "src/{}.js",
+  \     "src/*.vue": {
+  \       "alternate": "tests/unit/{}.spec.js",
+  \       "type": "source"
+  \     },
+  \     "tests/unit/*.spec.js": {
+  \       "alternate": ["src/{}.vue", "src/{}.js"],
   \       "type": "test"
   \     }
   \   }

@@ -51,6 +51,9 @@ Plug 'w0rp/ale'
 " Automatic :nohlsearch
 Plug 'romainl/vim-cool'
 
+" projectionist.vim: Granular project configuration
+Plug 'tpope/vim-projectionist'
+
 " Plug 'tweekmonster/startuptime.vim'
 
 "
@@ -142,9 +145,6 @@ Plug 'tpope/vim-rails', { 'for': ['ruby', 'rspec'] }
 
 " Vim/Ruby Configuration Files
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rspec'] }
-
-" projectionist.vim: Granular project configuration
-Plug 'tpope/vim-projectionist', { 'for': ['ruby', 'rspec'] }
 
 " Ruby textobjects
 Plug 'tek/vim-textobj-ruby', { 'for': ['ruby', 'rspec'] }
