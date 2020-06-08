@@ -132,6 +132,11 @@ snippet nt "nexttick"
 await ${1:wrapper}.vm.$nextTick();
 endsnippet
 
-snippet Ha ".toHaveBeenCalledWith()" i
+#
+# JEST
+#
+context "re.search('toH$', snip.buffer[snip.line])"
+snippet H ".toHaveBeenCalledWith()" ie
 HaveBeenCalledWith(${1});
 endsnippet
+
