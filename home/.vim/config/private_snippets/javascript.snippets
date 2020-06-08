@@ -98,16 +98,6 @@ if(typeof ${1} === "undefined") {
 }
 endsnippet
 
-# Used in formofill to export a class for testing
-# purposes and require()ing it
-snippet export "export class"
-// REMOVE START
-if(typeof exports === "object") {
-	exports.clazz = ${1};
-}
-// REMOVE END
-endsnippet
-
 snippet qs "document.querySelector"
 document.querySelector("${1}");
 endsnippet
@@ -142,6 +132,6 @@ snippet nt "nexttick"
 await ${1:wrapper}.vm.$nextTick();
 endsnippet
 
-snippet toH ".tohaveBeenCalledWith()"
-.toHaveBeenCalledWith(${1});
+snippet Ha ".toHaveBeenCalledWith()" i
+HaveBeenCalledWith(${1});
 endsnippet
