@@ -12,7 +12,7 @@ let g:grepper = {
 set grepprg=rg
 
 " Create :Rg command
-command! -nargs=* Rg Grepper -noprompt -tool rg -grepprg rg --hidden --vimgrep <args>
+command! -nargs=* Rg Grepper -noprompt -tool rg -grepprg rg -F --hidden --vimgrep <args>
 
 " gs<motion> prepupulates search
 nmap gs <plug>(GrepperOperator)
