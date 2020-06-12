@@ -6,9 +6,6 @@ Plug 'Shougo/context_filetype.vim'
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
 
-" Fuzzy file, buffer, mru, tag, etc finder
-Plug 'ctrlpvim/ctrlp.vim'
-
 " EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
 
@@ -60,11 +57,11 @@ Plug 'tpope/vim-projectionist'
 " Common tools
 "
 
+" fzf fie search in vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
-
-" A fast CtrlP matcher
-Plug 'raghur/fruzzy', {'do': ':call fruzzy#install()' }
 
 " Interactive command execution in Vim.
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
