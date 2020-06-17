@@ -63,6 +63,14 @@ export default {
 };
 endsnippet
 
+snippet data "data() {...}"
+data() {
+	return {
+		${1:element}: ${0:null},
+	};
+},
+endsnippet
+
 snippet props "props: {...}"
 props: {
 	${1:nameOfProp}: {
@@ -70,4 +78,12 @@ props: {
 		${3:default: null}
 	}
 }
+endsnippet
+
+snippet comp "computed: {...}"
+computed: {
+	${1:nameOfComputed}() {
+		return $0
+	}
+},
 endsnippet
