@@ -1,4 +1,4 @@
-let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_layout = { 'down': '~10%' }
 let g:fzf_history_dir = '~/.fzf-history'
 let g:fzf_action =  {
   \ 'ctrl-t': 'tab split',
