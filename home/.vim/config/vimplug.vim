@@ -118,9 +118,6 @@ Plug 'evanleck/vim-svelte', { 'for': 'svelte' }
 " bundle provides syntax highlighting and improved indentation
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'vue', 'svelte' ]}
 
-" Automatic JS module import
-Plug 'galooshi/vim-import-js', { 'for': [ 'javascript', 'vue', 'svelte' ]}
-
 " Textobjects if/af for matching brackets
 Plug 'thenoseman/vim-textobj-braces', { 'for': [ 'javascript', 'vue', 'svelte' ]}
 
