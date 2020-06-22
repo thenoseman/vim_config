@@ -1,5 +1,3 @@
-let g:UltiSnipsUsePythonVersion = 3
-
 " Split vertically on snippet edit
 let g:UltiSnipsEditSplit = "vertical"
 
@@ -12,8 +10,3 @@ let g:UltiSnipsSnippetDirectories = ["private_snippets"]
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" Dont auto-rehash on snippet changes
-" restart VIM for that
-let g:UltiSnipsDoHash=0
-
