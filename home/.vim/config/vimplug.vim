@@ -30,9 +30,6 @@ Plug 'tpope/vim-endwise'
 " A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
-" A git commit browser for vim. Extends fugitive.vim.
-Plug 'int3/vim-extradite'
-
 " repeat.vim: enable repeating supported plugin maps with '.'
 Plug 'tpope/vim-repeat'
 
