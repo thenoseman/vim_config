@@ -43,6 +43,7 @@ let g:ale_fixers = {
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
 \   'html': [ 'prettier' ],
+\   'haml': [ 'trim_whitespace' ],
 \   'svelte': [ 'prettier', 'eslint', 'importjs' ],
 \   'vue': [ 'prettier', 'eslint', 'importjs' ],
 \}
