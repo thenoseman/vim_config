@@ -54,7 +54,7 @@ Plug 'tpope/vim-projectionist'
 " Common tools
 "
 
-" fzf fie search in vim
+" fzf for file search in vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " A tree explorer plugin for vim.

@@ -6,7 +6,7 @@ let g:fzf_action =  {
   \ 'ctrl-v': 'vsplit' }
 
 " ,m opens list of files via ripgrep -> FZF
-nmap <leader>m :call fzf#run(fzf#wrap({'source': 'rg --files --hidden -g "!.git"', 'options': '--info hidden'}))<cr>
+nmap <leader>m :call fzf#run(fzf#wrap('vim', {'source': 'rg --files --hidden -g "!.git"', 'options': '--info hidden'}))<cr>
 
 " Disable status bar for a cleaner look
 autocmd! FileType fzf
