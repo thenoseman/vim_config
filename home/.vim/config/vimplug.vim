@@ -76,9 +76,6 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 " Vim runtime files for Haml, Sass, and SCSS
 Plug 'tpope/vim-haml', { 'for': 'haml' }
 
-" Emmet
-Plug 'mattn/emmet-vim', { 'for': ['html', 'xml', 'svelte', 'vue'] }
-
 " SCSS Syntax highlighting
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue', 'svelte'] }
 
