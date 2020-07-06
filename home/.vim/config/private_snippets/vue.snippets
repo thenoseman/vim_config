@@ -1,35 +1,11 @@
 extends html, javascript, css
 
-snippet t "New component template"
-<template>
-  ${1:<div>$0</div>}
-</template>
-
-<script>
-import { } from "@vue/composition-api";
-
-export default {
-  setup() {
-    return {
-    }
-  },
-	components: {
-		AdditionalComponentsUsedAsChild
-	}
-}
-</script>
-
-<style lang="scss">
-  
-</style>
+snippet { "Template var block"
+{{ ${0} }}
 endsnippet
 
-snippet img "<img ...>"
+snippet <img "<img ...>"
 <img src="@/assets/img/${0}" />
-endsnippet
-
-snippet html "html()"
-console.log(wrapper.html());
 endsnippet
 
 snippet store "store tpl"
