@@ -19,9 +19,7 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'vim-scripts/ReplaceWithRegister'
 
 " Helps you win at grep
-" Plug 'mhinz/vim-grepper'
-" Use fork until issue is fixed: https://github.com/mhinz/vim-grepper/issues/231
-Plug 'geekjuice/vim-grepper'
+Plug 'mhinz/vim-grepper'
 
 " Global search and replace for VI
 Plug 'skwp/greplace.vim'
