@@ -90,13 +90,6 @@ Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform'}
 
 "
-" Go
-"
-
-" Go development plugin for Vim
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-
-"
 " Javascript-like
 "
 
