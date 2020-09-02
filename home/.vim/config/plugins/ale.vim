@@ -37,15 +37,15 @@ let g:ale_linters = {
 \}
 
 let g:ale_fixers = {
-\   'javascript': [ 'prettier' ],
+\   'javascript': [ 'prettier', 'eslint' ],
 \   'json': [ 'prettier' ],
 \   'ruby': [ 'rufo' ],
 \   'rspec': [ 'rufo' ],
 \   'terraform': [ 'terraform' ],
 \   'html': [ 'prettier' ],
 \   'haml': [ 'trim_whitespace' ],
-\   'svelte': [ 'prettier', 'eslint', 'importjs' ],
-\   'vue': [ 'prettier', 'eslint', 'importjs' ],
+\   'svelte': [ 'prettier', 'eslint' ],
+\   'vue': [ 'prettier', 'eslint'  ],
 \}
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
