@@ -79,6 +79,9 @@ Plug 'tpope/vim-haml', { 'for': 'haml' }
 " SCSS Syntax highlighting
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue', 'svelte'] }
 
+" Pug (ex Jade)
+Plug 'digitaltoad/vim-pug', { 'for': ['vue', 'pug', 'svelte'] }
+
 "
 " Infrastructure
 "
