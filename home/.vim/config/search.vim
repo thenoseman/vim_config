@@ -12,6 +12,3 @@ set smartcase
 " auto search visually selected text when using '/'
 vmap / y:execute "/".escape(@",'[]/\.*')<CR>
 
-" For GSearch
-let g:grep_cmd_opts = '--fixed-strings --ignore-case --line-number'
-
