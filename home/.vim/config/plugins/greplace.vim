@@ -1,2 +1,2 @@
 " with ripgrep
-let g:grep_cmd_opts = '-S -F --vimgrep'
+let g:grep_cmd_opts = '-S -F --vimgrep --no-column'
