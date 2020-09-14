@@ -58,7 +58,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " A tree explorer plugin for vim.
-Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
+Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 
 " Interactive command execution in Vim.
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
