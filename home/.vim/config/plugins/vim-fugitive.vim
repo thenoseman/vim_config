@@ -1,8 +1,5 @@
 " Fugitive-specific configuration
-
-com! Gs Gstatus
-com! Gb Gblame
-com! Gc Gcommit
+com! Gl 0Gclog
 
 " Auto close fugitive buffers when I leave them
 " from http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
