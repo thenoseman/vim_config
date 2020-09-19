@@ -121,9 +121,6 @@ Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
 " Better rspec syntax highlighting for Vim
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'rspec' }
 
-" rake.vim: it's like rails.vim without the rails
-Plug 'tpope/vim-rake', { 'for': ['ruby', 'rspec'] }
-
 " rails.vim: Ruby on Rails power tools
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'rspec'] }
 
