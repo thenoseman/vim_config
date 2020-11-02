@@ -63,6 +63,9 @@ Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTre
 " Interactive command execution in Vim.
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
 
+" CTAGS management
+Plug 'ludovicchabant/vim-gutentags'
+
 "
 " Markup
 "
@@ -113,6 +116,9 @@ Plug 'thenoseman/vim-textobj-braces', { 'for': [ 'javascript', 'vue', 'svelte' ]
 
 " Vue
 Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
+
+" Automatic import
+Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 
 "
 " Ruby
