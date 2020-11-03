@@ -12,7 +12,7 @@ call add(g:gutentags_project_info, {'type': 'ruby', 'file': 'Gemfile'})
 let g:gutentags_generate_on_empty_buffer = 1
 let g:gutentags_add_default_project_roots = 0
 let g:gutentags_project_root = [ '.git', 'package.json' ]
-let g:gutentags_trace = 1
+let g:gutentags_trace = 0
 
 " If you add regexes below make sure to NOT use " " (space).
 " If you can use [:blank:] instead
