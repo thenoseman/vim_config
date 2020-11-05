@@ -48,17 +48,16 @@ function! TerraformOpenDoc()
     let s:provider = TerraformGetProvider()
     let s:resource = TerraformGetResource()
 
-    let s:link = 'https://www.terraform.io/docs/providers/' . s:provider
+    let s:link = 'https://registry.terraform.io/providers/hashicorp/' . s:provider . '/latest/docs/'
 
     if TerraformGetType() ==? 'resource'
-      let s:link .= '/r'
+      let s:link .= '/resources'
     else
-      let s:link .= '/d'
+      let s:link .= '/data-sources'
     endif
 
     let s:short_resource = substitute(s:resource, 'aws_', '', '')
-
-    let s:link .= '/' . s:short_resource . '.html'
+    let s:link .= '/' . s:short_resource
 
     "(Windows) cmd /c start filename_or_URL
     if has('mac')
