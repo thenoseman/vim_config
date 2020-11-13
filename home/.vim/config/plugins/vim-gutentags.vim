@@ -6,7 +6,7 @@ call add(g:gutentags_project_info, {'type': 'python', 'file': 'setup.py'})
 call add(g:gutentags_project_info, {'type': 'ruby', 'file': 'Gemfile'})
 let g:gutentags_generate_on_empty_buffer = 1
 let g:gutentags_add_default_project_roots = 0
-let g:gutentags_project_root = [ '.git', 'package.json' ]
+let g:gutentags_project_root = [ 'package.json' ]
 let g:gutentags_trace = 0
 
 " Available kinds for JavaScript:
