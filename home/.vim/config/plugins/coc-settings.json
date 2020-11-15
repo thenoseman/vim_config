@@ -1,5 +1,6 @@
 {
   "coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
+  "coc.preferences.extensionUpdateCheck": "weekly",
   "suggest.maxCompleteItemCount": 20,
   "suggest.autoTrigger": "always",
   "tsserver.formatOnType": false,
