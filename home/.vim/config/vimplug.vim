@@ -4,7 +4,7 @@ call plug#begin('~/.vim/bundles')
 Plug 'Shougo/context_filetype.vim'
 
 " UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 
 " EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
@@ -24,7 +24,7 @@ Plug 'mhinz/vim-grepper'
 " Global search and replace for VI
 Plug 'skwp/greplace.vim'
 
-" eisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+" Wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
 Plug 'tpope/vim-endwise'
 
 " A Git wrapper so awesome, it should be illegal
@@ -60,11 +60,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " A tree explorer plugin for vim.
 Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 
-" Interactive command execution in Vim.
+" Async command execution in Vim.
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
 
 " CTAGS management
 Plug 'ludovicchabant/vim-gutentags'
+
+" Async auto completion like vscode
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets coc-vetur'}
 
 "
 " Markup
@@ -109,7 +112,7 @@ Plug 'evanleck/vim-svelte', { 'for': 'svelte' }
 "Plug 'othree/yajs.vim', { 'for': 'javascript' }
 
 " bundle provides syntax highlighting and improved indentation
-Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'vue', 'svelte' ]}
+Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'svelte' ]}
 
 " Textobjects if/af for matching brackets
 Plug 'thenoseman/vim-textobj-braces', { 'for': [ 'javascript', 'vue', 'svelte' ]}

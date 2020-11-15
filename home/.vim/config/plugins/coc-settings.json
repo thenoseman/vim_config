@@ -1,0 +1,15 @@
+{
+  "coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
+  "suggest.maxCompleteItemCount": 20,
+  "suggest.autoTrigger": "always",
+  "tsserver.formatOnType": false,
+  "tsserver.reportStyleChecksAsWarnings": false,
+  "javascript.format.enabled": false,
+  "javascript.preferences.quoteStyle": "double",
+  "diagnostic.errorSign": "💀",
+  "diagnostic.warningSign": "🤔",
+  "snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
+  "snippets.snipmate.enable": false,
+  "snippets.trace": false,
+  "snippets.loadFromExtensions": false
+}
