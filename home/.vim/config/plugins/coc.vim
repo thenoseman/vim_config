@@ -7,6 +7,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " Deactivate mapping for vim-endwise to make this mapping work (queue
 " vim-endwise after coc)
 let g:endwise_no_mappings=1
+
+" Make <cr> auto select first entry in completion list
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<c-r>=EndwiseDiscretionary()\<CR>"
 
 " Use K to show documentation in preview window.
@@ -30,7 +32,7 @@ inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(
 inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " coc-snippet via <tab>
 inoremap <silent><expr> <TAB>
@@ -46,3 +48,5 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+" Deactivate for filetypes
+autocmd FileType gitrebase,vim let b:coc_suggest_disable = 1
