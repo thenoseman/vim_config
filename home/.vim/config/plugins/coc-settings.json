@@ -2,7 +2,7 @@
   "coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
   "coc.preferences.extensionUpdateCheck": "weekly",
   "suggest.maxCompleteItemCount": 20,
-  "suggest.autoTrigger": "trigger",
+  "suggest.autoTrigger": "always",
   "suggest.minTriggerInputLength": 3,
   "tsserver.formatOnType": false,
   "tsserver.reportStyleChecksAsWarnings": false,
