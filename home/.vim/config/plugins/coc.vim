@@ -49,4 +49,4 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 " Deactivate for filetypes
-autocmd FileType gitrebase,vim let b:coc_suggest_disable = 1
+autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
