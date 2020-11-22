@@ -120,9 +120,6 @@ Plug 'thenoseman/vim-textobj-braces', { 'for': [ 'javascript', 'vue', 'svelte' ]
 " Vue
 Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
 
-" Automatic import
-Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
-
 "
 " Ruby
 "
