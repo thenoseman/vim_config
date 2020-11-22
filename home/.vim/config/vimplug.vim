@@ -63,9 +63,6 @@ Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTre
 " Async command execution in Vim.
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
 
-" CTAGS management
-Plug 'ludovicchabant/vim-gutentags'
-
 " Async auto completion like vscode
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets coc-vetur'}
 
