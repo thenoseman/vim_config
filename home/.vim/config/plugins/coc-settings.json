@@ -10,6 +10,8 @@
   "javascript.preferences.quoteStyle": "double",
   "diagnostic.errorSign": "💀",
   "diagnostic.warningSign": "🤔",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "!",
   "snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
   "snippets.snipmate.enable": false,
   "snippets.trace": false,
