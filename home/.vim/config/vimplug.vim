@@ -21,8 +21,8 @@ Plug 'vim-scripts/ReplaceWithRegister'
 " Helps you win at grep
 Plug 'mhinz/vim-grepper'
 
-" Global search and replace for VI
-Plug 'skwp/greplace.vim'
+" Global search and replace in quickfix window
+Plug 'stefandtw/quickfix-reflector.vim'
 
 " Auto close parentheses
 Plug 'cohama/lexima.vim'
