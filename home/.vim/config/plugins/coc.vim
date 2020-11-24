@@ -8,11 +8,21 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " vim-endwise after coc)
 let g:endwise_no_mappings=1
 
+" Make lexima work with coc.vim:
+let g:lexima_no_default_rules = 1
+call lexima#set_default_rules()
+call lexima#insmode#map_hook('before', '<CR>', '')
+
 " Make <cr> auto select first entry in completion list
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<c-r>=EndwiseDiscretionary()\<CR>"
+" inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : lexima#expand('<CR>', 'i')
+"\<C-g>u\<CR>"
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" rename via F2
+nmap <F2> <Plug>(coc-rename)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
