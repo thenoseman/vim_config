@@ -20,14 +20,12 @@ set history=100
 " m - use "[+]" instead of "[Modified]"
 " n - use "[New]" instead of "[New File]"
 " r - use "[RO]" instead of "[readonly]"
-" x - use "[dos]" instead of "[dos format]", "[unix]" instead of "[unix
-" format]", and "[mac]" instead of "[mac format]"
-" t - truncate file message at the start if it is too long to fit on the
-" command-line, "<" will appear in the left most column.
-" T - trunctate other messages in the middle if they are too long to fit on
-" the command line. "..." will appear in the middle.
+" x - use "[dos]" instead of "[dos format]", "[unix]" instead of "[unix format]", and "[mac]" instead of "[mac format]"
+" t - truncate file message at the start if it is too long to fit on the command-line, "<" will appear in the left most column.
+" T - trunctate other messages in the middle if they are too long to fit on the command line. "..." will appear in the middle.
 " I - don't give the intro message when starting Vim.
-set shortmess=filmnrxtTI
+" c - don't give |ins-completion-menu| messages.
+set shortmess=filmnrxtTIc
 
 " turn filetype settings off so that stuff gets loaded from pathogen
 filetype off

@@ -41,8 +41,8 @@ set textwidth=0
 set nolinebreak
 set wrap
 
-" Always keep 3 lines on screen while scolling
-set scrolloff=3
+" Always keep 2 lines on screen while scolling
+set scrolloff=2
 set sidescrolloff=3
 
 " use system clipboard
@@ -50,6 +50,12 @@ set clipboard=unnamed
 
 " Wait less milliseconds before executing command
 set timeoutlen=500
+
+" Dont wait the default 4 seconds for CursorHold
+set updatetime=300
+
+" Number of screen lines to use for the command-line.
+set cmdheight=2
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
