@@ -1,3 +1,7 @@
 if !executable('ripper-tags')
-  echoe 'Please install the "ripper-tags" gem via "gem install ripper-tags"'
+  !gem install ripper-tags
+endif
+
+if !executable('terraform-ls')
+  !brew install terraform-ls
 endif
