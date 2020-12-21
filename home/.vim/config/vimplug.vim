@@ -24,8 +24,8 @@ Plug 'mhinz/vim-grepper'
 " Global search and replace in quickfix window
 Plug 'stefandtw/quickfix-reflector.vim'
 
-" Auto close parentheses
-Plug 'cohama/lexima.vim'
+" Wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+Plug 'tpope/vim-endwise'
 
 " A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
