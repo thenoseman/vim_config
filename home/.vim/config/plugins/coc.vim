@@ -51,5 +51,8 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+" Goto definition
+nmap <silent> gd <Plug>(coc-definition)
+
 " Deactivate for filetypes
 autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
