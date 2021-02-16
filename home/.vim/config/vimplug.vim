@@ -64,7 +64,7 @@ Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTre
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
 
 " Async auto completion like vscode
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets coc-rls'}
 
 "
 " Markup
@@ -132,5 +132,11 @@ Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rspec'] }
 
 " Ruby textobjects
 Plug 'tek/vim-textobj-ruby', { 'for': ['ruby', 'rspec'] }
+
+
+"
+" Rust
+"
+Plug 'rust-lang/rust.vim', { 'for': [ 'rust' ]}
 
 call plug#end()
