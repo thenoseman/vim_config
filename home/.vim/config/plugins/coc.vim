@@ -56,3 +56,10 @@ nmap <silent> gd <Plug>(coc-definition)
 
 " Deactivate for filetypes
 autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
+
+" Rust
+if !executable('rust-analyzer')
+  if has('mac')
+    !brew install rust-analyzer
+  endif
+endif
