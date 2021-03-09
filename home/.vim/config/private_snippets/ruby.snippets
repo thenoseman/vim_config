@@ -69,3 +69,13 @@ endsnippet
 snippet todo "# TODO"
 #TODO: ${1} (FS, `!v strftime("%Y-%m-%d")`)
 endsnippet
+
+snippet std0 "Turn standardrb off"
+# standard:disable ${1}
+${0}
+# standard:enable ${1}
+endsnippet
+
+snippet #s "Inline standardrb off"
+# standard:disable ${0}
+endsnippet
