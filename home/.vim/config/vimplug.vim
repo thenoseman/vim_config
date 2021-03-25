@@ -6,9 +6,6 @@ Plug 'Shougo/context_filetype.vim'
 " UltiSnips - The ultimate snippet solution for Vim
 " Plug 'SirVer/ultisnips'
 
-" EditorConfig plugin for Vim
-Plug 'editorconfig/editorconfig-vim'
-
 " Create your own text objects
 Plug 'kana/vim-textobj-user'
 
@@ -103,7 +100,7 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform'}
 Plug 'elzr/vim-json', { 'for': 'json' }
 
 " Svelte JavaScript syntax highlighting for vim
-Plug 'evanleck/vim-svelte', { 'for': 'svelte' }
+Plug 'evanleck/vim-svelte', { 'for': 'svelte', 'branch': 'main' }
 
 " YAJS.vim: Yet Another JavaScript Syntax for Vim
 "Plug 'othree/yajs.vim', { 'for': 'javascript' }
