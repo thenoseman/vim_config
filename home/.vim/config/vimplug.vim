@@ -37,7 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
 " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " Automatic :nohlsearch
 Plug 'romainl/vim-cool'
@@ -119,7 +119,7 @@ Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
 "
 
 " Better rspec syntax highlighting for Vim
-Plug 'Keithbsmiley/rspec.vim', { 'for': 'rspec' }
+Plug 'keith/rspec.vim', { 'for': 'rspec' }
 
 " rails.vim: Ruby on Rails power tools
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'rspec'] }
