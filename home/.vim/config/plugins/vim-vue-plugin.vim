@@ -9,6 +9,6 @@ let g:vim_vue_plugin_config = {
   \'attribute': 1,
   \'keyword': 1,
   \'foldexpr': 0,
-  \'init_indent': 1,
+  \'init_indent': 0,
   \'debug': 0,
 \}
