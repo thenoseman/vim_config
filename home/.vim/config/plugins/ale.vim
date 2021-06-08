@@ -24,7 +24,7 @@ let g:ale_sh_shellcheck_options = '-x'
 
 let g:ale_linters = {
 \   'ruby': ['standardrb'],
-\   'rspec': ['ruby'],
+\   'rspec': ['standardrb', 'ruby'],
 \   'html': [ '' ],
 \   'haml': [ 'htmllint' ],
 \   'cpp' : [ 'g++' ],
@@ -41,7 +41,7 @@ let g:ale_fixers = {
 \   'javascript': [ 'prettier', 'eslint' ],
 \   'json': [ 'prettier' ],
 \   'ruby': [ 'standardrb' ],
-\   'rspec': [ 'rufo' ],
+\   'rspec': [ 'standardrb' ],
 \   'terraform': [ 'terraform' ],
 \   'html': [ 'prettier' ],
 \   'haml': [ 'trim_whitespace' ],
