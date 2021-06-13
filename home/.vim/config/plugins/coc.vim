@@ -1,5 +1,15 @@
+" Keys overview:
+" --------------
+" <c-space> : Autocomplete
+" K         : Show docs (on cursor)
+" F2        : Rename (on cursor)
+" :OR       : Organize imports (JS)
+" <tab>     : Snippets
+" gd        : Goto definition
+
 let g:coc_config_home = "$HOME/.vim/config/plugins"
 let g:coc_data_home = "$HOME/.vim-coc"
+let g:coc_snippet_next = '<tab>'
 
 " Map <c-space> to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -49,15 +59,13 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:coc_snippet_next = '<tab>'
-
 " Goto definition
 nmap <silent> gd <Plug>(coc-definition)
 
 " Deactivate for filetypes
 autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
 
-" Rust
+" Install rust analyzer
 if !executable('rust-analyzer')
   if has('mac')
     !brew install rust-analyzer
