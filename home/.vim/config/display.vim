@@ -18,18 +18,14 @@ set cul
 "
 " New Font
 "
-if has('mac')
-  if has('gui_running')
-    if tolower(hostname()) =~ 'book'
-      set guifont=Inconsolata-dz:h11.00
-    else
-      set guifont=Inconsolata-dz:h12.00
-    endif
+if has('gui_running')
+  if tolower(hostname()) =~ 'book'
+    set guifont=InconsolataGo\ Nerd\ Font\ Mono:h12.00  
   else
-    set guifont=Inconsolata-dz:h8.00
+    set guifont=InconsolataGo\ Nerd\ Font\ Mono:h14.00  
   endif
 else
-  set guifont=Inconsolata-g\ Bold\ 11
+  set guifont=InconsolataGo\ Nerd\ Font\ Mono:h8.00  
 endif
 
 " Bigger for Windows
