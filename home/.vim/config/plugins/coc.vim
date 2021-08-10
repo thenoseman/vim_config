@@ -68,6 +68,6 @@ autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
 " Install rust analyzer
 if !executable('rust-analyzer')
   if has('mac')
-    !brew install rust-analyzer
+    echom "Install rust-analyzer via 'rustup +nightly component add rust-analyzer-preview' and adding the path (see rustup which rust-analyzer)"
   endif
 endif
