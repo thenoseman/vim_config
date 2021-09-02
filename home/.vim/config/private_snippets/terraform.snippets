@@ -7,8 +7,9 @@ snippet s3pub "restricted access"
 resource "aws_s3_bucket_public_access_block" "$1" {
   bucket = aws_s3_bucket.$1.id
 
-  block_public_acls   = true
-  block_public_policy = true
-  ignore_public_acls  = true
+  block_public_acls       = true
+  block_public_policy     = true
+  restrict_public_buckets = true
+  ignore_public_acls      = true
 }
 endsnippet
