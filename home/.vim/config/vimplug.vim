@@ -13,7 +13,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'maxbrunsfeld/vim-yankstack'
 
 " Replace text with the contents of a register (https://github.com/vim-scripts/ReplaceWithRegister)
-Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'inkarkat/vim-ReplaceWithRegister'
 
 " Helps you win at grep
 Plug 'mhinz/vim-grepper'
