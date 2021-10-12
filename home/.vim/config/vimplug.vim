@@ -3,11 +3,11 @@ call plug#begin('~/.vim/bundles')
 " Context filetype library for Vim script
 Plug 'Shougo/context_filetype.vim'
 
-" UltiSnips - The ultimate snippet solution for Vim
-" Plug 'SirVer/ultisnips'
-
 " Create your own text objects
 Plug 'kana/vim-textobj-user'
+
+" vim-textobj-function is a Vim plugin to text objects for functions
+Plug 'kana/vim-textobj-function'
 
 " A lightweight implementation of emacs's kill-ring for vim
 Plug 'maxbrunsfeld/vim-yankstack'
@@ -74,7 +74,7 @@ Plug 'alvan/vim-closetag', { 'for': ['html', 'xml', 'svelte', 'vue'] }
 Plug 'othree/html5.vim', { 'for': 'html' }
 
 " Vim runtime files for Haml, Sass, and SCSS
-Plug 'tpope/vim-haml', { 'for': 'haml' }
+Plug 'tpope/vim-haml', { 'for': [ 'haml' ]}
 
 " SCSS Syntax highlighting
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue', 'svelte'] }
@@ -102,17 +102,14 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 " Svelte JavaScript syntax highlighting for vim
 Plug 'evanleck/vim-svelte', { 'for': 'svelte', 'branch': 'main' }
 
-" YAJS.vim: Yet Another JavaScript Syntax for Vim
-"Plug 'othree/yajs.vim', { 'for': 'javascript' }
-
 " bundle provides syntax highlighting and improved indentation
 Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'svelte' ]}
 
-" Textobjects if/af for matching brackets
-Plug 'thenoseman/vim-textobj-braces', { 'for': [ 'javascript', 'vue', 'svelte' ]}
-
 " Vue
 Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
+
+" Javascript text objects (vif, daf, ...)
+Plug 'thenoseman/vim-textobj-function-javascript', { 'for': ['javascript', 'vue', 'svelte'] }
 
 "
 " Ruby
