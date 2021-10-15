@@ -18,3 +18,7 @@ Clone this repository then call `./relink` to link `.vim` and `.vimrc` to your h
 # Plugins:
 
 See `home/.vim/config/vimplug.vim` 
+
+# Quick tipps
+
+Search over multiple lines: `BEFORE\_.\{-}AFTER`
