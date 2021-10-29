@@ -55,7 +55,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " A tree explorer plugin for vim.
-Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
+Plug 'lambdalisue/fern.vim'
 
 " Async command execution in Vim.
 Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
