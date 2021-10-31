@@ -13,8 +13,9 @@ function! s:init_fern() abort
   nmap <buffer> u <Plug>(fern-action-leave)
   nmap <buffer> R gg<Plug>(fern-action-reload)<C-o>
   nmap <buffer> q :<C-u>quit<CR>
+  nmap <buffer><nowait> d <Plug>(fern-action-hidden:toggle)
 
- nmap <buffer><expr>
+  nmap <buffer><expr>
       \ <Plug>(fern-my-expand-or-collapse)
       \ fern#smart#leaf(
       \   "\<Plug>(fern-action-collapse)",
@@ -22,6 +23,7 @@ function! s:init_fern() abort
       \   "\<Plug>(fern-action-collapse)",
       \ )
 
+  nmap <buffer> <2-LeftMouse> <Plug>(fern-my-expand-or-collapse)
   nmap <buffer><nowait> <Right> <Plug>(fern-my-expand-or-collapse)
   nmap <buffer><nowait> <Left> <Plug>(fern-action-collapse)
 endfunction
@@ -31,6 +33,7 @@ augroup fern-custom
   autocmd FileType fern call s:init_fern()
   autocmd BufEnter <buffer> silent execute "normal \<Plug>(fern-action-reload)"
 augroup END
+
 
 " Custom symbols
 let g:fern#mark_symbol                       = '●'
