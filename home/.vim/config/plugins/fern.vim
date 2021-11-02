@@ -9,11 +9,15 @@ function! s:init_fern() abort
   nmap <buffer> i <Plug>(fern-action-open:split)
   nmap <buffer> s <Plug>(fern-action-open:vsplit)
   nmap <buffer> ma <Plug>(fern-action-new-path)
-  nmap <buffer> C <Plug>(fern-action-enter)
-  nmap <buffer> u <Plug>(fern-action-leave)
+  nmap <buffer> C <Plug>(fern-my-enter-and-tcd)
+  nmap <buffer> u <Plug>(fern-my-leave-and-tcd)
   nmap <buffer> R gg<Plug>(fern-action-reload)<C-o>
   nmap <buffer> q :<C-u>quit<CR>
   nmap <buffer><nowait> d <Plug>(fern-action-hidden:toggle)
+  nmap <buffer> <2-LeftMouse> <Plug>(fern-my-expand-or-collapse)
+
+  nmap <buffer><nowait> <Right> <Plug>(fern-my-expand-or-collapse)
+  nmap <buffer><nowait> <Left> <Plug>(fern-action-collapse)
 
   nmap <buffer><expr>
       \ <Plug>(fern-my-expand-or-collapse)
@@ -23,9 +27,16 @@ function! s:init_fern() abort
       \   "\<Plug>(fern-action-collapse)",
       \ )
 
-  nmap <buffer> <2-LeftMouse> <Plug>(fern-my-expand-or-collapse)
-  nmap <buffer><nowait> <Right> <Plug>(fern-my-expand-or-collapse)
-  nmap <buffer><nowait> <Left> <Plug>(fern-action-collapse)
+  " C and u will now set a new ROOT directory:
+  nmap <buffer> <Plug>(fern-my-enter-and-tcd)
+        \ <Plug>(fern-action-enter)
+        \ <Plug>(fern-wait)
+        \ <Plug>(fern-action-tcd:cursor)
+
+  nmap <buffer> <Plug>(fern-my-leave-and-tcd)
+        \ <Plug>(fern-action-leave)
+        \ <Plug>(fern-wait)
+        \ <Plug>(fern-action-tcd:cursor)
 endfunction
 
 augroup fern-custom
