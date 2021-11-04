@@ -1,7 +1,7 @@
 " Quick hack to toggle a text on/off
 fun! ToggleBackward(search, replace)
-  let pos_search = search(a:search, "bnW", line("w0"))
-  let pos_replace = search(a:replace, "bnW", line("w0"))
+  let pos_search = search(a:search, "bnWc", line("w0"))
+  let pos_replace = search(a:replace, "bnWc", line("w0"))
 
   " search was found nearest
   if(pos_search > pos_replace)
