@@ -6,10 +6,7 @@ augroup vim_config
   autocmd FileType haml  call ConfigureRubyFileType()
   autocmd FileType yaml  call ConfigureRubyFileType()
 
-  " On write just update tags of this file
-  "autocmd BufWritePost *.rb call writefile(split(system("sort -u <(touch tags && grep -v " . expand('%:%') . " tags) <(ripper-tags --exclude=vendor --exclude=log --exclude=tmp --exclude=testapp -f - " . shellescape(expand('%:%')) . " | grep " . expand('%:r') . ")"),"\n"),"tags")
-
-  " Specs can be named _scene.rb (integration tests)
+  " specs can be named _scene.rb (integration tests)
   autocmd BufReadPost,BufNewFile *_scene.rb set ft=rspec | set syntax=rspec | call ConfigureRubyFileType()
   autocmd BufReadPost,BufNewFile *_spec.rb set ft=rspec | set syntax=rspec | call ConfigureRubyFileType()
 

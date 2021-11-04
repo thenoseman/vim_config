@@ -8,4 +8,3 @@ fun! JavascriptConfigure()
   nmap <F12> :JsOnly<CR>
   nmap <F11> :JsAsync<CR>
 endfunction
-
