@@ -3,6 +3,7 @@ augroup vim_config
 augroup END
 
 " http://www.vimregex.com/
+" For char groups use double \\ (eg. \\a)
 fun! JavascriptConfigure()
   command! -nargs=0 JsAsync call ToggleBackward(", () =", ", async () =")
   command! -nargs=0 JsOnly call ToggleBackward("it\(\"", "it\.only(\"")
