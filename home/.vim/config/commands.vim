@@ -1,13 +1,11 @@
-"
 " Since I constantly type :W instead of :w remap that
-"
 command! W w
 command! Qa qa
 
-" @command Test: Open Test and Spec in split
+" Open Test and Spec in split
 command! Test :sp | :A
 
-" @command unindent ruby hashes coded with rubymine/intellij
+" Unindent ruby hashes coded with rubymine/intellij
 command! -range Unindent :'<,'>s/:\s\+/: /g
 
 " command to save a file with sudo privileges
