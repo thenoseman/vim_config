@@ -33,8 +33,11 @@ Plug 'tpope/vim-repeat'
 " surround.vim: quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
-" Vim comment plugin
+" Vim comment plugin 
 Plug 'tpope/vim-commentary'
+
+" Multiple languages/comment types per file (eg. .vue files)
+Plug 'suy/vim-context-commentstring'
 
 " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 Plug 'dense-analysis/ale'
