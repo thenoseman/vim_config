@@ -60,9 +60,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " A tree explorer plugin for vim.
 Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 
-" Async command execution in Vim.
-Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make clean && make' }
-
 " Async auto completion like vscode
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets coc-rust-analyzer'}
 
