@@ -24,7 +24,7 @@ let g:ale_sh_shellcheck_options = '-x'
 
 let g:ale_linters = {
 \   'ruby': ['standardrb'],
-\   'rspec': ['standardrb', 'ruby'],
+\   'rspec': ['standardrb'],
 \   'html': [ '' ],
 \   'haml': [ 'htmllint' ],
 \   'cpp' : [ 'g++' ],
