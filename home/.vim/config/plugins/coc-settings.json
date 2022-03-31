@@ -13,6 +13,7 @@
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": "!",
   "snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
+  "snippets.textmateSnippetsRoots": ["~/.vim/config/private_snippets"],
   "snippets.snipmate.enable": false,
   "snippets.trace": false,
   "snippets.loadFromExtensions": false,
