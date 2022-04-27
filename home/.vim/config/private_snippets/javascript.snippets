@@ -33,6 +33,10 @@ constructor(${1}) {
 }
 endsnippet
 
+snippet spy "spyOn"
+const spy = jest.spyOn(wrapper.vm, "${1}");
+endsnippet
+
 #
 # ESLINT
 #
@@ -85,7 +89,7 @@ document.querySelectorAll("${1}");
 endsnippet
 
 snippet todo "// TODO"
-//TODO: ${1} (FS, `!v strftime("%Y-%m-%d")`)
+//TODO: ${1} (FS, `date +"%Y.%m.%d"`)
 endsnippet
 
 snippet add ".addEventListener" w
