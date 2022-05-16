@@ -1,4 +1,3 @@
-" Configure projectionist for vim-rails/vim-rake
 let g:projectionist_heuristics = {
   \   "*.gemspec": {
   \     "app/models/*.rb": { "alternate": "spec/models/{}_spec.rb" },
@@ -18,7 +17,7 @@ let g:projectionist_heuristics = {
   \       "type": "source"
   \     },
   \     "tests/unit/*.spec.js": {
-  \       "alternate": ["src/{}.vue", "src/{}.js", "src/{}/index.vue"],
+  \       "alternate": ["src/{}.vue", "src/{}.js", "src/{}/index.vue", "src/{dirname|basename}/index.vue", "src/{dirname}/index.vue"],
   \       "type": "test"
   \     }
   \   }
