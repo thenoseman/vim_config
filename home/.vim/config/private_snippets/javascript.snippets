@@ -43,6 +43,11 @@ snippet spy "spyOn"
 const spy = jest.spyOn(wrapper.vm, "${1}");
 endsnippet
 
+
+snippet state "store set"
+wrapper.vm.$store.state${1:.base} = ${2};
+endsnippet
+
 #
 # ESLINT
 #
