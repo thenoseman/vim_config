@@ -3,7 +3,7 @@
 {
   "console.log(clipboard)": {
     "prefix": ["log"],
-    "body": ["console.log(`${CLIPBOARD/[\"]/\\\"/g}`, ${CLIPBOARD});"],
+    "body": ["console.log(`${CLIPBOARD/[\"]/\\\"/g}`, JSON.stringify(${CLIPBOARD}, null, 2));"],
     "description": "logs what is in your clipboard. Auto quotes."
   }
 }
