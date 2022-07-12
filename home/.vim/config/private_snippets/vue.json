@@ -1,9 +1,1 @@
-// https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets
-// javascript textmate/vscode syntax
-{
-  "console.log(clipboard)": {
-    "prefix": ["log"],
-    "body": ["console.log(\"${CLIPBOARD/[\"]/\\\"/g}\", ${CLIPBOARD});"],
-    "description": "logs what is in your clipboard. Auto quotes."
-  }
-}
+javascript.json
