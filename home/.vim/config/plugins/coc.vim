@@ -2,6 +2,7 @@
 " --------------
 " <c-space> : Autocomplete
 " K         : Show docs (on cursor)
+" ,k        : Open docs in browser
 " F2        : Rename (on cursor)
 " :OR       : Organize imports (JS)
 " <tab>     : Snippets
@@ -14,8 +15,8 @@ let g:coc_snippet_next = '<tab>'
 " Map <c-space> to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" Deactivate mapping for vim-endwise to make this mapping work (queue
-" vim-endwise after coc)
+" Deactivate mapping for vim-endwise to make this mapping work 
+" (queue vim-endwise after coc)
 let g:endwise_no_mappings=1
 
 " Make <cr> auto select first entry in completion list
@@ -23,6 +24,7 @@ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<C
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <leader>k :CocCommand rust-analyzer.openDocs<CR>
 
 " rename via F2
 nmap <F2> <Plug>(coc-rename)
@@ -46,6 +48,11 @@ inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+
+" Code actions
+" Old workaround: 
+" nmap <leader>a v<Plug>(coc-codeaction-selected)<Esc>
+nmap <leader>a <Plug>(coc-codeaction-cursor)
 
 " coc-snippet via <tab>
 inoremap <silent><expr> <TAB>
