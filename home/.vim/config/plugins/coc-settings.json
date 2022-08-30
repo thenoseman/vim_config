@@ -6,6 +6,8 @@
   "suggest.minTriggerInputLength": 3,
   "tsserver.formatOnType": false,
   "tsserver.reportStyleChecksAsWarnings": false,
+  "javascript.updateImportsOnFileMove.enable": false,
+  "javascript.preferences.quoteStyle": "double",
   "javascript.format.enabled": false,
   "javascript.preferences.quoteStyle": "double",
   "diagnostic.errorSign": "💀",
