@@ -111,6 +111,9 @@ Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
 " Javascript text objects (vif, daf, ...)
 Plug 'thenoseman/vim-textobj-function-javascript', { 'for': ['javascript', 'vue', 'svelte'] }
 
+" Automatic closing of ({ etc.
+Plug 'lunarWatcher/auto-pairs', { 'for': ['javascript', 'vue', 'svelte'] }
+
 "
 " Ruby
 "
