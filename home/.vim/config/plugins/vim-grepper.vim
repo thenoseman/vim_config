@@ -4,7 +4,7 @@
 let g:grepper = {
 \ 'highlight': 1,
 \ 'tools': [ 'rg' ],
-\ 'rg': { 'grepprg':    '/usr/local/bin/rg -H --no-heading --vimgrep -n --hidden -F',
+\ 'rg': { 'grepprg':    g:homebrew_prefix .. '/bin/rg -H --no-heading --vimgrep -n --hidden -F',
 \         'grepformat': '%f:%l:%c:%m,%f',
 \         'escape':     '\^$.*+?()[]{}|' },
 \ }

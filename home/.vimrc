@@ -48,6 +48,15 @@ if has('python3')
   silent! python3 1
 endif
 
+" Detect architecture
+let g:arch="arm"
+let g:homebrew_prefix="/opt/homebrew"
+
+if stridx(system("uname -m"), "x86_64") > -1
+  let g:arch="intel"
+  let g:homebrew_prefix="/usr/local"
+endif
+
 " load everything else in its own config file
 runtime! config/*.vim
 runtime! config/plugins/*.vim

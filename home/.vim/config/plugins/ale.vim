@@ -60,7 +60,7 @@ let g:ale_linter_aliases = {
 \}
 
 " TIDY
-let g:ale_html_tidy_executable= '/usr/local/bin/tidy'
+let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
 
 " Prettier (https://github.com/prettier/prettier/blob/master/docs/options.md)
 let g:ale_javascript_prettier_options = '--print-width 120 --trailing-comma es5'
@@ -71,4 +71,4 @@ let g:ale_javascript_prettier_use_global = 1
 let g:ale_vue_vls_use_global = 1
 
 " JS/TS
-let g:ale_typescript_tsserver_executable='/usr/local/bin/tsserver'
+let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/tsserver'
