@@ -18,3 +18,10 @@ See `home/.vim/config/vimplug.vim`
 # Quick tips
 
 Search over multiple lines: `BEFORE\_.\{-}AFTER`
+
+If there the window is not full height try:
+```bash
+defaults write org.vim.MacVim MMTextInsetBottom 10 # Adds pixel rows to the bottom
+defaults write org.vim.MacVim MMTextInsetTop 10 # Adds pixel rows to the top
+```
+
