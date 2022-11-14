@@ -103,9 +103,6 @@ set iskeyword+=-
 " Provides tab-completion for all file-related tasks
 set path=.,**
 
-" Display all matching files when we tab complete
-set wildmenu
-
 " overwrite ftplugin/gitcommit.vim
 au FileType gitcommit setlocal tw=120
 
