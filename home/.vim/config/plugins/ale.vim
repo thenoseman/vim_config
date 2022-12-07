@@ -35,6 +35,7 @@ let g:ale_linters = {
 \   'terraform': [ 'tflint' ],
 \   'vue': [ 'eslint' ],
 \   'rust': [ 'analyzer' ],
+\   'lua' : [ 'selene' ]
 \}
 
 let g:ale_fixers = {
@@ -48,6 +49,7 @@ let g:ale_fixers = {
 \   'svelte': [ 'prettier', 'eslint' ],
 \   'vue': [ 'prettier', 'eslint'  ],
 \   'rust': [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
+\   'lua' : [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ]
 \}
 
 let g:ale_fix_on_save = 1
@@ -72,3 +74,6 @@ let g:ale_vue_vls_use_global = 1
 
 " JS/TS
 let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/tsserver'
+
+" Lua
+let g:ale_lua_stylua_options = '--indent-type Spaces --indent-width 2'
