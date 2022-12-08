@@ -3,3 +3,36 @@ extends javascript
 # ---------------------------
 # svelte
 # ---------------------------
+
+snippet each "each loop" b
+{#each ${1:things} as ${1/s$//}${2:, index}${3: (${1/s$//}.id)}}
+	$0
+{/each}
+endsnippet
+
+snippet disp "event dispatcher" b
+import { createEventDispatcher } from 'svelte';
+
+const dispatch = createEventDispatcher();
+endsnippet
+
+snippet onmount "onMount"
+import { ${1:onMount} } from 'svelte';
+
+${1}(${2:async }() => {
+	$0
+});
+endsnippet
+
+snippet $ "reactive block"
+$: {
+  $0
+}
+endsnippet
+
+# https://svelte.dev/tutorial/svelte-self
+snippet <s "<svelte:*>"
+<svelte:${1|head,self,fragment,component,elements,window,body,options|}>
+	$0
+</svelte:$1>
+endsnippet
