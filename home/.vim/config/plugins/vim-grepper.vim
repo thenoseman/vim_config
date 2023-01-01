@@ -7,6 +7,7 @@ let g:grepper = {
 \ 'rg': { 'grepprg':    g:homebrew_prefix .. '/bin/rg -H --no-heading --vimgrep -n --hidden -F',
 \         'grepformat': '%f:%l:%c:%m,%f',
 \         'escape':     '\^$.*+?()[]{}|' },
+\ 'stop': 1000
 \ }
 
 set grepprg=rg
