@@ -59,6 +59,10 @@ endif
 
 " load everything else in its own config file
 runtime! config/*.vim
-runtime! config/plugins/*.vim
 runtime! config/filetypes/*.vim
-runtime! assorted_scripts/*.vim
+
+if has("gui_running")
+  runtime! config/plugins/*.vim
+  runtime! assorted_scripts/*.vim
+endif
+
