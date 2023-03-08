@@ -35,7 +35,8 @@ let g:ale_linters = {
 \   'terraform': [ 'tflint' ],
 \   'vue': [ 'eslint' ],
 \   'rust': [ 'analyzer' ],
-\   'lua' : [ 'selene' ]
+\   'lua' : [ 'selene' ],
+\   'yaml' : [ 'yamllint' ] 
 \}
 
 let g:ale_fixers = {
@@ -49,7 +50,8 @@ let g:ale_fixers = {
 \   'svelte': [ 'prettier', 'eslint' ],
 \   'vue': [ 'prettier', 'eslint'  ],
 \   'rust': [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
-\   'lua' : [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ]
+\   'lua' : [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
+\   'yaml' : [ 'prettier' ] 
 \}
 
 let g:ale_fix_on_save = 1
@@ -77,3 +79,6 @@ let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/tsserver'
 
 " Lua
 let g:ale_lua_stylua_options = '--indent-type Spaces --indent-width 2'
+
+" YAML
+let g:ale_yaml_yamllint_options = '-c ~/yamllint.yml'
