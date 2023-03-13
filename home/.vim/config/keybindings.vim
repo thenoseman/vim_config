@@ -56,3 +56,6 @@ imap <c-space> <c-x><c-o>
 " Map 'g=' to indent whole buffer 
 nmap g= :call PreservePosition("normal gg=G")<CR>
 
+" ctrl-n and p for quickfix navigation without loosing focus
+autocmd FileType qf nnoremap <buffer> <C-n> :cn<CR><c-w>p   
+autocmd FileType qf nnoremap <buffer> <C-p> :cp<CR><c-w>p   
