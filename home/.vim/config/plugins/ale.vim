@@ -48,7 +48,7 @@ let g:ale_fixers = {
 \   'html': [ 'prettier' ],
 \   'haml': [ 'trim_whitespace' ],
 \   'svelte': [ 'prettier', 'eslint' ],
-\   'vue': [ 'prettier', 'eslint'  ],
+\   'vue': [ 'prettier', 'eslint' ],
 \   'rust': [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
 \   'lua' : [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
 \   'yaml' : [ 'prettier' ] 
@@ -67,9 +67,11 @@ let g:ale_linter_aliases = {
 let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
 
 " Prettier (https://github.com/prettier/prettier/blob/master/docs/options.md)
+" IMPORTANT: Tag the root of your repo with an (empty) .prettierignore file
+" See https://github.com/dense-analysis/ale/blob/master/autoload/ale/fixers/prettier.vim#L38
+"let g:ale_javascript_prettier_use_global = 1
 let g:ale_javascript_prettier_options = '--print-width 120 --trailing-comma es5 --plugin-search-dir=.'
 let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_javascript_prettier_use_global = 1
 
 " VUE
 let g:ale_vue_vls_use_global = 1
