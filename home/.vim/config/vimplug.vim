@@ -75,6 +75,9 @@ if has("gui_running")
   " Auto close (X)HTML tags (fork)
   Plug 'thenoseman/vim-closetag', { 'for': ['html', 'xml', 'svelte', 'vue'] }
 
+  " Rename nested tags if one tag changes
+  Plug 'AndrewRadev/tagalong.vim', { 'for': ['html', 'xml', 'svelte', 'vue'] }
+
   " HTML5 omnicomplete and syntax
   Plug 'othree/html5.vim', { 'for': 'html' }
 
