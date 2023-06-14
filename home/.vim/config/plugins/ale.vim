@@ -51,7 +51,8 @@ let g:ale_fixers = {
 \   'vue': [ 'prettier', 'eslint' ],
 \   'rust': [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
 \   'lua' : [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
-\   'yaml' : [ 'prettier' ] 
+\   'yaml' : [ 'prettier' ],
+\   'hcl' : [ 'packer' ] 
 \}
 
 let g:ale_fix_on_save = 1
@@ -84,3 +85,6 @@ let g:ale_lua_stylua_options = '--indent-type Spaces --indent-width 2'
 
 " YAML
 let g:ale_yaml_yamllint_options = '-c ~/yamllint.yml'
+
+" HCL
+let g:ale_packer_fmt_executable = g:homebrew_prefix .. '/bin/packer'
