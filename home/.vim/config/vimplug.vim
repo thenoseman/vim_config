@@ -72,8 +72,8 @@ if has("gui_running")
   " Markup
   "
 
-  " Auto close (X)HTML tags
-  Plug 'alvan/vim-closetag', { 'for': ['html', 'xml', 'svelte', 'vue'] }
+  " Auto close (X)HTML tags (fork)
+  Plug 'thenoseman/vim-closetag', { 'for': ['html', 'xml', 'svelte', 'vue'] }
 
   " HTML5 omnicomplete and syntax
   Plug 'othree/html5.vim', { 'for': 'html' }
