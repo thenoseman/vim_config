@@ -4,18 +4,18 @@ snippet here "here document (here)"
 ${1/['"`](.+)['"`]/$1/}
 endsnippet
 
-snippet if "if ... then (if)"
-if ${2:[[ ${1:condition} ]]}; then
-	${0:#statements}
-fi
-endsnippet
-
 snippet sh "shellcheck disable"
 # shellcheck disable=SC${0}
 endsnippet
 
 snippet #! "shebang"
 #!/usr/bin/env bash
+endsnippet
+
+snippet b-empty  "if var empty"
+if [[ -z "${1}" ]]; then
+  ${0}
+fi
 endsnippet
 
 # vim:ft=snippets:
