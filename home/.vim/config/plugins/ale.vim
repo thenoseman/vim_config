@@ -52,7 +52,8 @@ let g:ale_fixers = {
 \   'rust': [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
 \   'lua' : [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
 \   'yaml' : [ 'prettier' ],
-\   'hcl' : [ 'packer' ] 
+\   'hcl' : [ 'packer' ],
+\   'sh' : [ 'shfmt' ] 
 \}
 
 let g:ale_fix_on_save = 1
