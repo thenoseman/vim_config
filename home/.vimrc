@@ -30,9 +30,6 @@ set shortmess=filmnrxtTIc
 " turn filetype settings off so that stuff gets loaded from pathogen
 filetype off
 
-" initialize matchit.vim
-packadd! matchit
-
 " turn on all filetype settings, syntax, etc.
 filetype plugin indent on
 syntax on

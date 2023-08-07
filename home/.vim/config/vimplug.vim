@@ -17,6 +17,9 @@ Plug 'tpope/vim-repeat'
 " surround.vim: quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
+" https://github.com/andymass/vim-matchup
+Plug 'andymass/vim-matchup'
+
 "
 " Only if runnning in gvim 
 " 
