@@ -34,11 +34,7 @@ filetype off
 filetype plugin indent on
 syntax on
 
-if has('unix')
-  set runtimepath+=~/.vim/config
-else
-  set runtimepath+=~/vimfiles/config
-endif
+set runtimepath+=~/.vim/config
 
 " Python 3.7 ("DeprecationWarning: The imp module is deprecated in favour of importlib;")
 if has('python3')

@@ -1,144 +1,147 @@
-call plug#begin('~/.vim/bundles')
-
-" Plug 'tweekmonster/startuptime.vim'
-
-" Replace text with the contents of a register (https://github.com/vim-scripts/ReplaceWithRegister)
-Plug 'inkarkat/vim-ReplaceWithRegister'
-
-" A lightweight implementation of emacs's kill-ring for vim
-Plug 'maxbrunsfeld/vim-yankstack'
-
-" A Git wrapper so awesome, it should be illegal
-Plug 'tpope/vim-fugitive'
-
-" repeat.vim: enable repeating supported plugin maps with '.'
-Plug 'tpope/vim-repeat'
-
-" surround.vim: quoting/parenthesizing made simple
-Plug 'tpope/vim-surround'
-
-" https://github.com/andymass/vim-matchup
-Plug 'andymass/vim-matchup'
-
-"
-" Only if runnning in gvim 
-" 
+" Only in GUI vim
 if has("gui_running")
-  " Context filetype library for Vim script
-  Plug 'Shougo/context_filetype.vim'
+  call plug#begin('~/.vim/bundles')
 
-  " Create your own text objects
-  Plug 'kana/vim-textobj-user'
+  " Plug 'tweekmonster/startuptime.vim'
 
-  " vim-textobj-function is a Vim plugin to text objects for functions
-  Plug 'kana/vim-textobj-function'
+  " Replace text with the contents of a register (https://github.com/vim-scripts/ReplaceWithRegister)
+  Plug 'inkarkat/vim-ReplaceWithRegister'
 
-  " Helps you win at grep
-  Plug 'mhinz/vim-grepper'
+  " A lightweight implementation of emacs's kill-ring for vim
+  Plug 'maxbrunsfeld/vim-yankstack'
 
-  " Global search and replace in quickfix window
-  Plug 'stefandtw/quickfix-reflector.vim'
+  " A Git wrapper so awesome, it should be illegal
+  Plug 'tpope/vim-fugitive'
 
-  " Wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
-  Plug 'tpope/vim-endwise'
+  " repeat.vim: enable repeating supported plugin maps with '.'
+  Plug 'tpope/vim-repeat'
 
-  " Vim comment plugin 
-  Plug 'tpope/vim-commentary'
+  " surround.vim: quoting/parenthesizing made simple
+  Plug 'tpope/vim-surround'
 
-  " Multiple languages/comment types per file (eg. .vue files)
-  Plug 'suy/vim-context-commentstring'
-
-  " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
-  Plug 'dense-analysis/ale'
-
-  " Automatic :nohlsearch
-  Plug 'romainl/vim-cool'
-
-  " projectionist.vim: Granular project configuration
-  Plug 'tpope/vim-projectionist'
-
+  " https://github.com/andymass/vim-matchup
+  Plug 'andymass/vim-matchup'
 
   "
-  " Common tools
-  "
+  " Only if runnning in gvim 
+  " 
+  if has("gui_running")
+    " Context filetype library for Vim script
+    Plug 'Shougo/context_filetype.vim'
 
-  " fzf for file search in vim
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    " Create your own text objects
+    Plug 'kana/vim-textobj-user'
 
-  " A tree explorer plugin for vim.
-  Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
+    " vim-textobj-function is a Vim plugin to text objects for functions
+    Plug 'kana/vim-textobj-function'
 
-  " Async auto completion like vscode
-  Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets coc-rust-analyzer'}
+    " Helps you win at grep
+    Plug 'mhinz/vim-grepper'
 
-  "
-  " Markup
-  "
+    " Global search and replace in quickfix window
+    Plug 'stefandtw/quickfix-reflector.vim'
 
-  " Auto close (X)HTML tags (fork)
-  Plug 'thenoseman/vim-closetag', { 'for': ['html', 'xml', 'svelte', 'vue'] }
+    " Wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+    Plug 'tpope/vim-endwise'
 
-  " HTML5 omnicomplete and syntax
-  Plug 'othree/html5.vim', { 'for': 'html' }
+    " Vim comment plugin 
+    Plug 'tpope/vim-commentary'
 
-  " Vim runtime files for Haml, Sass, and SCSS
-  Plug 'tpope/vim-haml', { 'for': [ 'haml' ]}
+    " Multiple languages/comment types per file (eg. .vue files)
+    Plug 'suy/vim-context-commentstring'
 
-  " SCSS Syntax highlighting
-  Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue', 'svelte'] }
+    " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+    Plug 'dense-analysis/ale'
 
-  " Pug (ex Jade)
-  Plug 'digitaltoad/vim-pug', { 'for': ['vue', 'pug', 'svelte'] }
+    " Automatic :nohlsearch
+    Plug 'romainl/vim-cool'
 
-  "
-  " Infrastructure
-  "
+    " projectionist.vim: Granular project configuration
+    Plug 'tpope/vim-projectionist'
 
-  " Vim syntax file & snippets for Docker's Dockerfile
-  Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 
-  " basic vim/terraform integration
-  Plug 'hashivim/vim-terraform', { 'for': 'terraform'}
+    "
+    " Common tools
+    "
 
-  "
-  " Javascript-like
-  "
+    " fzf for file search in vim
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-  " A better JSON for Vim
-  Plug 'elzr/vim-json', { 'for': 'json' }
+    " A tree explorer plugin for vim.
+    Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 
-  " Svelte JavaScript syntax highlighting for vim
-  Plug 'evanleck/vim-svelte', { 'for': 'svelte', 'branch': 'main' }
+    " Async auto completion like vscode
+    Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets coc-rust-analyzer'}
 
-  " bundle provides syntax highlighting and improved indentation
-  Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'svelte' ]}
+    "
+    " Markup
+    "
 
-  " Vue
-  Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
+    " Auto close (X)HTML tags (fork)
+    Plug 'thenoseman/vim-closetag', { 'for': ['html', 'xml', 'svelte', 'vue'] }
 
-  " Javascript text objects (vif, daf, ...)
-  Plug 'thenoseman/vim-textobj-function-javascript', { 'for': ['javascript', 'vue', 'svelte'] }
+    " HTML5 omnicomplete and syntax
+    Plug 'othree/html5.vim', { 'for': 'html' }
 
-  "
-  " Ruby
-  "
+    " Vim runtime files for Haml, Sass, and SCSS
+    Plug 'tpope/vim-haml', { 'for': [ 'haml' ]}
 
-  " Better rspec syntax highlighting for Vim
-  Plug 'keith/rspec.vim', { 'for': 'rspec' }
+    " SCSS Syntax highlighting
+    Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue', 'svelte'] }
 
-  " rails.vim: Ruby on Rails power tools
-  Plug 'tpope/vim-rails', { 'for': ['ruby', 'rspec'] }
+    " Pug (ex Jade)
+    Plug 'digitaltoad/vim-pug', { 'for': ['vue', 'pug', 'svelte'] }
 
-  " Vim/Ruby Configuration Files
-  Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rspec'] }
+    "
+    " Infrastructure
+    "
 
-  " Ruby textobjects
-  Plug 'tek/vim-textobj-ruby', { 'for': ['ruby', 'rspec'] }
+    " Vim syntax file & snippets for Docker's Dockerfile
+    Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 
-  "
-  " Rust
-  "
-  Plug 'rust-lang/rust.vim', { 'for': [ 'rust' ]}
+    " basic vim/terraform integration
+    Plug 'hashivim/vim-terraform', { 'for': 'terraform'}
+
+    "
+    " Javascript-like
+    "
+
+    " A better JSON for Vim
+    Plug 'elzr/vim-json', { 'for': 'json' }
+
+    " Svelte JavaScript syntax highlighting for vim
+    Plug 'evanleck/vim-svelte', { 'for': 'svelte', 'branch': 'main' }
+
+    " bundle provides syntax highlighting and improved indentation
+    Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'svelte' ]}
+
+    " Vue
+    Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
+
+    " Javascript text objects (vif, daf, ...)
+    Plug 'thenoseman/vim-textobj-function-javascript', { 'for': ['javascript', 'vue', 'svelte'] }
+
+    "
+    " Ruby
+    "
+
+    " Better rspec syntax highlighting for Vim
+    Plug 'keith/rspec.vim', { 'for': 'rspec' }
+
+    " rails.vim: Ruby on Rails power tools
+    Plug 'tpope/vim-rails', { 'for': ['ruby', 'rspec'] }
+
+    " Vim/Ruby Configuration Files
+    Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rspec'] }
+
+    " Ruby textobjects
+    Plug 'tek/vim-textobj-ruby', { 'for': ['ruby', 'rspec'] }
+
+    "
+    " Rust
+    "
+    Plug 'rust-lang/rust.vim', { 'for': [ 'rust' ]}
+  endif
+
+  call plug#end()
 endif
-
-call plug#end()
