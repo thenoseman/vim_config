@@ -22,6 +22,9 @@ if has("gui_running")
   " https://github.com/andymass/vim-matchup
   Plug 'andymass/vim-matchup'
 
+  " https://github.com/pechorin/any-jump.vim
+  Plug 'pechorin/any-jump.vim'
+
   "
   " Only if runnning in gvim 
   " 
