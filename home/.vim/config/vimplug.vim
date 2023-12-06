@@ -140,6 +140,7 @@ if has("gui_running")
     "
     " Rust
     "
+    "
     Plug 'rust-lang/rust.vim', { 'for': [ 'rust' ]}
   endif
 

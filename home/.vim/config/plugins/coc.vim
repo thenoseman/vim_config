@@ -71,3 +71,9 @@ nmap <silent> gd <Plug>(coc-definition)
 
 " Deactivate for filetypes
 autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
+
+" For typscript files open locationlist with errors reported by LSP on save
+autocmd BufWritePost *.ts call timer_start(1000, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
+
+" Highlight errors inline
+highlight CocErrorHighlight gui=undercurl

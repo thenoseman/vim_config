@@ -119,6 +119,13 @@ highlight markdownLineBreak ctermbg=4 guibg=#333435
 " Folding sucks
 highlight Folded term=bold ctermfg=7 ctermbg=52 gui=bold guifg=#E6E1DC guibg=#660000
 
+"
 " coc.nvim now has it's own popup
+"
 "hi CocSearch ctermfg=12 guifg=#18A3FF
 hi CocMenuSel guifg=#000000 guibg=#A5C261 gui=NONE
+
+" Highlight errors inline
+hi CocErrorHighlight gui=undercurl
+hi CocHintHighlight gui=undercurl guisp=#FFC66D
+
