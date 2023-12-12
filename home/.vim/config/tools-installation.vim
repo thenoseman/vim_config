@@ -9,5 +9,3 @@ if has("gui_running")
   endif
 endif
 
-" Turn off html rendering (:h html.vim)
-let html_no_rendering=1

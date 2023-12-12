@@ -6,11 +6,6 @@
 au VimEnter * set t_Co=256
 
 colorscheme railscasts
-" if has('gui_running')
-"   colorscheme railscasts
-" else
-"   colorscheme railscasts-console
-" endif
 
 " Show cursor line
 set cul
@@ -24,13 +19,22 @@ if has('gui_running')
   else
     set guifont=InconsolataGo\ Nerd\ Font\ Mono:h14.00  
   endif
+
+  "" gui options
+  " c - Use console dialogs instead of popup dialogs for simple choices.
+  " 
+  " more interesting, what is absent: no menu, no toolbar, no scrollbars.
+  set guioptions=c
+
+  " display base project name and full path to file in title of window
+  autocmd! BufEnter * let &titlestring="[" . split(getcwd(),"/")[-1] . "]" . expand("%")
+
+  " Disable ESC key delay in insert mode
+  " http://ksjoberg.com/vim-esckeys.html
+  " Breaks cursor keys in terminal vim
+  set noesckeys
 else
   set guifont=InconsolataGo\ Nerd\ Font\ Mono:h8.00  
-endif
-
-" Bigger for Windows
-if !has("unix")
-  set columns=999 lines=999
 endif
 
 set laststatus=2   " always display a status line
@@ -56,3 +60,6 @@ set t_ti= t_te=
 
 " faster keystroke sending
 set ttyfast
+
+" Turn off html rendering (:h html.vim)
+let html_no_rendering=1

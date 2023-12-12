@@ -110,3 +110,12 @@ au FileType gitcommit setlocal tw=120
 " Scale font with ctrl+shift+Up or Down Keys
 nnoremap <c-s-Up> :silent! let &guifont = substitute(&guifont,':h\zs\d\+','\=eval(submatch(0)+2)','')<CR>
 nnoremap <c-s-Down> :silent! let &guifont = substitute(&guifont,':h\zs\d\+','\=eval(submatch(0)-2)','')<CR>
+
+" Settings that control tab-completion,
+" wildcard menus, etc.
+set wildmenu
+set wildmode=longest:full,full
+set wildoptions=pum
+
+set completeopt=menu,preview,longest " complete options
+set dictionary+=/usr/share/dict/words "use mac words file for <c-x><c-k>
