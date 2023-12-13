@@ -121,6 +121,9 @@ if has("gui_running")
     " Javascript text objects (vif, daf, ...)
     Plug 'thenoseman/vim-textobj-function-javascript', { 'for': ['javascript', 'vue', 'svelte'] }
 
+    " The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file.
+    Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['javascriptreact'] }
+
     "
     " Ruby
     "
