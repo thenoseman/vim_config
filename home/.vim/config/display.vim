@@ -63,3 +63,6 @@ set ttyfast
 
 " Turn off html rendering (:h html.vim)
 let html_no_rendering=1
+
+" Ported from https://neovim.io/doc/user/options.html#'jumpoptions'
+set jumpoptions=stack
