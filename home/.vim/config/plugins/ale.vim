@@ -17,6 +17,8 @@ let g:ale_sign_error = '💀'
 let g:ale_sign_warning = '🤔'
 let g:ale_sign_highlight_linenrs = 1
 
+let g:ale_disable_lsp=1
+
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
@@ -42,6 +44,12 @@ let g:ale_linters = {
 \   'yaml' : [ 'yamllint' ] 
 \}
 
+let g:ale_linter_aliases = {
+\   'rspec': 'ruby',
+\   'svelte': ['css', 'javascript', 'html'],
+\   'vue': ['css', 'javascript', 'html'],
+\}
+
 let g:ale_fixers = {
 \   'javascript': [ 'prettier', 'eslint' ],
 \   'typescript': [ 'eslint' ],
@@ -60,14 +68,15 @@ let g:ale_fixers = {
 \   'sh' : [ 'shfmt' ] 
 \}
 
+" Disable all LSPs since we have COC.cim for that. This also disabled
+" terraform-lsp
+let g:ale_disable_lsp = 1
+let g:ale_lsp_suggestions = 0
+let g:ale_popup_menu_enabled = 0
+
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
 
-let g:ale_linter_aliases = {
-\   'rspec': 'ruby',
-\   'svelte': ['css', 'javascript', 'html'],
-\   'vue': ['css', 'javascript', 'html'],
-\}
 
 " TIDY
 let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
@@ -83,7 +92,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_vue_vls_use_global = 1
 
 " JS/TS
-let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/tsserver'
+"let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/managed-by-coc-and-here-disabled'
 
 " Lua
 let g:ale_lua_stylua_options = '--indent-type Spaces --indent-width 2'
