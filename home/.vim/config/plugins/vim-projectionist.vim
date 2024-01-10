@@ -1,3 +1,4 @@
+" https://github.com/tpope/vim-projectionist/blob/master/doc/projectionist.txt
 let g:projectionist_heuristics = {
   \   "*.gemspec": {
   \     "app/models/*.rb": { "alternate": "spec/models/{}_spec.rb" },
