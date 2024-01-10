@@ -9,15 +9,19 @@ let g:projectionist_heuristics = {
   \   },
   \   "package.json": {
   \     "src/*.js": {
-  \       "alternate": ["tests/unit/{}.spec.js"],
+  \       "alternate": ["tests/unit/{}.spec.js", "test/unit/{}.spec.js"],
   \       "type": "source"
   \     },
   \     "src/*.vue": {
-    \       "alternate": ["tests/unit/{}.spec.js", "tests/unit/{dirname}.spec.js", "tests/unit/{dirname}/{dirname|basename}.spec.js"],
+  \       "alternate": ["tests/unit/{}.spec.js", "tests/unit/{dirname}.spec.js", "tests/unit/{dirname}/{dirname|basename}.spec.js"],
   \       "type": "source"
   \     },
   \     "tests/unit/*.spec.js": {
   \       "alternate": ["src/{}.vue", "src/{}.js", "src/{}/index.vue", "src/{dirname|basename}/index.vue", "src/{dirname}/index.vue"],
+  \       "type": "test"
+  \     },
+  \     "test/unit/*.spec.js": {
+  \       "alternate": ["src/{}.js"],
   \       "type": "test"
   \     }
   \   }
