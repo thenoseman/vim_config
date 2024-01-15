@@ -9,7 +9,7 @@
   "suggest.floatConfig": { "title": "Suggest:", "border": true, "borderhighlight": "CocFloatBorder" },
   "tsserver.formatOnType": false,
   "tsserver.reportStyleChecksAsWarnings": false,
-  "typescript.suggest.autoImports": false,
+  "typescript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enable": "never",
   "javascript.preferences.quoteStyle": "double",
   "javascript.format.enabled": false,
