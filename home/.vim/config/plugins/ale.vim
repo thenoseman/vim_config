@@ -77,6 +77,9 @@ let g:ale_popup_menu_enabled = 0
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
 
+" Disable fixers for any path containing 'something' in its path.
+" See https://github.com/dense-analysis/ale/issues/1378
+let g:ale_pattern_options = {'/coms/': {'ale_fixers': { 'json': [], 'javascript' : [ 'eslint' ] }}}
 
 " TIDY
 let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
@@ -85,7 +88,7 @@ let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
 " IMPORTANT: Tag the root of your repo with an (empty) .prettierignore file
 " See https://github.com/dense-analysis/ale/blob/master/autoload/ale/fixers/prettier.vim#L38
 "let g:ale_javascript_prettier_use_global = 1
-let g:ale_javascript_prettier_options = '--print-width 120 --trailing-comma es5 --plugin-search-dir=.'
+let g:ale_javascript_prettier_options = '--print-width 120 --plugin-search-dir=.'
 let g:ale_javascript_prettier_use_local_config = 1
 
 " VUE
