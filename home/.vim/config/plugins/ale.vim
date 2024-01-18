@@ -2,8 +2,17 @@
 " Config for ALE plugin
 "
 " https://github.com/dense-analysis/ale/blob/master/doc/ale.txt
-"
+" :h ale#fix#registry#Add()
 scriptencoding utf-8
+
+
+function! FormatJsonViaBiome(buffer) abort
+  return {
+  \   'command': 'biome format --stdin-file-path=file.json'
+  \}
+endfunction
+
+execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json'], 'format JSON via biome')
 
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
 
@@ -53,7 +62,7 @@ let g:ale_linter_aliases = {
 let g:ale_fixers = {
 \   'javascript': [ 'prettier', 'eslint' ],
 \   'typescript': [ 'eslint' ],
-\   'json': [ 'prettier' ],
+\   'json': [ 'biomefmt' ],
 \   'ruby': [ 'standardrb' ],
 \   'rspec': [ 'standardrb' ],
 \   'terraform': [ 'terraform' ],
