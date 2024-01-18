@@ -88,7 +88,7 @@ let g:ale_linters_explicit = 1
 
 " Disable fixers for any path containing 'something' in its path.
 " See https://github.com/dense-analysis/ale/issues/1378
-let g:ale_pattern_options = {'/coms/': {'ale_fixers': { 'json': [], 'javascript' : [ 'eslint' ] }}}
+let g:ale_pattern_options = {'/some-path-just-a-demo-for-now/': {'ale_fixers': { 'json': [], 'javascript' : [ 'eslint' ] }}}
 
 " TIDY
 let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
