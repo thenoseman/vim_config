@@ -1,5 +1,6 @@
 augroup vim_config
   autocmd FileType javascript call JavascriptConfigure()
+  autocmd FileType typescript call JavascriptConfigure()
 augroup END
 
 " http://www.vimregex.com/
