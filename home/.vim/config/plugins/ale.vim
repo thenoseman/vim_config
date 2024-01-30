@@ -2,18 +2,20 @@
 " Config for ALE plugin
 "
 " https://github.com/dense-analysis/ale/blob/master/doc/ale.txt
-" :h ale#fix#registry#Add()
 scriptencoding utf-8
 
+" Custom format JSON via biome
+" biome is now implemented in ALE so this is just a demonstration
+" How to implement custom formatters
 
-function! FormatJsonViaBiome(buffer) abort
-  return {
-  \   'command': 'biome format --stdin-file-path=file.json'
-  \}
-endfunction
+"function! FormatJsonViaBiome(buffer) abort
+"  return {
+"  \   'command': 'biome format --stdin-file-path=file.json'
+"  \}
+"endfunction
+"execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json'], 'format JSON via biome')
 
-execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json'], 'format JSON via biome')
-
+" Toggle formatter on/off
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
 
 let g:ale_completion_tsserver_autoimport = 1
@@ -26,58 +28,7 @@ let g:ale_sign_error = '💀'
 let g:ale_sign_warning = '🤔'
 let g:ale_sign_highlight_linenrs = 1
 
-let g:ale_disable_lsp=1
-
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" SHELLCHECK use extended mode
-let g:ale_sh_shellcheck_executable = 'shellcheck'
-let g:ale_sh_shellcheck_options = '-x'
-
-let g:ale_linters = {
-\   'ruby': ['standardrb'],
-\   'rspec': ['standardrb'],
-\   'html': [ '' ],
-\   'haml': [ 'htmllint' ],
-\   'cpp' : [ 'g++' ],
-\   'sh' : [ 'shellcheck' ],
-\   'javascript' : [ 'eslint' ],
-\   'typescript' : [ 'eslint' ],
-\   'json' : [ 'jsonlint' ],
-\   'svelte': [ 'eslint' ],
-\   'terraform': [ 'tflint' ],
-\   'vue': [ 'eslint' ],
-\   'rust': [ 'analyzer' ],
-\   'lua' : [ 'selene' ],
-\   'yaml' : [ 'yamllint' ] 
-\}
-
-let g:ale_linter_aliases = {
-\   'rspec': 'ruby',
-\   'svelte': ['css', 'javascript', 'html'],
-\   'vue': ['css', 'javascript', 'html'],
-\}
-
-let g:ale_fixers = {
-\   'javascript': [ 'prettier', 'eslint' ],
-\   'typescript': [ 'eslint' ],
-\   'json': [ 'biomefmt' ],
-\   'ruby': [ 'standardrb' ],
-\   'rspec': [ 'standardrb' ],
-\   'terraform': [ 'terraform' ],
-\   'html': [ 'prettier' ],
-\   'haml': [ 'trim_whitespace' ],
-\   'svelte': [ 'prettier', 'eslint' ],
-\   'vue': [ 'prettier', 'eslint' ],
-\   'rust': [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
-\   'lua' : [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
-\   'yaml' : [ 'prettier' ],
-\   'hcl' : [ 'packer' ],
-\   'sh' : [ 'shfmt' ] 
-\}
-
-" Disable all LSPs since we have COC.cim for that. This also disabled
+" Disable all LSPs since we have COC.cim for that. This also disables
 " terraform-lsp
 let g:ale_disable_lsp = 1
 let g:ale_lsp_suggestions = 0
@@ -86,9 +37,61 @@ let g:ale_popup_menu_enabled = 0
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
 
-" Disable fixers for any path containing 'something' in its path.
+" Specify fixers for any path containing '/something/' in its path. Disable
+" fixers by specifying [] 
 " See https://github.com/dense-analysis/ale/issues/1378
 let g:ale_pattern_options = {'/some-path-just-a-demo-for-now/': {'ale_fixers': { 'json': [], 'javascript' : [ 'eslint' ] }}}
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+let g:ale_linters = {
+\   'ruby':        [ 'standardrb'],
+\   'rspec':       [ 'standardrb'],
+\   'html':        [ '' ],
+\   'haml':        [ 'hamllint' ],
+\   'cpp' :        [ 'g++' ],
+\   'sh' :         [ 'shellcheck' ],
+\   'javascript' : [ 'eslint' ],
+\   'typescript' : [ 'eslint' ],
+\   'json' :       [ 'jsonlint' ],
+\   'svelte':      [ 'eslint' ],
+\   'terraform':   [ 'tflint' ],
+\   'vue':         [ 'eslint' ],
+\   'rust':        [ 'analyzer' ],
+\   'lua' :        [ 'selene' ],
+\   'yaml' :       [ 'yamllint' ] 
+\}
+
+" aliases: NEW => OLD
+let g:ale_linter_aliases = {
+\   'rspec':  [ 'ruby'],
+\   'svelte': [ 'css', 'javascript', 'html'],
+\   'vue':    [ 'css', 'javascript', 'html'],
+\   'jsonc':  [ 'json' ],
+\}
+
+let g:ale_fixers = {
+\   'javascript': [ 'prettier', 'eslint' ],
+\   'typescript': [ 'eslint' ],
+\   'json':       [ 'biome' ],
+\   'ruby':       [ 'standardrb' ],
+\   'rspec':      [ 'standardrb' ],
+\   'terraform':  [ 'terraform' ],
+\   'html':       [ 'prettier' ],
+\   'haml':       [ 'trim_whitespace' ],
+\   'svelte':     [ 'prettier', 'eslint' ],
+\   'vue':        [ 'prettier', 'eslint' ],
+\   'rust':       [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
+\   'lua' :       [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
+\   'yaml' :      [ 'prettier' ],
+\   'hcl' :       [ 'packer' ],
+\   'sh' :        [ 'shfmt' ] 
+\}
+
+" SHELLCHECK use extended mode
+let g:ale_sh_shellcheck_executable = 'shellcheck'
+let g:ale_sh_shellcheck_options = '-x'
 
 " TIDY
 let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
