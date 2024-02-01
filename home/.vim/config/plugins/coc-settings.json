@@ -21,6 +21,8 @@
 	},
 	"tsserver.formatOnType": false,
 	"tsserver.reportStyleChecksAsWarnings": false,
+	"tsserver.tsdk": "./node_modules/typescript/lib",
+	"tsserver.useLocalTsdk": true,
 	"typescript.suggest.autoImports": true,
 	"javascript.updateImportsOnFileMove.enable": "never",
 	"javascript.preferences.quoteStyle": "double",
