@@ -18,6 +18,12 @@ if [[ -z "${1}" ]]; then
 fi
 endsnippet
 
+snippet n-empty  "if var ! empty"
+if [[ -n "${1}" ]]; then
+  ${0}
+fi
+endsnippet
+
 snippet loop "read lines from command loop"
 while read -r line; do
 	${0:echo "$line"}
