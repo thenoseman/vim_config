@@ -8,12 +8,12 @@ scriptencoding utf-8
 " biome is now implemented in ALE so this is just a demonstration
 " How to implement custom formatters
 
-"function! FormatJsonViaBiome(buffer) abort
-"  return {
-"  \   'command': 'biome format --stdin-file-path=file.json'
-"  \}
-"endfunction
-"execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json'], 'format JSON via biome')
+function! FormatJsonViaBiome(buffer) abort
+  return {
+  \   'command': 'biome format --stdin-file-path=file.json'
+  \}
+endfunction
+execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json'], 'format JSON via biome')
 
 " Toggle formatter on/off
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
@@ -74,7 +74,7 @@ let g:ale_linter_aliases = {
 let g:ale_fixers = {
 \   'javascript': [ 'prettier', 'eslint' ],
 \   'typescript': [ 'eslint' ],
-\   'json':       [ 'biome' ],
+\   'json':       [ 'biomefmt' ],
 \   'ruby':       [ 'standardrb' ],
 \   'rspec':      [ 'standardrb' ],
 \   'terraform':  [ 'terraform' ],
