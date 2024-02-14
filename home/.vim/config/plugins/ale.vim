@@ -75,6 +75,7 @@ let g:ale_fixers = {
 \   'javascript': [ 'prettier', 'eslint' ],
 \   'typescript': [ 'eslint' ],
 \   'json':       [ 'biomefmt' ],
+\   'jsonc':      [ 'biomefmt' ],
 \   'ruby':       [ 'standardrb' ],
 \   'rspec':      [ 'standardrb' ],
 \   'terraform':  [ 'terraform' ],
