@@ -10,6 +10,9 @@ colorscheme railscasts
 " Show cursor line
 set cul
 
+" 24 bit colors please
+set termguicolors
+
 "
 " New Font
 "
