@@ -128,4 +128,5 @@ hi CocMenuSel guifg=#000000 guibg=#A5C261 gui=NONE
 " Highlight errors inline
 hi CocErrorHighlight gui=undercurl
 hi CocHintHighlight gui=undercurl guisp=#FFC66D
-
+hi FgCocErrorFloatBgCocFloating guifg=#dddddd
+hi CocUnusedHighlight guibg=#777777
