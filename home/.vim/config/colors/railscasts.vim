@@ -130,3 +130,10 @@ hi CocErrorHighlight gui=undercurl
 hi CocHintHighlight gui=undercurl guisp=#FFC66D
 hi FgCocErrorFloatBgCocFloating guifg=#dddddd
 hi CocUnusedHighlight guibg=#777777
+
+hi ALEVirtualTextError guifg=#73634c
+hi ALEVirtualTextWarning guifg=#73634c
+
+" hi ALEVirtualTextInfo
+" hi ALEVirtualTextStyleError
+" hi ALEVirtualTextStyleWarning
