@@ -1,3 +1,4 @@
+# vim:ft=snippets:
 snippet here "here document (here)"
 <<-${2:'${1:EOF}'}
   $0
@@ -30,4 +31,8 @@ while read -r line; do
 done <<<"$(${1})"
 endsnippet
 
-# vim:ft=snippets:
+snippet include "includes a string"
+if [[ $${1:variable} == *"${2:text}"* ]]; then
+  ${3:echo "It's there!"}
+fi
+endsnippet
