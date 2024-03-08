@@ -23,14 +23,15 @@
 	"tsserver.reportStyleChecksAsWarnings": false,
 	"tsserver.tsdk": "./node_modules/typescript/lib",
 	"tsserver.useLocalTsdk": true,
-	"typescript.suggest.autoImports": true,
+	"typescript.suggest.autoImports": false,
+	"typescript.referencesCodeLens.enabled": true,
 	"javascript.updateImportsOnFileMove.enable": "never",
 	"javascript.preferences.quoteStyle": "double",
 	"javascript.format.enabled": false,
 	"javascript.preferences.quoteStyle": "double",
 	"diagnostic.errorSign": "💀",
 	"diagnostic.warningSign": "🤔",
-	"diagnostic.infoSign": "ℹ️",
+	"diagnostic.infoSign": "i",
 	"diagnostic.hintSign": "!",
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.virtualText": false,
@@ -38,7 +39,8 @@
 	"diagnostic.floatConfig": {
 		"title": "Diagnostics:",
 		"border": true,
-		"borderhighlight": "CocFloatBorder"
+		"borderhighlight": "CocFloatBorder",
+		"maxWidth": 160
 	},
 	"snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
 	"snippets.textmateSnippetsRoots": ["~/.vim/config/private_snippets"],

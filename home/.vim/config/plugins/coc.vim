@@ -26,8 +26,8 @@ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<C
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <leader>k :CocCommand rust-analyzer.openDocs<CR>
 
-" rename via F2
-nmap <F2> <Plug>(coc-rename)
+" Find references
+nmap <F2> <Plug>(coc-references)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
