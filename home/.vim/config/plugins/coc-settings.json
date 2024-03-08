@@ -4,6 +4,7 @@
 		"border": true,
 		"borderhighlight": "CocFloatBorder"
 	},
+	"coc.preferences.useQuickfixForLocations": true,
 	"coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
 	"coc.preferences.extensionUpdateCheck": "weekly",
 	"hover.floatConfig": {
