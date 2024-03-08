@@ -60,5 +60,7 @@
 	"rust-analyzer.procMacro.enable": true,
 	"rust-analyzer.cargo.loadOutDirsFromCheck": true,
 	"rust-analyzer.updates.channel": "nightly",
-	"snippets.ultisnips.pythonPrompt": false
+	"snippets.ultisnips.pythonPrompt": false,
+	"volar.disableFormatting": true,
+	"vue.inlayHints.missingProps": true
 }

@@ -71,7 +71,7 @@ if has("gui_running")
     Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 
     " Async auto completion like vscode
-    Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets coc-rust-analyzer'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets coc-rust-analyzer @yaegassy/coc-volar'}
 
     "
     " Markup
