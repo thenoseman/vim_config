@@ -62,5 +62,11 @@
 	"rust-analyzer.updates.channel": "nightly",
 	"snippets.ultisnips.pythonPrompt": false,
 	"volar.disableFormatting": true,
-	"vue.inlayHints.missingProps": true
+	"vue.inlayHints.missingProps": true,
+	"ltex.enabled": ["latex", "markdown"],
+	"ltex.language": "en-US",
+	"ltex.additionalRules.enablePickyRules": true,
+	"ltex.additionalRules.motherTongue": "de-DE",
+	"ltex.languageToolHttpServerUri": "http://languagetool-63c3b72e77bffb46.elb.eu-central-1.amazonaws.com:8010/",
+	"ltex.checkFrequency": "save"
 }
