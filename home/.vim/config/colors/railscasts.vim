@@ -126,7 +126,8 @@ highlight Folded term=bold ctermfg=7 ctermbg=52 gui=bold guifg=#E6E1DC guibg=#66
 hi CocMenuSel guifg=#000000 guibg=#A5C261 gui=NONE
 
 " Highlight errors inline
-hi CocErrorHighlight gui=undercurl
+hi CocErrorHighlight gui=undercurl guisp=#FF0000
+hi CocInfoHighlight gui=undercurl guisp=#FFC66D
 hi CocHintHighlight gui=undercurl guisp=#FFC66D
 hi FgCocErrorFloatBgCocFloating guifg=#dddddd
 hi CocUnusedHighlight guibg=#777777
