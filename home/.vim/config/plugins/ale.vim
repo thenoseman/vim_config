@@ -39,8 +39,21 @@ let g:ale_linters_explicit = 1
 
 " Specify fixers for any path containing '/something/' in its path. Disable
 " fixers by specifying [] 
+"
+" This allow to set any ale_* variable per path match.
+" 
 " See https://github.com/dense-analysis/ale/issues/1378
-let g:ale_pattern_options = {'/consent-management/': {'ale_fixers': { 'json': [ 'biomefmt' ], 'jsonc': [ 'biomefmt' ], 'javascript' : [ 'eslint' ], 'html' : [ 'trim_whitespace' ] }}}
+let g:ale_pattern_options = {
+\   '/consent-management/': {
+\     'ale_fix_on_save': 1,
+\     'ale_fixers': { 
+\       'json': [ 'biomefmt' ], 
+\       'jsonc': [ 'biomefmt' ], 
+\       'javascript' : [ 'eslint' ], 
+\       'html' : [ 'trim_whitespace' ] 
+\     }
+\   }
+\ }
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
