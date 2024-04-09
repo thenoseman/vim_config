@@ -94,7 +94,7 @@ let g:ale_fixers = {
 let g:ale_pattern_options = {
 \   '/consent-management/': {
 \     'ale_fix_on_save': 1,
-\     'ale_fixers': extend(g:ale_fixers, { 
+\     'ale_fixers': extend(copy(g:ale_fixers), { 
 \       'javascript' : [ 'eslint' ], 
 \       'typescript' : [ 'eslint' ], 
 \       'html' : [ 'trim_whitespace' ] 
