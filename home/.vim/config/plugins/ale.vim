@@ -50,6 +50,7 @@ let g:ale_pattern_options = {
 \       'json': [ 'biomefmt' ], 
 \       'jsonc': [ 'biomefmt' ], 
 \       'javascript' : [ 'eslint' ], 
+\       'typescript' : [ 'eslint' ], 
 \       'html' : [ 'trim_whitespace' ] 
 \     }
 \   }
