@@ -37,32 +37,13 @@ let g:ale_popup_menu_enabled = 0
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
 
-" Specify fixers for any path containing '/something/' in its path. Disable
-" fixers by specifying [] 
-"
-" This allow to set any ale_* variable per path match.
-" 
-" See https://github.com/dense-analysis/ale/issues/1378
-let g:ale_pattern_options = {
-\   '/consent-management/': {
-\     'ale_fix_on_save': 1,
-\     'ale_fixers': { 
-\       'json': [ 'biomefmt' ], 
-\       'jsonc': [ 'biomefmt' ], 
-\       'javascript' : [ 'eslint' ], 
-\       'typescript' : [ 'eslint' ], 
-\       'html' : [ 'trim_whitespace' ] 
-\     }
-\   }
-\ }
-
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:ale_linters = {
 \   'ruby':        [ 'standardrb'],
 \   'rspec':       [ 'standardrb'],
-\   'html':        [ '' ],
+\   'html':        [ 'trim_whitespace' ],
 \   'haml':        [ 'hamllint' ],
 \   'cpp' :        [ 'g++' ],
 \   'sh' :         [ 'shellcheck' ],
@@ -103,6 +84,23 @@ let g:ale_fixers = {
 \   'hcl' :       [ 'packer' ],
 \   'sh' :        [ 'shfmt' ] 
 \}
+
+" Specify fixers for any path containing '/something/' in its path. 
+" Disable fixers by specifying [] 
+"
+" This allow to set any ale_* variable per path match.
+" 
+" See https://github.com/dense-analysis/ale/issues/1378
+let g:ale_pattern_options = {
+\   '/consent-management/': {
+\     'ale_fix_on_save': 1,
+\     'ale_fixers': extend(g:ale_fixers, { 
+\       'javascript' : [ 'eslint' ], 
+\       'typescript' : [ 'eslint' ], 
+\       'html' : [ 'trim_whitespace' ] 
+\     })
+\   }
+\ }
 
 " SHELLCHECK use extended mode
 let g:ale_sh_shellcheck_executable = 'shellcheck'
