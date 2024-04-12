@@ -9,11 +9,14 @@ scriptencoding utf-8
 " How to implement custom formatters
 
 function! FormatJsonViaBiome(buffer) abort
+  let l:ft = getbufvar(str2nr(a:buffer), '&filetype')
+  let l:ft = l:ft =~# 'jsonc' ? 'jsonc' : 'json'
+
   return {
-  \   'command': 'biome format --stdin-file-path=file.json'
+  \   'command': 'biome format --stdin-file-path=file.' . l:ft
   \}
 endfunction
-execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json'], 'format JSON via biome')
+execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json', 'jsonc'], 'format JSON(C) via biome')
 
 " Toggle formatter on/off
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
