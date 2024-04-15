@@ -107,7 +107,7 @@ if has("gui_running")
     "
 
     " A better JSON for Vim
-    Plug 'elzr/vim-json', { 'for': 'json', 'jsonc' }
+    Plug 'elzr/vim-json', { 'for': ['json', 'jsonc'] }
 
     " Svelte JavaScript syntax highlighting for vim
     Plug 'evanleck/vim-svelte', { 'for': 'svelte', 'branch': 'main' }
