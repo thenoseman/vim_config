@@ -1,72 +1,72 @@
 {
-	"floatFactory.floatConfig": {
-		"title": "Float:",
-		"border": true,
-		"borderhighlight": "CocFloatBorder"
-	},
-	"coc.preferences.useQuickfixForLocations": true,
-	"coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
-	"coc.preferences.extensionUpdateCheck": "weekly",
-	"hover.floatConfig": {
-		"title": "Hover:",
-		"border": true,
-		"borderhighlight": "CocFloatBorder"
-	},
-	"suggest.maxCompleteItemCount": 20,
-	"suggest.autoTrigger": "always",
-	"suggest.minTriggerInputLength": 3,
-	"suggest.floatConfig": {
-		"title": "Suggest:",
-		"border": true,
-		"borderhighlight": "CocFloatBorder"
-	},
-	"tsserver.formatOnType": false,
-	"tsserver.reportStyleChecksAsWarnings": false,
-	"tsserver.tsdk": "./node_modules/typescript/lib",
-	"tsserver.useLocalTsdk": true,
-	"typescript.suggest.autoImports": false,
-	"typescript.referencesCodeLens.enabled": true,
-	"javascript.updateImportsOnFileMove.enable": "never",
-	"javascript.preferences.quoteStyle": "double",
-	"javascript.format.enabled": false,
-	"javascript.preferences.quoteStyle": "double",
-	"diagnostic.errorSign": "💀",
-	"diagnostic.warningSign": "🤔",
-	"diagnostic.infoSign": "i",
-	"diagnostic.hintSign": "!",
-	"diagnostic.checkCurrentLine": true,
-	"diagnostic.virtualText": false,
-	"diagnostic.virtualTextCurrentLineOnly": true,
-	"diagnostic.floatConfig": {
-		"title": "Diagnostics:",
-		"border": true,
-		"borderhighlight": "CocFloatBorder",
-		"maxWidth": 160
-	},
-	"snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
-	"snippets.textmateSnippetsRoots": ["~/.vim/config/private_snippets"],
-	"snippets.snipmate.enable": false,
-	"snippets.trace": false,
-	"snippets.loadFromExtensions": false,
-	"languageserver": {
-		"terraform": {
-			"command": "terraform-ls",
-			"args": ["serve"],
-			"filetypes": ["terraform", "tf"],
-			"initializationOptions": {},
-			"settings": {}
-		}
-	},
-	"rust-analyzer.procMacro.enable": true,
-	"rust-analyzer.cargo.loadOutDirsFromCheck": true,
-	"rust-analyzer.updates.channel": "nightly",
-	"snippets.ultisnips.pythonPrompt": false,
-	"volar.disableFormatting": true,
-	"vue.inlayHints.missingProps": true,
-	"ltex.enabled": ["latex", "markdown"],
-	"ltex.language": "en-US",
-	"ltex.additionalRules.enablePickyRules": true,
-	"ltex.additionalRules.motherTongue": "de-DE",
-	"ltex.languageToolHttpServerUri": "http://languagetool-63c3b72e77bffb46.elb.eu-central-1.amazonaws.com:8010/",
-	"ltex.checkFrequency": "save"
+  "floatFactory.floatConfig": {
+    "title": "Float:",
+    "border": true,
+    "borderhighlight": "CocFloatBorder"
+  },
+  "coc.preferences.useQuickfixForLocations": true,
+  "coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
+  "coc.preferences.extensionUpdateCheck": "weekly",
+  "hover.floatConfig": {
+    "title": "Hover:",
+    "border": true,
+    "borderhighlight": "CocFloatBorder"
+  },
+  "suggest.maxCompleteItemCount": 20,
+  "suggest.autoTrigger": "always",
+  "suggest.minTriggerInputLength": 3,
+  "suggest.floatConfig": {
+    "title": "Suggest:",
+    "border": true,
+    "borderhighlight": "CocFloatBorder"
+  },
+  "tsserver.formatOnType": false,
+  "tsserver.reportStyleChecksAsWarnings": false,
+  "tsserver.tsdk": "./node_modules/typescript/lib",
+  "tsserver.useLocalTsdk": true,
+  "typescript.suggest.autoImports": false,
+  "typescript.referencesCodeLens.enabled": true,
+  "javascript.updateImportsOnFileMove.enable": "never",
+  "javascript.preferences.quoteStyle": "double",
+  "javascript.format.enabled": false,
+  "javascript.preferences.quoteStyle": "double",
+  "diagnostic.errorSign": "💀",
+  "diagnostic.warningSign": "🤔",
+  "diagnostic.infoSign": "i",
+  "diagnostic.hintSign": "!",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualText": false,
+  "diagnostic.virtualTextCurrentLineOnly": true,
+  "diagnostic.floatConfig": {
+    "title": "Diagnostics:",
+    "border": true,
+    "borderhighlight": "CocFloatBorder",
+    "maxWidth": 160
+  },
+  "snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
+  "snippets.textmateSnippetsRoots": ["~/.vim/config/private_snippets"],
+  "snippets.snipmate.enable": false,
+  "snippets.trace": false,
+  "snippets.loadFromExtensions": false,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  },
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+  "rust-analyzer.updates.channel": "nightly",
+  "snippets.ultisnips.pythonPrompt": false,
+  "volar.disableFormatting": true,
+  "vue.inlayHints.missingProps": true,
+  "ltex.enabled": ["latex", "markdown"],
+  "ltex.language": "en-US",
+  "ltex.additionalRules.enablePickyRules": true,
+  "ltex.additionalRules.motherTongue": "de-DE",
+  "ltex.languageToolHttpServerUri": "http://languagetool-63c3b72e77bffb46.elb.eu-central-1.amazonaws.com:8010/",
+  "ltex.checkFrequency": "save"
 }
