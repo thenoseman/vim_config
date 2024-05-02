@@ -117,16 +117,13 @@ if has("gui_running")
 
     " bundle provides syntax highlighting and improved indentation
     Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'svelte', 'typescript' ]}
+    Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'vue', 'svelte', 'typescript' ]}
 
     " Vue
     Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
 
     " Javascript text objects (vif, daf, ...)
-    " Plug 'thenoseman/vim-textobj-function-javascript', { 'for': ['javascript', 'vue', 'svelte', 'typescript'] }
     Plug 'haya14busa/vim-textobj-function-syntax', { 'for': ['javascript', 'vue', 'svelte', 'typescript'] }
-
-    " The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file.
-    Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['javascriptreact'] }
 
     "
     " Ruby
