@@ -7,11 +7,14 @@
   "coc.preferences.useQuickfixForLocations": true,
   "coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
   "coc.preferences.extensionUpdateCheck": "weekly",
+  "coc.source.snippets.priority": 100,
+  "coc.source.snippets-source.priority": 100,
   "hover.floatConfig": {
     "title": "Hover:",
     "border": true,
     "borderhighlight": "CocFloatBorder"
   },
+  "suggest.languageSourcePriority": 89,
   "suggest.maxCompleteItemCount": 20,
   "suggest.autoTrigger": "always",
   "suggest.minTriggerInputLength": 3,
