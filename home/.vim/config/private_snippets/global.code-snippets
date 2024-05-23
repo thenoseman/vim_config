@@ -1,7 +1,9 @@
+// vim: set ft=jsonc:
 // https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets
 // javascript textmate/vscode syntax
 {
   "console.log(clipboard)": {
+    "scope": "javascript,typescript",
     "prefix": ["log"],
     "body": ["console.log(`${CLIPBOARD/[\"]/\\\"/g}`, JSON.stringify(${CLIPBOARD}, null, 2));"],
     "description": "logs what is in your clipboard. Auto quotes."
