@@ -66,5 +66,8 @@
   "rust-analyzer.updates.channel": "nightly",
   "snippets.ultisnips.pythonPrompt": false,
   "volar.disableFormatting": true,
-  "vue.inlayHints.missingProps": true
+  "vue.inlayHints.missingProps": true,
+  "refactor.afterContext": 1,
+  "refactor.beforeContext": 1,
+  "refactor.openCommand": "split"
 }
