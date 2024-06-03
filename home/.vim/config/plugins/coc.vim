@@ -74,3 +74,7 @@ autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
 
 " For typscript files open locationlist with errors reported by LSP on save
 autocmd BufWritePost *.ts call timer_start(1000, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
+
+" Search based on ripgrep, save the buffer to apply all changes to the
+" original files. Replaces vim-grepper and quickfix-reflector.
+command! -nargs=1 Fi call coc#rpc#notify('search', ["--fixed-strings", "--smart-case", <f-args>]) 
