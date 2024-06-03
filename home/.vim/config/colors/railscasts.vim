@@ -122,7 +122,7 @@ highlight Folded term=bold ctermfg=7 ctermbg=52 gui=bold guifg=#E6E1DC guibg=#66
 "
 " coc.nvim now has it's own popup
 "
-"hi CocSearch ctermfg=12 guifg=#18A3FF
+hi CocSearch ctermfg=12 guifg=#18A3FF
 hi CocMenuSel guifg=#000000 guibg=#A5C261 gui=NONE
 
 " Highlight errors inline
