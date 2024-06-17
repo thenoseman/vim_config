@@ -10,7 +10,8 @@ scriptencoding utf-8
 
 function! FormatJsonViaBiome(buffer) abort
   let l:ft = getbufvar(str2nr(a:buffer), '&filetype')
-  let l:ft = l:ft =~# 'jsonc' ? 'jsonc' : 'json'
+  "let l:ft = l:ft =~# 'jsonc' ? 'jsonc' : 'json'
+  let l:ft = 'json'
 
   return {
   \   'command': 'biome format --stdin-file-path=file.' . l:ft
