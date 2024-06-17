@@ -71,6 +71,7 @@ let g:ale_linter_aliases = {
 \}
 
 let g:ale_fixers = {
+\   'css':        [ 'prettier' ],
 \   'javascript': [ 'prettier', 'eslint' ],
 \   'typescript': [ 'eslint' ],
 \   'json':       [ 'biomefmt' ],
