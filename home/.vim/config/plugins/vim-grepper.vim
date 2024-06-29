@@ -18,7 +18,7 @@ set grepprg=rg
 
 " Create :Rg command
 command! -nargs=* -complete=file Rg Grepper -noprompt -tool rg -query <args>
-command! -nargs=* -complete=file Cs Grepper -noprompt -tool cs -query <args>
+"command! -nargs=* -complete=file Cs Grepper -noprompt -tool cs -query <args>
 
 " gs<motion> prepupulates search
 nmap gs <plug>(GrepperOperator)
