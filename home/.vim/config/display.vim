@@ -20,7 +20,7 @@ if has('gui_running')
   if tolower(hostname()) =~ 'fmbp'
     set guifont=InconsolataGo\ Nerd\ Font\ Mono:h12.00  
   else
-    set guifont=InconsolataGo\ Nerd\ Font\ Mono:h14.00  
+    set guifont=InconsolataGo\ Nerd\ Font\ Mono:h14.00
   endif
 
   "" gui options

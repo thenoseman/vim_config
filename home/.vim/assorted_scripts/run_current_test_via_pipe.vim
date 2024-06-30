@@ -28,11 +28,17 @@ autocmd FileType rspec map <leader>r :call RSpecCurrent() <CR>
 " <leader>r will execute the current test
 "
 fun! JestExecuteCurrent()
+  if(!filereadable("tmp/test-pipe"))
+    echom "IN SHELL DO: mkfifo tmp/test-pipe && while true; do sh -c '$(cat tmp/test-pipe)'; done"
+    return
+  endif
+
   let s:itpos = search('it(', 'bcnWz', line("w0"))
   let s:line = getline(s:itpos)
   let s:ittxt = matchstr(getline(s:itpos), "\".*\"")    
   echom 'Running test: ' . s:ittxt[0:10] . ' in ' . expand("%:t")
-  execute "silent !echo NODE_ICU_DATA=node_modules/full-icu node node_modules/.bin/vue-cli-service test:unit --runInBand -t " . shellescape(s:ittxt) . " " . expand("%p") . " > tmp/test-pipe"
+  execute "silent !echo node node_modules/.bin/jest test:unit --runInBand -t " . shellescape(s:ittxt) . " " . expand("%p") . " > tmp/test-pipe"
 endfun
 
 autocmd FileType javascript map <leader>r :call JestExecuteCurrent() <CR>
+autocmd FileType typescript map <leader>r :call JestExecuteCurrent() <CR>
