@@ -1,13 +1,11 @@
-if has('unix')
-  " settings controlling temporary/backup files
-  set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-  set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+" settings controlling temporary/backup files
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-  " Configure undo files (if we're in vim 7.3 and +persistent_undo has been
-  " compiled)
-  if has("persistent_undo")
-    set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-  endif
+" Configure undo files (if we're in vim 7.3 and +persistent_undo has been
+" compiled)
+if has("persistent_undo")
+  set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 endif
 set undofile
 

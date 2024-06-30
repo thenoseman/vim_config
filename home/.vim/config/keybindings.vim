@@ -3,7 +3,7 @@
 "
 
 " fix arrow keys in console mode
-if has('gui_running') && has("mac")
+if has('gui_running')
   set nomacmeta
 endif
 

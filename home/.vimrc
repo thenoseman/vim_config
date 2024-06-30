@@ -22,7 +22,7 @@ set history=100
 " r - use "[RO]" instead of "[readonly]"
 " x - use "[dos]" instead of "[dos format]", "[unix]" instead of "[unix format]", and "[mac]" instead of "[mac format]"
 " t - truncate file message at the start if it is too long to fit on the command-line, "<" will appear in the left most column.
-" T - trunctate other messages in the middle if they are too long to fit on the command line. "..." will appear in the middle.
+" T - truncate other messages in the middle if they are too long to fit on the command line. "..." will appear in the middle.
 " I - don't give the intro message when starting Vim.
 " c - don't give |ins-completion-menu| messages.
 set shortmess=filmnrxtTIc
@@ -45,7 +45,7 @@ endif
 let g:arch="arm"
 let g:homebrew_prefix="/opt/homebrew"
 
-if stridx(system("uname -m"), "x86_64") > -1
+if isdirectory('/usr/local/bin') > 0
   let g:arch="intel"
   let g:homebrew_prefix="/usr/local"
 endif
