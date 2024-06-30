@@ -29,13 +29,7 @@ vnoremap <silent> <C-Down> :<C-u>call MoveVisualDown()<CR>
 " Show Invisibles (http://vimcasts.org/episodes/show-invisibles/) 
 " @key <leader>l: Show EOL and Tab markers (invisible characters)
 nnoremap <leader>l :set list!<CR>
-if has("unix")
-  set listchars=tab:▸\ ,eol:¬
-else
-  set listchars=tab:>-,eol:¬
-endif
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+set listchars=tab:▸\ ,eol:¬
 
 " @key <leader>x: closes buffer
 nnoremap <leader>x :bd<CR>
@@ -53,7 +47,7 @@ map <c-s> :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'> trans<'.s
 " ctrl-space: autocomplete via Omnicomplete
 imap <c-space> <c-x><c-o>
 
-" Map 'g=' to indent whole buffer 
+" Map 'g=' to indent whole buffer
 nmap g= :call PreservePosition("normal gg=G")<CR>
 
 " ctrl-n and p for quickfix navigation without loosing focus

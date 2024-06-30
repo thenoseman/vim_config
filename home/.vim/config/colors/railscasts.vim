@@ -146,3 +146,6 @@ hi ALEVirtualTextWarning guifg=#73634c
 " hi ALEVirtualTextStyleWarning
 "
 
+" Overwrite some syn groups
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59

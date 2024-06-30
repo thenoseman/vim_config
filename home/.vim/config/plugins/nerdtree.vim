@@ -34,3 +34,35 @@ fun! NERDTreeSmartToggle()
     endif
   endif
 endfun
+
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+" Stolen from http://stackoverflow.com/a/5403847/171364 (janus repo)
+fun! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
+
+function! s:CloseIfOnlyQuickfixLeft()
+  if &buftype=="quickfix"
+    if winnr("$") == 1
+      q
+    endif
+  endif
+endfunction
+
+" Automatically restore cursor position when possible
+augroup vim_config
+  autocmd BufReadPost *
+     \ if line("'\"") > 1 && line("'\"") <= line("$") && !exists("g:vim_commandline") |
+     \ exe "normal! g`\"" |
+     \ endif
+  autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+  autocmd BufEnter * call s:CloseIfOnlyQuickfixLeft()
+augroup END
+
