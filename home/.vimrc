@@ -42,12 +42,12 @@ if has('python3')
 endif
 
 " Detect architecture
-let g:arch="arm"
-let g:homebrew_prefix="/opt/homebrew"
+let g:arch="intel"
+let g:homebrew_prefix="/usr/local"
 
-if isdirectory('/usr/local/bin') > 0
-  let g:arch="intel"
-  let g:homebrew_prefix="/usr/local"
+if isdirectory('/opt/homebrew') > 0
+  let g:arch="arm"
+  let g:homebrew_prefix="/opt/homebrew"
 endif
 
 " load everything else in its own config file
