@@ -5,7 +5,7 @@
   "console.log(clipboard)": {
     "scope": "javascript,typescript",
     "prefix": ["log"],
-    "body": ["console.log(`${CLIPBOARD/[\"]/\\\"/g}`, JSON.stringify(${CLIPBOARD}, null, 2));"],
+    "body": ["console.log(`${CLIPBOARD/[\"]/\\\"/g}`, JSON.stringify(${CLIPBOARD}, null, 2)); // THENOSEMAN"],
     "description": "logs what is in your clipboard. Auto quotes."
   }
 }
