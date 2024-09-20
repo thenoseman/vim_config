@@ -10,7 +10,7 @@ iab flase false
 iab fasle false
 iab suers users
 iab paramters parameters
-iab seperat separat
+iab seperate separate
 iab cosnt const
 iab fpr for
 iab paramter parameter
