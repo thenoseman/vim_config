@@ -10,7 +10,18 @@ let g:projectionist_heuristics = {
   \   },
   \   "package.json": {
   \     "src/*.js": {
-  \       "alternate": ["tests/unit/{}.spec.js", "test/unit/{}.spec.js"],
+  \       "alternate": [
+  \         "tests/unit/{}.spec.js", 
+  \         "tests/unit/{}.test.js",
+  \         "test/unit/{}.spec.js",
+  \         "test/unit/{}.spec.ts", 
+  \         "test/unit/{}.test.ts", 
+  \         "test/unit/{}.test.js", 
+  \         "tests/unit-jest/{}.test.js", 
+  \         "tests/unit-jest/{}.test.ts", 
+  \         "tests/unit-mocha/{}.spec.js", 
+  \         "tests/unit-mocha/{}.spec.ts"
+  \       ],
   \       "type": "source"
   \     },
   \     "src/*.vue": {
