@@ -5,7 +5,13 @@
   "console.log(clipboard)": {
     "scope": "javascript,typescript",
     "prefix": ["log"],
-    "body": ["console.log(`${CLIPBOARD/[\"]/\\\"/g}`, JSON.stringify(${CLIPBOARD}, null, 2)); // THENOSEMAN"],
+    "body": ["console.log(`%c${CLIPBOARD/[\"]/\\\"/g}%c`, `%cchangesMade%c`, `color: orange;`, `color: #000;`, JSON.stringify(${CLIPBOARD}, null, 2)); // THENOSEMAN"],
+    "description": "logs what is in your clipboard. Auto quotes."
+  },
+  "util.inspect(clipboard)": {
+    "scope": "javascript,typescript",
+    "prefix": ["logu"],
+    "body": ["console.info(require('util').inspect(${CLIPBOARD}, false, 15, true)); // eslint-disable-line"],
     "description": "logs what is in your clipboard. Auto quotes."
   },
   "server.log(clipboard)": {
