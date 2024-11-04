@@ -54,6 +54,9 @@ command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport
 " nmap <leader>a v<Plug>(coc-codeaction-selected)<Esc>
 nmap <leader>a <Plug>(coc-codeaction-cursor)
 
+" Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
+
 " coc-snippet via <tab>
 inoremap <silent><expr> <TAB>
       \  coc#pum#visible() ? coc#pum#confirm() :
