@@ -4,7 +4,6 @@ augroup vim_config
   autocmd FileType ruby call ConfigureRubyFileType()
   autocmd FileType eruby call ConfigureRubyFileType()
   autocmd FileType haml  call ConfigureRubyFileType()
-  autocmd FileType yaml  call ConfigureRubyFileType()
 
   " specs can be named _scene.rb (integration tests)
   autocmd BufReadPost,BufNewFile *_scene.rb set ft=rspec | set syntax=rspec | call ConfigureRubyFileType()
