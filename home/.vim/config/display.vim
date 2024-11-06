@@ -79,3 +79,6 @@ let html_no_rendering=1
 
 " Ported from https://neovim.io/doc/user/options.html#'jumpoptions'
 set jumpoptions=stack
+
+" Don't fold by default
+set nofoldenable
