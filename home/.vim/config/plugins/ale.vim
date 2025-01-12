@@ -127,6 +127,7 @@ let g:ale_vue_vls_use_global = 1
 
 " JS/TS
 "let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/managed-by-coc-and-here-disabled'
+let g:ale_javascript_eslint_options = '--cache --cache-file /tmp/eslint-cache'
 
 " Lua
 let g:ale_lua_stylua_options = '--indent-type Spaces --indent-width 2'
