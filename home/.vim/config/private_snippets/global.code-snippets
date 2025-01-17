@@ -11,7 +11,7 @@
   "util.inspect(clipboard)": {
     "scope": "javascript,typescript",
     "prefix": ["logu"],
-    "body": ["console.info('${CLIPBOARD}', require('util').inspect(${CLIPBOARD}, false, 15, true)); // eslint-disable-line -- THENOSEMAN"],
+    "body": ["console.info('[logu] ${CLIPBOARD}:', require('util').inspect(${CLIPBOARD}, false, 15, true)); // eslint-disable-line -- THENOSEMAN"],
     "description": "logs what is in your clipboard. Auto quotes."
   },
   "server.log(clipboard)": {
