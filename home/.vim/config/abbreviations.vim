@@ -15,3 +15,5 @@ iab cosnt const
 iab fpr for
 iab paramter parameter
 iab unknwon unknown
+iab cosnet consent
+iab cosnets consents
