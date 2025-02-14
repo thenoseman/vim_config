@@ -52,6 +52,7 @@ let g:ale_linters = {
 \   'cpp' :        [ 'g++' ],
 \   'sh' :         [ 'shellcheck' ],
 \   'javascript' : [ 'eslint' ],
+\   'javascriptreact' : [ 'eslint' ],
 \   'typescript' : [ 'eslint' ],
 \   'json' :       [ 'jsonlint' ],
 \   'svelte':      [ 'eslint' ],
@@ -73,6 +74,7 @@ let g:ale_linter_aliases = {
 let g:ale_fixers = {
 \   'css':        [ 'prettier' ],
 \   'javascript': [ 'prettier', 'eslint' ],
+\   'javascriptreact': [ 'prettier', 'eslint' ],
 \   'typescript': [ 'eslint' ],
 \   'json':       [ 'biomefmt' ],
 \   'jsonc':      [ 'biomefmt' ],
