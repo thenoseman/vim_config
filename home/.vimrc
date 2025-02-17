@@ -41,14 +41,8 @@ if has('python3')
   silent! python3 1
 endif
 
-" Detect architecture
-let g:arch="intel"
-let g:homebrew_prefix="/usr/local"
-
-if isdirectory('/opt/homebrew') > 0
-  let g:arch="arm"
-  let g:homebrew_prefix="/opt/homebrew"
-endif
+let g:arch="arm"
+let g:homebrew_prefix="/opt/homebrew"
 
 " load everything else in its own config file
 runtime! config/*.vim
