@@ -112,7 +112,7 @@ if has("gui_running")
   Plug 'evanleck/vim-svelte', { 'for': 'svelte', 'branch': 'main' }
 
   " bundle provides syntax highlighting and improved indentation
-  Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'svelte' ]}
+  Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'svelte', 'typescript' ]}
 
   " Typescript highlighting
   Plug 'HerringtonDarkholme/yats.vim', { 'for': [ 'typescript' ]}

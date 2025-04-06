@@ -75,7 +75,7 @@ snippet esl "eslint line"
 endsnippet
 
 #
-# JAVSCRIPT
+# JAVASCRIPT
 #
 
 snippet exit. "process.exit"
@@ -139,11 +139,8 @@ import { dirname } from 'path'
 const __dirname = dirname(fileURLToPath(import.meta.url));
 endsnippet
 
-#
-# VUE
-#
-snippet nt "nexttick"
-await ${1:wrapper}.vm.\$nextTick();
+snippet stderr ""
+process.stderr.write(JSON.stringify(${1}));
 endsnippet
 
 #
@@ -170,9 +167,5 @@ endsnippet
 #
 snippet pr0 "prettier-ignore"
 // prettier-ignore
-endsnippet
-
-snippet stderr ""
-process.stderr.write(JSON.stringify(${1}));
 endsnippet
 
