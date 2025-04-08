@@ -7,7 +7,6 @@ scriptencoding utf-8
 " Custom format JSON via biome
 " biome is now implemented in ALE so this is just a demonstration
 " How to implement custom formatters
-
 function! FormatJsonViaBiome(buffer) abort
   let l:ft = getbufvar(str2nr(a:buffer), '&filetype')
   "let l:ft = l:ft =~# 'jsonc' ? 'jsonc' : 'json'
@@ -94,7 +93,12 @@ let g:ale_fixers = {
 
 " Specify fixers for any path containing '/something/' in its path. 
 " Disable fixers by specifying [] 
-"
+let use_biome_for_js = extend(copy(g:ale_fixers), {
+\  'json' : [ 'biome' ],
+\  'javascript' : [ 'biome' ],
+\  'typescript' : [ 'biome' ]
+\})
+
 " This allow to set any ale_* variable per path match.
 " 
 " See https://github.com/dense-analysis/ale/issues/1378
@@ -107,6 +111,11 @@ let g:ale_pattern_options = {
 \       'html' : [ 'trim_whitespace' ],
 \       'yaml' : []
 \     })
+\   },
+\   '/i-am-here/': {
+\     'ale_fix_on_save': 1,
+\     'ale_linters': use_biome_for_js,
+\     'ale_fixers': use_biome_for_js
 \   }
 \ }
 
