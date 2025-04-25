@@ -74,7 +74,7 @@ if has("gui_running")
   "
 
   " Auto close (X)HTML tags (fork)
-  Plug 'thenoseman/vim-closetag', { 'for': ['html', 'xml', 'svelte', 'vue', 'typescript'] }
+  Plug 'thenoseman/vim-closetag', { 'for': ['html', 'xml', 'vue', 'typescript'] }
 
   " HTML5 omnicomplete and syntax
   Plug 'othree/html5.vim', { 'for': 'html' }
@@ -83,10 +83,10 @@ if has("gui_running")
   Plug 'tpope/vim-haml', { 'for': [ 'haml' ]}
 
   " SCSS Syntax highlighting
-  Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue', 'svelte'] }
+  Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue'] }
 
   " Pug (ex Jade)
-  Plug 'digitaltoad/vim-pug', { 'for': ['vue', 'pug', 'svelte'] }
+  Plug 'digitaltoad/vim-pug', { 'for': ['vue', 'pug'] }
 
   "
   " Infrastructure
@@ -108,23 +108,20 @@ if has("gui_running")
   " A better JSON for Vim
   Plug 'elzr/vim-json', { 'for': ['json', 'jsonc', '.eslintrc'] }
 
-  " Svelte JavaScript syntax highlighting for vim
-  Plug 'evanleck/vim-svelte', { 'for': 'svelte', 'branch': 'main' }
-
   " bundle provides syntax highlighting and improved indentation
-  Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'svelte', 'typescript' ]}
+  Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'typescript' ]}
 
   " Typescript highlighting
   Plug 'HerringtonDarkholme/yats.vim', { 'for': [ 'typescript' ]}
 
   " html`<p></p>` syntax highlighting
-  Plug 'jonsmithers/vim-html-template-literals', { 'for': [ 'javascript', 'vue', 'svelte', 'typescript' ]}
+  Plug 'jonsmithers/vim-html-template-literals', { 'for': [ 'javascript', 'vue', 'typescript' ]}
   
   " Vue
   Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
 
   " Javascript text objects (vif, daf, ...)
-  Plug 'haya14busa/vim-textobj-function-syntax', { 'for': ['javascript', 'vue', 'svelte', 'typescript'] }
+  Plug 'haya14busa/vim-textobj-function-syntax', { 'for': ['javascript', 'vue', 'typescript'] }
 
   "
   " Ruby

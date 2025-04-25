@@ -54,7 +54,6 @@ let g:ale_linters = {
 \   'javascriptreact' : [ 'eslint' ],
 \   'typescript' : [ 'eslint' ],
 \   'json' :       [ 'jsonlint' ],
-\   'svelte':      [ 'eslint' ],
 \   'terraform':   [ 'tflint' ],
 \   'vue':         [ 'eslint' ],
 \   'rust':        [ 'analyzer' ],
@@ -65,7 +64,6 @@ let g:ale_linters = {
 " aliases: NEW => OLD
 let g:ale_linter_aliases = {
 \   'rspec':  [ 'ruby'],
-\   'svelte': [ 'css', 'javascript', 'html'],
 \   'vue':    [ 'css', 'javascript', 'html'],
 \   'jsonc':  [ 'json' ],
 \}
@@ -82,7 +80,6 @@ let g:ale_fixers = {
 \   'terraform':  [ 'terraform' ],
 \   'html':       [ 'prettier' ],
 \   'haml':       [ 'trim_whitespace' ],
-\   'svelte':     [ 'prettier', 'eslint' ],
 \   'vue':        [ 'prettier', 'eslint' ],
 \   'rust':       [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
 \   'lua' :       [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
