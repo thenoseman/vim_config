@@ -13,13 +13,13 @@ snippet #! "shebang"
 #!/usr/bin/env bash
 endsnippet
 
-snippet b-empty  "if var empty"
+snippet empty-yes  "if var empty"
 if [[ -z "${1}" ]]; then
   ${0}
 fi
 endsnippet
 
-snippet n-empty  "if var ! empty"
+snippet empty-no  "if var ! empty"
 if [[ -n "${1}" ]]; then
   ${0}
 fi
@@ -35,4 +35,16 @@ snippet include "includes a string"
 if [[ $${1:variable} == *"${2:text}"* ]]; then
   ${3:echo "It's there!"}
 fi
+endsnippet
+
+snippet for "for loop (ASSOC)"
+for one in "${!${ASSOC}[@]}"; do
+  ${1:${ASSOC[${one}]}}
+done
+endsnippet
+
+snippet declare-assoc "declare ASSOC"
+declare -rA ASSOC=(
+  ["key"]="value"
+)
 endsnippet
