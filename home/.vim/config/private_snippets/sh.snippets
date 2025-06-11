@@ -1,4 +1,5 @@
 # vim:ft=snippets:
+# https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
 snippet here "here document (here)"
 <<-${2:${1:EOF}}
   $0
@@ -25,26 +26,84 @@ if [[ -n "${1}" ]]; then
 fi
 endsnippet
 
-snippet loop "read lines from command loop"
+snippet loop-var-newline "read lines from command loop"
 while read -r line; do
 	${0:echo "$line"}
 done <<<"$(${1})"
 endsnippet
 
-snippet include "includes a string"
+snippet string-include "includes a string"
 if [[ $${1:variable} == *"${2:text}"* ]]; then
   ${3:echo "It's there!"}
 fi
 endsnippet
 
-snippet for "for loop (ASSOC)"
+snippet for-assoc "for loop (ASSOC)"
 for one in "${!${ASSOC}[@]}"; do
   ${1:${ASSOC[${one}]}}
 done
 endsnippet
 
-snippet declare-assoc "declare ASSOC"
-declare -rA ASSOC=(
+snippet declare-assoc "declare assoc array"
+declare -rA ${1:ASSOC}=(
   ["key"]="value"
 )
+endsnippet
+
+snippet declare-array "declare array"
+declare -ra ${1:ARRAY}=(
+  "value"
+)
+endsnippet
+
+snippet array-assoc-spaced-list-keys "space delim keys"
+${!${0:declared_assoc_array}[@]}
+endsnippet
+
+snippet array-spaced-list-values "space delim values"
+${!${0:declared_assoc_array}[@]}
+endsnippet
+
+snippet array-length "array length"
+${#${0:ARRAY}[@]}
+endsnippet
+
+snippet string-greedy-remove-start "remove greedy from start"
+"${${1:STRING}##*${2:DELIMITER}}"
+endsnippet
+
+snippet string-ungreedy-remove-start "remove ungreedy from start"
+"${${1:STRING}#*${2:DELIMITER}}"
+endsnippet
+
+snippet string-greedy-remove-end "remove greedy from end"
+"${${1:STRING}%%*${2:DELIMITER}}"
+endsnippet
+
+snippet string-ungreedy-remove-end "remove ungreedy from end"
+"${${1:STRING}%*${2:DELIMITER}}"
+endsnippet
+
+snippet string-replace-once "replace once in string"
+${${1:PARAM}/${2:PATTERN}/${3:REPLACEMENT}}
+endsnippet
+
+snippet string-replace-all "replace all in string"
+${${1:PARAM}//${2:PATTERN}/${3:REPLACEMENT}}
+endsnippet
+
+snippet string-replace-start "replace at start of string"
+${${1:PARAM}/#${2:PATTERN}/${3:REPLACEMENT}}
+endsnippet
+
+snippet string-replace-end "replace at end of string"
+${${1:PARAM}/%${2:PATTERN}/${3:REPLACEMENT}}
+endsnippet
+
+snippet string-transform-upper "UPCASE a variable"
+${${1:PARAM}@U}
+endsnippet
+
+snippet string-transform-lower "lowercase a variable"
+${${1:PARAM}@L}
 endsnippet
