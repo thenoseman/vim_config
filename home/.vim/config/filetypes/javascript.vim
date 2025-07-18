@@ -19,7 +19,6 @@ fun! JavascriptConfigure()
   " Modified vim-js highlighting (added jsTemplateString)
   " This enables crazy stuff like 
   " { template: /* html */ `<span class="badge bg-dark rounded-pill">workaround</span>` }
-  " To be highlighted correctly
-  " Needed until https://github.com/yuezk/vim-js/pull/23 lands
-  syntax cluster jsOperators contains=jsRelationalOperator,jsTernary,jsOperator,jsTopOperator,jsBindOperator,jsTemplateString
+  " to be highlighted correctly
+  syntax region  jsComment start=+/\*+  end=+\*/+ contains=jsCommentTodo,@Spell,jsDocTags,jsDocInline fold keepend skipwhite skipempty nextgroup=@jsOperators,@jsTop
 endfunction
