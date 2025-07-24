@@ -15,10 +15,4 @@ fun! JavascriptConfigure()
   " For full keyboard where fn is on top right:
   nmap <C-F12> :JsOnly<CR>
   nmap <C-F11> :JsAsync<CR>
-
-  " Modified vim-js highlighting (added jsTemplateString)
-  " This enables crazy stuff like 
-  " { template: /* html */ `<span class="badge bg-dark rounded-pill">workaround</span>` }
-  " to be highlighted correctly
-  syntax region  jsComment start=+/\*+  end=+\*/+ contains=jsCommentTodo,@Spell,jsDocTags,jsDocInline fold keepend skipwhite skipempty nextgroup=@jsOperators,@jsTop
 endfunction
