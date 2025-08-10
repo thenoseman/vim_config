@@ -26,7 +26,6 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-nnoremap <leader>k :CocCommand rust-analyzer.openDocs<CR>
 
 " Find references
 nmap <F2> <Plug>(coc-references)

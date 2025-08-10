@@ -56,7 +56,6 @@ let g:ale_linters = {
 \   'json' :       [ 'jsonlint' ],
 \   'terraform':   [ 'tflint' ],
 \   'vue':         [ 'eslint' ],
-\   'rust':        [ 'analyzer' ],
 \   'lua' :        [ 'selene' ],
 \   'yaml' :       [ 'yamllint' ] 
 \}
@@ -81,7 +80,6 @@ let g:ale_fixers = {
 \   'html':       [ 'prettier' ],
 \   'haml':       [ 'trim_whitespace' ],
 \   'vue':        [ 'prettier', 'eslint' ],
-\   'rust':       [ 'trim_whitespace', 'remove_trailing_lines', "rustfmt" ],
 \   'lua' :       [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
 \   'yaml' :      [ 'prettier' ],
 \   'hcl' :       [ 'packer' ],

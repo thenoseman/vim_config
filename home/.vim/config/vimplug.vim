@@ -140,15 +140,8 @@ if has("gui_running")
   Plug 'tek/vim-textobj-ruby', { 'for': ['ruby', 'rspec'] }
 
   "
-  " Rust
-  "
-  
-  Plug 'rust-lang/rust.vim', { 'for': [ 'rust' ]}
-
-  "
   " YAML
   "
-  
   Plug 'pedrohdz/vim-yaml-folds', { 'for': [ 'yaml' ]}
 
   call plug#end()
