@@ -1,5 +1,5 @@
 #
-# Mocha + Chai + Sinon
+# TESTING
 #
 snippet it "it() {}"
 it("${1}", () => {
@@ -43,10 +43,11 @@ snippet spy "spyOn"
 const spy = jest.spyOn(${1:this}, "${2}");
 endsnippet
 
-
-snippet state "store set"
-wrapper.vm.\$store.state.${1:base}.${2} = ${3};
-endsnippet
+snippet test "playwright: test() => {}"
+test("${1}", async () => {
+  ${0}
+});
+endsnippet 
 
 #
 # ESLINT

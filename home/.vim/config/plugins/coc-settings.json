@@ -1,84 +1,74 @@
 {
-  "coc.preferences.extensionUpdateCheck": "weekly",
-  "coc.preferences.rootPatterns": [
-    ".git",
-    ".projections.json",
-    "package.json"
-  ],
-  "coc.preferences.useQuickfixForLocations": true,
-  "coc.source.snippets-source.priority": 100,
-  "coc.source.snippets.priority": 100,
-  "diagnostic.checkCurrentLine": true,
-  "diagnostic.errorSign": "💀",
-  "diagnostic.floatConfig": {
-    "border": true,
-    "borderhighlight": "CocFloatBorder",
-    "maxWidth": 160,
-    "title": "Diagnostics:"
-  },
-  "diagnostic.hintSign": "!",
-  "diagnostic.infoSign": "i",
-  "diagnostic.virtualText": false,
-  "diagnostic.virtualTextCurrentLineOnly": true,
-  "diagnostic.warningSign": "🤔",
-  "floatFactory.floatConfig": {
-    "border": true,
-    "borderhighlight": "CocFloatBorder",
-    "title": "Float:"
-  },
-  "hover.floatConfig": {
-    "border": true,
-    "borderhighlight": "CocFloatBorder",
-    "title": "Hover:"
-  },
-  "javascript.format.enabled": false,
-  "javascript.preferences.quoteStyle": "double",
-  "javascript.updateImportsOnFileMove.enable": "never",
-  "languageserver": {
-    "terraform": {
-      "args": [
-        "serve"
-      ],
-      "command": "terraform-ls",
-      "filetypes": [
-        "terraform",
-        "tf"
-      ],
-      "initializationOptions": {},
-      "settings": {}
-    }
-  },
-  "refactor.afterContext": 1,
-  "refactor.beforeContext": 1,
-  "refactor.openCommand": "split",
-  "rust-analyzer.cargo.loadOutDirsFromCheck": true,
-  "rust-analyzer.procMacro.enable": true,
-  "rust-analyzer.updates.channel": "nightly",
-  "snippets.loadFromExtensions": false,
-  "snippets.priority": 100,
-  "snippets.snipmate.enable": false,
-  "snippets.textmateSnippetsRoots": [
-    "~/.vim/config/private_snippets"
-  ],
-  "snippets.trace": false,
-  "snippets.ultisnips.pythonPrompt": false,
-  "snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
-  "suggest.autoTrigger": "always",
-  "suggest.floatConfig": {
-    "border": true,
-    "borderhighlight": "CocFloatBorder",
-    "title": "Suggest:"
-  },
-  "suggest.languageSourcePriority": 89,
-  "suggest.maxCompleteItemCount": 20,
-  "suggest.minTriggerInputLength": 3,
-  "tsserver.formatOnType": false,
-  "tsserver.reportStyleChecksAsWarnings": false,
-  "tsserver.tsdk": "./node_modules/typescript/lib",
-  "tsserver.useLocalTsdk": true,
-  "typescript.preferences.includePackageJsonAutoImports": "off",
-  "typescript.referencesCodeLens.enabled": true,
-  "typescript.suggest.autoImports": false,
-  "volar.disableFormatting": true,
-  "vue.inlayHints.missingProps": true
+	"coc.preferences.extensionUpdateCheck": "weekly",
+	"coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
+	"coc.preferences.useQuickfixForLocations": true,
+	"coc.source.snippets-source.priority": 100,
+	"coc.source.snippets.priority": 100,
+	"diagnostic.checkCurrentLine": true,
+	"diagnostic.errorSign": "💀",
+	"diagnostic.floatConfig": {
+		"border": true,
+		"borderhighlight": "CocFloatBorder",
+		"maxWidth": 160,
+		"title": "Diagnostics:"
+	},
+	"diagnostic.hintSign": "!",
+	"diagnostic.infoSign": "i",
+	"diagnostic.virtualText": false,
+	"diagnostic.virtualTextCurrentLineOnly": true,
+	"diagnostic.warningSign": "🤔",
+	"floatFactory.floatConfig": {
+		"border": true,
+		"borderhighlight": "CocFloatBorder",
+		"title": "Float:"
+	},
+	"hover.floatConfig": {
+		"border": true,
+		"borderhighlight": "CocFloatBorder",
+		"title": "Hover:"
+	},
+	"javascript.format.enabled": false,
+	"javascript.preferences.quoteStyle": "double",
+	"javascript.updateImportsOnFileMove.enable": "never",
+	"languageserver": {
+		"terraform": {
+			"args": ["serve"],
+			"command": "terraform-ls",
+			"filetypes": ["terraform", "tf"],
+			"initializationOptions": {},
+			"settings": {}
+		}
+	},
+	"refactor.afterContext": 1,
+	"refactor.beforeContext": 1,
+	"refactor.openCommand": "split",
+	"rust-analyzer.cargo.loadOutDirsFromCheck": true,
+	"rust-analyzer.procMacro.enable": true,
+	"rust-analyzer.updates.channel": "nightly",
+	"snippets.loadFromExtensions": false,
+	"snippets.priority": 100,
+	"snippets.snipmate.enable": false,
+	"snippets.textmateSnippetsRoots": ["~/.vim/config/private_snippets"],
+	"snippets.trace": false,
+	"snippets.ultisnips.pythonPrompt": false,
+	"snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
+	"suggest.autoTrigger": "always",
+	"suggest.floatConfig": {
+		"border": true,
+		"borderhighlight": "CocFloatBorder",
+		"title": "Suggest:"
+	},
+	"suggest.insertMode": "insert",
+	"suggest.languageSourcePriority": 89,
+	"suggest.maxCompleteItemCount": 20,
+	"suggest.minTriggerInputLength": 3,
+	"tsserver.formatOnType": false,
+	"tsserver.reportStyleChecksAsWarnings": false,
+	"tsserver.tsdk": "./node_modules/typescript/lib",
+	"tsserver.useLocalTsdk": true,
+	"typescript.preferences.includePackageJsonAutoImports": "off",
+	"typescript.referencesCodeLens.enabled": true,
+	"typescript.suggest.autoImports": false,
+	"volar.disableFormatting": true,
+	"vue.inlayHints.missingProps": true
 }

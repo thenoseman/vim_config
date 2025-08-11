@@ -38,9 +38,15 @@ if [[ $${1:variable} == *"${2:text}"* ]]; then
 fi
 endsnippet
 
+snippet for-array "for loop (ARRAY)"
+for one in "${${1:more}[@]}"; do
+  ${2}
+done
+endsnippet
+
 snippet for-assoc "for loop (ASSOC)"
-for one in "${!${ASSOC}[@]}"; do
-  ${1:${ASSOC[${one}]}}
+for one in "${!${1:more}[@]}"; do
+  $1[${one}]}}
 done
 endsnippet
 
