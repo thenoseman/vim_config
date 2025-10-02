@@ -8,3 +8,7 @@ snippet tse "ts ignore"
 // @ts-expect-error "${0:For testing purposes}"
 endsnippet
 
+snippet lit-props "List all lit comp properties"
+[...this.constructor.elementProperties].forEach(([propName, desc]) => { console.log('%c%s (%s)%c:', 'color: orange', propName, desc.type.name, 'color: #000', this[propName]); }); // THENOSEMAN
+endsnippet
+
