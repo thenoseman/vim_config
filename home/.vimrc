@@ -50,6 +50,7 @@ runtime! config/filetypes/*.vim
 
 if has("gui_running")
   runtime! config/plugins/*.vim
+  runtime! config/private/*.vim
   runtime! assorted_scripts/*.vim
 endif
 

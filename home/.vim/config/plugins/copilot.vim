@@ -1,3 +1,10 @@
+" To add workspace folders create "config/private/copilot-workspace-folders.vim with the following content:
+"
+" let g:copilot_workspace_folders = [
+" \  '~/some/path/to/sources'
+" \ ]
+
+"
 let g:copilot_no_tab_map = v:true
 
 " option + enter / option + tab
