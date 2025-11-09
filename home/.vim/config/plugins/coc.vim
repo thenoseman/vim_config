@@ -70,8 +70,9 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Goto definition
+" Goto definition / implementation
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gi <Plug>(coc-implementation)
 
 " Deactivate for filetypes
 autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
