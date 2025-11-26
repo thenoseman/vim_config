@@ -4,14 +4,13 @@
 " \  '~/some/path/to/sources'
 " \ ]
 
-"
 let g:copilot_no_tab_map = v:true
 
 " option + enter / option + space
 imap <silent><script><expr> <M-CR> copilot#Accept("\<CR>")
 imap <silent><script><expr> <M-space> copilot#Suggest()
 
-" Disabled by default, ony triggered by Leader + o + KEY
+" Disabled by default, only triggered by keypress above
 let g:copilot_filetypes = {
 \ '*': v:false,
 \ }
