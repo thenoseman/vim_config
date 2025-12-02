@@ -133,7 +133,12 @@ let g:ale_vue_vls_use_global = 1
 
 " JS/TS
 "let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/managed-by-coc-and-here-disabled'
+
+" Activate eslint_d (https://github.com/mantoni/eslint_d.js/)
+let $ESLINT_D_PPID = getpid()
 let g:ale_javascript_eslint_options = '--cache --cache-location /tmp/eslint-cache/'
+let g:ale_javascript_eslint_executable = 'eslint_d'
+let g:ale_javascript_eslint_use_global = 1
 
 " Lua
 let g:ale_lua_stylua_options = '--indent-type Spaces --indent-width 2'
