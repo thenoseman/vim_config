@@ -136,6 +136,7 @@ let g:ale_vue_vls_use_global = 1
 
 " Activate eslint_d (https://github.com/mantoni/eslint_d.js/)
 let $ESLINT_D_PPID = getpid()
+let $ESLINT_D_MISS = 'fail'
 let g:ale_javascript_eslint_options = '--cache --cache-location /tmp/eslint-cache/'
 let g:ale_javascript_eslint_executable = 'eslint_d'
 let g:ale_javascript_eslint_use_global = 1
