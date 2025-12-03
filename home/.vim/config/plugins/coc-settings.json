@@ -37,17 +37,6 @@
 			"filetypes": ["terraform", "tf"],
 			"initializationOptions": {},
 			"settings": {}
-		},
-		"tsgo": {
-			"command": "tsgo",
-			"args": ["--lsp", "--stdio"],
-			"filetypes": [
-				"typescript",
-				"typescriptreact",
-				"javascript",
-				"javascriptreact"
-			],
-			"rootPatterns": ["tsconfig.json", "jsconfig.json", ".git/"]
 		}
 	},
 	"refactor.afterContext": 1,

@@ -25,3 +25,20 @@ defaults write org.vim.MacVim MMTextInsetBottom 10 # Adds pixel rows to the bott
 defaults write org.vim.MacVim MMTextInsetTop 10 # Adds pixel rows to the top
 ```
 
+## tsgo
+
+Add to `coc-settings.json`:
+
+```
+"tsgo": {
+    "command": "tsgo",
+    "args": ["--lsp", "--stdio"],
+    "filetypes": [
+        "typescript",
+        "typescriptreact",
+        "javascript",
+        "javascriptreact"
+    ],
+    "rootPatterns": ["tsconfig.json", "jsconfig.json", ".git/"]
+}
+```

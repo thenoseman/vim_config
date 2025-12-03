@@ -43,7 +43,7 @@ endif
 " ALE plugin: Fixer status
 fun StatuslineAleFixOnSave() 
   let s:ale_on_save_enabled = "🍺"
-  if get(g:, "ale_fix_on_save", 0) == 0
+  if get(g:, "ale_fix_on_save", 0) == 0 || get(b:, "ale_fix_on_save", 0) == 0
     let s:ale_on_save_enabled = ""
   endif
   return s:ale_on_save_enabled
