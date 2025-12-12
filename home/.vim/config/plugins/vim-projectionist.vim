@@ -19,13 +19,11 @@ let g:projectionist_heuristics = {
   \         "test/unit/{}.test.js", 
   \         "tests/unit-jest/{}.test.js", 
   \         "tests/unit-jest/{}.test.ts", 
-  \         "tests/unit-mocha/{}.spec.js", 
-  \         "tests/unit-mocha/{}.spec.ts"
   \       ],
   \       "type": "source"
   \     },
   \     "src/*.vue": {
-  \       "alternate": ["tests/unit/{}.spec.js", "tests/unit/{dirname}.spec.js", "tests/unit/{dirname}/{dirname|basename}.spec.js"],
+  \       "alternate": ["test/unit/{}.test.ts", "test/unit/{dirname}.test.ts", "test/unit/{dirname}/{dirname|basename}.test.ts"],
   \       "type": "source"
   \     },
   \     "tests/unit/*.spec.js": {
@@ -37,19 +35,17 @@ let g:projectionist_heuristics = {
   \       "type": "test"
   \     },
   \     "test/unit/*.test.ts": {
-  \       "alternate": ["src/{}.js", "src/{}.ts"],
+  \       "alternate": ["src/{}.ts", "src/{}.vue", "src/{}.js"],
   \       "type": "test"
   \     },
   \     "src/*.ts": {
   \       "alternate": [
-  \          "tests/unit/{}.spec.js", 
-  \          "test/unit/{}.spec.ts", 
-  \          "tests/unit/{}.test.js",
   \          "test/unit/{}.test.ts", 
-  \          "tests/unit-jest/{}.test.js", 
+  \          "tests/unit/{}.test.js",
+  \          "test/unit/{}.spec.ts", 
+  \          "tests/unit/{}.spec.js", 
   \          "tests/unit-jest/{}.test.ts", 
-  \          "tests/unit-mocha/{}.spec.js", 
-  \          "tests/unit-mocha/{}.spec.ts"
+  \          "tests/unit-jest/{}.test.js", 
   \       ],
   \       "type": "source"
   \     }
