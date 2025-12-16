@@ -85,9 +85,6 @@ if has("gui_running")
   " HTML5 omnicomplete and syntax
   Plug 'othree/html5.vim', { 'for': 'html' }
 
-  " Vim runtime files for Haml, Sass, and SCSS
-  Plug 'tpope/vim-haml', { 'for': [ 'haml' ]}
-
   " SCSS Syntax highlighting
   Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue'] }
 
