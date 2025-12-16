@@ -1,0 +1,7 @@
+extends typescript
+
+# Overwrite spyOn from javascript.snippets
+snippet spy "spyOn"
+const spy = vi.spyOn(${1:wrapper}, "${2}");
+endsnippet
+
