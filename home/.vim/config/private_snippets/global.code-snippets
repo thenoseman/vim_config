@@ -3,13 +3,13 @@
 // javascript textmate/vscode syntax
 {
   "console.log(clipboard)": {
-    "scope": "javascript,typescript",
+    "scope": "javascript,typescript,vue",
     "prefix": ["log"],
     "body": ["console.log(`%c${CLIPBOARD/[\"]/\\\"/g}%c`, `color: orange;`, `color: #000;`, JSON.stringify(${CLIPBOARD}, null, 2)); // THENOSEMAN"],
     "description": "logs what is in your clipboard. Auto quotes."
   },
   "util.inspect(clipboard)": {
-    "scope": "javascript,typescript",
+    "scope": "javascript,typescript,vue",
     "prefix": ["logu"],
     "body": ["console.info('[logu] ${CLIPBOARD}:', require('util').inspect(${CLIPBOARD}, false, 15, true)); // eslint-disable-line -- THENOSEMAN"],
     "description": "logs what is in your clipboard. Auto quotes."
