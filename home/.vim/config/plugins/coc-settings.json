@@ -37,6 +37,13 @@
 			"filetypes": ["terraform", "tf"],
 			"initializationOptions": {},
 			"settings": {}
+		},
+		"toml": {
+			"args": ["lsp"],
+			"command": "tombi",
+			"filetypes": ["toml"],
+			"initializationOptions": {},
+			"settings": {}
 		}
 	},
 	"refactor.afterContext": 1,

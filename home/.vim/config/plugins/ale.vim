@@ -56,6 +56,7 @@ let g:ale_linters = {
 \   'terraform':   [ 'tflint' ],
 \   'vue':         [ 'eslint' ],
 \   'lua' :        [ 'selene' ],
+\   'toml' :       [ 'tombi' ],
 \   'yaml' :       [ 'yamllint' ] 
 \}
 
@@ -79,6 +80,7 @@ let g:ale_fixers = {
 \   'html':       [ 'prettier' ],
 \   'vue':        [ 'prettier', 'eslint' ],
 \   'lua' :       [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
+\   'toml' :       [ 'tombi_format', 'tombi_lint' ],
 \   'yaml' :      [ 'prettier' ],
 \   'hcl' :       [ 'packer' ],
 \   'sh' :        [ 'shfmt' ] 
