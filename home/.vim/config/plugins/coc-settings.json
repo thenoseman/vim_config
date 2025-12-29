@@ -57,6 +57,7 @@
 	"snippets.snipmate.enable": false,
 	"snippets.textmateSnippetsRoots": ["~/.vim/config/private_snippets"],
 	"snippets.trace": false,
+	"snippets.ultisnips.directories": [],
 	"snippets.ultisnips.pythonPrompt": false,
 	"snippets.userSnippetsDirectory": "~/.vim/config/private_snippets",
 	"suggest.autoTrigger": "always",
