@@ -38,25 +38,25 @@ if [[ $${1:variable} == *"${2:text}"* ]]; then
 fi
 endsnippet
 
-snippet for-array "for loop (ARRAY)"
+snippet array-for "for loop (ARRAY)"
 for one in "${${1:more}[@]}"; do
   ${2}
 done
 endsnippet
 
-snippet for-assoc "for loop (ASSOC)"
+snippet array-for-assoc "for loop (ASSOC)"
 for one in "${!${1:more}[@]}"; do
   $1[${one}]}}
 done
 endsnippet
 
-snippet declare-assoc "declare assoc array"
+snippet array-declare-assoc "declare assoc array"
 declare -rA ${1:ASSOC}=(
   ["key"]="value"
 )
 endsnippet
 
-snippet declare-array "declare array"
+snippet array-declare "declare array"
 declare -ra ${1:ARRAY}=(
   "value"
 )
@@ -112,4 +112,10 @@ endsnippet
 
 snippet string-transform-lower "lowercase a variable"
 ${${1:PARAM}@L}
+endsnippet
+
+snippet array-item-contains "array contains item"
+if [[ " ${${1:array}[*]} " == *" $${2:value} "* ]]; then
+  ${0}
+fi
 endsnippet
