@@ -17,11 +17,7 @@ set termguicolors
 " New Font
 "
 if has('gui_running')
-  if tolower(hostname()) =~ 'fmbp'
-    set guifont=InconsolataGo\ Nerd\ Font\ Mono:h12.00  
-  else
-    set guifont=InconsolataGo\ Nerd\ Font\ Mono:h14.00
-  endif
+  set guifont=InconsolataDz\ Nerd\ Font:h14.00
 
   "" gui options
   " c - Use console dialogs instead of popup dialogs for simple choices.
@@ -36,8 +32,6 @@ if has('gui_running')
   " http://ksjoberg.com/vim-esckeys.html
   " Breaks cursor keys in terminal vim
   set noesckeys
-else
-  set guifont=InconsolataGo\ Nerd\ Font\ Mono:h8.00  
 endif
 
 " ALE plugin: Fixer status
