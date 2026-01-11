@@ -41,6 +41,11 @@ set textwidth=0
 set nolinebreak
 set wrap
 
+" While using my own 'InconsolataDz Nerd Font'
+" I noticed that visually there was too much linespacing (for me).
+" Of cause vim has a setting for that (in px)!
+set linespace=-1
+
 " Always keep 2 lines on screen while scolling
 set scrolloff=2
 set sidescrolloff=3
@@ -65,8 +70,8 @@ set splitbelow
 set splitright
 
 " add minus / dash to motion word separator
-" usefull for motiond like inner-word that then
-" also use - as a delimeter
+" usefull for motions like inner-word that then
+" also can use - as a delimeter
 set iskeyword+=-
 
 " Provides tab-completion for all file-related tasks
