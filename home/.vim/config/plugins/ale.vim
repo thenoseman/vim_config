@@ -52,7 +52,7 @@ let g:ale_linters = {
 \   'javascript' : [ 'eslint' ],
 \   'javascriptreact' : [ 'eslint' ],
 \   'typescript' : [ 'eslint' ],
-\   'json' :       [ 'jsonlint' ],
+\   'json' :       [ 'biome' ],
 \   'terraform':   [ 'tflint' ],
 \   'vue':         [ 'eslint' ],
 \   'lua' :        [ 'selene' ],
