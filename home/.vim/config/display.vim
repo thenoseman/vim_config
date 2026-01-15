@@ -17,7 +17,7 @@ set termguicolors
 " New Font
 "
 if has('gui_running')
-  set guifont=InconsolataDz\ Nerd\ Font:h14.00
+  set guifont=InconsolataGo\ Nerd\ Font:h16.00
 
   "" gui options
   " c - Use console dialogs instead of popup dialogs for simple choices.

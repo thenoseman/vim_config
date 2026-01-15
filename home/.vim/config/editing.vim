@@ -44,7 +44,7 @@ set wrap
 " While using my own 'InconsolataDz Nerd Font'
 " I noticed that visually there was too much linespacing (for me).
 " Of cause vim has a setting for that (in px)!
-set linespace=-1
+"set linespace=-1
 
 " Always keep 2 lines on screen while scolling
 set scrolloff=2
