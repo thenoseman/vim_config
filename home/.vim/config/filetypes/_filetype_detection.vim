@@ -1,9 +1,9 @@
 " Custom Filetypes
 function! s:DetectTypescriptFiletype()
-  " import of test-utils in the first 20 lines?
-  if join(getline(1, 10), "") =~ '@vue/test-util'
+  " import of test-utils in the first lines?
+  if join(getline(1, 6), "") =~ '@vue/test-util'
     set filetype=typescript.vitest
-    let b:coc_snippets_filetypes = ['typescript-vitest']
+    execute 'CocCommand snippets.addFiletypes vitest'
   endif
 endfunction
 
