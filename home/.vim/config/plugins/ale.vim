@@ -18,6 +18,17 @@ function! FormatJsonViaBiome(buffer) abort
 endfunction
 execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json', 'jsonc'], 'format JSON(C) via biome')
 
+"
+" ALE FORMATTER
+" oxfmt (https://oxc.rs/docs/guide/usage/formatter.html)
+"
+function! AleFormatOxfmt(buffer) abort
+  return {
+    \ 'command': 'oxfmt --write %s'
+  \}
+endfunction
+execute ale#fix#registry#Add('oxfmt', 'AleFormatOxfmt', ['json', 'jsonc', 'typescript', 'yaml', 'html', 'vue', 'css', 'markdown' ], 'format file with oxfmt')
+
 " Toggle formatter on/off
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
 
