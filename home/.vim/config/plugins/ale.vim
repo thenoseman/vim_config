@@ -22,12 +22,18 @@ execute ale#fix#registry#Add('biomefmt', 'FormatJsonViaBiome', ['json', 'jsonc']
 " ALE FORMATTER
 " oxfmt (https://oxc.rs/docs/guide/usage/formatter.html)
 "
+call ale#Set('oxfmt_use_global', 0)
 function! AleFormatOxfmt(buffer) abort
+  let l:executable = ale#path#FindExecutable(a:buffer, 'oxfmt', [
+    \   'node_modules/oxfmt/bin/oxfmt',
+    \   'node_modules/.bin/oxfmt',
+    \])
+
   return {
-    \ 'command': 'oxfmt --write %s'
-  \}
+    \   'command': ale#Escape(l:executable) . ' --stdin-filepath %s'
+    \}
 endfunction
-execute ale#fix#registry#Add('oxfmt', 'AleFormatOxfmt', ['json', 'jsonc', 'typescript', 'yaml', 'html', 'vue', 'css', 'markdown' ], 'format file with oxfmt')
+execute ale#fix#registry#Add('oxfmt', 'AleFormatOxfmt', ['json', 'jsonc', 'typescript', 'yaml', 'html', 'vue', 'css', 'markdown' ], 'Format file with oxfmt')
 
 " Toggle formatter on/off
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
@@ -105,8 +111,20 @@ let use_biome_for_js = extend(copy(g:ale_fixers), {
 \  'typescript' : [ 'biome' ]
 \})
 
+" Use oxfmt for everything
+let use_oxfmt = extend(copy(g:ale_fixers), {
+\  'css' : [ 'oxfmt' ],
+\  'html' : [ 'oxfmt' ],
+\  'javascript' : [ 'oxfmt' ],
+\  'json' : [ 'oxfmt' ],
+\  'jsonc' : [ 'oxfmt' ],
+\  'markdown' : [ 'oxfmt' ],
+\  'typescript' : [ 'oxfmt' ],
+\  'vue' : [ 'oxfmt' ],
+\  'yaml' : [ 'oxfmt' ],
+\})
+
 " This allow to set any ale_* variable per path match.
-" 
 " See https://github.com/dense-analysis/ale/issues/1378
 let g:ale_pattern_options = {
 \   '/consent-management/': {
@@ -118,11 +136,10 @@ let g:ale_pattern_options = {
 \       'yaml' : []
 \     })
 \   },
-\   '/i-am-here/': {
+\   '/consent-management/central-app/': {
 \     'ale_fix_on_save': 1,
-\     'ale_linters': use_biome_for_js,
-\     'ale_fixers': use_biome_for_js
-\   }
+\     'ale_fixers': use_oxfmt
+\   },
 \ }
 
 " SHELLCHECK use extended mode
