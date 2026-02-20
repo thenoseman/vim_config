@@ -8,10 +8,16 @@
     "body": ["console.log(`%c${CLIPBOARD/[\"]/\\\"/g}%c`, `color: orange;`, `color: #000;`, JSON.stringify(${CLIPBOARD}, null, 2)); // THENOSEMAN"],
     "description": "logs what is in your clipboard. Auto quotes."
   },
-  "util.inspect(clipboard)": {
+  "util.inspect(clipboard) (CJS)": {
     "scope": "javascript,typescript,vue",
     "prefix": ["logu"],
     "body": ["console.info('[logu] ${CLIPBOARD}:', require('util').inspect(${CLIPBOARD}, false, 15, true)); // eslint-disable-line -- THENOSEMAN"],
+    "description": "logs what is in your clipboard. Auto quotes."
+  },
+  "util.inspect(clipboard) (ESM)": {
+    "scope": "javascript,typescript,vue",
+    "prefix": ["loge"],
+    "body": ["console.info('[logu] ${CLIPBOARD}:', (await import('node:util')).inspect(${CLIPBOARD}, false, 15, true)); // eslint-disable-line -- THENOSEMAN"],
     "description": "logs what is in your clipboard. Auto quotes."
   },
   "server.log(clipboard)": {
