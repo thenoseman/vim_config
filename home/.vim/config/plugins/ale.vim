@@ -27,13 +27,14 @@ function! AleFormatOxfmt(buffer) abort
   let l:executable = ale#path#FindExecutable(a:buffer, 'oxfmt', [
     \   'node_modules/oxfmt/bin/oxfmt',
     \   'node_modules/.bin/oxfmt',
+    \   '/opt/homebrew/bin/oxfmt',
     \])
 
   return {
     \   'command': ale#Escape(l:executable) . ' --stdin-filepath %s'
     \}
 endfunction
-execute ale#fix#registry#Add('oxfmt', 'AleFormatOxfmt', ['json', 'jsonc', 'typescript', 'yaml', 'html', 'vue', 'css', 'markdown' ], 'Format file with oxfmt')
+execute ale#fix#registry#Add('oxfmt', 'AleFormatOxfmt', ['js', 'mjs', 'cjs', 'jsx', 'ts', 'mts', 'cts', 'tsx', 'json', 'jsonc', 'json5', 'yaml', 'yml', 'toml', 'html', 'htm', 'vue', 'css', 'scss', 'less', 'md', 'markdown', 'mdx', 'graphql', 'gql', 'hbs', 'handlebars'], 'Format file with oxfmt')
 
 " Toggle formatter on/off
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
@@ -53,7 +54,6 @@ let g:ale_sign_highlight_linenrs = 1
 let g:ale_disable_lsp = 1
 let g:ale_lsp_suggestions = 0
 let g:ale_popup_menu_enabled = 0
-
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
 
@@ -61,20 +61,20 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:ale_linters = {
-\   'ruby':        [ 'standardrb'],
-\   'rspec':       [ 'standardrb'],
-\   'html':        [ 'trim_whitespace', 'biome' ],
-\   'cpp' :        [ 'g++' ],
-\   'sh' :         [ 'shellcheck' ],
-\   'javascript' : [ 'eslint' ],
+\   'ruby':             [ 'standardrb'],
+\   'rspec':            [ 'standardrb'],
+\   'html':             [ 'trim_whitespace', 'biome' ],
+\   'cpp' :             [ 'g++' ],
+\   'sh' :              [ 'shellcheck' ],
+\   'javascript' :      [ 'eslint' ],
 \   'javascriptreact' : [ 'eslint' ],
-\   'typescript' : [ 'eslint', 'biome' ],
-\   'json' :       [ 'biome' ],
-\   'terraform':   [ 'tflint' ],
-\   'vue':         [ 'eslint' ],
-\   'lua' :        [ 'selene' ],
-\   'toml' :       [ 'tombi' ],
-\   'yaml' :       [ 'yamllint' ] 
+\   'typescript' :      [ 'eslint', 'biome' ],
+\   'json' :            [ 'biome' ],
+\   'terraform':        [ 'tflint' ],
+\   'vue':              [ 'eslint' ],
+\   'lua' :             [ 'selene' ],
+\   'toml' :            [ 'tombi' ],
+\   'yaml' :            [ 'yamllint' ] 
 \}
 
 " aliases: NEW => OLD
@@ -85,43 +85,43 @@ let g:ale_linter_aliases = {
 \}
 
 let g:ale_fixers = {
-\   'css':        [ 'prettier' ],
-\   'javascript': [ 'prettier', 'eslint' ],
-\   'javascriptreact': [ 'prettier', 'eslint' ],
-\   'typescript': [ 'eslint', 'biome' ],
-\   'json':       [ 'biomefmt' ],
-\   'jsonc':      [ 'biomefmt' ],
-\   'ruby':       [ 'standardrb' ],
-\   'rspec':      [ 'standardrb' ],
-\   'terraform':  [ 'terraform' ],
-\   'html':       [ 'biome', 'prettier' ],
-\   'vue':        [ 'prettier', 'eslint' ],
-\   'lua' :       [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
-\   'toml' :       [ 'tombi_format', 'tombi_lint' ],
-\   'yaml' :      [ 'prettier' ],
-\   'hcl' :       [ 'packer' ],
-\   'sh' :        [ 'shfmt' ] 
+\   'css':             [ 'oxfmt' ],
+\   'javascript':      [ 'oxfmt', 'eslint' ],
+\   'javascriptreact': [ 'oxfmt', 'eslint' ],
+\   'typescript':      [ 'eslint', 'oxfmt' ],
+\   'json':            [ 'oxfmt' ],
+\   'jsonc':           [ 'oxfmt' ],
+\   'ruby':            [ 'standardrb' ],
+\   'rspec':           [ 'standardrb' ],
+\   'terraform':       [ 'terraform' ],
+\   'html':            [ 'oxfmt', 'oxfmt' ],
+\   'vue':             [ 'oxfmt', 'eslint' ],
+\   'lua' :            [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
+\   'toml' :           [ 'tombi_format', 'tombi_lint' ],
+\   'yaml' :           [ 'oxfmt' ],
+\   'hcl' :            [ 'packer' ],
+\   'sh' :             [ 'shfmt' ] 
 \}
 
 " Specify fixers for any path containing '/something/' in its path. 
 " Disable fixers by specifying [] 
 let use_biome_for_js = extend(copy(g:ale_fixers), {
-\  'json' : [ 'biome' ],
+\  'json' :       [ 'biome' ],
 \  'javascript' : [ 'biome' ],
 \  'typescript' : [ 'biome' ]
 \})
 
 " Use oxfmt for everything
 let use_oxfmt = extend(copy(g:ale_fixers), {
-\  'css' : [ 'oxfmt' ],
-\  'html' : [ 'oxfmt' ],
+\  'css' :        [ 'oxfmt' ],
+\  'html' :       [ 'oxfmt' ],
 \  'javascript' : [ 'oxfmt' ],
-\  'json' : [ 'oxfmt' ],
-\  'jsonc' : [ 'oxfmt' ],
-\  'markdown' : [ 'oxfmt' ],
+\  'json' :       [ 'oxfmt' ],
+\  'jsonc' :      [ 'oxfmt' ],
+\  'markdown' :   [ 'oxfmt' ],
 \  'typescript' : [ 'oxfmt' ],
-\  'vue' : [ 'oxfmt' ],
-\  'yaml' : [ 'oxfmt' ],
+\  'vue' :        [ 'oxfmt' ],
+\  'yaml' :       [ 'oxfmt' ],
 \})
 
 " This allow to set any ale_* variable per path match.
@@ -160,7 +160,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_vue_vls_use_global = 1
 
 " JS/TS
-"let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/managed-by-coc-and-here-disabled'
+"let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/managed-by-coc-and-disabled'
 
 " Activate eslint_d (https://github.com/mantoni/eslint_d.js/)
 let $ESLINT_D_PPID = getpid()

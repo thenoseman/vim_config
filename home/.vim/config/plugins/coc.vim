@@ -7,6 +7,7 @@
 " :OR       : Organize imports (JS)
 " <tab>     : Snippets
 " gd        : Goto definition
+" gi        : Goto implementation
 
 let g:coc_config_home = "$HOME/.vim/config/plugins"
 let g:coc_data_home = "$HOME/.vim-coc"
