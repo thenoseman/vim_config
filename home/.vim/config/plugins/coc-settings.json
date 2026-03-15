@@ -1,10 +1,6 @@
 {
   "coc.preferences.extensionUpdateCheck": "weekly",
-  "coc.preferences.rootPatterns": [
-    ".git",
-    ".projections.json",
-    "package.json"
-  ],
+  "coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
   "coc.preferences.useQuickfixForLocations": true,
   "coc.source.snippets-source.priority": 100,
   "coc.source.snippets.priority": 100,
@@ -38,31 +34,22 @@
   "javascript.updateImportsOnFileMove.enable": "never",
   "languageserver": {
     "terraform": {
-      "args": [
-        "serve"
-      ],
+      "args": ["serve"],
       "command": "terraform-ls",
-      "filetypes": [
-        "terraform",
-        "tf"
-      ],
+      "filetypes": ["terraform", "tf"],
       "initializationOptions": {},
       "settings": {}
     },
     "toml": {
-      "args": [
-        "lsp"
-      ],
+      "args": ["lsp"],
       "command": "tombi",
-      "filetypes": [
-        "toml"
-      ],
+      "filetypes": ["toml"],
       "initializationOptions": {},
       "settings": {}
     }
   },
-  "refactor.afterContext": 1,
   "refactor.beforeContext": 1,
+  "refactor.afterContext": 1,
   "refactor.openCommand": "split",
   "rust-analyzer.cargo.loadOutDirsFromCheck": true,
   "rust-analyzer.procMacro.enable": true,
@@ -70,9 +57,7 @@
   "snippets.loadFromExtensions": false,
   "snippets.priority": 100,
   "snippets.snipmate.enable": false,
-  "snippets.textmateSnippetsRoots": [
-    "~/.vim/config/private_snippets"
-  ],
+  "snippets.textmateSnippetsRoots": ["~/.vim/config/private_snippets"],
   "snippets.trace": false,
   "snippets.ultisnips.directories": [],
   "snippets.ultisnips.pythonPrompt": false,
@@ -91,9 +76,7 @@
   "tsserver.reportStyleChecksAsWarnings": false,
   "tsserver.tsdk": "./node_modules/typescript/lib",
   "tsserver.useLocalTsdk": true,
-  "typescript.diagnostics.ignoredCodes": [
-    80004
-  ],
+  "typescript.diagnostics.ignoredCodes": [80004],
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "js",
   "typescript.preferences.includePackageJsonAutoImports": "off",
