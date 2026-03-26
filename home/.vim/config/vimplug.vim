@@ -59,7 +59,7 @@ if has("gui_running")
   " github copilot (only on business laptop)
   if tolower(hostname()) =~ 'm2max'
     Plug 'github/copilot.vim'
-    Plug 'DanBradbury/copilot-chat.vim', { 'for': [ 'javascript', 'vue', 'typescript', 'css', 'html' ]}
+    Plug 'DanBradbury/copilot-chat.vim'
   endif
 
   "
