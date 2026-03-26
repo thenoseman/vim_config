@@ -17,8 +17,6 @@ let g:projectionist_heuristics = {
   \         "test/unit/{}.spec.ts", 
   \         "test/unit/{}.test.ts", 
   \         "test/unit/{}.test.js", 
-  \         "tests/unit-jest/{}.test.js", 
-  \         "tests/unit-jest/{}.test.ts", 
   \       ],
   \       "type": "source"
   \     },
@@ -44,8 +42,6 @@ let g:projectionist_heuristics = {
   \          "tests/unit/{}.test.js",
   \          "test/unit/{}.spec.ts", 
   \          "tests/unit/{}.spec.js", 
-  \          "tests/unit-jest/{}.test.ts", 
-  \          "tests/unit-jest/{}.test.js", 
   \       ],
   \       "type": "source"
   \     }

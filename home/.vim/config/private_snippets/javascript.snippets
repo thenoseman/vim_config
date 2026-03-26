@@ -149,10 +149,10 @@ snippet jsd-r "JSDOC: Returns"
 endsnippet
 
 #
-# JEST
+# VITEST
 #
 snippet spy "spyOn"
-const spy = jest.spyOn(${1:this}, "${2}");
+const spy = vi.spyOn(${1:this}, "${2}");
 endsnippet
 
 context "re.search('toH$', snip.buffer[snip.line])"
@@ -165,9 +165,9 @@ snippet E ".toEqual()" ie
 Equal(${1});
 endsnippet
 
-snippet jest-env "Jest environment"
+snippet env "Test environment"
 /**
- * @jest-environment ${0:@happy-dom/jest-environment}
+ * @vitest-environment ${0:happy-dom}
  */
 endsnippet
 
@@ -178,9 +178,3 @@ snippet pr0 "prettier-ignore"
 // prettier-ignore
 endsnippet
 
-#
-# coverage
-#
-snippet col "coverage ignore (jest + istanbul)"
-/* istanbul ignore next */
-endsnippet

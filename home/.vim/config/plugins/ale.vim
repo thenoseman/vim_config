@@ -133,7 +133,8 @@ let g:ale_pattern_options = {
 \       'javascript' : [ 'eslint' ],
 \       'typescript' : [ 'eslint' ],
 \       'html' : [ 'trim_whitespace' ],
-\       'yaml' : []
+\       'yaml' : [],
+\       'json' :       [ 'biome' ],
 \     })
 \   },
 \   '/consent-management/central-app/': {
