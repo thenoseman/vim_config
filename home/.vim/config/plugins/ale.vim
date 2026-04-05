@@ -61,8 +61,6 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:ale_linters = {
-\   'ruby':             [ 'standardrb'],
-\   'rspec':            [ 'standardrb'],
 \   'html':             [ 'trim_whitespace', 'biome' ],
 \   'cpp' :             [ 'g++' ],
 \   'sh' :              [ 'shellcheck' ],
@@ -79,7 +77,6 @@ let g:ale_linters = {
 
 " aliases: NEW => OLD
 let g:ale_linter_aliases = {
-\   'rspec':  [ 'ruby'],
 \   'vue':    [ 'css', 'javascript', 'html'],
 \   'jsonc':  [ 'json' ],
 \}
@@ -91,8 +88,6 @@ let g:ale_fixers = {
 \   'typescript':      [ 'eslint', 'oxfmt' ],
 \   'json':            [ 'oxfmt' ],
 \   'jsonc':           [ 'oxfmt' ],
-\   'ruby':            [ 'standardrb' ],
-\   'rspec':           [ 'standardrb' ],
 \   'terraform':       [ 'terraform' ],
 \   'html':            [ 'oxfmt', 'oxfmt' ],
 \   'vue':             [ 'oxfmt', 'eslint' ],

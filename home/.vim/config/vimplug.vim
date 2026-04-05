@@ -38,7 +38,7 @@ if has("gui_running")
   " Global search and replace in quickfix window
   Plug 'stefandtw/quickfix-reflector.vim'
 
-  " Wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+  " Wisely add 'fi' in bash, endfunction/endif/more in vim script, etc
   Plug 'tpope/vim-endwise'
 
   " Vim comment plugin 
@@ -125,22 +125,6 @@ if has("gui_running")
 
   " Javascript text objects (vif, daf, ...)
   Plug 'haya14busa/vim-textobj-function-syntax', { 'for': ['javascript', 'vue', 'typescript'] }
-
-  "
-  " Ruby
-  "
-
-  " Better rspec syntax highlighting for Vim
-  Plug 'keith/rspec.vim', { 'for': 'rspec' }
-
-  " rails.vim: Ruby on Rails power tools
-  Plug 'tpope/vim-rails', { 'for': ['ruby', 'rspec'] }
-
-  " Vim/Ruby Configuration Files
-  Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'rspec'] }
-
-  " Ruby textobjects
-  Plug 'tek/vim-textobj-ruby', { 'for': ['ruby', 'rspec'] }
 
   "
   " YAML
