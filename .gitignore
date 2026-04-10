@@ -13,3 +13,4 @@ home/.vim/config/private/*.vim
 home/.vim/copilot-chat/
 home/.vim/view/
 home/.vim/yankring_history_v2.txt
+home/.vim/assorted_scripts/kubernetes-json-schema/
