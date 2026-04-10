@@ -13,6 +13,10 @@ let g:coc_config_home = "$HOME/.vim/config/plugins"
 let g:coc_data_home = "$HOME/.vim-coc"
 let g:coc_snippet_next = '<tab>'
 
+" Maps filetypes to another filetype coc should assume
+let g:coc_filetype_map = {
+\ }
+
 " Map <c-space> to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
 

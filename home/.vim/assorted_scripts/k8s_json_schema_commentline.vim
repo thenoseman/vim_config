@@ -5,8 +5,10 @@ vim9script
 
 import "./k8s/k8s-json-schema-index.vim" as mapping
 
+final allowed_filetypes: list<string> = ["yaml", "helm", "kubernetes"]
+
 def KubernetesAddSchemaCommentLine()
-  if getbufvar('%', '&filetype') != "yaml"
+  if index(allowed_filetypes, getbufvar('%', '&filetype')) == -1
     echoerr "KubernetesAddSchemaCommentLine: Cannot be used for non yaml filetype"
     return
   endif

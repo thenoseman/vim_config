@@ -46,6 +46,12 @@
       "filetypes": ["toml"],
       "initializationOptions": {},
       "settings": {}
+    },
+    "helm": {
+      "command": "helm_ls",
+      "args": ["serve"],
+      "filetypes": ["helm", "helmfile"],
+      "rootPatterns": ["Chart.yaml"]
     }
   },
   "refactor.beforeContext": 1,
@@ -91,7 +97,6 @@
   "yaml.hover": true,
   "yaml.completion": true,
   "yaml.schemas": {
-    "kubernetes": "/coms-eks/*/*.yaml",
     "modline-example-in-yaml-files": "# yaml-language-server: $schema=<urlToTheSchema>",
     "actual-url-for-kubernetes": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.34.0-standalone-strict/all.json"
   }
