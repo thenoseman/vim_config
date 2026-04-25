@@ -54,6 +54,7 @@
       "rootPatterns": ["Chart.yaml"]
     }
   },
+  "redhat.telemetry.enabled": false,
   "refactor.beforeContext": 1,
   "refactor.afterContext": 1,
   "refactor.openCommand": "split",
@@ -78,6 +79,7 @@
   "suggest.languageSourcePriority": 89,
   "suggest.maxCompleteItemCount": 20,
   "suggest.minTriggerInputLength": 3,
+  "telemetry.enable": false,
   "tsserver.formatOnType": false,
   "tsserver.reportStyleChecksAsWarnings": false,
   "tsserver.tsdk": "./node_modules/typescript/lib",
