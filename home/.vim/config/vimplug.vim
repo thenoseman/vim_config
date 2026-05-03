@@ -88,9 +88,6 @@ if has("gui_running")
   " SCSS Syntax highlighting
   Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue'] }
 
-  " Pug (ex Jade)
-  Plug 'digitaltoad/vim-pug', { 'for': ['vue', 'pug'] }
-
   "
   " Infrastructure
   "
