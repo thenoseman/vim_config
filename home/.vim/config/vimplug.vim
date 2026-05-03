@@ -85,9 +85,6 @@ if has("gui_running")
   " HTML5 omnicomplete and syntax
   Plug 'othree/html5.vim', { 'for': 'html' }
 
-  " SCSS Syntax highlighting
-  Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'vue'] }
-
   "
   " Infrastructure
   "
