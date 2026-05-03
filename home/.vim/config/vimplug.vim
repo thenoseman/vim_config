@@ -99,7 +99,7 @@ if has("gui_running")
   Plug 'hashivim/vim-terraform', { 'for': 'terraform'}
 
   " helm syntax
-  Plug 'towolf/vim-helm'
+  Plug 'towolf/vim-helm', { 'for': [ 'yaml' ]}
 
   "
   " Javascript-like
