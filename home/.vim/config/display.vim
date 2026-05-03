@@ -76,3 +76,6 @@ set jumpoptions=stack
 
 " Don't fold by default
 set nofoldenable
+
+" Syntx highlighting max time
+set redrawtime=5000
