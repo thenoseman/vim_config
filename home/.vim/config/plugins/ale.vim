@@ -132,6 +132,16 @@ let g:ale_pattern_options = {
 \       'json' :       [ 'biome' ],
 \     })
 \   },
+\   '/live-config-cli/': {
+\     'ale_fix_on_save': 1,
+\     'ale_fixers': extend(copy(g:ale_fixers), {
+\       'javascript' : [ 'eslint' ],
+\       'typescript' : [ 'eslint' ],
+\       'html' : [ 'trim_whitespace' ],
+\       'yaml' : [],
+\       'json' :       [ 'biome' ],
+\     })
+\   },
 \   '/consent-management/central-app/': {
 \     'ale_fix_on_save': 1,
 \     'ale_fixers': use_oxfmt
