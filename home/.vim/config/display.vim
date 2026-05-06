@@ -77,5 +77,7 @@ set jumpoptions=stack
 " Don't fold by default
 set nofoldenable
 
-" Syntx highlighting max time
+" Syntax highlighting max time / columns
 set redrawtime=5000
+set synmaxcol=12000
+set maxmempattern=4096
