@@ -183,6 +183,12 @@ snippet env "Test environment"
  */
 endsnippet
 
+snippet hoist "vi.hoisted()"
+const mocks = vi.hoisted(() => ({
+  ${1:methodName}: vi.fn()
+}));
+endsnippet
+
 #
 # Prettier
 #
