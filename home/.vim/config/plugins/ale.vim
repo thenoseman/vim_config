@@ -127,7 +127,7 @@ let g:ale_pattern_options = {
 \     'ale_fixers': extend(copy(g:ale_fixers), {
 \       'javascript' : [ 'eslint' ],
 \       'typescript' : [ 'eslint' ],
-\       'html' : [ 'trim_whitespace' ],
+\       'html' : [ 'trim_whitespace', 'oxfmt' ],
 \       'yaml' : [],
 \       'json' :       [ 'biome' ],
 \     })
