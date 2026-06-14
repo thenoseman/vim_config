@@ -27,6 +27,8 @@
     "borderhighlight": "CocFloatBorder",
     "title": "Hover:"
   },
+  "html.filetypes": ["html", "vue"],
+  "html.format.enable": false,
   "javascript.format.enabled": false,
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifierEnding": "js",

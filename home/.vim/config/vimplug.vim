@@ -71,17 +71,7 @@ if has("gui_running")
   Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] }
 
   " Async auto completion like vscode
-  Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets @yaegassy/coc-volar coc-yaml'}
-
-  "
-  " Markup
-  "
-
-  " Auto close (X)HTML tags (fork)
-  Plug 'thenoseman/vim-closetag', { 'for': ['html', 'xml', 'vue', 'typescript'] }
-
-  " HTML5 omnicomplete and syntax
-  Plug 'othree/html5.vim', { 'for': 'html' }
+  Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-tsserver coc-snippets @yaegassy/coc-volar coc-yaml coc-html'}
 
   "
   " Infrastructure
