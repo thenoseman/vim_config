@@ -6,7 +6,7 @@ scriptencoding utf-8
 
 " Custom format JSON via biome
 " biome is now implemented in ALE so this is just a demonstration
-" How to implement custom formatters
+" How to implement a custom formatters
 function! FormatJsonViaBiome(buffer) abort
   let l:ft = getbufvar(str2nr(a:buffer), '&filetype')
   "let l:ft = l:ft =~# 'jsonc' ? 'jsonc' : 'json'
@@ -28,13 +28,48 @@ function! AleFormatOxfmt(buffer) abort
     \   'node_modules/oxfmt/bin/oxfmt',
     \   'node_modules/.bin/oxfmt',
     \   '/opt/homebrew/bin/oxfmt',
-    \])
+  \])
 
   return {
     \   'command': ale#Escape(l:executable) . ' --stdin-filepath %s'
-    \}
+  \}
 endfunction
 execute ale#fix#registry#Add('oxfmt', 'AleFormatOxfmt', ['js', 'mjs', 'cjs', 'jsx', 'ts', 'mts', 'cts', 'tsx', 'json', 'jsonc', 'json5', 'yaml', 'yml', 'toml', 'html', 'htm', 'vue', 'css', 'scss', 'less', 'md', 'markdown', 'mdx', 'graphql', 'gql', 'hbs', 'handlebars'], 'Format file with oxfmt')
+
+
+"
+" Set ALE config based on marker file in the current directory
+" 
+function! SetALEConfig(marker_files, linters, fixers) abort
+  " Get the current working directory where Vim was started
+  let l:cwd = getcwd()
+
+  " Check if any of the marker files exist in the current directory
+  let l:marker_found = ''
+  for l:file in a:marker_files
+    if filereadable(l:cwd . '/' . l:file)
+      let l:marker_found = l:file
+      break
+    endif
+  endfor
+
+  " If a marker file is found, set the ALE variables
+  if !empty(l:marker_found)
+    let status = '🍺 : Found marker ' . l:marker_found
+    if !empty(a:linters)
+      let b:ale_linters = a:linters
+      let status = status . '; linters=' . string(a:linters)
+    endif
+    if !empty(a:fixers)
+      let b:ale_fixers = a:fixers
+      let status = status . '; fixers=' . string(a:fixers)
+    endif
+    echom status
+  endif
+endfunction
+
+" Call function for these marker files
+autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxfmtrc.json'], {}, { 'javascript': ['oxfmt']})
 
 " Toggle formatter on/off
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1 | echo 'ALEFixOnSave=' . g:ale_fix_on_save"
@@ -129,7 +164,7 @@ let g:ale_pattern_options = {
 \       'typescript' : [ 'eslint' ],
 \       'html' : [ 'trim_whitespace', 'oxfmt' ],
 \       'yaml' : [],
-\       'json' :       [ 'biome' ],
+\       'json' : [ 'biome' ],
 \     })
 \   },
 \   '/live-config-cli/': {
@@ -139,7 +174,7 @@ let g:ale_pattern_options = {
 \       'typescript' : [ 'eslint' ],
 \       'html' : [ 'trim_whitespace' ],
 \       'yaml' : [],
-\       'json' :       [ 'biome' ],
+\       'json' : [ 'biome' ],
 \     })
 \   },
 \   '/consent-management/central-app/': {
@@ -161,12 +196,6 @@ let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
 "let g:ale_javascript_prettier_use_global = 1
 let g:ale_javascript_prettier_options = '--print-width 120 --plugin-search-dir=.'
 let g:ale_javascript_prettier_use_local_config = 1
-
-" VUE
-let g:ale_vue_vls_use_global = 1
-
-" JS/TS
-"let g:ale_typescript_tsserver_executable = g:homebrew_prefix .. '/bin/managed-by-coc-and-disabled'
 
 " Activate eslint_d (https://github.com/mantoni/eslint_d.js/)
 let $ESLINT_D_PPID = getpid()
