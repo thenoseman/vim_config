@@ -90,8 +90,9 @@ if has("gui_running")
   " Javascript-like
   "
 
-  " A better JSON for Vim
-  Plug 'elzr/vim-json', { 'for': ['json', 'jsonc', '.eslintrc'] }
+  " A better JSON(C) for Vim
+  Plug 'elzr/vim-json', { 'for': ['json', '.eslintrc'] }
+  Plug 'neoclide/jsonc.vim'
 
   " bundle provides syntax highlighting and improved indentation
   Plug 'yuezk/vim-js', { 'for': [ 'javascript', 'vue', 'typescript' ]}
