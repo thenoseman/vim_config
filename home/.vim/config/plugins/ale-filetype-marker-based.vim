@@ -33,3 +33,4 @@ endfunction
 
 " Call function for these marker files
 autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxfmtrc.json'], {}, { 'javascript': ['oxfmt']})
+"autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxlintrc.json'], {}, { 'javascript': ['oxlint']})

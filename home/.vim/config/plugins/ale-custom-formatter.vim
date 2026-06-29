@@ -32,4 +32,3 @@ function! AleFormatOxfmt(buffer) abort
 endfunction
 
 execute ale#fix#registry#Add('oxfmt', 'AleFormatOxfmt', ['js', 'mjs', 'cjs', 'jsx', 'ts', 'mts', 'cts', 'tsx', 'json', 'jsonc', 'json5', 'yaml', 'yml', 'toml', 'html', 'htm', 'vue', 'css', 'scss', 'less', 'md', 'markdown', 'mdx', 'graphql', 'gql', 'hbs', 'handlebars'], 'Format file with oxfmt')
-
