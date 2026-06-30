@@ -35,12 +35,18 @@ if has('gui_running')
 endif
 
 " ALE plugin: Fixer status
-fun StatuslineAleFixOnSave() 
-  let s:ale_on_save_enabled = "🍺"
-  if get(g:, "ale_fix_on_save", 0) == 0 || get(b:, "ale_fix_on_save", 0) == 0
-    let s:ale_on_save_enabled = ""
+fun StatuslineAle() 
+  let s:ale_status_line = "🍺"
+  if exists('b:ale_fixers') && empty(b:ale_fixers) == 0
+    let s:ale_status_line .= 'F'
   endif
-  return s:ale_on_save_enabled
+  if exists('b:ale_linters') && empty(b:ale_linters) == 0
+    let s:ale_status_line .= 'L'
+  endif
+  if get(g:, "ale_fix_on_save", 0) == 0 || get(b:, "ale_fix_on_save", 0) == 0
+    let s:ale_status_line = ""
+  endif
+  return s:ale_status_line
 endfun
 
 set laststatus=2   " always display a status line
@@ -58,7 +64,7 @@ set statusline+=[%{strlen(&ft)?&ft:'none'}]                   " filetype
 set statusline+=%h%1*%m%r%w%0*                                " flags
 set statusline+=%=                                            " right align
 set statusline+=[ENC:%{&fileencoding}]\                       " file encoding
-set statusline+=%{StatuslineAleFixOnSave()}\                  " ALE enabled?
+set statusline+=%{StatuslineAle()}\                  " ALE enabled?
 set statusline+=(%l,%c%V)\ %<%P                               " offset
 
 " Dont clear out the screen when vim ends

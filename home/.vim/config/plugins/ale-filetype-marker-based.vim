@@ -18,19 +18,16 @@ function! SetALEConfig(marker_files, linters, fixers) abort
 
   " If a marker file is found, set the ALE variables
   if !empty(l:marker_found)
-    let status = '🍺 : Found marker ' . l:marker_found
     if !empty(a:linters)
       let b:ale_linters = a:linters
-      let status = status . '; linters=' . string(a:linters)
     endif
     if !empty(a:fixers)
+      let b:ale_fix_on_save = get(g:, "ale_fix_on_save", 1)
       let b:ale_fixers = a:fixers
-      let status = status . '; fixers=' . string(a:fixers)
     endif
-    echom status
   endif
 endfunction
 
 " Call function for these marker files
 autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxfmtrc.json'], {}, { 'javascript': ['oxfmt']})
-"autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxlintrc.json'], {}, { 'javascript': ['oxlint']})
+autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxlintrc.json'], { 'javascript': ['oxlint']} , { 'javascript': ['oxlint', 'oxfmt']})
