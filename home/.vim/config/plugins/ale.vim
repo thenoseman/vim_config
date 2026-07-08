@@ -34,7 +34,7 @@ let g:ale_linters = {
 \   'json' :            [ 'biome' ],
 \   'terraform':        [ 'tflint' ],
 \   'vue':              [ 'eslint' ],
-\   'lua' :             [ 'selene' ],
+\   'lua' :             [ 'luacheck' ],
 \   'toml' :            [ 'tombi' ],
 \   'yaml' :            [ 'yamllint' ] 
 \}
