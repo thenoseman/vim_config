@@ -53,7 +53,7 @@ let g:ale_fixers = {
 \   'json':            [ 'oxfmt' ],
 \   'jsonc':           [ 'oxfmt' ],
 \   'terraform':       [ 'terraform' ],
-\   'html':            [ 'oxfmt', 'oxfmt' ],
+\   'html':            [ 'oxfmt' ],
 \   'vue':             [ 'oxfmt', 'eslint' ],
 \   'lua' :            [ 'trim_whitespace', 'remove_trailing_lines', 'stylua' ],
 \   'toml' :           [ 'tombi_format', 'tombi_lint' ],
