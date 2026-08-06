@@ -1,6 +1,9 @@
 # vim:ft=snippets:
+#
 # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
-snippet here "here document (here)"
+# https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02
+#
+snippet here "here document (HEREDOC)"
 <<-${2:${1:EOF}}
   $0
 ${1/['"`](.+)['"`]/$1/}
@@ -14,22 +17,16 @@ snippet #! "shebang"
 #!/usr/bin/env bash
 endsnippet
 
-snippet empty-yes  "if var empty"
+snippet if-empty-yes  "if var empty"
 if [[ -z "${1}" ]]; then
   ${0}
 fi
 endsnippet
 
-snippet empty-no  "if var ! empty"
+snippet if-empty-no  "if var ! empty"
 if [[ -n "${1}" ]]; then
   ${0}
 fi
-endsnippet
-
-snippet loop-var-newline "read lines from command loop"
-while read -r line; do
-	${0:echo "$line"}
-done <<<"$(${1})"
 endsnippet
 
 snippet string-include "includes a string"
@@ -122,4 +119,29 @@ endsnippet
 
 snippet todo "# TODO"
 # TODO: ${1} (FS, `date +"%d.%m.%Y"`)
+endsnippet
+
+snippet loop-over-files "Loop: Over files"
+mapfile -d '' -t files < <(
+	find . -name "${1:*somepattern*}" -type f -print0
+)
+
+for file in "${files[@]}"; do
+	printf '%q\n' "$file"
+done
+endsnippet
+
+
+snippet loop-lines-in-file "Loop: Lines in file"
+mapfile -t lines <${1:the_file_on_disc}
+
+for line in "${lines[@]}"; do
+	printf '%s\n' "$line"
+done
+endsnippet
+
+snippet loop-var-newline "read lines from command loop"
+while read -r line; do
+	${0:echo "$line"}
+done <<<"$(${1})"
 endsnippet
