@@ -54,6 +54,13 @@
       "args": ["serve"],
       "filetypes": ["helm", "helmfile"],
       "rootPatterns": ["Chart.yaml"]
+    },
+    "typescript7": {
+      "command": "tsc",
+      "args": ["--lsp", "--stdio"],
+      "filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+      "rootPatterns": ["tsconfig.json", "jsconfig.json", "package.json", ".git"],
+      "trace.server": "verbose"
     }
   },
   "redhat.telemetry.enabled": false,
@@ -82,6 +89,7 @@
   "suggest.maxCompleteItemCount": 20,
   "suggest.minTriggerInputLength": 3,
   "telemetry.enable": false,
+  "tsserver.enable": false,
   "tsserver.formatOnType": false,
   "tsserver.reportStyleChecksAsWarnings": false,
   "tsserver.tsdk": "./node_modules/typescript/lib",
