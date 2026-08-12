@@ -56,8 +56,8 @@
       "rootPatterns": ["Chart.yaml"]
     },
     "typescript7": {
-      "command": "tsc",
-      "args": ["--lsp", "--stdio"],
+      "command": "/opt/homebrew/bin/tsc",
+      "args": ["--lsp", "--stdio", "--locale en"],
       "filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
       "rootPatterns": ["tsconfig.json", "jsconfig.json", "package.json", ".git"],
       "trace.server": "verbose"
