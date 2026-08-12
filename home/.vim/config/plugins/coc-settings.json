@@ -1,4 +1,5 @@
 {
+  "coc.preferences.language": "en",
   "coc.preferences.extensionUpdateCheck": "weekly",
   "coc.preferences.rootPatterns": [".git", ".projections.json", "package.json"],
   "coc.preferences.useQuickfixForLocations": true,
@@ -53,14 +54,18 @@
       "command": "helm_ls",
       "args": ["serve"],
       "filetypes": ["helm", "helmfile"],
-      "rootPatterns": ["Chart.yaml"]
+      "rootPatterns": ["Chart.yaml"],
+      "settings": {}
     },
     "typescript7": {
       "command": "/opt/homebrew/bin/tsc",
-      "args": ["--lsp", "--stdio", "--locale en"],
+      "args": ["--lsp", "--stdio"],
       "filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
       "rootPatterns": ["tsconfig.json", "jsconfig.json", "package.json", ".git"],
-      "trace.server": "verbose"
+      "trace.server": "verbose",
+      "initializationOptions": {
+        "locale": "de"
+      }
     }
   },
   "redhat.telemetry.enabled": false,

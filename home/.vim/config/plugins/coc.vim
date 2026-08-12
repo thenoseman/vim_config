@@ -9,6 +9,9 @@
 " gd        : Goto definition
 " gi        : Goto implementation
 
+" To force the coc-vim LSP client to english:
+let $LANG = "en_US.UTF-8"
+
 let g:coc_config_home = "$HOME/.vim/config/plugins"
 let g:coc_data_home = "$HOME/.vim-coc"
 let g:coc_snippet_next = '<tab>'
