@@ -6,6 +6,7 @@
   "coc.source.snippets-source.priority": 100,
   "coc.source.snippets.priority": 100,
   "diagnostic.checkCurrentLine": true,
+  "diagnostic.displayByAle": true,
   "diagnostic.errorSign": "💀",
   "diagnostic.floatConfig": {
     "border": true,
