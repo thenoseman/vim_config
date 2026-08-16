@@ -31,11 +31,13 @@ function! SetALEConfig(marker_files, linters, fixers) abort
     let l:ft = &filetype
 
     if !empty(a:linters)
+      let b:ale_linters = get(b:, 'ale_linters', {})
       let b:ale_linters[l:ft] = a:linters
       "call SetALEConfigDebug("Linters set: " .. string(b:ale_linters))
     endif
     if !empty(a:fixers)
       let b:ale_fix_on_save = get(g:, "ale_fix_on_save", 1)
+      let b:ale_fixers = get(b:, 'ale_fixers', {})
       let b:ale_fixers[l:ft] = a:fixers
       "call SetALEConfigDebug("Fixers set: " .. string(b:ale_fixers))
     endif
