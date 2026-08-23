@@ -4,26 +4,21 @@
 " https://github.com/dense-analysis/ale/blob/master/doc/ale.txt
 scriptencoding utf-8
 
-let g:ale_echo_msg_format = '[%linter%] %code%: %s'
+let g:ale_echo_msg_format = '[%linter%] %severity%: %code%: %s'
+let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_open_list = 'on_save'
-let g:ale_sign_error = '💀'
-let g:ale_sign_warning = '🤔'
-let g:ale_sign_highlight_linenrs = 1
-
-" Disable all LSPs since we have COC.cim for that. This also disables
-" terraform-lsp
-let g:ale_disable_lsp = 1
-let g:ale_lsp_suggestions = 0
-let g:ale_popup_menu_enabled = 0
-let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
+let g:ale_lsp_suggestions = 0
+let g:ale_open_list = 'on_save'
+let g:ale_popup_menu_enabled = 0
+let g:ale_sign_error = '💀'
+let g:ale_sign_highlight_linenrs = 1
+let g:ale_sign_warning = '🤔'
 
-" COC owns location list, ALE should use quickfix
-"let g:ale_set_loclist = 0
-"let g:ale_set_quickfix = 1
+" Disable all LSPs since we have COC.cim for that. 
+let g:ale_disable_lsp = 1
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -116,17 +111,16 @@ let g:ale_pattern_options = {
 \   },
 \ }
 
-" SHELLCHECK use extended mode
+" SH (https://www.shellcheck.net/)
 let g:ale_sh_shellcheck_executable = 'shellcheck'
 let g:ale_sh_shellcheck_options = '-x'
 
-" TIDY
+" HTML (https://www.html-tidy.org/)
 let g:ale_html_tidy_executable= g:homebrew_prefix .. '/bin/tidy'
 
 " Prettier (https://github.com/prettier/prettier/blob/master/docs/options.md)
 " IMPORTANT: Tag the root of your repo with an (empty) .prettierignore file
 " See https://github.com/dense-analysis/ale/blob/master/autoload/ale/fixers/prettier.vim#L38
-"let g:ale_javascript_prettier_use_global = 1
 let g:ale_javascript_prettier_options = '--print-width 120 --plugin-search-dir=.'
 let g:ale_javascript_prettier_use_local_config = 1
 
@@ -137,11 +131,11 @@ let g:ale_javascript_eslint_options = '--cache --cache-location /tmp/eslint-cach
 let g:ale_javascript_eslint_executable = 'eslint_d'
 let g:ale_javascript_eslint_use_global = 1
 
-" Lua
+" Lua (https://github.com/JohnnyMorganz/StyLua)
 let g:ale_lua_stylua_options = '--indent-type Spaces --indent-width 2'
 
-" YAML
+" YAML (https://github.com/adrienverge/yamllint)
 let g:ale_yaml_yamllint_options = '-c ~/yamllint.yml'
 
-" HCL
+" HCL (packer)
 let g:ale_packer_fmt_executable = g:homebrew_prefix .. '/bin/packer'
