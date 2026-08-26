@@ -6,7 +6,7 @@
 let g:grepper = {
 \ 'highlight': 1,
 \ 'tools': [ 'rg', 'cs' ],
-\ 'rg': { 'grepprg': g:homebrew_prefix .. '/bin/rg -H --no-heading --vimgrep -n --hidden -F',
+\ 'rg': { 'grepprg': g:homebrew_prefix .. '/bin/rg -H --no-heading --vimgrep -n --hidden -F --sort path',
 \         'grepformat': '%f:%l:%c:%m,%f',
 \         'escape': '\^$.*+?()[]{}|' },
 \ 'cs': { 'grepprg': g:homebrew_prefix .. '/bin/cs --format vimgrep',
