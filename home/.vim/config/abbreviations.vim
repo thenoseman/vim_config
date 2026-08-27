@@ -2,21 +2,21 @@
 " Abbreviations
 " aka. typos
 "
-iab backgorund background
-iab excpetion exception
 ab :. ::
-iab funcion function
-iab flase false
-iab fasle false
-iab suers users
-iab paramters parameters
-iab seperate separate
-iab cosnt const
-iab fpr for
-iab paramter parameter
-iab unknwon unknown
-iab unkown unknown
+iab backgorund background
 iab cosnet consent
 iab cosnets consents
+iab cosnt const
 iab custoemr customer
+iab excpetion exception
+iab fasle false
+iab flase false
+iab fpr for
+iab funcion function
+iab paramter parameter
+iab paramters parameters
+iab seperate separate
+iab suers users
+iab unknwon unknown
+iab unkown unknown
 
