@@ -1,5 +1,8 @@
-syntax match htmlTagName /[a-zA-Z][a-zA-Z0-9._:-]*/ contained
-syntax match htmlTagN    /[a-zA-Z][a-zA-Z0-9._:-]*/ contained
+fun! ConfigureHtmlSyntax()
+  syntax match htmlTagName /[a-zA-Z][a-zA-Z0-9._:-]*/ contained
+  highlight link htmlTagName htmlTag
+endfun
 
-highlight link htmlTagName htmlTag
-highlight link htmlTagN    htmlTag
+augroup vim_config
+  autocmd Syntax html call ConfigureHtmlSyntax()
+augroup END
