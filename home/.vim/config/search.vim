@@ -12,3 +12,6 @@ set smartcase
 " auto search visually selected text when using '/'
 vmap / y:execute "/".escape(@",'[]/\.*')<CR>
 
+" Make / search very magic (No nee for https://vimregex.com/, more PCRL like)
+nnoremap / /\v
+nnoremap ? ?\v
