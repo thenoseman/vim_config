@@ -1,5 +1,33 @@
-" Only in GUI vim
+"
+" Update plugins every now and then
+"
+let s:update_every_days = 7
+
 if has("gui_running")
+  function! s:MaybePlugUpdate() abort
+    let l:stamp = expand('~/.vim/.last_plugupdate')
+
+    if filereadable(l:stamp)
+      let l:last = str2nr(readfile(l:stamp)[0])
+      if localtime() - l:last < s:update_every_days * 24 * 60 * 60
+        return
+      endif
+    endif
+
+    " Mark it as attempted before starting the update.
+    call writefile([string(localtime())], l:stamp)
+
+    " Let MacVim finish starting before doing anything.
+    call timer_start(1000, {-> execute('PlugUpdate')})
+  endfunction
+
+  autocmd VimEnter * ++once call <SID>MaybePlugUpdate()
+
+  "
+  " Only in GUI vim
+  "
+  " Plugin list
+  " 
   call plug#begin('~/.vim/bundles')
 
   " Plug 'tweekmonster/startuptime.vim'
