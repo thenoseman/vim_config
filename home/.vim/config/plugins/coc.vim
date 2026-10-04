@@ -86,11 +86,14 @@ endfunction
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 
-" Deactivate for filetypes
-autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
+augroup vim_config_coc
+  autocmd!
+  " Deactivate for filetypes
+  autocmd FileType gitrebase,vim,gitcommit let b:coc_suggest_disable = 1
 
-" For typscript files open locationlist with errors reported by LSP on save
-autocmd BufWritePost *.ts call timer_start(1000, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
+  " For typscript files open locationlist with errors reported by LSP on save
+  autocmd BufWritePost *.ts call timer_start(1000, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
+augroup END
 
 " Search based on ripgrep, save the buffer to apply all changes to the
 " original files. Replaces vim-grepper and quickfix-reflector.

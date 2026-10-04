@@ -18,6 +18,6 @@ let g:copilot_filetypes = {
 "
 " DanBradbury/copilot-chat.vim
 "
-command CToggle :CopilotChatToggle
+command! CToggle :CopilotChatToggle
 vmap <leader>ca <Plug>CopilotChatAddSelection
 

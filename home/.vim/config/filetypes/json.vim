@@ -1,5 +1,5 @@
 fun! ConfigureJsonFileType()
-  nnoremap <space> za
+  nnoremap <buffer> <space> za
   setlocal foldmethod=syntax
 endfun
 

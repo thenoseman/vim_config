@@ -2,7 +2,7 @@ fun! ConfigureYamlFileType()
   setlocal foldmethod=expr
   setlocal foldlevel=3
   setlocal foldnestmax=10
-  nnoremap <space> za
+  nnoremap <buffer> <space> za
 endfun
 
 augroup vim_config

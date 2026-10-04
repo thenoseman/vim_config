@@ -45,5 +45,8 @@ function! SetALEConfig(marker_files, linters, fixers) abort
 endfunction
 
 " Call function for these marker files
-autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxfmtrc.json'], [], ['oxfmt'])
-autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxlintrc.json'], ['oxlint'] , ['oxlint', 'oxfmt'])
+augroup vim_config_ale_marker
+  autocmd!
+  autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxfmtrc.json'], [], ['oxfmt'])
+  autocmd FileType javascript,typescript,vue call SetALEConfig(['.oxlintrc.json'], ['oxlint'] , ['oxlint', 'oxfmt'])
+augroup END

@@ -9,5 +9,7 @@ let g:fzf_action =  {
 nmap <leader>m :call fzf#run(fzf#wrap('vim', {'source': 'rg --files --hidden -g "!.git"', 'options': '--info hidden'}))<cr>
 
 " Disable status bar for a cleaner look
-autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+augroup vim_config_fzf
+  autocmd!
+  autocmd FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+augroup END

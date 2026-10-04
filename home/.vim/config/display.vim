@@ -3,7 +3,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " iTerm2 => 256 colors
 " Set iTerm Profiles -> your Profile -> Terminal -> Report Terminal Type to xterm-256colors
-au VimEnter * set t_Co=256
+augroup vim_config_display
+  autocmd!
+  au VimEnter * set t_Co=256
+augroup END
 
 colorscheme railscasts
 
@@ -26,16 +29,22 @@ if has('gui_running')
   set guioptions=c
 
   " display base project name and full path to file in title of window
-  autocmd! BufEnter * let &titlestring="[" . split(getcwd(),"/")[-1] . "]" . expand("%")
+  augroup vim_config_display_title
+    autocmd!
+    autocmd BufEnter * let &titlestring="[" . split(getcwd(),"/")[-1] . "]" . expand("%")
+  augroup END
 
   " Disable ESC key delay in insert mode
   " http://ksjoberg.com/vim-esckeys.html
   " Breaks cursor keys in terminal vim
-  set noesckeys
+  " (guarded: 'esckeys' was removed in recent Vim/MacVim builds)
+  if exists('+esckeys')
+    set noesckeys
+  endif
 endif
 
 " ALE plugin: Fixer status
-fun StatuslineAle() 
+fun! StatuslineAle() 
   let s:ale_status_line = "🍺"
   if exists('b:ale_fixers') && empty(b:ale_fixers) == 0
     let s:ale_status_line .= 'F'
@@ -43,7 +52,7 @@ fun StatuslineAle()
   if exists('b:ale_linters') && empty(b:ale_linters) == 0
     let s:ale_status_line .= 'L'
   endif
-  if get(g:, "ale_fix_on_save", 0) == 0 || get(b:, "ale_fix_on_save", 0) == 0
+  if get(g:, "ale_fix_on_save", 0) == 0 && get(b:, "ale_fix_on_save", 0) == 0
     let s:ale_status_line = ""
   endif
   return s:ale_status_line

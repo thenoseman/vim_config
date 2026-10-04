@@ -9,7 +9,7 @@ fun! Pretty()
   " JSON ?
   if join(getline(1, 5), "") =~ '{'
     if executable("jq") != 1
-      echoerr "To use :Pretty with XML please install xmllint into your path"
+      echoerr "To use :Pretty with JSON please install jq into your path"
     else
       silent %!jq .
       set filetype=json

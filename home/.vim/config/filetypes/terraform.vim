@@ -83,4 +83,4 @@ fun TfJumpToDoc()
   endif
 endfun
 
-command Doc call TfJumpToDoc()<CR>
+command! Doc call TfJumpToDoc()

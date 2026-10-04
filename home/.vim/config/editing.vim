@@ -78,7 +78,10 @@ set iskeyword+=-
 set path=.,**
 
 " overwrite ftplugin/gitcommit.vim
-au FileType gitcommit setlocal tw=120
+augroup vim_config_editing
+  autocmd!
+  au FileType gitcommit setlocal tw=120
+augroup END
 
 " Taken from http://vim.wikia.com/wiki/Change_font_size_quickly
 " Scale font with ctrl+shift+Up or Down Keys

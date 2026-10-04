@@ -11,8 +11,6 @@ endif
 let mapleader = ","
 
 " Keep Block visually marked when indenting
-nnoremap > ><CR>gv
-nnoremap < <<CR>gv
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
 
@@ -48,5 +46,8 @@ map <c-s> :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'> trans<'.s
 nmap g= :call PreservePosition("normal gg=G")<CR>
 
 " ctrl-n and p for quickfix navigation without loosing focus
-autocmd FileType qf nnoremap <buffer> <C-n> :cn<CR><c-w>p   
-autocmd FileType qf nnoremap <buffer> <C-p> :cp<CR><c-w>p   
+augroup vim_config_keybindings
+  autocmd!
+  autocmd FileType qf nnoremap <buffer> <C-n> :cn<CR><c-w>p   
+  autocmd FileType qf nnoremap <buffer> <C-p> :cp<CR><c-w>p   
+augroup END
