@@ -96,3 +96,7 @@ set wildoptions=pum
 
 set completeopt=menu,preview,longest,fuzzy " complete options
 set dictionary+=/usr/share/dict/words "use mac words file for <c-x><c-k>
+
+" Only new regex engine please
+set regexpengine=0
+
