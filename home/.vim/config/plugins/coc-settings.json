@@ -34,6 +34,7 @@
   "javascript.format.enabled": false,
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifierEnding": "js",
+  "javascript.preferences.preferTypeOnlyAutoImports": true,
   "javascript.preferences.quoteStyle": "double",
   "javascript.updateImportsOnFileMove.enable": "never",
   "languageserver": {

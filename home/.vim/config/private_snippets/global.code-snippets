@@ -6,7 +6,7 @@
     "scope": "javascript,typescript,vue",
     "prefix": ["log"],
     "body": [
-      "console.log(`%c${CLIPBOARD/[\"]/\\\"/g}%c`, `color: orange;`, `color: #000;`, JSON.stringify(${CLIPBOARD}, (_, v) => (v instanceof Map ? Object.fromEntries(v) : v instanceof Set ? [...v] : v), 2)); // THENOSEMAN",
+      "console.log(`%c${CLIPBOARD/[\"]/\\\"/g}%c`, `color: orange;`, `color: #000;`, JSON.stringify(${CLIPBOARD}, (_, v) => (v instanceof Map ? Object.fromEntries(v) : v instanceof Set ? [...v] : v), 2)); // eslint-disable-line -- THENOSEMAN",
     ],
     "description": "logs what is in your clipboard. Auto quotes.",
   },
