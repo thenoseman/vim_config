@@ -84,10 +84,6 @@ if has("gui_running")
   " projectionist.vim: Granular project configuration
   Plug 'tpope/vim-projectionist'
 
-  " github copilot
-  Plug 'github/copilot.vim'
-  Plug 'DanBradbury/copilot-chat.vim'
-
   "
   " Common tools
   "
