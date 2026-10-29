@@ -100,3 +100,9 @@ set dictionary+=/usr/share/dict/words "use mac words file for <c-x><c-k>
 " Only new regex engine please
 set regexpengine=0
 
+" Rsync syntax for typescript or javascript files so that highlighting works
+" correctly
+augroup FixBrokenSyntax
+    autocmd!
+    autocmd BufEnter *.js,*.ts syntax sync fromstart
+augroup END
