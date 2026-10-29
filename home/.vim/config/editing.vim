@@ -100,9 +100,26 @@ set dictionary+=/usr/share/dict/words "use mac words file for <c-x><c-k>
 " Only new regex engine please
 set regexpengine=0
 
-" Rsync syntax for typescript or javascript files so that highlighting works
-" correctly
+" Keep multiline JavaScript/TypeScript syntax in sync. Syntax loaders (including
+" embedded HTML/XML) can replace fromstart, so restore it after they finish.
+function! s:SyncSyntaxFromStart(buffer, timer) abort
+  if !bufloaded(a:buffer)
+    return
+  endif
+  if index(['javascript', 'javascriptreact', 'typescript', 'typescriptreact'],
+        \ getbufvar(a:buffer, '&filetype')) < 0
+    return
+  endif
+
+  " Hidden buffers are handled on BufEnter; never change an unrelated buffer.
+  for l:window in win_findbuf(a:buffer)
+    call win_execute(l:window, 'syntax sync fromstart')
+  endfor
+endfunction
+
 augroup FixBrokenSyntax
-    autocmd!
-    autocmd BufEnter *.js,*.ts syntax sync fromstart
+  autocmd!
+  autocmd BufEnter * call <SID>SyncSyntaxFromStart(bufnr(), 0)
+  autocmd Syntax,FileType javascript,javascriptreact,typescript,typescriptreact
+        \ call timer_start(0, function('<SID>SyncSyntaxFromStart', [str2nr(expand('<abuf>'))]))
 augroup END
